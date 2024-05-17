@@ -53,10 +53,9 @@ Partial Class Events
         ' PictureBox2
         ' 
         PictureBox2.Image = My.Resources.Resources._2
-        PictureBox2.Location = New Point(835, 16)
-        PictureBox2.Margin = New Padding(3, 4, 3, 4)
+        PictureBox2.Location = New Point(731, 12)
         PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(54, 60)
+        PictureBox2.Size = New Size(47, 45)
         PictureBox2.SizeMode = PictureBoxSizeMode.Zoom
         PictureBox2.TabIndex = 14
         PictureBox2.TabStop = False
@@ -66,9 +65,9 @@ Partial Class Events
         Label3.AutoSize = True
         Label3.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.RoyalBlue
-        Label3.Location = New Point(665, 33)
+        Label3.Location = New Point(582, 25)
         Label3.Name = "Label3"
-        Label3.Size = New Size(182, 32)
+        Label3.Size = New Size(143, 25)
         Label3.TabIndex = 13
         Label3.Text = "JPPSITE ORG."
         ' 
@@ -77,9 +76,9 @@ Partial Class Events
         Label2.AutoSize = True
         Label2.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.RoyalBlue
-        Label2.Location = New Point(206, 33)
+        Label2.Location = New Point(180, 25)
         Label2.Name = "Label2"
-        Label2.Size = New Size(106, 32)
+        Label2.Size = New Size(85, 25)
         Label2.TabIndex = 12
         Label2.Text = "EVENTS"
         ' 
@@ -89,10 +88,9 @@ Partial Class Events
         logoutBtn.FlatStyle = FlatStyle.Flat
         logoutBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         logoutBtn.ForeColor = Color.White
-        logoutBtn.Location = New Point(14, 439)
-        logoutBtn.Margin = New Padding(3, 4, 3, 4)
+        logoutBtn.Location = New Point(12, 329)
         logoutBtn.Name = "logoutBtn"
-        logoutBtn.Size = New Size(146, 49)
+        logoutBtn.Size = New Size(128, 37)
         logoutBtn.TabIndex = 6
         logoutBtn.Text = "Log Out"
         logoutBtn.TextAlign = ContentAlignment.MiddleLeft
@@ -102,9 +100,9 @@ Partial Class Events
         ' 
         usernameLabel.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         usernameLabel.ForeColor = Color.White
-        usernameLabel.Location = New Point(43, 113)
+        usernameLabel.Location = New Point(38, 85)
         usernameLabel.Name = "usernameLabel"
-        usernameLabel.Size = New Size(80, 21)
+        usernameLabel.Size = New Size(70, 16)
         usernameLabel.TabIndex = 1
         usernameLabel.Text = "User"
         usernameLabel.TextAlign = ContentAlignment.MiddleCenter
@@ -112,10 +110,9 @@ Partial Class Events
         ' PictureBox1
         ' 
         PictureBox1.Image = My.Resources.Resources.circle_user
-        PictureBox1.Location = New Point(43, 17)
-        PictureBox1.Margin = New Padding(3, 4, 3, 4)
+        PictureBox1.Location = New Point(38, 13)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(80, 92)
+        PictureBox1.Size = New Size(70, 69)
         PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
         PictureBox1.TabIndex = 0
         PictureBox1.TabStop = False
@@ -126,10 +123,9 @@ Partial Class Events
         officersBtn.FlatStyle = FlatStyle.Flat
         officersBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         officersBtn.ForeColor = Color.White
-        officersBtn.Location = New Point(14, 381)
-        officersBtn.Margin = New Padding(3, 4, 3, 4)
+        officersBtn.Location = New Point(12, 286)
         officersBtn.Name = "officersBtn"
-        officersBtn.Size = New Size(146, 49)
+        officersBtn.Size = New Size(128, 37)
         officersBtn.TabIndex = 5
         officersBtn.Text = "My Officers"
         officersBtn.TextAlign = ContentAlignment.MiddleLeft
@@ -141,10 +137,9 @@ Partial Class Events
         ratingsBtn.FlatStyle = FlatStyle.Flat
         ratingsBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         ratingsBtn.ForeColor = Color.White
-        ratingsBtn.Location = New Point(14, 324)
-        ratingsBtn.Margin = New Padding(3, 4, 3, 4)
+        ratingsBtn.Location = New Point(12, 243)
         ratingsBtn.Name = "ratingsBtn"
-        ratingsBtn.Size = New Size(146, 49)
+        ratingsBtn.Size = New Size(128, 37)
         ratingsBtn.TabIndex = 4
         ratingsBtn.Text = "My Ratings"
         ratingsBtn.TextAlign = ContentAlignment.MiddleLeft
@@ -156,10 +151,9 @@ Partial Class Events
         profileBtn.FlatStyle = FlatStyle.Flat
         profileBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         profileBtn.ForeColor = Color.White
-        profileBtn.Location = New Point(14, 267)
-        profileBtn.Margin = New Padding(3, 4, 3, 4)
+        profileBtn.Location = New Point(12, 200)
         profileBtn.Name = "profileBtn"
-        profileBtn.Size = New Size(146, 49)
+        profileBtn.Size = New Size(128, 37)
         profileBtn.TabIndex = 3
         profileBtn.Text = "My Profile"
         profileBtn.TextAlign = ContentAlignment.MiddleLeft
@@ -171,10 +165,9 @@ Partial Class Events
         eventsBtn.FlatStyle = FlatStyle.Flat
         eventsBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         eventsBtn.ForeColor = Color.White
-        eventsBtn.Location = New Point(14, 209)
-        eventsBtn.Margin = New Padding(3, 4, 3, 4)
+        eventsBtn.Location = New Point(12, 157)
         eventsBtn.Name = "eventsBtn"
-        eventsBtn.Size = New Size(146, 49)
+        eventsBtn.Size = New Size(128, 37)
         eventsBtn.TabIndex = 3
         eventsBtn.Text = "My Events"
         eventsBtn.TextAlign = ContentAlignment.MiddleLeft
@@ -186,10 +179,9 @@ Partial Class Events
         dashboardBtn.FlatStyle = FlatStyle.Flat
         dashboardBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         dashboardBtn.ForeColor = Color.White
-        dashboardBtn.Location = New Point(14, 152)
-        dashboardBtn.Margin = New Padding(3, 4, 3, 4)
+        dashboardBtn.Location = New Point(12, 114)
         dashboardBtn.Name = "dashboardBtn"
-        dashboardBtn.Size = New Size(146, 49)
+        dashboardBtn.Size = New Size(128, 37)
         dashboardBtn.TabIndex = 2
         dashboardBtn.Text = "My Dashboard"
         dashboardBtn.TextAlign = ContentAlignment.MiddleLeft
@@ -206,10 +198,9 @@ Partial Class Events
         Panel1.Controls.Add(profileBtn)
         Panel1.Controls.Add(eventsBtn)
         Panel1.Controls.Add(dashboardBtn)
-        Panel1.Location = New Point(14, 16)
-        Panel1.Margin = New Padding(3, 4, 3, 4)
+        Panel1.Location = New Point(12, 12)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(175, 569)
+        Panel1.Size = New Size(153, 427)
         Panel1.TabIndex = 11
         ' 
         ' Panel2
@@ -217,10 +208,9 @@ Partial Class Events
         Panel2.BackColor = Color.White
         Panel2.Controls.Add(Label1)
         Panel2.Controls.Add(ListBox1)
-        Panel2.Location = New Point(560, 91)
-        Panel2.Margin = New Padding(3, 4, 3, 4)
+        Panel2.Location = New Point(490, 68)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(329, 493)
+        Panel2.Size = New Size(288, 370)
         Panel2.TabIndex = 15
         ' 
         ' Label1
@@ -228,9 +218,9 @@ Partial Class Events
         Label1.AutoSize = True
         Label1.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.CornflowerBlue
-        Label1.Location = New Point(27, 15)
+        Label1.Location = New Point(24, 11)
         Label1.Name = "Label1"
-        Label1.Size = New Size(157, 32)
+        Label1.Size = New Size(123, 25)
         Label1.TabIndex = 1
         Label1.Text = "Past Events"
         ' 
@@ -238,26 +228,24 @@ Partial Class Events
         ' 
         ListBox1.BorderStyle = BorderStyle.None
         ListBox1.FormattingEnabled = True
-        ListBox1.Location = New Point(27, 84)
-        ListBox1.Margin = New Padding(3, 4, 3, 4)
+        ListBox1.ItemHeight = 15
+        ListBox1.Location = New Point(24, 63)
         ListBox1.Name = "ListBox1"
-        ListBox1.Size = New Size(277, 380)
+        ListBox1.Size = New Size(242, 285)
         ListBox1.TabIndex = 0
         ' 
         ' Panel3
         ' 
         Panel3.BackColor = Color.White
         Panel3.Controls.Add(MonthCalendar1)
-        Panel3.Location = New Point(206, 340)
-        Panel3.Margin = New Padding(3, 4, 3, 4)
+        Panel3.Location = New Point(180, 255)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(334, 244)
+        Panel3.Size = New Size(292, 183)
         Panel3.TabIndex = 16
         ' 
         ' MonthCalendar1
         ' 
-        MonthCalendar1.Location = New Point(32, 16)
-        MonthCalendar1.Margin = New Padding(10, 12, 10, 12)
+        MonthCalendar1.Location = New Point(28, 12)
         MonthCalendar1.Name = "MonthCalendar1"
         MonthCalendar1.TabIndex = 0
         ' 
@@ -266,20 +254,19 @@ Partial Class Events
         Panel4.BackColor = Color.White
         Panel4.Controls.Add(ListBox2)
         Panel4.Controls.Add(Label4)
-        Panel4.Location = New Point(206, 91)
-        Panel4.Margin = New Padding(3, 4, 3, 4)
+        Panel4.Location = New Point(180, 68)
         Panel4.Name = "Panel4"
-        Panel4.Size = New Size(334, 224)
+        Panel4.Size = New Size(292, 168)
         Panel4.TabIndex = 17
         ' 
         ' ListBox2
         ' 
         ListBox2.BorderStyle = BorderStyle.None
         ListBox2.FormattingEnabled = True
-        ListBox2.Location = New Point(29, 60)
-        ListBox2.Margin = New Padding(3, 4, 3, 4)
+        ListBox2.ItemHeight = 15
+        ListBox2.Location = New Point(25, 45)
         ListBox2.Name = "ListBox2"
-        ListBox2.Size = New Size(277, 140)
+        ListBox2.Size = New Size(242, 105)
         ListBox2.TabIndex = 3
         ' 
         ' Label4
@@ -287,18 +274,18 @@ Partial Class Events
         Label4.AutoSize = True
         Label4.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.CornflowerBlue
-        Label4.Location = New Point(17, 15)
+        Label4.Location = New Point(15, 11)
         Label4.Name = "Label4"
-        Label4.Size = New Size(313, 32)
+        Label4.Size = New Size(246, 25)
         Label4.TabIndex = 2
         Label4.Text = "Current and Upcoming"
         ' 
         ' Events
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        ClientSize = New Size(914, 600)
+        ClientSize = New Size(800, 450)
         Controls.Add(Panel4)
         Controls.Add(Panel3)
         Controls.Add(Panel2)
@@ -307,7 +294,6 @@ Partial Class Events
         Controls.Add(Label2)
         Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.FixedDialog
-        Margin = New Padding(3, 4, 3, 4)
         Name = "Events"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Events"

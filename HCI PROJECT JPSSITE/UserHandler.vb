@@ -35,6 +35,39 @@ Public Class UserHandler
         ConnectionHandler.connection.close()
     End Sub
 
+    Public Shared Sub updateUser(newUser As User, oldUsername As String)
+        ConnectionHandler.connection.open()
+        Try
+            Dim query As String = "UPDATE users SET username = ?, password = ?, firstname = ?, surname = ?, userID = ?, birthDate = ?, courseProgram = ?, yearLevel = ? WHERE username = ?"
+            Dim command As New MySqlCommand(query, ConnectionHandler.connection)
+
+            command.Parameters.AddWithValue(1, newUser.username)
+            command.Parameters.AddWithValue(2, newUser.password)
+            command.Parameters.AddWithValue(3, newUser.firstName)
+            command.Parameters.AddWithValue(4, newUser.surName)
+            command.Parameters.AddWithValue(5, newUser.userID)
+            command.Parameters.AddWithValue(6, newUser.birthDate.ToString("yyyy-MM-dd HH:mm:ss"))
+            command.Parameters.AddWithValue(7, newUser.courseProgram)
+            command.Parameters.AddWithValue(8, newUser.yearLevel)
+            command.Parameters.AddWithValue(9, oldUsername)
+
+            command.ExecuteNonQuery()
+            For Each user As User In usersList
+                If user.username Is oldUsername Then
+                    user = newUser
+                    Exit For
+                End If
+            Next
+
+            currentUser = newUser
+            Console.WriteLine(oldUsername + " Changed")
+
+        Catch ex As Exception
+            MessageBox.Show("Error : " & ex.Message)
+        End Try
+        ConnectionHandler.connection.close()
+    End Sub
+
     Public Shared Sub getUsersFromDB()
         ConnectionHandler.connection.open()
         Dim query As String = "SELECT * FROM users"
