@@ -59,18 +59,16 @@ Partial Class Ratings
         Panel4.Controls.Add(PictureBox3)
         Panel4.Controls.Add(ComboBox1)
         Panel4.Controls.Add(Label4)
-        Panel4.Location = New Point(206, 91)
-        Panel4.Margin = New Padding(3, 4, 3, 4)
+        Panel4.Location = New Point(180, 68)
         Panel4.Name = "Panel4"
-        Panel4.Size = New Size(334, 493)
+        Panel4.Size = New Size(292, 370)
         Panel4.TabIndex = 30
         ' 
         ' PictureBox3
         ' 
-        PictureBox3.Location = New Point(41, 139)
-        PictureBox3.Margin = New Padding(3, 4, 3, 4)
+        PictureBox3.Location = New Point(36, 104)
         PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(248, 268)
+        PictureBox3.Size = New Size(217, 201)
         PictureBox3.TabIndex = 4
         PictureBox3.TabStop = False
         ' 
@@ -79,10 +77,9 @@ Partial Class Ratings
         ComboBox1.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         ComboBox1.FormattingEnabled = True
         ComboBox1.Items.AddRange(New Object() {"Event 1", "Event 2", "Event 3"})
-        ComboBox1.Location = New Point(41, 77)
-        ComboBox1.Margin = New Padding(3, 4, 3, 4)
+        ComboBox1.Location = New Point(36, 58)
         ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(247, 28)
+        ComboBox1.Size = New Size(217, 25)
         ComboBox1.TabIndex = 3
         ' 
         ' Label4
@@ -90,9 +87,9 @@ Partial Class Ratings
         Label4.AutoSize = True
         Label4.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.CornflowerBlue
-        Label4.Location = New Point(41, 15)
+        Label4.Location = New Point(36, 11)
         Label4.Name = "Label4"
-        Label4.Size = New Size(276, 32)
+        Label4.Size = New Size(217, 25)
         Label4.TabIndex = 2
         Label4.Text = "Overall Event Rating"
         ' 
@@ -102,10 +99,9 @@ Partial Class Ratings
         logoutBtn.FlatStyle = FlatStyle.Flat
         logoutBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         logoutBtn.ForeColor = Color.White
-        logoutBtn.Location = New Point(14, 439)
-        logoutBtn.Margin = New Padding(3, 4, 3, 4)
+        logoutBtn.Location = New Point(12, 329)
         logoutBtn.Name = "logoutBtn"
-        logoutBtn.Size = New Size(146, 49)
+        logoutBtn.Size = New Size(128, 37)
         logoutBtn.TabIndex = 6
         logoutBtn.Text = "Log Out"
         logoutBtn.TextAlign = ContentAlignment.MiddleLeft
@@ -115,9 +111,9 @@ Partial Class Ratings
         ' 
         usernameLabel.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         usernameLabel.ForeColor = Color.White
-        usernameLabel.Location = New Point(43, 113)
+        usernameLabel.Location = New Point(38, 85)
         usernameLabel.Name = "usernameLabel"
-        usernameLabel.Size = New Size(80, 21)
+        usernameLabel.Size = New Size(70, 16)
         usernameLabel.TabIndex = 1
         usernameLabel.Text = "User"
         usernameLabel.TextAlign = ContentAlignment.MiddleCenter
@@ -125,10 +121,9 @@ Partial Class Ratings
         ' PictureBox1
         ' 
         PictureBox1.Image = My.Resources.Resources.circle_user
-        PictureBox1.Location = New Point(43, 17)
-        PictureBox1.Margin = New Padding(3, 4, 3, 4)
+        PictureBox1.Location = New Point(38, 13)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(80, 92)
+        PictureBox1.Size = New Size(70, 69)
         PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
         PictureBox1.TabIndex = 0
         PictureBox1.TabStop = False
@@ -139,10 +134,9 @@ Partial Class Ratings
         officersBtn.FlatStyle = FlatStyle.Flat
         officersBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         officersBtn.ForeColor = Color.White
-        officersBtn.Location = New Point(14, 381)
-        officersBtn.Margin = New Padding(3, 4, 3, 4)
+        officersBtn.Location = New Point(12, 286)
         officersBtn.Name = "officersBtn"
-        officersBtn.Size = New Size(146, 49)
+        officersBtn.Size = New Size(128, 37)
         officersBtn.TabIndex = 5
         officersBtn.Text = "My Officers"
         officersBtn.TextAlign = ContentAlignment.MiddleLeft
@@ -154,10 +148,9 @@ Partial Class Ratings
         ratingsBtn.FlatStyle = FlatStyle.Flat
         ratingsBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         ratingsBtn.ForeColor = Color.White
-        ratingsBtn.Location = New Point(14, 324)
-        ratingsBtn.Margin = New Padding(3, 4, 3, 4)
+        ratingsBtn.Location = New Point(12, 243)
         ratingsBtn.Name = "ratingsBtn"
-        ratingsBtn.Size = New Size(146, 49)
+        ratingsBtn.Size = New Size(128, 37)
         ratingsBtn.TabIndex = 4
         ratingsBtn.Text = "My Ratings"
         ratingsBtn.TextAlign = ContentAlignment.MiddleLeft
@@ -169,10 +162,9 @@ Partial Class Ratings
         profileBtn.FlatStyle = FlatStyle.Flat
         profileBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         profileBtn.ForeColor = Color.White
-        profileBtn.Location = New Point(14, 267)
-        profileBtn.Margin = New Padding(3, 4, 3, 4)
+        profileBtn.Location = New Point(12, 200)
         profileBtn.Name = "profileBtn"
-        profileBtn.Size = New Size(146, 49)
+        profileBtn.Size = New Size(128, 37)
         profileBtn.TabIndex = 3
         profileBtn.Text = "My Profile"
         profileBtn.TextAlign = ContentAlignment.MiddleLeft
@@ -184,10 +176,9 @@ Partial Class Ratings
         eventsBtn.FlatStyle = FlatStyle.Flat
         eventsBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         eventsBtn.ForeColor = Color.White
-        eventsBtn.Location = New Point(14, 209)
-        eventsBtn.Margin = New Padding(3, 4, 3, 4)
+        eventsBtn.Location = New Point(12, 157)
         eventsBtn.Name = "eventsBtn"
-        eventsBtn.Size = New Size(146, 49)
+        eventsBtn.Size = New Size(128, 37)
         eventsBtn.TabIndex = 3
         eventsBtn.Text = "My Events"
         eventsBtn.TextAlign = ContentAlignment.MiddleLeft
@@ -204,10 +195,9 @@ Partial Class Ratings
         Panel1.Controls.Add(profileBtn)
         Panel1.Controls.Add(eventsBtn)
         Panel1.Controls.Add(dashboardBtn)
-        Panel1.Location = New Point(14, 16)
-        Panel1.Margin = New Padding(3, 4, 3, 4)
+        Panel1.Location = New Point(12, 12)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(175, 569)
+        Panel1.Size = New Size(153, 427)
         Panel1.TabIndex = 25
         ' 
         ' dashboardBtn
@@ -216,10 +206,9 @@ Partial Class Ratings
         dashboardBtn.FlatStyle = FlatStyle.Flat
         dashboardBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         dashboardBtn.ForeColor = Color.White
-        dashboardBtn.Location = New Point(14, 152)
-        dashboardBtn.Margin = New Padding(3, 4, 3, 4)
+        dashboardBtn.Location = New Point(12, 114)
         dashboardBtn.Name = "dashboardBtn"
-        dashboardBtn.Size = New Size(146, 49)
+        dashboardBtn.Size = New Size(128, 37)
         dashboardBtn.TabIndex = 2
         dashboardBtn.Text = "My Dashboard"
         dashboardBtn.TextAlign = ContentAlignment.MiddleLeft
@@ -228,10 +217,9 @@ Partial Class Ratings
         ' PictureBox2
         ' 
         PictureBox2.Image = My.Resources.Resources._2
-        PictureBox2.Location = New Point(835, 16)
-        PictureBox2.Margin = New Padding(3, 4, 3, 4)
+        PictureBox2.Location = New Point(731, 12)
         PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(54, 60)
+        PictureBox2.Size = New Size(47, 45)
         PictureBox2.SizeMode = PictureBoxSizeMode.Zoom
         PictureBox2.TabIndex = 28
         PictureBox2.TabStop = False
@@ -241,9 +229,9 @@ Partial Class Ratings
         Label2.AutoSize = True
         Label2.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.RoyalBlue
-        Label2.Location = New Point(206, 33)
+        Label2.Location = New Point(180, 25)
         Label2.Name = "Label2"
-        Label2.Size = New Size(126, 32)
+        Label2.Size = New Size(100, 25)
         Label2.TabIndex = 26
         Label2.Text = "RATINGS"
         ' 
@@ -252,9 +240,9 @@ Partial Class Ratings
         Label3.AutoSize = True
         Label3.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.RoyalBlue
-        Label3.Location = New Point(665, 33)
+        Label3.Location = New Point(582, 25)
         Label3.Name = "Label3"
-        Label3.Size = New Size(182, 32)
+        Label3.Size = New Size(143, 25)
         Label3.TabIndex = 27
         Label3.Text = "JPPSITE ORG."
         ' 
@@ -263,10 +251,9 @@ Partial Class Ratings
         TextBox1.BackColor = Color.White
         TextBox1.BorderStyle = BorderStyle.None
         TextBox1.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox1.Location = New Point(174, 111)
-        TextBox1.Margin = New Padding(3, 4, 3, 4)
+        TextBox1.Location = New Point(152, 83)
         TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(114, 20)
+        TextBox1.Size = New Size(100, 16)
         TextBox1.TabIndex = 39
         ' 
         ' TextBox2
@@ -274,10 +261,9 @@ Partial Class Ratings
         TextBox2.BackColor = Color.White
         TextBox2.BorderStyle = BorderStyle.None
         TextBox2.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox2.Location = New Point(174, 177)
-        TextBox2.Margin = New Padding(3, 4, 3, 4)
+        TextBox2.Location = New Point(152, 133)
         TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(114, 20)
+        TextBox2.Size = New Size(100, 16)
         TextBox2.TabIndex = 40
         ' 
         ' TextBox3
@@ -285,10 +271,9 @@ Partial Class Ratings
         TextBox3.BackColor = Color.White
         TextBox3.BorderStyle = BorderStyle.None
         TextBox3.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox3.Location = New Point(174, 313)
-        TextBox3.Margin = New Padding(3, 4, 3, 4)
+        TextBox3.Location = New Point(152, 235)
         TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(114, 20)
+        TextBox3.Size = New Size(100, 16)
         TextBox3.TabIndex = 42
         ' 
         ' TextBox4
@@ -296,10 +281,9 @@ Partial Class Ratings
         TextBox4.BackColor = Color.White
         TextBox4.BorderStyle = BorderStyle.None
         TextBox4.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox4.Location = New Point(174, 384)
-        TextBox4.Margin = New Padding(3, 4, 3, 4)
+        TextBox4.Location = New Point(152, 288)
         TextBox4.Name = "TextBox4"
-        TextBox4.Size = New Size(114, 20)
+        TextBox4.Size = New Size(100, 16)
         TextBox4.TabIndex = 43
         ' 
         ' Button4
@@ -308,10 +292,9 @@ Partial Class Ratings
         Button4.FlatStyle = FlatStyle.Flat
         Button4.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button4.ForeColor = Color.White
-        Button4.Location = New Point(127, 449)
-        Button4.Margin = New Padding(3, 4, 3, 4)
+        Button4.Location = New Point(111, 337)
         Button4.Name = "Button4"
-        Button4.Size = New Size(86, 31)
+        Button4.Size = New Size(75, 23)
         Button4.TabIndex = 49
         Button4.Text = "SAVE"
         Button4.UseVisualStyleBackColor = False
@@ -325,10 +308,9 @@ Partial Class Ratings
         Panel2.Controls.Add(TextBox2)
         Panel2.Controls.Add(TextBox1)
         Panel2.Controls.Add(Label1)
-        Panel2.Location = New Point(560, 91)
-        Panel2.Margin = New Padding(3, 4, 3, 4)
+        Panel2.Location = New Point(490, 68)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(329, 493)
+        Panel2.Size = New Size(288, 370)
         Panel2.TabIndex = 29
         ' 
         ' Label1
@@ -336,18 +318,18 @@ Partial Class Ratings
         Label1.AutoSize = True
         Label1.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.CornflowerBlue
-        Label1.Location = New Point(74, 15)
+        Label1.Location = New Point(65, 11)
         Label1.Name = "Label1"
-        Label1.Size = New Size(216, 32)
+        Label1.Size = New Size(170, 25)
         Label1.TabIndex = 1
         Label1.Text = "Edit Information"
         ' 
         ' Ratings
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        ClientSize = New Size(914, 600)
+        ClientSize = New Size(800, 450)
         Controls.Add(Panel2)
         Controls.Add(Panel4)
         Controls.Add(Panel1)
@@ -355,7 +337,6 @@ Partial Class Ratings
         Controls.Add(Label2)
         Controls.Add(Label3)
         FormBorderStyle = FormBorderStyle.FixedDialog
-        Margin = New Padding(3, 4, 3, 4)
         Name = "Ratings"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Forum"
