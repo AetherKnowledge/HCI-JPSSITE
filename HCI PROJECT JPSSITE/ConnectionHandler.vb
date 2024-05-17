@@ -5,14 +5,9 @@ Public Class ConnectionHandler
     Public Shared ReadOnly connection = startConnection()
 
     Private Shared Function startConnection()
-        Dim fullAddress() As String = getTCPAddress.Split(":"c)
-        Dim tcp As String = fullAddress.GetValue(0)
-        Dim port As String = fullAddress.GetValue(1)
-
         Dim conString As String = "server=librarysystem-librarysystem.e.aivencloud.com;Port=15306;user id=test;password=AVNS_4GVJCxH3fyoz2Y41vHL;database=jpssite"
         Dim con As New MySqlConnection(conString)
 
-        con.Open()
         Return con
     End Function
 
