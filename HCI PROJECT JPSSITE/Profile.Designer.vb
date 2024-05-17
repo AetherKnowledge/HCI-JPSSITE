@@ -27,6 +27,7 @@ Partial Class Profile
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Panel4 = New Panel()
+        userIDLabel = New Label()
         Label5 = New Label()
         passLabel = New Label()
         usrnameLabel = New Label()
@@ -58,11 +59,11 @@ Partial Class Profile
         Label19 = New Label()
         Label18 = New Label()
         Label16 = New Label()
-        TextBox4 = New TextBox()
-        TextBox3 = New TextBox()
+        passwordField = New TextBox()
+        usernameField = New TextBox()
         birthDateField = New DateTimePicker()
-        TextBox2 = New TextBox()
-        TextBox1 = New TextBox()
+        surnameField = New TextBox()
+        firstnameField = New TextBox()
         Panel9 = New Panel()
         Panel10 = New Panel()
         Panel11 = New Panel()
@@ -85,6 +86,7 @@ Partial Class Profile
         ' Panel4
         ' 
         Panel4.BackColor = Color.White
+        Panel4.Controls.Add(userIDLabel)
         Panel4.Controls.Add(Label5)
         Panel4.Controls.Add(passLabel)
         Panel4.Controls.Add(usrnameLabel)
@@ -97,19 +99,28 @@ Partial Class Profile
         Panel4.Controls.Add(fullnameLabel)
         Panel4.Controls.Add(PictureBox3)
         Panel4.Controls.Add(Label4)
-        Panel4.Location = New Point(206, 91)
-        Panel4.Margin = New Padding(3, 4, 3, 4)
+        Panel4.Location = New Point(180, 68)
         Panel4.Name = "Panel4"
-        Panel4.Size = New Size(334, 493)
+        Panel4.Size = New Size(292, 370)
         Panel4.TabIndex = 24
+        ' 
+        ' userIDLabel
+        ' 
+        userIDLabel.AutoSize = True
+        userIDLabel.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        userIDLabel.Location = New Point(149, 255)
+        userIDLabel.Name = "userIDLabel"
+        userIDLabel.Size = New Size(59, 17)
+        userIDLabel.TabIndex = 18
+        userIDLabel.Text = "LOLOLO"
         ' 
         ' Label5
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(63, 340)
+        Label5.Location = New Point(55, 255)
         Label5.Name = "Label5"
-        Label5.Size = New Size(77, 21)
+        Label5.Size = New Size(58, 17)
         Label5.TabIndex = 17
         Label5.Text = "USER ID:"
         Label5.TextAlign = ContentAlignment.MiddleRight
@@ -118,9 +129,9 @@ Partial Class Profile
         ' 
         passLabel.AutoSize = True
         passLabel.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        passLabel.Location = New Point(170, 411)
+        passLabel.Location = New Point(149, 308)
         passLabel.Name = "passLabel"
-        passLabel.Size = New Size(64, 21)
+        passLabel.Size = New Size(50, 17)
         passLabel.TabIndex = 16
         passLabel.Text = "666666"
         ' 
@@ -128,9 +139,9 @@ Partial Class Profile
         ' 
         usrnameLabel.AutoSize = True
         usrnameLabel.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        usrnameLabel.Location = New Point(170, 375)
+        usrnameLabel.Location = New Point(149, 281)
         usrnameLabel.Name = "usrnameLabel"
-        usrnameLabel.Size = New Size(79, 21)
+        usrnameLabel.Size = New Size(59, 17)
         usrnameLabel.TabIndex = 15
         usrnameLabel.Text = "LOLOLO"
         ' 
@@ -138,9 +149,9 @@ Partial Class Profile
         ' 
         Label11.AutoSize = True
         Label11.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label11.Location = New Point(63, 411)
+        Label11.Location = New Point(55, 308)
         Label11.Name = "Label11"
-        Label11.Size = New Size(109, 21)
+        Label11.Size = New Size(83, 17)
         Label11.TabIndex = 14
         Label11.Text = "PASSWORD:"
         Label11.TextAlign = ContentAlignment.MiddleRight
@@ -149,9 +160,9 @@ Partial Class Profile
         ' 
         Label10.AutoSize = True
         Label10.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label10.Location = New Point(63, 375)
+        Label10.Location = New Point(55, 281)
         Label10.Name = "Label10"
-        Label10.Size = New Size(106, 21)
+        Label10.Size = New Size(78, 17)
         Label10.TabIndex = 13
         Label10.Text = "USERNAME:"
         Label10.TextAlign = ContentAlignment.MiddleRight
@@ -160,9 +171,9 @@ Partial Class Profile
         ' 
         yearLabel.AutoSize = True
         yearLabel.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        yearLabel.Location = New Point(266, 307)
+        yearLabel.Location = New Point(233, 230)
         yearLabel.Name = "yearLabel"
-        yearLabel.Size = New Size(19, 21)
+        yearLabel.Size = New Size(15, 17)
         yearLabel.TabIndex = 12
         yearLabel.Text = "2"
         ' 
@@ -170,9 +181,9 @@ Partial Class Profile
         ' 
         courselabel.AutoSize = True
         courselabel.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        courselabel.Location = New Point(81, 307)
+        courselabel.Location = New Point(71, 230)
         courselabel.Name = "courselabel"
-        courselabel.Size = New Size(41, 21)
+        courselabel.Size = New Size(29, 17)
         courselabel.TabIndex = 11
         courselabel.Text = "BSIT"
         ' 
@@ -180,9 +191,9 @@ Partial Class Profile
         ' 
         Label7.AutoSize = True
         Label7.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label7.Location = New Point(178, 307)
+        Label7.Location = New Point(156, 230)
         Label7.Name = "Label7"
-        Label7.Size = New Size(110, 21)
+        Label7.Size = New Size(82, 17)
         Label7.TabIndex = 10
         Label7.Text = "YEAR LEVEL:"
         ' 
@@ -190,9 +201,9 @@ Partial Class Profile
         ' 
         Label6.AutoSize = True
         Label6.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label6.Location = New Point(16, 307)
+        Label6.Location = New Point(14, 230)
         Label6.Name = "Label6"
-        Label6.Size = New Size(83, 21)
+        Label6.Size = New Size(63, 17)
         Label6.TabIndex = 9
         Label6.Text = "COURSE:"
         ' 
@@ -200,19 +211,18 @@ Partial Class Profile
         ' 
         fullnameLabel.AutoSize = True
         fullnameLabel.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        fullnameLabel.Location = New Point(102, 263)
+        fullnameLabel.Location = New Point(89, 197)
         fullnameLabel.Name = "fullnameLabel"
-        fullnameLabel.Size = New Size(132, 21)
+        fullnameLabel.Size = New Size(103, 17)
         fullnameLabel.TabIndex = 8
         fullnameLabel.Text = "User's Fullname"
         ' 
         ' PictureBox3
         ' 
         PictureBox3.Image = My.Resources.Resources.circle_user__1_
-        PictureBox3.Location = New Point(81, 77)
-        PictureBox3.Margin = New Padding(3, 4, 3, 4)
+        PictureBox3.Location = New Point(71, 58)
         PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(157, 164)
+        PictureBox3.Size = New Size(137, 123)
         PictureBox3.SizeMode = PictureBoxSizeMode.Zoom
         PictureBox3.TabIndex = 7
         PictureBox3.TabStop = False
@@ -222,9 +232,9 @@ Partial Class Profile
         Label4.AutoSize = True
         Label4.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.CornflowerBlue
-        Label4.Location = New Point(16, 15)
+        Label4.Location = New Point(14, 11)
         Label4.Name = "Label4"
-        Label4.Size = New Size(281, 32)
+        Label4.Size = New Size(221, 25)
         Label4.TabIndex = 2
         Label4.Text = "Account Information"
         ' 
@@ -232,12 +242,11 @@ Partial Class Profile
         ' 
         logoutBtn.BackColor = Color.CornflowerBlue
         logoutBtn.FlatStyle = FlatStyle.Flat
-        logoutBtn.Font = New Font("Century Gothic", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        logoutBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         logoutBtn.ForeColor = Color.White
-        logoutBtn.Location = New Point(14, 439)
-        logoutBtn.Margin = New Padding(3, 4, 3, 4)
+        logoutBtn.Location = New Point(12, 329)
         logoutBtn.Name = "logoutBtn"
-        logoutBtn.Size = New Size(146, 49)
+        logoutBtn.Size = New Size(128, 37)
         logoutBtn.TabIndex = 6
         logoutBtn.Text = "Log Out"
         logoutBtn.TextAlign = ContentAlignment.MiddleLeft
@@ -245,11 +254,11 @@ Partial Class Profile
         ' 
         ' usernameLabel
         ' 
-        usernameLabel.Font = New Font("Century Gothic", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        usernameLabel.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         usernameLabel.ForeColor = Color.White
-        usernameLabel.Location = New Point(43, 113)
+        usernameLabel.Location = New Point(38, 85)
         usernameLabel.Name = "usernameLabel"
-        usernameLabel.Size = New Size(80, 21)
+        usernameLabel.Size = New Size(70, 16)
         usernameLabel.TabIndex = 1
         usernameLabel.Text = "User"
         usernameLabel.TextAlign = ContentAlignment.MiddleCenter
@@ -257,10 +266,9 @@ Partial Class Profile
         ' PictureBox1
         ' 
         PictureBox1.Image = My.Resources.Resources.circle_user
-        PictureBox1.Location = New Point(43, 17)
-        PictureBox1.Margin = New Padding(3, 4, 3, 4)
+        PictureBox1.Location = New Point(38, 13)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(80, 92)
+        PictureBox1.Size = New Size(70, 69)
         PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
         PictureBox1.TabIndex = 0
         PictureBox1.TabStop = False
@@ -269,12 +277,11 @@ Partial Class Profile
         ' 
         officersBtn.BackColor = Color.CornflowerBlue
         officersBtn.FlatStyle = FlatStyle.Flat
-        officersBtn.Font = New Font("Century Gothic", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        officersBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         officersBtn.ForeColor = Color.White
-        officersBtn.Location = New Point(14, 381)
-        officersBtn.Margin = New Padding(3, 4, 3, 4)
+        officersBtn.Location = New Point(12, 286)
         officersBtn.Name = "officersBtn"
-        officersBtn.Size = New Size(146, 49)
+        officersBtn.Size = New Size(128, 37)
         officersBtn.TabIndex = 5
         officersBtn.Text = "My Officers"
         officersBtn.TextAlign = ContentAlignment.MiddleLeft
@@ -284,12 +291,11 @@ Partial Class Profile
         ' 
         ratingsBtn.BackColor = Color.CornflowerBlue
         ratingsBtn.FlatStyle = FlatStyle.Flat
-        ratingsBtn.Font = New Font("Century Gothic", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        ratingsBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         ratingsBtn.ForeColor = Color.White
-        ratingsBtn.Location = New Point(14, 324)
-        ratingsBtn.Margin = New Padding(3, 4, 3, 4)
+        ratingsBtn.Location = New Point(12, 243)
         ratingsBtn.Name = "ratingsBtn"
-        ratingsBtn.Size = New Size(146, 49)
+        ratingsBtn.Size = New Size(128, 37)
         ratingsBtn.TabIndex = 4
         ratingsBtn.Text = "My Ratings"
         ratingsBtn.TextAlign = ContentAlignment.MiddleLeft
@@ -299,12 +305,11 @@ Partial Class Profile
         ' 
         Button3.BackColor = Color.RoyalBlue
         Button3.FlatStyle = FlatStyle.Flat
-        Button3.Font = New Font("Century Gothic", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button3.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button3.ForeColor = Color.White
-        Button3.Location = New Point(14, 267)
-        Button3.Margin = New Padding(3, 4, 3, 4)
+        Button3.Location = New Point(12, 200)
         Button3.Name = "Button3"
-        Button3.Size = New Size(146, 49)
+        Button3.Size = New Size(128, 37)
         Button3.TabIndex = 3
         Button3.Text = "My Profile"
         Button3.TextAlign = ContentAlignment.MiddleLeft
@@ -314,12 +319,11 @@ Partial Class Profile
         ' 
         eventsBtn.BackColor = Color.CornflowerBlue
         eventsBtn.FlatStyle = FlatStyle.Flat
-        eventsBtn.Font = New Font("Century Gothic", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        eventsBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         eventsBtn.ForeColor = Color.White
-        eventsBtn.Location = New Point(14, 209)
-        eventsBtn.Margin = New Padding(3, 4, 3, 4)
+        eventsBtn.Location = New Point(12, 157)
         eventsBtn.Name = "eventsBtn"
-        eventsBtn.Size = New Size(146, 49)
+        eventsBtn.Size = New Size(128, 37)
         eventsBtn.TabIndex = 3
         eventsBtn.Text = "My Events"
         eventsBtn.TextAlign = ContentAlignment.MiddleLeft
@@ -336,22 +340,20 @@ Partial Class Profile
         Panel1.Controls.Add(Button3)
         Panel1.Controls.Add(eventsBtn)
         Panel1.Controls.Add(dashboardBtn)
-        Panel1.Location = New Point(14, 16)
-        Panel1.Margin = New Padding(3, 4, 3, 4)
+        Panel1.Location = New Point(12, 12)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(175, 569)
+        Panel1.Size = New Size(153, 427)
         Panel1.TabIndex = 18
         ' 
         ' dashboardBtn
         ' 
         dashboardBtn.BackColor = Color.CornflowerBlue
         dashboardBtn.FlatStyle = FlatStyle.Flat
-        dashboardBtn.Font = New Font("Century Gothic", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        dashboardBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         dashboardBtn.ForeColor = Color.White
-        dashboardBtn.Location = New Point(14, 152)
-        dashboardBtn.Margin = New Padding(3, 4, 3, 4)
+        dashboardBtn.Location = New Point(12, 114)
         dashboardBtn.Name = "dashboardBtn"
-        dashboardBtn.Size = New Size(146, 49)
+        dashboardBtn.Size = New Size(128, 37)
         dashboardBtn.TabIndex = 2
         dashboardBtn.Text = "My Dashboard"
         dashboardBtn.TextAlign = ContentAlignment.MiddleLeft
@@ -360,10 +362,9 @@ Partial Class Profile
         ' PictureBox2
         ' 
         PictureBox2.Image = My.Resources.Resources._2
-        PictureBox2.Location = New Point(835, 16)
-        PictureBox2.Margin = New Padding(3, 4, 3, 4)
+        PictureBox2.Location = New Point(731, 12)
         PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(54, 60)
+        PictureBox2.Size = New Size(47, 45)
         PictureBox2.SizeMode = PictureBoxSizeMode.Zoom
         PictureBox2.TabIndex = 21
         PictureBox2.TabStop = False
@@ -373,9 +374,9 @@ Partial Class Profile
         Label3.AutoSize = True
         Label3.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.RoyalBlue
-        Label3.Location = New Point(665, 33)
+        Label3.Location = New Point(582, 25)
         Label3.Name = "Label3"
-        Label3.Size = New Size(182, 32)
+        Label3.Size = New Size(143, 25)
         Label3.TabIndex = 20
         Label3.Text = "JPPSITE ORG."
         ' 
@@ -384,9 +385,9 @@ Partial Class Profile
         Label2.AutoSize = True
         Label2.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.RoyalBlue
-        Label2.Location = New Point(206, 33)
+        Label2.Location = New Point(180, 25)
         Label2.Name = "Label2"
-        Label2.Size = New Size(115, 32)
+        Label2.Size = New Size(90, 25)
         Label2.TabIndex = 19
         Label2.Text = "PROFILE"
         ' 
@@ -399,11 +400,11 @@ Partial Class Profile
         Panel2.Controls.Add(Label19)
         Panel2.Controls.Add(Label18)
         Panel2.Controls.Add(Label16)
-        Panel2.Controls.Add(TextBox4)
-        Panel2.Controls.Add(TextBox3)
+        Panel2.Controls.Add(passwordField)
+        Panel2.Controls.Add(usernameField)
         Panel2.Controls.Add(birthDateField)
-        Panel2.Controls.Add(TextBox2)
-        Panel2.Controls.Add(TextBox1)
+        Panel2.Controls.Add(surnameField)
+        Panel2.Controls.Add(firstnameField)
         Panel2.Controls.Add(Panel9)
         Panel2.Controls.Add(Panel10)
         Panel2.Controls.Add(Panel11)
@@ -415,10 +416,9 @@ Partial Class Profile
         Panel2.Controls.Add(Label24)
         Panel2.Controls.Add(Label25)
         Panel2.Controls.Add(Label1)
-        Panel2.Location = New Point(560, 91)
-        Panel2.Margin = New Padding(3, 4, 3, 4)
+        Panel2.Location = New Point(490, 68)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(329, 493)
+        Panel2.Size = New Size(288, 370)
         Panel2.TabIndex = 30
         ' 
         ' Button4
@@ -427,10 +427,9 @@ Partial Class Profile
         Button4.FlatStyle = FlatStyle.Flat
         Button4.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button4.ForeColor = Color.White
-        Button4.Location = New Point(127, 449)
-        Button4.Margin = New Padding(3, 4, 3, 4)
+        Button4.Location = New Point(111, 337)
         Button4.Name = "Button4"
-        Button4.Size = New Size(86, 31)
+        Button4.Size = New Size(75, 23)
         Button4.TabIndex = 49
         Button4.Text = "SAVE"
         Button4.UseVisualStyleBackColor = False
@@ -439,9 +438,9 @@ Partial Class Profile
         ' 
         Label23.AutoSize = True
         Label23.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label23.Location = New Point(153, 384)
+        Label23.Location = New Point(134, 288)
         Label23.Name = "Label23"
-        Label23.Size = New Size(15, 21)
+        Label23.Size = New Size(12, 17)
         Label23.TabIndex = 48
         Label23.Text = ":"
         Label23.TextAlign = ContentAlignment.MiddleLeft
@@ -450,9 +449,9 @@ Partial Class Profile
         ' 
         Label22.AutoSize = True
         Label22.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label22.Location = New Point(153, 313)
+        Label22.Location = New Point(134, 235)
         Label22.Name = "Label22"
-        Label22.Size = New Size(15, 21)
+        Label22.Size = New Size(12, 17)
         Label22.TabIndex = 47
         Label22.Text = ":"
         Label22.TextAlign = ContentAlignment.MiddleLeft
@@ -461,9 +460,9 @@ Partial Class Profile
         ' 
         Label19.AutoSize = True
         Label19.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label19.Location = New Point(153, 243)
+        Label19.Location = New Point(134, 182)
         Label19.Name = "Label19"
-        Label19.Size = New Size(15, 21)
+        Label19.Size = New Size(12, 17)
         Label19.TabIndex = 46
         Label19.Text = ":"
         Label19.TextAlign = ContentAlignment.MiddleLeft
@@ -472,9 +471,9 @@ Partial Class Profile
         ' 
         Label18.AutoSize = True
         Label18.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label18.Location = New Point(153, 177)
+        Label18.Location = New Point(134, 133)
         Label18.Name = "Label18"
-        Label18.Size = New Size(15, 21)
+        Label18.Size = New Size(12, 17)
         Label18.TabIndex = 45
         Label18.Text = ":"
         Label18.TextAlign = ContentAlignment.MiddleLeft
@@ -483,122 +482,112 @@ Partial Class Profile
         ' 
         Label16.AutoSize = True
         Label16.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label16.Location = New Point(153, 111)
+        Label16.Location = New Point(134, 83)
         Label16.Name = "Label16"
-        Label16.Size = New Size(15, 21)
+        Label16.Size = New Size(12, 17)
         Label16.TabIndex = 44
         Label16.Text = ":"
         Label16.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' TextBox4
+        ' passwordField
         ' 
-        TextBox4.BackColor = Color.White
-        TextBox4.BorderStyle = BorderStyle.None
-        TextBox4.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox4.Location = New Point(174, 384)
-        TextBox4.Margin = New Padding(3, 4, 3, 4)
-        TextBox4.Name = "TextBox4"
-        TextBox4.Size = New Size(114, 20)
-        TextBox4.TabIndex = 43
+        passwordField.BackColor = Color.White
+        passwordField.BorderStyle = BorderStyle.None
+        passwordField.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        passwordField.Location = New Point(152, 288)
+        passwordField.Name = "passwordField"
+        passwordField.Size = New Size(100, 16)
+        passwordField.TabIndex = 43
         ' 
-        ' TextBox3
+        ' usernameField
         ' 
-        TextBox3.BackColor = Color.White
-        TextBox3.BorderStyle = BorderStyle.None
-        TextBox3.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox3.Location = New Point(174, 313)
-        TextBox3.Margin = New Padding(3, 4, 3, 4)
-        TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(114, 20)
-        TextBox3.TabIndex = 42
+        usernameField.BackColor = Color.White
+        usernameField.BorderStyle = BorderStyle.None
+        usernameField.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        usernameField.Location = New Point(152, 235)
+        usernameField.Name = "usernameField"
+        usernameField.Size = New Size(100, 16)
+        usernameField.TabIndex = 42
         ' 
         ' birthDateField
         ' 
-        birthDateField.CalendarFont = New Font("Century Gothic", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        birthDateField.CalendarFont = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         birthDateField.CalendarMonthBackground = Color.White
-        birthDateField.Font = New Font("Century Gothic", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        birthDateField.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         birthDateField.Format = DateTimePickerFormat.Custom
-        birthDateField.Location = New Point(174, 236)
-        birthDateField.Margin = New Padding(3, 4, 3, 4)
+        birthDateField.Location = New Point(152, 177)
         birthDateField.Name = "birthDateField"
-        birthDateField.Size = New Size(114, 26)
+        birthDateField.Size = New Size(100, 22)
         birthDateField.TabIndex = 41
         birthDateField.Value = New Date(2024, 5, 11, 0, 0, 0, 0)
         ' 
-        ' TextBox2
+        ' surnameField
         ' 
-        TextBox2.BackColor = Color.White
-        TextBox2.BorderStyle = BorderStyle.None
-        TextBox2.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox2.Location = New Point(174, 177)
-        TextBox2.Margin = New Padding(3, 4, 3, 4)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(114, 20)
-        TextBox2.TabIndex = 40
+        surnameField.BackColor = Color.White
+        surnameField.BorderStyle = BorderStyle.None
+        surnameField.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        surnameField.Location = New Point(152, 133)
+        surnameField.Name = "surnameField"
+        surnameField.Size = New Size(100, 16)
+        surnameField.TabIndex = 40
         ' 
-        ' TextBox1
+        ' firstnameField
         ' 
-        TextBox1.BackColor = Color.White
-        TextBox1.BorderStyle = BorderStyle.None
-        TextBox1.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        TextBox1.Location = New Point(174, 111)
-        TextBox1.Margin = New Padding(3, 4, 3, 4)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(114, 20)
-        TextBox1.TabIndex = 39
+        firstnameField.BackColor = Color.White
+        firstnameField.BorderStyle = BorderStyle.None
+        firstnameField.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        firstnameField.Location = New Point(152, 83)
+        firstnameField.Name = "firstnameField"
+        firstnameField.Size = New Size(100, 16)
+        firstnameField.TabIndex = 39
         ' 
         ' Panel9
         ' 
         Panel9.BackColor = Color.Silver
-        Panel9.Location = New Point(45, 411)
-        Panel9.Margin = New Padding(3, 4, 3, 4)
+        Panel9.Location = New Point(39, 308)
         Panel9.Name = "Panel9"
-        Panel9.Size = New Size(243, 1)
+        Panel9.Size = New Size(213, 1)
         Panel9.TabIndex = 38
         ' 
         ' Panel10
         ' 
         Panel10.BackColor = Color.Silver
-        Panel10.Location = New Point(45, 340)
-        Panel10.Margin = New Padding(3, 4, 3, 4)
+        Panel10.Location = New Point(39, 255)
         Panel10.Name = "Panel10"
-        Panel10.Size = New Size(243, 1)
+        Panel10.Size = New Size(213, 1)
         Panel10.TabIndex = 37
         ' 
         ' Panel11
         ' 
         Panel11.BackColor = Color.Silver
-        Panel11.Location = New Point(45, 273)
-        Panel11.Margin = New Padding(3, 4, 3, 4)
+        Panel11.Location = New Point(39, 205)
         Panel11.Name = "Panel11"
-        Panel11.Size = New Size(243, 1)
+        Panel11.Size = New Size(213, 1)
         Panel11.TabIndex = 36
         ' 
         ' Panel12
         ' 
         Panel12.BackColor = Color.Silver
-        Panel12.Location = New Point(45, 204)
-        Panel12.Margin = New Padding(3, 4, 3, 4)
+        Panel12.Location = New Point(39, 153)
         Panel12.Name = "Panel12"
-        Panel12.Size = New Size(243, 1)
+        Panel12.Size = New Size(213, 1)
         Panel12.TabIndex = 35
         ' 
         ' Panel13
         ' 
         Panel13.BackColor = Color.Silver
-        Panel13.Location = New Point(45, 135)
-        Panel13.Margin = New Padding(3, 4, 3, 4)
+        Panel13.Location = New Point(39, 101)
         Panel13.Name = "Panel13"
-        Panel13.Size = New Size(243, 1)
+        Panel13.Size = New Size(213, 1)
         Panel13.TabIndex = 34
         ' 
         ' Label17
         ' 
         Label17.AutoSize = True
         Label17.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label17.Location = New Point(45, 111)
+        Label17.Location = New Point(39, 83)
         Label17.Name = "Label17"
-        Label17.Size = New Size(96, 21)
+        Label17.Size = New Size(75, 17)
         Label17.TabIndex = 32
         Label17.Text = "First Name"
         Label17.TextAlign = ContentAlignment.MiddleLeft
@@ -607,9 +596,9 @@ Partial Class Profile
         ' 
         Label20.AutoSize = True
         Label20.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label20.Location = New Point(45, 384)
+        Label20.Location = New Point(39, 288)
         Label20.Name = "Label20"
-        Label20.Size = New Size(88, 21)
+        Label20.Size = New Size(69, 17)
         Label20.TabIndex = 29
         Label20.Text = "Password"
         Label20.TextAlign = ContentAlignment.MiddleLeft
@@ -618,9 +607,9 @@ Partial Class Profile
         ' 
         Label21.AutoSize = True
         Label21.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label21.Location = New Point(45, 313)
+        Label21.Location = New Point(39, 235)
         Label21.Name = "Label21"
-        Label21.Size = New Size(93, 21)
+        Label21.Size = New Size(71, 17)
         Label21.TabIndex = 28
         Label21.Text = "Username"
         Label21.TextAlign = ContentAlignment.MiddleLeft
@@ -629,9 +618,9 @@ Partial Class Profile
         ' 
         Label24.AutoSize = True
         Label24.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label24.Location = New Point(45, 243)
+        Label24.Location = New Point(39, 182)
         Label24.Name = "Label24"
-        Label24.Size = New Size(77, 21)
+        Label24.Size = New Size(59, 17)
         Label24.TabIndex = 25
         Label24.Text = "Birthday"
         Label24.TextAlign = ContentAlignment.MiddleLeft
@@ -640,9 +629,9 @@ Partial Class Profile
         ' 
         Label25.AutoSize = True
         Label25.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label25.Location = New Point(45, 177)
+        Label25.Location = New Point(39, 133)
         Label25.Name = "Label25"
-        Label25.Size = New Size(81, 21)
+        Label25.Size = New Size(64, 17)
         Label25.TabIndex = 24
         Label25.Text = "Surname"
         Label25.TextAlign = ContentAlignment.MiddleLeft
@@ -652,24 +641,23 @@ Partial Class Profile
         Label1.AutoSize = True
         Label1.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.CornflowerBlue
-        Label1.Location = New Point(74, 15)
+        Label1.Location = New Point(65, 11)
         Label1.Name = "Label1"
-        Label1.Size = New Size(216, 32)
+        Label1.Size = New Size(170, 25)
         Label1.TabIndex = 1
         Label1.Text = "Edit Information"
         ' 
         ' Profile
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(914, 600)
+        ClientSize = New Size(800, 450)
         Controls.Add(Panel2)
         Controls.Add(Panel4)
         Controls.Add(Panel1)
         Controls.Add(PictureBox2)
         Controls.Add(Label3)
         Controls.Add(Label2)
-        Margin = New Padding(3, 4, 3, 4)
         Name = "Profile"
         Text = "Profile"
         Panel4.ResumeLayout(False)
@@ -714,11 +702,11 @@ Partial Class Profile
     Friend WithEvents Label19 As Label
     Friend WithEvents Label18 As Label
     Friend WithEvents Label16 As Label
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents passwordField As TextBox
+    Friend WithEvents usernameField As TextBox
     Friend WithEvents birthDateField As DateTimePicker
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents surnameField As TextBox
+    Friend WithEvents firstnameField As TextBox
     Friend WithEvents Panel9 As Panel
     Friend WithEvents Panel10 As Panel
     Friend WithEvents Panel11 As Panel
@@ -731,4 +719,5 @@ Partial Class Profile
     Friend WithEvents Label25 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label5 As Label
+    Friend WithEvents userIDLabel As Label
 End Class
