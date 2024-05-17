@@ -10,30 +10,30 @@
         MyBase.Show()
     End Sub
 
-
+    Private Sub Me_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        Login.Close()
+    End Sub
     Private Sub logoutBtn_Click(sender As Object, e As EventArgs) Handles logoutBtn.Click
         Hide()
         Login.Show()
     End Sub
 
-    Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-
+    Private Sub profileBtn_Click(sender As Object, e As EventArgs) Handles profileBtn.Click
+        Me.Hide()
+        Profile.show()
     End Sub
 
-    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
-
+    Private Sub eventsBtn_Click(sender As Object, e As EventArgs) Handles eventsBtn.Click
+        Me.Hide()
+        HCI_PROJECT_JPSSITE.Events.Show()
     End Sub
 
-    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
-
+    Private Sub ratingsBtn_Click(sender As Object, e As EventArgs) Handles ratingsBtn.Click
+        Me.Hide()
+        Ratings.Show()
     End Sub
 
-    Private Sub Me_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        Login.Close()
-    End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles eventsBtn.Click
-
+    Private Sub officersBtn_Click(sender As Object, e As EventArgs) Handles officersBtn.Click
+        Me.Hide()
     End Sub
 End Class
