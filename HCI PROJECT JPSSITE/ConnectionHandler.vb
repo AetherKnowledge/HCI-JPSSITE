@@ -9,7 +9,7 @@ Public Class ConnectionHandler
         Dim tcp As String = fullAddress.GetValue(0)
         Dim port As String = fullAddress.GetValue(1)
 
-        Dim conString As String = "server=" + tcp + ";Port=" + port + ";user id=wew;password=ruX4q1pvt8Rxck4n;database=jpssite"
+        Dim conString As String = "server=librarysystem-librarysystem.e.aivencloud.com;Port=15306;user id=test;password=AVNS_4GVJCxH3fyoz2Y41vHL;database=jpssite"
         Dim con As New MySqlConnection(conString)
 
         con.Open()
