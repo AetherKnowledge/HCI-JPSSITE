@@ -37,7 +37,43 @@
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Dim username As String = usernameField.Text
+        Dim password As String = passwordField.Text
+        Dim firstName As String = firstnameField.Text
+        Dim surName As String = surnameField.Text
+        Dim userID As String = UserHandler.getCurrentuser.userID
+        Dim birthDate As Date = birthDateField.Value
+        Dim courseProgram As String = UserHandler.getCurrentuser.courseProgram
+        Dim yearLevel As Integer = UserHandler.getCurrentuser.yearLevel
 
+        If username.Length < 4 Then
+            MessageBox.Show("Invalid username, length must be greater than 3")
+            Return
+        ElseIf password.Length < 8 Then
+            MessageBox.Show("Invalid password, length must be greater or equal to 8")
+            Return
+        ElseIf Not Utilities.containsUppercase(password) Then
+            MessageBox.Show("Invalid password, must contain uppercase")
+            Return
+        ElseIf Not Utilities.containsSpecial(password) Then
+            MessageBox.Show("Invalid password, must contain special character")
+            Return
+        ElseIf firstName = "" Then
+            MessageBox.Show("Invalid Firstname, cannot be empty")
+            Return
+        ElseIf surName = "" Then
+            MessageBox.Show("Invalid Surname, cannot be empty")
+            Return
+        End If
+        Dim newUser As User = New User(username, password, firstName, surName, userID, birthDate, courseProgram, yearLevel)
+        UserHandler.updateUser(newUser, UserHandler.getCurrentuser.username)
+
+        firstnameField.Text = UserHandler.getCurrentuser.firstName
+        surnameField.Text = UserHandler.getCurrentuser.surName
+        usernameField.Text = UserHandler.getCurrentuser.username
+        usrnameLabel.Text = UserHandler.getCurrentuser.username
+        birthDateField.Value = UserHandler.getCurrentuser.birthDate
+        passwordField.Text = "Password"
     End Sub
 
     Private Sub Me_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
