@@ -22,12 +22,4 @@
         HCI_PROJECT_JPSSITE.Events.Show()
     End Sub
 
-    Private Sub officersBtn_Click(sender As Object, e As EventArgs) Handles officersBtn.Click
-        Me.Hide()
-    End Sub
-
-    Shadows Sub show()
-        MyBase.Show()
-        usernameLabel.Text = UserHandler.getCurrentuser.username
-    End Sub
 End Class
