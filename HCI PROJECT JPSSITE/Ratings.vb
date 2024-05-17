@@ -24,11 +24,14 @@
 
     Private Sub Me_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         Login.Close()
+<<<<<<< HEAD
     End Sub
 
     Shadows Sub show()
         MyBase.Show()
         usernameLabel.Text = UserHandler.getCurrentuser.username
+=======
+>>>>>>> f9bd7882684c7e44aad6c5689e1ced8216cea0c1
     End Sub
 
 End Class
