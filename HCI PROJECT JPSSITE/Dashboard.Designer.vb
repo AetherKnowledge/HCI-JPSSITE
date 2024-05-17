@@ -49,6 +49,8 @@ Partial Class Dashboard
         Panel5 = New Panel()
         PictureBox4 = New PictureBox()
         Label6 = New Label()
+        Button4 = New Button()
+        Button7 = New Button()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
@@ -282,6 +284,8 @@ Partial Class Dashboard
         ' Panel3
         ' 
         Panel3.BackColor = Color.White
+        Panel3.Controls.Add(Button7)
+        Panel3.Controls.Add(Button4)
         Panel3.Controls.Add(RichTextBox1)
         Panel3.Controls.Add(Label5)
         Panel3.Location = New Point(182, 223)
@@ -375,6 +379,24 @@ Partial Class Dashboard
         Label6.TabIndex = 1
         Label6.Text = "My Officers"
         ' 
+        ' Button4
+        ' 
+        Button4.Location = New Point(51, 144)
+        Button4.Name = "Button4"
+        Button4.Size = New Size(75, 23)
+        Button4.TabIndex = 2
+        Button4.Text = "Button4"
+        Button4.UseVisualStyleBackColor = True
+        ' 
+        ' Button7
+        ' 
+        Button7.Location = New Point(51, 176)
+        Button7.Name = "Button7"
+        Button7.Size = New Size(75, 23)
+        Button7.TabIndex = 3
+        Button7.Text = "Button7"
+        Button7.UseVisualStyleBackColor = True
+        ' 
         ' Dashboard
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -438,4 +460,6 @@ Partial Class Dashboard
     Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents Label4 As Label
+    Friend WithEvents Button7 As Button
+    Friend WithEvents Button4 As Button
 End Class
