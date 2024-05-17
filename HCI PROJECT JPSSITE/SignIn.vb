@@ -29,10 +29,10 @@
         ElseIf password.Length < 8 Then
             MessageBox.Show("Invalid password, length must be greater or equal to 8")
             Return
-        ElseIf Not containsUppercase(password) Then
+        ElseIf Not Utilities.containsUppercase(password) Then
             MessageBox.Show("Invalid password, must contain uppercase")
             Return
-        ElseIf Not containsSpecial(password) Then
+        ElseIf Not Utilities.containsSpecial(password) Then
             MessageBox.Show("Invalid password, must contain special character")
             Return
         ElseIf firstName = "" Then
@@ -65,24 +65,6 @@
 
         End If
     End Sub
-
-    Private Function containsSpecial(text As String) As Boolean
-        For Each ch As Char In text
-            If Not Char.IsLetter(ch) And Not Char.IsNumber(ch) Then
-                Return True
-            End If
-        Next
-        Return False
-    End Function
-
-    Private Function containsUppercase(text As String) As Boolean
-        For Each ch As Char In text
-            If Char.IsUpper(ch) Then
-                Return True
-            End If
-        Next
-        Return False
-    End Function
 
     Private Sub Me_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         Login.Close()
