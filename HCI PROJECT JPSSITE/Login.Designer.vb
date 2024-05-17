@@ -23,7 +23,6 @@ Partial Class Login
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Panel1 = New Panel()
-        Label4 = New Label()
         Label3 = New Label()
         PictureBox2 = New PictureBox()
         Label1 = New Label()
@@ -41,7 +40,6 @@ Partial Class Login
         ' Panel1
         ' 
         Panel1.BackColor = Color.CornflowerBlue
-        Panel1.Controls.Add(Label4)
         Panel1.Controls.Add(Label3)
         Panel1.Controls.Add(PictureBox2)
         Panel1.Location = New Point(387, 0)
@@ -49,37 +47,25 @@ Partial Class Login
         Panel1.Size = New Size(418, 455)
         Panel1.TabIndex = 0
         ' 
-        ' Label4
-        ' 
-        Label4.AutoSize = True
-        Label4.Font = New Font("Century Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label4.ForeColor = Color.White
-        Label4.Location = New Point(108, 65)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(248, 38)
-        Label4.TabIndex = 11
-        Label4.Text = "JPPSITE PORTAL"
-        Label4.TextAlign = ContentAlignment.TopRight
-        ' 
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Century Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Century Gothic", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.White
-        Label3.Location = New Point(132, 27)
+        Label3.Location = New Point(11, 27)
         Label3.Name = "Label3"
-        Label3.Size = New Size(224, 38)
+        Label3.Size = New Size(391, 32)
         Label3.TabIndex = 10
-        Label3.Text = "WELCOME TO"
+        Label3.Text = "WELCOME TO JPPSITE PORTAL"
         Label3.TextAlign = ContentAlignment.TopRight
         ' 
         ' PictureBox2
         ' 
         PictureBox2.BackColor = Color.CornflowerBlue
-        PictureBox2.Image = My.Resources.Resources._2
-        PictureBox2.Location = New Point(62, 134)
+        PictureBox2.Image = My.Resources.Resources.login_graphics
+        PictureBox2.Location = New Point(11, 74)
         PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(294, 283)
+        PictureBox2.Size = New Size(390, 364)
         PictureBox2.SizeMode = PictureBoxSizeMode.Zoom
         PictureBox2.TabIndex = 1
         PictureBox2.TabStop = False
@@ -207,7 +193,6 @@ Partial Class Login
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
 
