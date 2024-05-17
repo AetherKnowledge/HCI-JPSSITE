@@ -51,6 +51,10 @@ Partial Class SignIn
         usernameField = New TextBox()
         Label4 = New Label()
         passwordField = New TextBox()
+        Label12 = New Label()
+        RadioButton1 = New RadioButton()
+        RadioButton2 = New RadioButton()
+        Panel8 = New Panel()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
@@ -102,6 +106,10 @@ Partial Class SignIn
         ' Panel2
         ' 
         Panel2.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        Panel2.Controls.Add(Panel8)
+        Panel2.Controls.Add(RadioButton2)
+        Panel2.Controls.Add(RadioButton1)
+        Panel2.Controls.Add(Label12)
         Panel2.Controls.Add(toLoginBtn)
         Panel2.Controls.Add(registerBtn)
         Panel2.Controls.Add(Label11)
@@ -137,7 +145,7 @@ Partial Class SignIn
         toLoginBtn.FlatStyle = FlatStyle.Popup
         toLoginBtn.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         toLoginBtn.ForeColor = Color.White
-        toLoginBtn.Location = New Point(23, 343)
+        toLoginBtn.Location = New Point(22, 347)
         toLoginBtn.Name = "toLoginBtn"
         toLoginBtn.Size = New Size(101, 23)
         toLoginBtn.TabIndex = 33
@@ -150,7 +158,7 @@ Partial Class SignIn
         registerBtn.FlatStyle = FlatStyle.Popup
         registerBtn.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         registerBtn.ForeColor = Color.White
-        registerBtn.Location = New Point(224, 343)
+        registerBtn.Location = New Point(223, 347)
         registerBtn.Name = "registerBtn"
         registerBtn.Size = New Size(101, 23)
         registerBtn.TabIndex = 32
@@ -162,7 +170,7 @@ Partial Class SignIn
         Label11.AutoSize = True
         Label11.Font = New Font("Century Gothic", 9.75F, FontStyle.Italic, GraphicsUnit.Point, CByte(0))
         Label11.ForeColor = Color.CornflowerBlue
-        Label11.Location = New Point(23, 29)
+        Label11.Location = New Point(23, 22)
         Label11.Name = "Label11"
         Label11.Size = New Size(286, 16)
         Label11.TabIndex = 31
@@ -172,7 +180,7 @@ Partial Class SignIn
         ' 
         yearLevelComboBox.FormattingEnabled = True
         yearLevelComboBox.Items.AddRange(New Object() {"1", "2", "3", "4"})
-        yearLevelComboBox.Location = New Point(177, 272)
+        yearLevelComboBox.Location = New Point(176, 257)
         yearLevelComboBox.Name = "yearLevelComboBox"
         yearLevelComboBox.Size = New Size(148, 23)
         yearLevelComboBox.TabIndex = 30
@@ -181,7 +189,7 @@ Partial Class SignIn
         ' 
         courseprogramComboBox.FormattingEnabled = True
         courseprogramComboBox.Items.AddRange(New Object() {"BSIT", "BSCPE", "BSIE"})
-        courseprogramComboBox.Location = New Point(23, 272)
+        courseprogramComboBox.Location = New Point(22, 257)
         courseprogramComboBox.Name = "courseprogramComboBox"
         courseprogramComboBox.Size = New Size(148, 23)
         courseprogramComboBox.TabIndex = 29
@@ -192,7 +200,7 @@ Partial Class SignIn
         birthDateField.CalendarMonthBackground = Color.White
         birthDateField.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         birthDateField.Format = DateTimePickerFormat.Custom
-        birthDateField.Location = New Point(177, 212)
+        birthDateField.Location = New Point(176, 197)
         birthDateField.Name = "birthDateField"
         birthDateField.Size = New Size(148, 22)
         birthDateField.TabIndex = 28
@@ -202,7 +210,7 @@ Partial Class SignIn
         ' 
         Label10.AutoSize = True
         Label10.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label10.Location = New Point(177, 252)
+        Label10.Location = New Point(176, 237)
         Label10.Name = "Label10"
         Label10.Size = New Size(74, 17)
         Label10.TabIndex = 26
@@ -212,7 +220,7 @@ Partial Class SignIn
         ' 
         Label9.AutoSize = True
         Label9.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label9.Location = New Point(23, 252)
+        Label9.Location = New Point(22, 237)
         Label9.Name = "Label9"
         Label9.Size = New Size(105, 17)
         Label9.TabIndex = 23
@@ -222,7 +230,7 @@ Partial Class SignIn
         ' 
         Label8.AutoSize = True
         Label8.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label8.Location = New Point(177, 194)
+        Label8.Location = New Point(176, 179)
         Label8.Name = "Label8"
         Label8.Size = New Size(66, 17)
         Label8.TabIndex = 20
@@ -231,7 +239,7 @@ Partial Class SignIn
         ' Panel7
         ' 
         Panel7.BackColor = Color.Black
-        Panel7.Location = New Point(23, 231)
+        Panel7.Location = New Point(22, 216)
         Panel7.Name = "Panel7"
         Panel7.Size = New Size(148, 1)
         Panel7.TabIndex = 18
@@ -240,7 +248,7 @@ Partial Class SignIn
         ' 
         Label7.AutoSize = True
         Label7.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label7.Location = New Point(23, 194)
+        Label7.Location = New Point(22, 179)
         Label7.Name = "Label7"
         Label7.Size = New Size(48, 17)
         Label7.TabIndex = 17
@@ -251,7 +259,7 @@ Partial Class SignIn
         userIDField.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         userIDField.BorderStyle = BorderStyle.None
         userIDField.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        userIDField.Location = New Point(23, 212)
+        userIDField.Location = New Point(22, 197)
         userIDField.Name = "userIDField"
         userIDField.Size = New Size(148, 15)
         userIDField.TabIndex = 16
@@ -259,7 +267,7 @@ Partial Class SignIn
         ' Panel6
         ' 
         Panel6.BackColor = Color.Black
-        Panel6.Location = New Point(177, 175)
+        Panel6.Location = New Point(176, 160)
         Panel6.Name = "Panel6"
         Panel6.Size = New Size(148, 1)
         Panel6.TabIndex = 15
@@ -268,7 +276,7 @@ Partial Class SignIn
         ' 
         Label6.AutoSize = True
         Label6.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label6.Location = New Point(177, 138)
+        Label6.Location = New Point(176, 123)
         Label6.Name = "Label6"
         Label6.Size = New Size(63, 17)
         Label6.TabIndex = 14
@@ -279,7 +287,7 @@ Partial Class SignIn
         surnameField.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         surnameField.BorderStyle = BorderStyle.None
         surnameField.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        surnameField.Location = New Point(177, 156)
+        surnameField.Location = New Point(176, 141)
         surnameField.Name = "surnameField"
         surnameField.Size = New Size(148, 15)
         surnameField.TabIndex = 13
@@ -287,7 +295,7 @@ Partial Class SignIn
         ' Panel5
         ' 
         Panel5.BackColor = Color.Black
-        Panel5.Location = New Point(23, 175)
+        Panel5.Location = New Point(22, 160)
         Panel5.Name = "Panel5"
         Panel5.Size = New Size(148, 1)
         Panel5.TabIndex = 12
@@ -296,7 +304,7 @@ Partial Class SignIn
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(23, 138)
+        Label5.Location = New Point(22, 123)
         Label5.Name = "Label5"
         Label5.Size = New Size(68, 17)
         Label5.TabIndex = 11
@@ -307,7 +315,7 @@ Partial Class SignIn
         firstNameField.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         firstNameField.BorderStyle = BorderStyle.None
         firstNameField.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        firstNameField.Location = New Point(23, 156)
+        firstNameField.Location = New Point(22, 141)
         firstNameField.Name = "firstNameField"
         firstNameField.Size = New Size(148, 15)
         firstNameField.TabIndex = 10
@@ -315,7 +323,7 @@ Partial Class SignIn
         ' Panel3
         ' 
         Panel3.BackColor = Color.Black
-        Panel3.Location = New Point(23, 119)
+        Panel3.Location = New Point(22, 104)
         Panel3.Name = "Panel3"
         Panel3.Size = New Size(148, 1)
         Panel3.TabIndex = 9
@@ -324,7 +332,7 @@ Partial Class SignIn
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(23, 82)
+        Label3.Location = New Point(22, 67)
         Label3.Name = "Label3"
         Label3.Size = New Size(70, 17)
         Label3.TabIndex = 8
@@ -333,7 +341,7 @@ Partial Class SignIn
         ' Panel4
         ' 
         Panel4.BackColor = Color.Black
-        Panel4.Location = New Point(177, 119)
+        Panel4.Location = New Point(176, 104)
         Panel4.Name = "Panel4"
         Panel4.Size = New Size(148, 1)
         Panel4.TabIndex = 6
@@ -343,7 +351,7 @@ Partial Class SignIn
         usernameField.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         usernameField.BorderStyle = BorderStyle.None
         usernameField.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        usernameField.Location = New Point(23, 100)
+        usernameField.Location = New Point(22, 85)
         usernameField.Name = "usernameField"
         usernameField.Size = New Size(148, 15)
         usernameField.TabIndex = 7
@@ -352,7 +360,7 @@ Partial Class SignIn
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label4.Location = New Point(177, 82)
+        Label4.Location = New Point(176, 67)
         Label4.Name = "Label4"
         Label4.Size = New Size(66, 17)
         Label4.TabIndex = 4
@@ -363,10 +371,52 @@ Partial Class SignIn
         passwordField.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         passwordField.BorderStyle = BorderStyle.None
         passwordField.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        passwordField.Location = New Point(177, 100)
+        passwordField.Location = New Point(176, 85)
         passwordField.Name = "passwordField"
         passwordField.Size = New Size(148, 15)
         passwordField.TabIndex = 3
+        ' 
+        ' Label12
+        ' 
+        Label12.AutoSize = True
+        Label12.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label12.Location = New Point(22, 292)
+        Label12.Name = "Label12"
+        Label12.Size = New Size(32, 17)
+        Label12.TabIndex = 34
+        Label12.Text = "Sex:"
+        ' 
+        ' RadioButton1
+        ' 
+        RadioButton1.AutoSize = True
+        RadioButton1.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        RadioButton1.Location = New Point(97, 292)
+        RadioButton1.Name = "RadioButton1"
+        RadioButton1.Size = New Size(58, 21)
+        RadioButton1.TabIndex = 35
+        RadioButton1.TabStop = True
+        RadioButton1.Text = "MALE"
+        RadioButton1.UseVisualStyleBackColor = True
+        ' 
+        ' RadioButton2
+        ' 
+        RadioButton2.AutoSize = True
+        RadioButton2.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        RadioButton2.Location = New Point(201, 292)
+        RadioButton2.Name = "RadioButton2"
+        RadioButton2.Size = New Size(70, 21)
+        RadioButton2.TabIndex = 36
+        RadioButton2.TabStop = True
+        RadioButton2.Text = "FEMALE"
+        RadioButton2.UseVisualStyleBackColor = True
+        ' 
+        ' Panel8
+        ' 
+        Panel8.BackColor = Color.Black
+        Panel8.Location = New Point(22, 312)
+        Panel8.Name = "Panel8"
+        Panel8.Size = New Size(302, 1)
+        Panel8.TabIndex = 19
         ' 
         ' SignIn
         ' 
@@ -415,4 +465,8 @@ Partial Class SignIn
     Friend WithEvents registerBtn As Button
     Friend WithEvents Label11 As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents RadioButton2 As RadioButton
+    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Panel8 As Panel
 End Class

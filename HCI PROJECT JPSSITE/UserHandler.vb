@@ -10,7 +10,7 @@ Public Class UserHandler
     Private Shared ReadOnly USERS_PATH As String = "users.sav"
 
     Public Shared Sub addUser(newUser As User)
-
+        ConnectionHandler.connection.open()
         Try
             Dim query As String = "INSERT into users(username, password, firstname, surname, userID, birthDate, courseProgram, yearLevel) VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
             Dim command As New MySqlCommand(query, ConnectionHandler.connection)
@@ -31,9 +31,12 @@ Public Class UserHandler
         Catch ex As Exception
             MessageBox.Show("Error : " & ex.Message)
         End Try
+
+        ConnectionHandler.connection.close()
     End Sub
 
     Public Shared Sub getUsersFromDB()
+        ConnectionHandler.connection.open()
         Dim query As String = "SELECT * FROM users"
         Dim command As New MySqlCommand(query, ConnectionHandler.connection)
         Dim reader As MySqlDataReader = command.ExecuteReader()
@@ -51,6 +54,8 @@ Public Class UserHandler
             Dim newUser As User = New User(username, password, firstName, surName, userID, birthDate, courseProgram, yearLevel)
             usersList.Add(newUser)
         End While
+
+        ConnectionHandler.connection.close()
     End Sub
 
     Public Shared Function containsUserDuplicate(newUser As User)

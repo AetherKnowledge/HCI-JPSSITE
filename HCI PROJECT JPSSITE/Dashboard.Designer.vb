@@ -26,10 +26,10 @@ Partial Class Dashboard
         logoutBtn = New Button()
         usernameLabel = New Label()
         PictureBox1 = New PictureBox()
-        Button5 = New Button()
-        Button6 = New Button()
-        Button3 = New Button()
-        Button2 = New Button()
+        officersBtn = New Button()
+        ratingsBtn = New Button()
+        profileBtn = New Button()
+        eventsBtn = New Button()
         Button1 = New Button()
         Label2 = New Label()
         Label3 = New Label()
@@ -39,9 +39,8 @@ Partial Class Dashboard
         RadioButton2 = New RadioButton()
         RadioButton3 = New RadioButton()
         Panel2 = New Panel()
-        Label4 = New Label()
         Panel3 = New Panel()
-        RichTextBox1 = New RichTextBox()
+        PictureBox6 = New PictureBox()
         Label5 = New Label()
         Panel4 = New Panel()
         PictureBox5 = New PictureBox()
@@ -49,12 +48,15 @@ Partial Class Dashboard
         Panel5 = New Panel()
         PictureBox4 = New PictureBox()
         Label6 = New Label()
+        Label1 = New Label()
+        Label4 = New Label()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
         Panel3.SuspendLayout()
+        CType(PictureBox6, ComponentModel.ISupportInitialize).BeginInit()
         Panel4.SuspendLayout()
         CType(PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
         Panel5.SuspendLayout()
@@ -67,10 +69,10 @@ Partial Class Dashboard
         Panel1.Controls.Add(logoutBtn)
         Panel1.Controls.Add(usernameLabel)
         Panel1.Controls.Add(PictureBox1)
-        Panel1.Controls.Add(Button5)
-        Panel1.Controls.Add(Button6)
-        Panel1.Controls.Add(Button3)
-        Panel1.Controls.Add(Button2)
+        Panel1.Controls.Add(officersBtn)
+        Panel1.Controls.Add(ratingsBtn)
+        Panel1.Controls.Add(profileBtn)
+        Panel1.Controls.Add(eventsBtn)
         Panel1.Controls.Add(Button1)
         Panel1.Location = New Point(9, 11)
         Panel1.Name = "Panel1"
@@ -80,7 +82,7 @@ Partial Class Dashboard
         ' logoutBtn
         ' 
         logoutBtn.BackColor = Color.CornflowerBlue
-        logoutBtn.FlatStyle = FlatStyle.Flat
+        logoutBtn.FlatStyle = FlatStyle.Popup
         logoutBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         logoutBtn.ForeColor = Color.White
         logoutBtn.Location = New Point(12, 329)
@@ -112,66 +114,66 @@ Partial Class Dashboard
         PictureBox1.TabIndex = 0
         PictureBox1.TabStop = False
         ' 
-        ' Button5
+        ' officersBtn
         ' 
-        Button5.BackColor = Color.CornflowerBlue
-        Button5.FlatStyle = FlatStyle.Flat
-        Button5.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button5.ForeColor = Color.White
-        Button5.Location = New Point(12, 286)
-        Button5.Name = "Button5"
-        Button5.Size = New Size(128, 37)
-        Button5.TabIndex = 5
-        Button5.Text = "My Officers"
-        Button5.TextAlign = ContentAlignment.MiddleLeft
-        Button5.UseVisualStyleBackColor = False
+        officersBtn.BackColor = Color.CornflowerBlue
+        officersBtn.FlatStyle = FlatStyle.Popup
+        officersBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        officersBtn.ForeColor = Color.White
+        officersBtn.Location = New Point(12, 286)
+        officersBtn.Name = "officersBtn"
+        officersBtn.Size = New Size(128, 37)
+        officersBtn.TabIndex = 5
+        officersBtn.Text = "My Officers"
+        officersBtn.TextAlign = ContentAlignment.MiddleLeft
+        officersBtn.UseVisualStyleBackColor = False
         ' 
-        ' Button6
+        ' ratingsBtn
         ' 
-        Button6.BackColor = Color.CornflowerBlue
-        Button6.FlatStyle = FlatStyle.Flat
-        Button6.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button6.ForeColor = Color.White
-        Button6.Location = New Point(12, 243)
-        Button6.Name = "Button6"
-        Button6.Size = New Size(128, 37)
-        Button6.TabIndex = 4
-        Button6.Text = "My Forum"
-        Button6.TextAlign = ContentAlignment.MiddleLeft
-        Button6.UseVisualStyleBackColor = False
+        ratingsBtn.BackColor = Color.CornflowerBlue
+        ratingsBtn.FlatStyle = FlatStyle.Popup
+        ratingsBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        ratingsBtn.ForeColor = Color.White
+        ratingsBtn.Location = New Point(12, 243)
+        ratingsBtn.Name = "ratingsBtn"
+        ratingsBtn.Size = New Size(128, 37)
+        ratingsBtn.TabIndex = 4
+        ratingsBtn.Text = "My Ratings"
+        ratingsBtn.TextAlign = ContentAlignment.MiddleLeft
+        ratingsBtn.UseVisualStyleBackColor = False
         ' 
-        ' Button3
+        ' profileBtn
         ' 
-        Button3.BackColor = Color.CornflowerBlue
-        Button3.FlatStyle = FlatStyle.Flat
-        Button3.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button3.ForeColor = Color.White
-        Button3.Location = New Point(12, 200)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(128, 37)
-        Button3.TabIndex = 3
-        Button3.Text = "My Profile"
-        Button3.TextAlign = ContentAlignment.MiddleLeft
-        Button3.UseVisualStyleBackColor = False
+        profileBtn.BackColor = Color.CornflowerBlue
+        profileBtn.FlatStyle = FlatStyle.Popup
+        profileBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        profileBtn.ForeColor = Color.White
+        profileBtn.Location = New Point(12, 200)
+        profileBtn.Name = "profileBtn"
+        profileBtn.Size = New Size(128, 37)
+        profileBtn.TabIndex = 3
+        profileBtn.Text = "My Profile"
+        profileBtn.TextAlign = ContentAlignment.MiddleLeft
+        profileBtn.UseVisualStyleBackColor = False
         ' 
-        ' Button2
+        ' eventsBtn
         ' 
-        Button2.BackColor = Color.CornflowerBlue
-        Button2.FlatStyle = FlatStyle.Flat
-        Button2.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button2.ForeColor = Color.White
-        Button2.Location = New Point(12, 157)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(128, 37)
-        Button2.TabIndex = 3
-        Button2.Text = "My Events"
-        Button2.TextAlign = ContentAlignment.MiddleLeft
-        Button2.UseVisualStyleBackColor = False
+        eventsBtn.BackColor = Color.CornflowerBlue
+        eventsBtn.FlatStyle = FlatStyle.Popup
+        eventsBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        eventsBtn.ForeColor = Color.White
+        eventsBtn.Location = New Point(12, 157)
+        eventsBtn.Name = "eventsBtn"
+        eventsBtn.Size = New Size(128, 37)
+        eventsBtn.TabIndex = 3
+        eventsBtn.Text = "My Events"
+        eventsBtn.TextAlign = ContentAlignment.MiddleLeft
+        eventsBtn.UseVisualStyleBackColor = False
         ' 
         ' Button1
         ' 
         Button1.BackColor = Color.RoyalBlue
-        Button1.FlatStyle = FlatStyle.Flat
+        Button1.FlatStyle = FlatStyle.Popup
         Button1.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
         Button1.Location = New Point(12, 114)
@@ -186,6 +188,7 @@ Partial Class Dashboard
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.ForeColor = Color.MidnightBlue
         Label2.Location = New Point(177, 24)
         Label2.Name = "Label2"
         Label2.Size = New Size(141, 25)
@@ -196,6 +199,7 @@ Partial Class Dashboard
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label3.ForeColor = Color.MidnightBlue
         Label3.Location = New Point(579, 24)
         Label3.Name = "Label3"
         Label3.Size = New Size(143, 25)
@@ -214,7 +218,7 @@ Partial Class Dashboard
         ' 
         ' PictureBox3
         ' 
-        PictureBox3.Image = My.Resources.Resources.EVENT_2
+        PictureBox3.Image = My.Resources.Resources.Event_banner
         PictureBox3.Location = New Point(0, -1)
         PictureBox3.Name = "PictureBox3"
         PictureBox3.Size = New Size(593, 146)
@@ -228,7 +232,7 @@ Partial Class Dashboard
         RadioButton1.BackColor = Color.Transparent
         RadioButton1.Checked = True
         RadioButton1.ForeColor = Color.CornflowerBlue
-        RadioButton1.Location = New Point(275, 129)
+        RadioButton1.Location = New Point(455, 211)
         RadioButton1.Name = "RadioButton1"
         RadioButton1.Size = New Size(14, 13)
         RadioButton1.TabIndex = 5
@@ -239,7 +243,7 @@ Partial Class Dashboard
         ' 
         RadioButton2.AutoSize = True
         RadioButton2.BackColor = Color.Transparent
-        RadioButton2.Location = New Point(255, 129)
+        RadioButton2.Location = New Point(435, 211)
         RadioButton2.Name = "RadioButton2"
         RadioButton2.Size = New Size(14, 13)
         RadioButton2.TabIndex = 6
@@ -249,7 +253,7 @@ Partial Class Dashboard
         ' 
         RadioButton3.AutoSize = True
         RadioButton3.BackColor = Color.Transparent
-        RadioButton3.Location = New Point(295, 129)
+        RadioButton3.Location = New Point(475, 211)
         RadioButton3.Name = "RadioButton3"
         RadioButton3.Size = New Size(14, 13)
         RadioButton3.TabIndex = 7
@@ -257,76 +261,60 @@ Partial Class Dashboard
         ' 
         ' Panel2
         ' 
-        Panel2.Controls.Add(Label4)
-        Panel2.Controls.Add(RadioButton3)
-        Panel2.Controls.Add(RadioButton2)
-        Panel2.Controls.Add(RadioButton1)
         Panel2.Controls.Add(PictureBox3)
         Panel2.Location = New Point(182, 60)
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(593, 145)
         Panel2.TabIndex = 8
         ' 
-        ' Label4
-        ' 
-        Label4.AutoSize = True
-        Label4.BackColor = Color.CornflowerBlue
-        Label4.Font = New Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label4.ForeColor = Color.White
-        Label4.Location = New Point(0, 14)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(107, 19)
-        Label4.TabIndex = 8
-        Label4.Text = "JPPSITE DAYS"
-        ' 
         ' Panel3
         ' 
         Panel3.BackColor = Color.White
-        Panel3.Controls.Add(RichTextBox1)
+        Panel3.Controls.Add(PictureBox6)
         Panel3.Controls.Add(Label5)
-        Panel3.Location = New Point(182, 223)
+        Panel3.Location = New Point(182, 241)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(184, 215)
+        Panel3.Size = New Size(184, 197)
         Panel3.TabIndex = 9
         ' 
-        ' RichTextBox1
+        ' PictureBox6
         ' 
-        RichTextBox1.BorderStyle = BorderStyle.None
-        RichTextBox1.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        RichTextBox1.Location = New Point(12, 39)
-        RichTextBox1.Name = "RichTextBox1"
-        RichTextBox1.Size = New Size(157, 160)
-        RichTextBox1.TabIndex = 1
-        RichTextBox1.Text = "1.__________________" & vbLf & "2.__________________" & vbLf & "3.__________________" & vbLf & "4.__________________" & vbLf & "5.__________________"
+        PictureBox6.Image = My.Resources.Resources.profile_graphics
+        PictureBox6.Location = New Point(3, 28)
+        PictureBox6.Name = "PictureBox6"
+        PictureBox6.Size = New Size(178, 169)
+        PictureBox6.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox6.TabIndex = 3
+        PictureBox6.TabStop = False
         ' 
         ' Label5
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label5.ForeColor = Color.CornflowerBlue
+        Label5.ForeColor = Color.MidnightBlue
         Label5.ImageAlign = ContentAlignment.MiddleLeft
         Label5.Location = New Point(3, 6)
         Label5.Name = "Label5"
-        Label5.Size = New Size(123, 19)
+        Label5.Size = New Size(82, 19)
         Label5.TabIndex = 0
-        Label5.Text = "My Latest News"
+        Label5.Text = "My Profile"
         ' 
         ' Panel4
         ' 
         Panel4.BackColor = Color.White
         Panel4.Controls.Add(PictureBox5)
         Panel4.Controls.Add(Label7)
-        Panel4.Location = New Point(591, 223)
+        Panel4.Location = New Point(591, 241)
         Panel4.Name = "Panel4"
-        Panel4.Size = New Size(184, 215)
+        Panel4.Size = New Size(184, 197)
         Panel4.TabIndex = 10
         ' 
         ' PictureBox5
         ' 
-        PictureBox5.Image = My.Resources.Resources.messages
-        PictureBox5.Location = New Point(36, 74)
+        PictureBox5.Image = My.Resources.Resources.ratings_graphics
+        PictureBox5.Location = New Point(3, 28)
         PictureBox5.Name = "PictureBox5"
-        PictureBox5.Size = New Size(119, 105)
+        PictureBox5.Size = New Size(178, 169)
         PictureBox5.SizeMode = PictureBoxSizeMode.Zoom
         PictureBox5.TabIndex = 3
         PictureBox5.TabStop = False
@@ -335,30 +323,30 @@ Partial Class Dashboard
         ' 
         Label7.AutoSize = True
         Label7.Font = New Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label7.ForeColor = Color.CornflowerBlue
+        Label7.ForeColor = Color.MidnightBlue
         Label7.ImageAlign = ContentAlignment.MiddleLeft
         Label7.Location = New Point(3, 6)
         Label7.Name = "Label7"
-        Label7.Size = New Size(85, 19)
+        Label7.Size = New Size(91, 19)
         Label7.TabIndex = 1
-        Label7.Text = "My Forum"
+        Label7.Text = "My Ratings"
         ' 
         ' Panel5
         ' 
         Panel5.BackColor = Color.White
         Panel5.Controls.Add(PictureBox4)
         Panel5.Controls.Add(Label6)
-        Panel5.Location = New Point(388, 223)
+        Panel5.Location = New Point(388, 241)
         Panel5.Name = "Panel5"
-        Panel5.Size = New Size(184, 215)
+        Panel5.Size = New Size(184, 197)
         Panel5.TabIndex = 10
         ' 
         ' PictureBox4
         ' 
-        PictureBox4.Image = My.Resources.Resources.users_alt
-        PictureBox4.Location = New Point(32, 74)
+        PictureBox4.Image = My.Resources.Resources.meeting
+        PictureBox4.Location = New Point(3, 28)
         PictureBox4.Name = "PictureBox4"
-        PictureBox4.Size = New Size(119, 105)
+        PictureBox4.Size = New Size(178, 169)
         PictureBox4.SizeMode = PictureBoxSizeMode.Zoom
         PictureBox4.TabIndex = 2
         PictureBox4.TabStop = False
@@ -367,7 +355,7 @@ Partial Class Dashboard
         ' 
         Label6.AutoSize = True
         Label6.Font = New Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label6.ForeColor = Color.CornflowerBlue
+        Label6.ForeColor = Color.MidnightBlue
         Label6.ImageAlign = ContentAlignment.MiddleLeft
         Label6.Location = New Point(3, 6)
         Label6.Name = "Label6"
@@ -375,13 +363,41 @@ Partial Class Dashboard
         Label6.TabIndex = 1
         Label6.Text = "My Officers"
         ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.ForeColor = Color.MidnightBlue
+        Label1.Location = New Point(185, 211)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(69, 16)
+        Label1.TabIndex = 11
+        Label1.Text = "Event title"
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label4.ForeColor = Color.MidnightBlue
+        Label4.Location = New Point(690, 208)
+        Label4.Name = "Label4"
+        Label4.RightToLeft = RightToLeft.Yes
+        Label4.Size = New Size(85, 16)
+        Label4.TabIndex = 12
+        Label4.Text = "Event Sched"
+        ' 
         ' Dashboard
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         ClientSize = New Size(800, 450)
+        Controls.Add(Label4)
+        Controls.Add(Label1)
+        Controls.Add(RadioButton3)
         Controls.Add(Panel5)
+        Controls.Add(RadioButton1)
+        Controls.Add(RadioButton2)
         Controls.Add(Panel4)
         Controls.Add(Panel3)
         Controls.Add(Panel2)
@@ -398,9 +414,9 @@ Partial Class Dashboard
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
         Panel2.ResumeLayout(False)
-        Panel2.PerformLayout()
         Panel3.ResumeLayout(False)
         Panel3.PerformLayout()
+        CType(PictureBox6, ComponentModel.ISupportInitialize).EndInit()
         Panel4.ResumeLayout(False)
         Panel4.PerformLayout()
         CType(PictureBox5, ComponentModel.ISupportInitialize).EndInit()
@@ -416,10 +432,10 @@ Partial Class Dashboard
     Friend WithEvents usernameLabel As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents logoutBtn As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button6 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents officersBtn As Button
+    Friend WithEvents ratingsBtn As Button
+    Friend WithEvents profileBtn As Button
+    Friend WithEvents eventsBtn As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents PictureBox2 As PictureBox
@@ -435,7 +451,8 @@ Partial Class Dashboard
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents PictureBox4 As PictureBox
-    Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents PictureBox5 As PictureBox
+    Friend WithEvents Label1 As Label
     Friend WithEvents Label4 As Label
+    Friend WithEvents PictureBox6 As PictureBox
 End Class
