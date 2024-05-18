@@ -36,7 +36,7 @@
         Dashboard.show()
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles saveBtn.Click
         Dim username As String = usernameField.Text
         Dim password As String = passwordField.Text
         Dim firstName As String = firstnameField.Text

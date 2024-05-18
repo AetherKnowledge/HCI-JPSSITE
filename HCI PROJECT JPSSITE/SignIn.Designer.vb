@@ -27,6 +27,10 @@ Partial Class SignIn
         Label2 = New Label()
         Label1 = New Label()
         Panel2 = New Panel()
+        Panel8 = New Panel()
+        femaleRBtn = New RadioButton()
+        maleRBtn = New RadioButton()
+        Label12 = New Label()
         toLoginBtn = New Button()
         registerBtn = New Button()
         Label11 = New Label()
@@ -51,10 +55,6 @@ Partial Class SignIn
         usernameField = New TextBox()
         Label4 = New Label()
         passwordField = New TextBox()
-        Label12 = New Label()
-        RadioButton1 = New RadioButton()
-        RadioButton2 = New RadioButton()
-        Panel8 = New Panel()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
@@ -107,8 +107,8 @@ Partial Class SignIn
         ' 
         Panel2.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         Panel2.Controls.Add(Panel8)
-        Panel2.Controls.Add(RadioButton2)
-        Panel2.Controls.Add(RadioButton1)
+        Panel2.Controls.Add(femaleRBtn)
+        Panel2.Controls.Add(maleRBtn)
         Panel2.Controls.Add(Label12)
         Panel2.Controls.Add(toLoginBtn)
         Panel2.Controls.Add(registerBtn)
@@ -138,6 +138,48 @@ Partial Class SignIn
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(347, 390)
         Panel2.TabIndex = 3
+        ' 
+        ' Panel8
+        ' 
+        Panel8.BackColor = Color.Black
+        Panel8.Location = New Point(22, 312)
+        Panel8.Name = "Panel8"
+        Panel8.Size = New Size(302, 1)
+        Panel8.TabIndex = 19
+        ' 
+        ' femaleRBtn
+        ' 
+        femaleRBtn.AutoSize = True
+        femaleRBtn.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        femaleRBtn.Location = New Point(201, 292)
+        femaleRBtn.Name = "femaleRBtn"
+        femaleRBtn.Size = New Size(70, 21)
+        femaleRBtn.TabIndex = 36
+        femaleRBtn.TabStop = True
+        femaleRBtn.Text = "FEMALE"
+        femaleRBtn.UseVisualStyleBackColor = True
+        ' 
+        ' maleRBtn
+        ' 
+        maleRBtn.AutoSize = True
+        maleRBtn.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        maleRBtn.Location = New Point(97, 292)
+        maleRBtn.Name = "maleRBtn"
+        maleRBtn.Size = New Size(58, 21)
+        maleRBtn.TabIndex = 35
+        maleRBtn.TabStop = True
+        maleRBtn.Text = "MALE"
+        maleRBtn.UseVisualStyleBackColor = True
+        ' 
+        ' Label12
+        ' 
+        Label12.AutoSize = True
+        Label12.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label12.Location = New Point(22, 292)
+        Label12.Name = "Label12"
+        Label12.Size = New Size(32, 17)
+        Label12.TabIndex = 34
+        Label12.Text = "Sex:"
         ' 
         ' toLoginBtn
         ' 
@@ -376,48 +418,6 @@ Partial Class SignIn
         passwordField.Size = New Size(148, 15)
         passwordField.TabIndex = 3
         ' 
-        ' Label12
-        ' 
-        Label12.AutoSize = True
-        Label12.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label12.Location = New Point(22, 292)
-        Label12.Name = "Label12"
-        Label12.Size = New Size(32, 17)
-        Label12.TabIndex = 34
-        Label12.Text = "Sex:"
-        ' 
-        ' RadioButton1
-        ' 
-        RadioButton1.AutoSize = True
-        RadioButton1.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        RadioButton1.Location = New Point(97, 292)
-        RadioButton1.Name = "RadioButton1"
-        RadioButton1.Size = New Size(58, 21)
-        RadioButton1.TabIndex = 35
-        RadioButton1.TabStop = True
-        RadioButton1.Text = "MALE"
-        RadioButton1.UseVisualStyleBackColor = True
-        ' 
-        ' RadioButton2
-        ' 
-        RadioButton2.AutoSize = True
-        RadioButton2.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        RadioButton2.Location = New Point(201, 292)
-        RadioButton2.Name = "RadioButton2"
-        RadioButton2.Size = New Size(70, 21)
-        RadioButton2.TabIndex = 36
-        RadioButton2.TabStop = True
-        RadioButton2.Text = "FEMALE"
-        RadioButton2.UseVisualStyleBackColor = True
-        ' 
-        ' Panel8
-        ' 
-        Panel8.BackColor = Color.Black
-        Panel8.Location = New Point(22, 312)
-        Panel8.Name = "Panel8"
-        Panel8.Size = New Size(302, 1)
-        Panel8.TabIndex = 19
-        ' 
         ' SignIn
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -465,8 +465,8 @@ Partial Class SignIn
     Friend WithEvents registerBtn As Button
     Friend WithEvents Label11 As Label
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents RadioButton2 As RadioButton
-    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents femaleRBtn As RadioButton
+    Friend WithEvents maleRBtn As RadioButton
     Friend WithEvents Label12 As Label
     Friend WithEvents Panel8 As Panel
 End Class

@@ -22,11 +22,11 @@ Partial Class Ratings2
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        ComboBox5 = New ComboBox()
+        q4CBox = New ComboBox()
         Label13 = New Label()
-        ComboBox3 = New ComboBox()
-        ComboBox2 = New ComboBox()
-        ComboBox1 = New ComboBox()
+        q3CBox = New ComboBox()
+        q2CBox = New ComboBox()
+        q1CBox = New ComboBox()
         Label11 = New Label()
         Label10 = New Label()
         Label9 = New Label()
@@ -39,12 +39,12 @@ Partial Class Ratings2
         Label5 = New Label()
         Label4 = New Label()
         Panel2 = New Panel()
-        ComboBox6 = New ComboBox()
+        q6CBox = New ComboBox()
         Label14 = New Label()
-        ComboBox4 = New ComboBox()
+        q5CBox = New ComboBox()
         Label12 = New Label()
-        Button7 = New Button()
-        Button4 = New Button()
+        backBtn = New Button()
+        nextBtn = New Button()
         Label1 = New Label()
         PictureBox2 = New PictureBox()
         Label2 = New Label()
@@ -64,61 +64,61 @@ Partial Class Ratings2
         Panel1.SuspendLayout()
         SuspendLayout()
         ' 
-        ' ComboBox5
+        ' q4CBox
         ' 
-        ComboBox5.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        ComboBox5.FormattingEnabled = True
-        ComboBox5.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
-        ComboBox5.Location = New Point(338, 108)
-        ComboBox5.Name = "ComboBox5"
-        ComboBox5.Size = New Size(142, 25)
-        ComboBox5.TabIndex = 29
+        q4CBox.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        q4CBox.FormattingEnabled = True
+        q4CBox.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
+        q4CBox.Location = New Point(363, 109)
+        q4CBox.Name = "q4CBox"
+        q4CBox.Size = New Size(142, 25)
+        q4CBox.TabIndex = 29
         ' 
         ' Label13
         ' 
         Label13.AutoSize = True
         Label13.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label13.Location = New Point(318, 91)
+        Label13.Location = New Point(343, 92)
         Label13.Name = "Label13"
         Label13.Size = New Size(174, 17)
         Label13.TabIndex = 25
         Label13.Text = "4. Used interesting methods."
         ' 
-        ' ComboBox3
+        ' q3CBox
         ' 
-        ComboBox3.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        ComboBox3.FormattingEnabled = True
-        ComboBox3.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
-        ComboBox3.Location = New Point(43, 250)
-        ComboBox3.Name = "ComboBox3"
-        ComboBox3.Size = New Size(142, 25)
-        ComboBox3.TabIndex = 23
+        q3CBox.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        q3CBox.FormattingEnabled = True
+        q3CBox.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
+        q3CBox.Location = New Point(68, 251)
+        q3CBox.Name = "q3CBox"
+        q3CBox.Size = New Size(142, 25)
+        q3CBox.TabIndex = 23
         ' 
-        ' ComboBox2
+        ' q2CBox
         ' 
-        ComboBox2.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        ComboBox2.FormattingEnabled = True
-        ComboBox2.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
-        ComboBox2.Location = New Point(43, 184)
-        ComboBox2.Name = "ComboBox2"
-        ComboBox2.Size = New Size(142, 25)
-        ComboBox2.TabIndex = 22
+        q2CBox.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        q2CBox.FormattingEnabled = True
+        q2CBox.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
+        q2CBox.Location = New Point(68, 185)
+        q2CBox.Name = "q2CBox"
+        q2CBox.Size = New Size(142, 25)
+        q2CBox.TabIndex = 22
         ' 
-        ' ComboBox1
+        ' q1CBox
         ' 
-        ComboBox1.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        ComboBox1.FormattingEnabled = True
-        ComboBox1.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
-        ComboBox1.Location = New Point(43, 113)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(142, 25)
-        ComboBox1.TabIndex = 21
+        q1CBox.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        q1CBox.FormattingEnabled = True
+        q1CBox.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
+        q1CBox.Location = New Point(68, 114)
+        q1CBox.Name = "q1CBox"
+        q1CBox.Size = New Size(142, 25)
+        q1CBox.TabIndex = 21
         ' 
         ' Label11
         ' 
         Label11.AutoSize = True
         Label11.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label11.Location = New Point(23, 230)
+        Label11.Location = New Point(48, 231)
         Label11.Name = "Label11"
         Label11.Size = New Size(228, 17)
         Label11.TabIndex = 15
@@ -128,7 +128,7 @@ Partial Class Ratings2
         ' 
         Label10.AutoSize = True
         Label10.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label10.Location = New Point(23, 164)
+        Label10.Location = New Point(48, 165)
         Label10.Name = "Label10"
         Label10.Size = New Size(179, 17)
         Label10.TabIndex = 14
@@ -138,7 +138,7 @@ Partial Class Ratings2
         ' 
         Label9.AutoSize = True
         Label9.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label9.Location = New Point(23, 91)
+        Label9.Location = New Point(48, 92)
         Label9.Name = "Label9"
         Label9.Size = New Size(162, 17)
         Label9.TabIndex = 13
@@ -204,7 +204,7 @@ Partial Class Ratings2
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label5.ForeColor = Color.CornflowerBlue
+        Label5.ForeColor = Color.MidnightBlue
         Label5.Location = New Point(208, 20)
         Label5.Name = "Label5"
         Label5.Size = New Size(18, 25)
@@ -225,15 +225,15 @@ Partial Class Ratings2
         ' Panel2
         ' 
         Panel2.BackColor = Color.White
-        Panel2.Controls.Add(ComboBox6)
+        Panel2.Controls.Add(q6CBox)
         Panel2.Controls.Add(Label14)
-        Panel2.Controls.Add(ComboBox4)
+        Panel2.Controls.Add(q5CBox)
         Panel2.Controls.Add(Label12)
-        Panel2.Controls.Add(ComboBox5)
+        Panel2.Controls.Add(q4CBox)
         Panel2.Controls.Add(Label13)
-        Panel2.Controls.Add(ComboBox3)
-        Panel2.Controls.Add(ComboBox2)
-        Panel2.Controls.Add(ComboBox1)
+        Panel2.Controls.Add(q3CBox)
+        Panel2.Controls.Add(q2CBox)
+        Panel2.Controls.Add(q1CBox)
         Panel2.Controls.Add(Label11)
         Panel2.Controls.Add(Label10)
         Panel2.Controls.Add(Label9)
@@ -245,85 +245,85 @@ Partial Class Ratings2
         Panel2.Controls.Add(Label6)
         Panel2.Controls.Add(Label5)
         Panel2.Controls.Add(Label4)
-        Panel2.Controls.Add(Button7)
-        Panel2.Controls.Add(Button4)
+        Panel2.Controls.Add(backBtn)
+        Panel2.Controls.Add(nextBtn)
         Panel2.Controls.Add(Label1)
         Panel2.Location = New Point(180, 68)
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(598, 370)
         Panel2.TabIndex = 40
         ' 
-        ' ComboBox6
+        ' q6CBox
         ' 
-        ComboBox6.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        ComboBox6.FormattingEnabled = True
-        ComboBox6.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
-        ComboBox6.Location = New Point(338, 247)
-        ComboBox6.Name = "ComboBox6"
-        ComboBox6.Size = New Size(142, 25)
-        ComboBox6.TabIndex = 33
+        q6CBox.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        q6CBox.FormattingEnabled = True
+        q6CBox.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
+        q6CBox.Location = New Point(363, 248)
+        q6CBox.Name = "q6CBox"
+        q6CBox.Size = New Size(142, 25)
+        q6CBox.TabIndex = 33
         ' 
         ' Label14
         ' 
         Label14.AutoSize = True
         Label14.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label14.Location = New Point(318, 230)
+        Label14.Location = New Point(343, 231)
         Label14.Name = "Label14"
         Label14.Size = New Size(180, 17)
         Label14.TabIndex = 32
         Label14.Text = "6. Ability to handle questions."
         ' 
-        ' ComboBox4
+        ' q5CBox
         ' 
-        ComboBox4.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        ComboBox4.FormattingEnabled = True
-        ComboBox4.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
-        ComboBox4.Location = New Point(338, 181)
-        ComboBox4.Name = "ComboBox4"
-        ComboBox4.Size = New Size(142, 25)
-        ComboBox4.TabIndex = 31
+        q5CBox.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        q5CBox.FormattingEnabled = True
+        q5CBox.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
+        q5CBox.Location = New Point(363, 182)
+        q5CBox.Name = "q5CBox"
+        q5CBox.Size = New Size(142, 25)
+        q5CBox.TabIndex = 31
         ' 
         ' Label12
         ' 
         Label12.AutoSize = True
         Label12.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label12.Location = New Point(318, 164)
+        Label12.Location = New Point(343, 165)
         Label12.Name = "Label12"
         Label12.Size = New Size(180, 17)
         Label12.TabIndex = 30
         Label12.Text = "5. Ability to maintain interest."
         ' 
-        ' Button7
+        ' backBtn
         ' 
-        Button7.BackColor = Color.White
-        Button7.FlatStyle = FlatStyle.Flat
-        Button7.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button7.ForeColor = Color.Black
-        Button7.Location = New Point(23, 321)
-        Button7.Name = "Button7"
-        Button7.Size = New Size(110, 33)
-        Button7.TabIndex = 4
-        Button7.Text = "Back"
-        Button7.UseVisualStyleBackColor = False
+        backBtn.BackColor = Color.White
+        backBtn.FlatStyle = FlatStyle.Flat
+        backBtn.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        backBtn.ForeColor = Color.Black
+        backBtn.Location = New Point(23, 321)
+        backBtn.Name = "backBtn"
+        backBtn.Size = New Size(110, 33)
+        backBtn.TabIndex = 4
+        backBtn.Text = "Back"
+        backBtn.UseVisualStyleBackColor = False
         ' 
-        ' Button4
+        ' nextBtn
         ' 
-        Button4.BackColor = Color.CornflowerBlue
-        Button4.FlatStyle = FlatStyle.Flat
-        Button4.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button4.ForeColor = Color.White
-        Button4.Location = New Point(465, 321)
-        Button4.Name = "Button4"
-        Button4.Size = New Size(110, 33)
-        Button4.TabIndex = 3
-        Button4.Text = "Next"
-        Button4.UseVisualStyleBackColor = False
+        nextBtn.BackColor = Color.CornflowerBlue
+        nextBtn.FlatStyle = FlatStyle.Flat
+        nextBtn.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        nextBtn.ForeColor = Color.White
+        nextBtn.Location = New Point(465, 321)
+        nextBtn.Name = "nextBtn"
+        nextBtn.Size = New Size(110, 33)
+        nextBtn.TabIndex = 3
+        nextBtn.Text = "Next"
+        nextBtn.UseVisualStyleBackColor = False
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.ForeColor = Color.CornflowerBlue
+        Label1.ForeColor = Color.MidnightBlue
         Label1.Location = New Point(23, 20)
         Label1.Name = "Label1"
         Label1.Size = New Size(179, 25)
@@ -344,7 +344,7 @@ Partial Class Ratings2
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label2.ForeColor = Color.RoyalBlue
+        Label2.ForeColor = Color.MidnightBlue
         Label2.Location = New Point(180, 25)
         Label2.Name = "Label2"
         Label2.Size = New Size(100, 25)
@@ -355,7 +355,7 @@ Partial Class Ratings2
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label3.ForeColor = Color.RoyalBlue
+        Label3.ForeColor = Color.MidnightBlue
         Label3.Location = New Point(582, 25)
         Label3.Name = "Label3"
         Label3.Size = New Size(143, 25)
@@ -365,7 +365,7 @@ Partial Class Ratings2
         ' logoutBtn
         ' 
         logoutBtn.BackColor = Color.CornflowerBlue
-        logoutBtn.FlatStyle = FlatStyle.Flat
+        logoutBtn.FlatStyle = FlatStyle.Popup
         logoutBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         logoutBtn.ForeColor = Color.White
         logoutBtn.Location = New Point(12, 329)
@@ -400,7 +400,7 @@ Partial Class Ratings2
         ' officersBtn
         ' 
         officersBtn.BackColor = Color.CornflowerBlue
-        officersBtn.FlatStyle = FlatStyle.Flat
+        officersBtn.FlatStyle = FlatStyle.Popup
         officersBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         officersBtn.ForeColor = Color.White
         officersBtn.Location = New Point(12, 286)
@@ -414,7 +414,7 @@ Partial Class Ratings2
         ' ratingsBtn
         ' 
         ratingsBtn.BackColor = Color.RoyalBlue
-        ratingsBtn.FlatStyle = FlatStyle.Flat
+        ratingsBtn.FlatStyle = FlatStyle.Popup
         ratingsBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         ratingsBtn.ForeColor = Color.White
         ratingsBtn.Location = New Point(12, 243)
@@ -428,7 +428,7 @@ Partial Class Ratings2
         ' profileBtn
         ' 
         profileBtn.BackColor = Color.CornflowerBlue
-        profileBtn.FlatStyle = FlatStyle.Flat
+        profileBtn.FlatStyle = FlatStyle.Popup
         profileBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         profileBtn.ForeColor = Color.White
         profileBtn.Location = New Point(12, 200)
@@ -442,7 +442,7 @@ Partial Class Ratings2
         ' eventsBtn
         ' 
         eventsBtn.BackColor = Color.CornflowerBlue
-        eventsBtn.FlatStyle = FlatStyle.Flat
+        eventsBtn.FlatStyle = FlatStyle.Popup
         eventsBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         eventsBtn.ForeColor = Color.White
         eventsBtn.Location = New Point(12, 157)
@@ -456,7 +456,7 @@ Partial Class Ratings2
         ' dashboardBtn
         ' 
         dashboardBtn.BackColor = Color.CornflowerBlue
-        dashboardBtn.FlatStyle = FlatStyle.Flat
+        dashboardBtn.FlatStyle = FlatStyle.Popup
         dashboardBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         dashboardBtn.ForeColor = Color.White
         dashboardBtn.Location = New Point(12, 114)
@@ -506,11 +506,11 @@ Partial Class Ratings2
         ResumeLayout(False)
         PerformLayout()
     End Sub
-    Friend WithEvents ComboBox5 As ComboBox
+    Friend WithEvents q4CBox As ComboBox
     Friend WithEvents Label13 As Label
-    Friend WithEvents ComboBox3 As ComboBox
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents q3CBox As ComboBox
+    Friend WithEvents q2CBox As ComboBox
+    Friend WithEvents q1CBox As ComboBox
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label9 As Label
@@ -523,8 +523,8 @@ Partial Class Ratings2
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Button7 As Button
-    Friend WithEvents Button4 As Button
+    Friend WithEvents backBtn As Button
+    Friend WithEvents nextBtn As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label2 As Label
@@ -538,8 +538,8 @@ Partial Class Ratings2
     Friend WithEvents eventsBtn As Button
     Friend WithEvents dashboardBtn As Button
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents ComboBox4 As ComboBox
+    Friend WithEvents q5CBox As ComboBox
     Friend WithEvents Label12 As Label
-    Friend WithEvents ComboBox6 As ComboBox
+    Friend WithEvents q6CBox As ComboBox
     Friend WithEvents Label14 As Label
 End Class

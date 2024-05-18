@@ -35,12 +35,12 @@ Partial Class Ratings3
         Label2 = New Label()
         Label3 = New Label()
         Panel2 = New Panel()
-        ComboBox3 = New ComboBox()
-        ComboBox2 = New ComboBox()
+        q3CBox = New ComboBox()
+        q2CBox = New ComboBox()
         Label11 = New Label()
         Label10 = New Label()
         Label13 = New Label()
-        ComboBox1 = New ComboBox()
+        q1CBox = New ComboBox()
         Label9 = New Label()
         Label8 = New Label()
         Panel5 = New Panel()
@@ -50,8 +50,8 @@ Partial Class Ratings3
         Label6 = New Label()
         Label5 = New Label()
         Label4 = New Label()
-        Button7 = New Button()
-        Button4 = New Button()
+        backBtn = New Button()
+        submitBtn = New Button()
         Label1 = New Label()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -78,7 +78,7 @@ Partial Class Ratings3
         ' logoutBtn
         ' 
         logoutBtn.BackColor = Color.CornflowerBlue
-        logoutBtn.FlatStyle = FlatStyle.Flat
+        logoutBtn.FlatStyle = FlatStyle.Popup
         logoutBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         logoutBtn.ForeColor = Color.White
         logoutBtn.Location = New Point(12, 329)
@@ -113,7 +113,7 @@ Partial Class Ratings3
         ' officersBtn
         ' 
         officersBtn.BackColor = Color.CornflowerBlue
-        officersBtn.FlatStyle = FlatStyle.Flat
+        officersBtn.FlatStyle = FlatStyle.Popup
         officersBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         officersBtn.ForeColor = Color.White
         officersBtn.Location = New Point(12, 286)
@@ -127,7 +127,7 @@ Partial Class Ratings3
         ' ratingsBtn
         ' 
         ratingsBtn.BackColor = Color.RoyalBlue
-        ratingsBtn.FlatStyle = FlatStyle.Flat
+        ratingsBtn.FlatStyle = FlatStyle.Popup
         ratingsBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         ratingsBtn.ForeColor = Color.White
         ratingsBtn.Location = New Point(12, 243)
@@ -141,7 +141,7 @@ Partial Class Ratings3
         ' profileBtn
         ' 
         profileBtn.BackColor = Color.CornflowerBlue
-        profileBtn.FlatStyle = FlatStyle.Flat
+        profileBtn.FlatStyle = FlatStyle.Popup
         profileBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         profileBtn.ForeColor = Color.White
         profileBtn.Location = New Point(12, 200)
@@ -155,7 +155,7 @@ Partial Class Ratings3
         ' eventsBtn
         ' 
         eventsBtn.BackColor = Color.CornflowerBlue
-        eventsBtn.FlatStyle = FlatStyle.Flat
+        eventsBtn.FlatStyle = FlatStyle.Popup
         eventsBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         eventsBtn.ForeColor = Color.White
         eventsBtn.Location = New Point(12, 157)
@@ -169,7 +169,7 @@ Partial Class Ratings3
         ' dashboardBtn
         ' 
         dashboardBtn.BackColor = Color.CornflowerBlue
-        dashboardBtn.FlatStyle = FlatStyle.Flat
+        dashboardBtn.FlatStyle = FlatStyle.Popup
         dashboardBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         dashboardBtn.ForeColor = Color.White
         dashboardBtn.Location = New Point(12, 114)
@@ -194,7 +194,7 @@ Partial Class Ratings3
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label2.ForeColor = Color.RoyalBlue
+        Label2.ForeColor = Color.MidnightBlue
         Label2.Location = New Point(180, 25)
         Label2.Name = "Label2"
         Label2.Size = New Size(100, 25)
@@ -205,7 +205,7 @@ Partial Class Ratings3
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label3.ForeColor = Color.RoyalBlue
+        Label3.ForeColor = Color.MidnightBlue
         Label3.Location = New Point(582, 25)
         Label3.Name = "Label3"
         Label3.Size = New Size(143, 25)
@@ -215,12 +215,12 @@ Partial Class Ratings3
         ' Panel2
         ' 
         Panel2.BackColor = Color.White
-        Panel2.Controls.Add(ComboBox3)
-        Panel2.Controls.Add(ComboBox2)
+        Panel2.Controls.Add(q3CBox)
+        Panel2.Controls.Add(q2CBox)
         Panel2.Controls.Add(Label11)
         Panel2.Controls.Add(Label10)
         Panel2.Controls.Add(Label13)
-        Panel2.Controls.Add(ComboBox1)
+        Panel2.Controls.Add(q1CBox)
         Panel2.Controls.Add(Label9)
         Panel2.Controls.Add(Label8)
         Panel2.Controls.Add(Panel5)
@@ -230,33 +230,33 @@ Partial Class Ratings3
         Panel2.Controls.Add(Label6)
         Panel2.Controls.Add(Label5)
         Panel2.Controls.Add(Label4)
-        Panel2.Controls.Add(Button7)
-        Panel2.Controls.Add(Button4)
+        Panel2.Controls.Add(backBtn)
+        Panel2.Controls.Add(submitBtn)
         Panel2.Controls.Add(Label1)
         Panel2.Location = New Point(180, 68)
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(598, 370)
         Panel2.TabIndex = 45
         ' 
-        ' ComboBox3
+        ' q3CBox
         ' 
-        ComboBox3.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        ComboBox3.FormattingEnabled = True
-        ComboBox3.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
-        ComboBox3.Location = New Point(384, 240)
-        ComboBox3.Name = "ComboBox3"
-        ComboBox3.Size = New Size(142, 25)
-        ComboBox3.TabIndex = 29
+        q3CBox.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        q3CBox.FormattingEnabled = True
+        q3CBox.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
+        q3CBox.Location = New Point(384, 240)
+        q3CBox.Name = "q3CBox"
+        q3CBox.Size = New Size(142, 25)
+        q3CBox.TabIndex = 29
         ' 
-        ' ComboBox2
+        ' q2CBox
         ' 
-        ComboBox2.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        ComboBox2.FormattingEnabled = True
-        ComboBox2.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
-        ComboBox2.Location = New Point(384, 185)
-        ComboBox2.Name = "ComboBox2"
-        ComboBox2.Size = New Size(142, 25)
-        ComboBox2.TabIndex = 28
+        q2CBox.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        q2CBox.FormattingEnabled = True
+        q2CBox.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
+        q2CBox.Location = New Point(384, 185)
+        q2CBox.Name = "q2CBox"
+        q2CBox.Size = New Size(142, 25)
+        q2CBox.TabIndex = 28
         ' 
         ' Label11
         ' 
@@ -288,15 +288,15 @@ Partial Class Ratings3
         Label13.TabIndex = 25
         Label13.Text = "1.1. Personal growth obtained."
         ' 
-        ' ComboBox1
+        ' q1CBox
         ' 
-        ComboBox1.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        ComboBox1.FormattingEnabled = True
-        ComboBox1.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
-        ComboBox1.Location = New Point(384, 144)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(142, 25)
-        ComboBox1.TabIndex = 21
+        q1CBox.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        q1CBox.FormattingEnabled = True
+        q1CBox.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
+        q1CBox.Location = New Point(384, 144)
+        q1CBox.Name = "q1CBox"
+        q1CBox.Size = New Size(142, 25)
+        q1CBox.TabIndex = 21
         ' 
         ' Label9
         ' 
@@ -368,7 +368,7 @@ Partial Class Ratings3
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label5.ForeColor = Color.CornflowerBlue
+        Label5.ForeColor = Color.MidnightBlue
         Label5.Location = New Point(208, 20)
         Label5.Name = "Label5"
         Label5.Size = New Size(18, 25)
@@ -386,37 +386,37 @@ Partial Class Ratings3
         Label4.TabIndex = 5
         Label4.Text = "Activities"
         ' 
-        ' Button7
+        ' backBtn
         ' 
-        Button7.BackColor = Color.White
-        Button7.FlatStyle = FlatStyle.Flat
-        Button7.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button7.ForeColor = Color.Black
-        Button7.Location = New Point(23, 321)
-        Button7.Name = "Button7"
-        Button7.Size = New Size(110, 33)
-        Button7.TabIndex = 4
-        Button7.Text = "Back"
-        Button7.UseVisualStyleBackColor = False
+        backBtn.BackColor = Color.White
+        backBtn.FlatStyle = FlatStyle.Flat
+        backBtn.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        backBtn.ForeColor = Color.Black
+        backBtn.Location = New Point(23, 321)
+        backBtn.Name = "backBtn"
+        backBtn.Size = New Size(110, 33)
+        backBtn.TabIndex = 4
+        backBtn.Text = "Back"
+        backBtn.UseVisualStyleBackColor = False
         ' 
-        ' Button4
+        ' submitBtn
         ' 
-        Button4.BackColor = Color.CornflowerBlue
-        Button4.FlatStyle = FlatStyle.Flat
-        Button4.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button4.ForeColor = Color.White
-        Button4.Location = New Point(465, 321)
-        Button4.Name = "Button4"
-        Button4.Size = New Size(110, 33)
-        Button4.TabIndex = 3
-        Button4.Text = "Submit"
-        Button4.UseVisualStyleBackColor = False
+        submitBtn.BackColor = Color.CornflowerBlue
+        submitBtn.FlatStyle = FlatStyle.Flat
+        submitBtn.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        submitBtn.ForeColor = Color.White
+        submitBtn.Location = New Point(465, 321)
+        submitBtn.Name = "submitBtn"
+        submitBtn.Size = New Size(110, 33)
+        submitBtn.TabIndex = 3
+        submitBtn.Text = "Submit"
+        submitBtn.UseVisualStyleBackColor = False
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.ForeColor = Color.CornflowerBlue
+        Label1.ForeColor = Color.MidnightBlue
         Label1.Location = New Point(23, 20)
         Label1.Name = "Label1"
         Label1.Size = New Size(179, 25)
@@ -434,6 +434,7 @@ Partial Class Ratings3
         Controls.Add(Label2)
         Controls.Add(Label3)
         Controls.Add(Panel2)
+        ForeColor = Color.MidnightBlue
         FormBorderStyle = FormBorderStyle.FixedDialog
         Name = "Ratings3"
         StartPosition = FormStartPosition.CenterScreen
@@ -461,7 +462,7 @@ Partial Class Ratings3
     Friend WithEvents Label3 As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label13 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents q1CBox As ComboBox
     Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Panel5 As Panel
@@ -471,11 +472,11 @@ Partial Class Ratings3
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Button7 As Button
-    Friend WithEvents Button4 As Button
+    Friend WithEvents backBtn As Button
+    Friend WithEvents submitBtn As Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents ComboBox3 As ComboBox
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents q3CBox As ComboBox
+    Friend WithEvents q2CBox As ComboBox
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
 End Class

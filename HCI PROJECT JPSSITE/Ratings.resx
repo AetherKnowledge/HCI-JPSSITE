@@ -117,4 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="allcommentRTBox.Text" xml:space="preserve">
+    <value>Example: 
+"Name of commenter | Section | yearlvl | (star ratings)[bold]
+'comment comment comment comment commment commment commment commment'
+[next line]
+"Name of commenter | Section | yearlvl | (star ratings)[bold]
+'comment comment comment comment commment commment commment commment'
+"</value>
+  </data>
 </root>

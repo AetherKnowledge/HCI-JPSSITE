@@ -30,4 +30,8 @@
         MyBase.Show()
         usernameLabel.Text = UserHandler.getCurrentuser.username
     End Sub
+
+    Private Sub ComboBox6_SelectedIndexChanged(sender As Object, e As EventArgs) Handles q6CBox.SelectedIndexChanged
+
+    End Sub
 End Class

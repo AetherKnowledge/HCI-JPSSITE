@@ -27,9 +27,9 @@ Partial Class Login
         PictureBox2 = New PictureBox()
         Label1 = New Label()
         passwordTextField = New TextBox()
-        Button1 = New Button()
+        loginBtn = New Button()
         userNameTextField = New TextBox()
-        Button2 = New Button()
+        signupBtn = New Button()
         Label2 = New Label()
         Panel2 = New Panel()
         Panel3 = New Panel()
@@ -93,18 +93,18 @@ Partial Class Login
         passwordTextField.TabIndex = 3
         passwordTextField.Text = "Password"
         ' 
-        ' Button1
+        ' loginBtn
         ' 
-        Button1.BackColor = Color.CornflowerBlue
-        Button1.FlatStyle = FlatStyle.Popup
-        Button1.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button1.ForeColor = Color.White
-        Button1.Location = New Point(78, 274)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(222, 23)
-        Button1.TabIndex = 6
-        Button1.Text = "LOGIN"
-        Button1.UseVisualStyleBackColor = False
+        loginBtn.BackColor = Color.CornflowerBlue
+        loginBtn.FlatStyle = FlatStyle.Popup
+        loginBtn.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        loginBtn.ForeColor = Color.White
+        loginBtn.Location = New Point(78, 274)
+        loginBtn.Name = "loginBtn"
+        loginBtn.Size = New Size(222, 23)
+        loginBtn.TabIndex = 6
+        loginBtn.Text = "LOGIN"
+        loginBtn.UseVisualStyleBackColor = False
         ' 
         ' userNameTextField
         ' 
@@ -118,18 +118,18 @@ Partial Class Login
         userNameTextField.TabIndex = 7
         userNameTextField.Text = "Username"
         ' 
-        ' Button2
+        ' signupBtn
         ' 
-        Button2.BackColor = Color.Gray
-        Button2.FlatStyle = FlatStyle.Popup
-        Button2.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Button2.ForeColor = Color.White
-        Button2.Location = New Point(266, 405)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(75, 23)
-        Button2.TabIndex = 8
-        Button2.Text = "Sign Up"
-        Button2.UseVisualStyleBackColor = False
+        signupBtn.BackColor = Color.Gray
+        signupBtn.FlatStyle = FlatStyle.Popup
+        signupBtn.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        signupBtn.ForeColor = Color.White
+        signupBtn.Location = New Point(266, 405)
+        signupBtn.Name = "signupBtn"
+        signupBtn.Size = New Size(75, 23)
+        signupBtn.TabIndex = 8
+        signupBtn.Text = "Sign Up"
+        signupBtn.UseVisualStyleBackColor = False
         ' 
         ' Label2
         ' 
@@ -167,9 +167,9 @@ Partial Class Login
         Controls.Add(Panel3)
         Controls.Add(Panel2)
         Controls.Add(Label2)
-        Controls.Add(Button2)
+        Controls.Add(signupBtn)
         Controls.Add(userNameTextField)
-        Controls.Add(Button1)
+        Controls.Add(loginBtn)
         Controls.Add(passwordTextField)
         Controls.Add(Label1)
         Controls.Add(Panel1)
@@ -187,9 +187,9 @@ Partial Class Login
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents passwordTextField As TextBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents loginBtn As Button
     Friend WithEvents userNameTextField As TextBox
-    Friend WithEvents Button2 As Button
+    Friend WithEvents signupBtn As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label3 As Label

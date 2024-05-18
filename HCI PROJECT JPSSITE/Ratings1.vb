@@ -30,4 +30,6 @@
         MyBase.Show()
         usernameLabel.Text = UserHandler.getCurrentuser.username
     End Sub
+
+
 End Class

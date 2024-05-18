@@ -22,9 +22,12 @@ Partial Class Ratings
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Ratings))
         Panel4 = New Panel()
-        PictureBox3 = New PictureBox()
-        ComboBox1 = New ComboBox()
+        ratingsLabel = New Label()
+        rateBtn = New Button()
+        eventpicPBox = New PictureBox()
+        eventselectCBox = New ComboBox()
         Label4 = New Label()
         logoutBtn = New Button()
         usernameLabel = New Label()
@@ -42,11 +45,13 @@ Partial Class Ratings
         TextBox2 = New TextBox()
         TextBox3 = New TextBox()
         TextBox4 = New TextBox()
-        Button4 = New Button()
         Panel2 = New Panel()
+        sendBtn = New Button()
+        yourcommentRTBox = New RichTextBox()
+        allcommentRTBox = New RichTextBox()
         Label1 = New Label()
         Panel4.SuspendLayout()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
+        CType(eventpicPBox, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
@@ -56,37 +61,65 @@ Partial Class Ratings
         ' Panel4
         ' 
         Panel4.BackColor = Color.White
-        Panel4.Controls.Add(PictureBox3)
-        Panel4.Controls.Add(ComboBox1)
+        Panel4.Controls.Add(ratingsLabel)
+        Panel4.Controls.Add(rateBtn)
+        Panel4.Controls.Add(eventpicPBox)
+        Panel4.Controls.Add(eventselectCBox)
         Panel4.Controls.Add(Label4)
         Panel4.Location = New Point(180, 68)
         Panel4.Name = "Panel4"
         Panel4.Size = New Size(292, 370)
         Panel4.TabIndex = 30
         ' 
-        ' PictureBox3
+        ' ratingsLabel
         ' 
-        PictureBox3.Location = New Point(36, 104)
-        PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(217, 201)
-        PictureBox3.TabIndex = 4
-        PictureBox3.TabStop = False
+        ratingsLabel.AutoSize = True
+        ratingsLabel.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        ratingsLabel.Location = New Point(101, 283)
+        ratingsLabel.Name = "ratingsLabel"
+        ratingsLabel.Size = New Size(90, 16)
+        ratingsLabel.TabIndex = 50
+        ratingsLabel.Text = """star ratings"""
+        ratingsLabel.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' ComboBox1
+        ' rateBtn
         ' 
-        ComboBox1.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        ComboBox1.FormattingEnabled = True
-        ComboBox1.Items.AddRange(New Object() {"Event 1", "Event 2", "Event 3"})
-        ComboBox1.Location = New Point(36, 58)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(217, 25)
-        ComboBox1.TabIndex = 3
+        rateBtn.BackColor = Color.CornflowerBlue
+        rateBtn.FlatStyle = FlatStyle.Flat
+        rateBtn.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        rateBtn.ForeColor = Color.White
+        rateBtn.Location = New Point(101, 320)
+        rateBtn.Name = "rateBtn"
+        rateBtn.Size = New Size(90, 31)
+        rateBtn.TabIndex = 49
+        rateBtn.Text = "RATE"
+        rateBtn.UseVisualStyleBackColor = False
+        ' 
+        ' eventpicPBox
+        ' 
+        eventpicPBox.Image = My.Resources.Resources.EVENT_2
+        eventpicPBox.Location = New Point(45, 89)
+        eventpicPBox.Name = "eventpicPBox"
+        eventpicPBox.Size = New Size(197, 179)
+        eventpicPBox.SizeMode = PictureBoxSizeMode.Zoom
+        eventpicPBox.TabIndex = 4
+        eventpicPBox.TabStop = False
+        ' 
+        ' eventselectCBox
+        ' 
+        eventselectCBox.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        eventselectCBox.FormattingEnabled = True
+        eventselectCBox.Items.AddRange(New Object() {"Event 1", "Event 2", "Event 3"})
+        eventselectCBox.Location = New Point(36, 58)
+        eventselectCBox.Name = "eventselectCBox"
+        eventselectCBox.Size = New Size(217, 25)
+        eventselectCBox.TabIndex = 3
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label4.ForeColor = Color.CornflowerBlue
+        Label4.ForeColor = Color.MidnightBlue
         Label4.Location = New Point(36, 11)
         Label4.Name = "Label4"
         Label4.Size = New Size(217, 25)
@@ -96,7 +129,7 @@ Partial Class Ratings
         ' logoutBtn
         ' 
         logoutBtn.BackColor = Color.CornflowerBlue
-        logoutBtn.FlatStyle = FlatStyle.Flat
+        logoutBtn.FlatStyle = FlatStyle.Popup
         logoutBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         logoutBtn.ForeColor = Color.White
         logoutBtn.Location = New Point(12, 329)
@@ -131,7 +164,7 @@ Partial Class Ratings
         ' officersBtn
         ' 
         officersBtn.BackColor = Color.CornflowerBlue
-        officersBtn.FlatStyle = FlatStyle.Flat
+        officersBtn.FlatStyle = FlatStyle.Popup
         officersBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         officersBtn.ForeColor = Color.White
         officersBtn.Location = New Point(12, 286)
@@ -145,7 +178,7 @@ Partial Class Ratings
         ' ratingsBtn
         ' 
         ratingsBtn.BackColor = Color.RoyalBlue
-        ratingsBtn.FlatStyle = FlatStyle.Flat
+        ratingsBtn.FlatStyle = FlatStyle.Popup
         ratingsBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         ratingsBtn.ForeColor = Color.White
         ratingsBtn.Location = New Point(12, 243)
@@ -159,7 +192,7 @@ Partial Class Ratings
         ' profileBtn
         ' 
         profileBtn.BackColor = Color.CornflowerBlue
-        profileBtn.FlatStyle = FlatStyle.Flat
+        profileBtn.FlatStyle = FlatStyle.Popup
         profileBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         profileBtn.ForeColor = Color.White
         profileBtn.Location = New Point(12, 200)
@@ -173,7 +206,7 @@ Partial Class Ratings
         ' eventsBtn
         ' 
         eventsBtn.BackColor = Color.CornflowerBlue
-        eventsBtn.FlatStyle = FlatStyle.Flat
+        eventsBtn.FlatStyle = FlatStyle.Popup
         eventsBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         eventsBtn.ForeColor = Color.White
         eventsBtn.Location = New Point(12, 157)
@@ -203,7 +236,7 @@ Partial Class Ratings
         ' dashboardBtn
         ' 
         dashboardBtn.BackColor = Color.CornflowerBlue
-        dashboardBtn.FlatStyle = FlatStyle.Flat
+        dashboardBtn.FlatStyle = FlatStyle.Popup
         dashboardBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         dashboardBtn.ForeColor = Color.White
         dashboardBtn.Location = New Point(12, 114)
@@ -228,7 +261,7 @@ Partial Class Ratings
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label2.ForeColor = Color.RoyalBlue
+        Label2.ForeColor = Color.MidnightBlue
         Label2.Location = New Point(180, 25)
         Label2.Name = "Label2"
         Label2.Size = New Size(100, 25)
@@ -239,7 +272,7 @@ Partial Class Ratings
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label3.ForeColor = Color.RoyalBlue
+        Label3.ForeColor = Color.MidnightBlue
         Label3.Location = New Point(582, 25)
         Label3.Name = "Label3"
         Label3.Size = New Size(143, 25)
@@ -286,23 +319,12 @@ Partial Class Ratings
         TextBox4.Size = New Size(100, 16)
         TextBox4.TabIndex = 43
         ' 
-        ' Button4
-        ' 
-        Button4.BackColor = Color.CornflowerBlue
-        Button4.FlatStyle = FlatStyle.Flat
-        Button4.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button4.ForeColor = Color.White
-        Button4.Location = New Point(111, 337)
-        Button4.Name = "Button4"
-        Button4.Size = New Size(75, 23)
-        Button4.TabIndex = 49
-        Button4.Text = "SAVE"
-        Button4.UseVisualStyleBackColor = False
-        ' 
         ' Panel2
         ' 
         Panel2.BackColor = Color.White
-        Panel2.Controls.Add(Button4)
+        Panel2.Controls.Add(sendBtn)
+        Panel2.Controls.Add(yourcommentRTBox)
+        Panel2.Controls.Add(allcommentRTBox)
         Panel2.Controls.Add(TextBox4)
         Panel2.Controls.Add(TextBox3)
         Panel2.Controls.Add(TextBox2)
@@ -313,16 +335,50 @@ Partial Class Ratings
         Panel2.Size = New Size(288, 370)
         Panel2.TabIndex = 29
         ' 
+        ' sendBtn
+        ' 
+        sendBtn.BackColor = Color.CornflowerBlue
+        sendBtn.FlatStyle = FlatStyle.Flat
+        sendBtn.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        sendBtn.ForeColor = Color.White
+        sendBtn.Location = New Point(224, 310)
+        sendBtn.Name = "sendBtn"
+        sendBtn.Size = New Size(50, 41)
+        sendBtn.TabIndex = 54
+        sendBtn.Text = "SEND"
+        sendBtn.UseVisualStyleBackColor = False
+        ' 
+        ' yourcommentRTBox
+        ' 
+        yourcommentRTBox.BorderStyle = BorderStyle.FixedSingle
+        yourcommentRTBox.Location = New Point(14, 310)
+        yourcommentRTBox.Name = "yourcommentRTBox"
+        yourcommentRTBox.Size = New Size(204, 41)
+        yourcommentRTBox.TabIndex = 45
+        yourcommentRTBox.Text = ""
+        ' 
+        ' allcommentRTBox
+        ' 
+        allcommentRTBox.BackColor = Color.White
+        allcommentRTBox.BorderStyle = BorderStyle.None
+        allcommentRTBox.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        allcommentRTBox.Location = New Point(14, 58)
+        allcommentRTBox.Name = "allcommentRTBox"
+        allcommentRTBox.ReadOnly = True
+        allcommentRTBox.Size = New Size(260, 224)
+        allcommentRTBox.TabIndex = 44
+        allcommentRTBox.Text = resources.GetString("allcommentRTBox.Text")
+        ' 
         ' Label1
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.ForeColor = Color.CornflowerBlue
+        Label1.ForeColor = Color.MidnightBlue
         Label1.Location = New Point(65, 11)
         Label1.Name = "Label1"
-        Label1.Size = New Size(170, 25)
+        Label1.Size = New Size(162, 25)
         Label1.TabIndex = 1
-        Label1.Text = "Edit Information"
+        Label1.Text = "Comment Wall"
         ' 
         ' Ratings
         ' 
@@ -342,7 +398,7 @@ Partial Class Ratings
         Text = "Forum"
         Panel4.ResumeLayout(False)
         Panel4.PerformLayout()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
+        CType(eventpicPBox, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         Panel1.ResumeLayout(False)
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
@@ -365,13 +421,17 @@ Partial Class Ratings
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents eventpicPBox As PictureBox
+    Friend WithEvents eventselectCBox As ComboBox
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents Button4 As Button
+    Friend WithEvents rateBtn As Button
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label1 As Label
+    Friend WithEvents ratingsLabel As Label
+    Friend WithEvents allcommentRTBox As RichTextBox
+    Friend WithEvents sendBtn As Button
+    Friend WithEvents yourcommentRTBox As RichTextBox
 End Class
