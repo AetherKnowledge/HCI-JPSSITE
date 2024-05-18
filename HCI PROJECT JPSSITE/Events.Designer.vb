@@ -64,7 +64,7 @@ Partial Class Events
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label3.ForeColor = Color.RoyalBlue
+        Label3.ForeColor = Color.MidnightBlue
         Label3.Location = New Point(582, 25)
         Label3.Name = "Label3"
         Label3.Size = New Size(143, 25)
@@ -75,7 +75,7 @@ Partial Class Events
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label2.ForeColor = Color.RoyalBlue
+        Label2.ForeColor = Color.MidnightBlue
         Label2.Location = New Point(180, 25)
         Label2.Name = "Label2"
         Label2.Size = New Size(85, 25)
@@ -217,7 +217,7 @@ Partial Class Events
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.ForeColor = Color.CornflowerBlue
+        Label1.ForeColor = Color.MidnightBlue
         Label1.Location = New Point(24, 11)
         Label1.Name = "Label1"
         Label1.Size = New Size(123, 25)
@@ -273,7 +273,7 @@ Partial Class Events
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label4.ForeColor = Color.CornflowerBlue
+        Label4.ForeColor = Color.MidnightBlue
         Label4.Location = New Point(15, 11)
         Label4.Name = "Label4"
         Label4.Size = New Size(246, 25)

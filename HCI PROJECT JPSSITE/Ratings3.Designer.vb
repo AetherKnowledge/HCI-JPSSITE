@@ -194,7 +194,7 @@ Partial Class Ratings3
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label2.ForeColor = Color.RoyalBlue
+        Label2.ForeColor = Color.MidnightBlue
         Label2.Location = New Point(180, 25)
         Label2.Name = "Label2"
         Label2.Size = New Size(100, 25)
@@ -205,7 +205,7 @@ Partial Class Ratings3
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label3.ForeColor = Color.RoyalBlue
+        Label3.ForeColor = Color.MidnightBlue
         Label3.Location = New Point(582, 25)
         Label3.Name = "Label3"
         Label3.Size = New Size(143, 25)
@@ -368,7 +368,7 @@ Partial Class Ratings3
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label5.ForeColor = Color.CornflowerBlue
+        Label5.ForeColor = Color.MidnightBlue
         Label5.Location = New Point(208, 20)
         Label5.Name = "Label5"
         Label5.Size = New Size(18, 25)
@@ -416,7 +416,7 @@ Partial Class Ratings3
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.ForeColor = Color.CornflowerBlue
+        Label1.ForeColor = Color.MidnightBlue
         Label1.Location = New Point(23, 20)
         Label1.Name = "Label1"
         Label1.Size = New Size(179, 25)
@@ -434,6 +434,7 @@ Partial Class Ratings3
         Controls.Add(Label2)
         Controls.Add(Label3)
         Controls.Add(Panel2)
+        ForeColor = Color.MidnightBlue
         FormBorderStyle = FormBorderStyle.FixedDialog
         Name = "Ratings3"
         StartPosition = FormStartPosition.CenterScreen

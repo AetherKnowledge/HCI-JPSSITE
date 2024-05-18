@@ -22,6 +22,7 @@ Partial Class Ratings
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Ratings))
         Panel4 = New Panel()
         PictureBox3 = New PictureBox()
         ComboBox1 = New ComboBox()
@@ -45,6 +46,10 @@ Partial Class Ratings
         Button4 = New Button()
         Panel2 = New Panel()
         Label1 = New Label()
+        Label5 = New Label()
+        RichTextBox1 = New RichTextBox()
+        RichTextBox2 = New RichTextBox()
+        Button1 = New Button()
         Panel4.SuspendLayout()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -56,6 +61,8 @@ Partial Class Ratings
         ' Panel4
         ' 
         Panel4.BackColor = Color.White
+        Panel4.Controls.Add(Label5)
+        Panel4.Controls.Add(Button4)
         Panel4.Controls.Add(PictureBox3)
         Panel4.Controls.Add(ComboBox1)
         Panel4.Controls.Add(Label4)
@@ -66,9 +73,11 @@ Partial Class Ratings
         ' 
         ' PictureBox3
         ' 
-        PictureBox3.Location = New Point(36, 104)
+        PictureBox3.Image = My.Resources.Resources.EVENT_2
+        PictureBox3.Location = New Point(45, 89)
         PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(217, 201)
+        PictureBox3.Size = New Size(197, 179)
+        PictureBox3.SizeMode = PictureBoxSizeMode.Zoom
         PictureBox3.TabIndex = 4
         PictureBox3.TabStop = False
         ' 
@@ -86,7 +95,7 @@ Partial Class Ratings
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label4.ForeColor = Color.CornflowerBlue
+        Label4.ForeColor = Color.MidnightBlue
         Label4.Location = New Point(36, 11)
         Label4.Name = "Label4"
         Label4.Size = New Size(217, 25)
@@ -228,7 +237,7 @@ Partial Class Ratings
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label2.ForeColor = Color.RoyalBlue
+        Label2.ForeColor = Color.MidnightBlue
         Label2.Location = New Point(180, 25)
         Label2.Name = "Label2"
         Label2.Size = New Size(100, 25)
@@ -239,7 +248,7 @@ Partial Class Ratings
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label3.ForeColor = Color.RoyalBlue
+        Label3.ForeColor = Color.MidnightBlue
         Label3.Location = New Point(582, 25)
         Label3.Name = "Label3"
         Label3.Size = New Size(143, 25)
@@ -292,17 +301,19 @@ Partial Class Ratings
         Button4.FlatStyle = FlatStyle.Flat
         Button4.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button4.ForeColor = Color.White
-        Button4.Location = New Point(111, 337)
+        Button4.Location = New Point(101, 320)
         Button4.Name = "Button4"
-        Button4.Size = New Size(75, 23)
+        Button4.Size = New Size(90, 31)
         Button4.TabIndex = 49
-        Button4.Text = "SAVE"
+        Button4.Text = "RATE"
         Button4.UseVisualStyleBackColor = False
         ' 
         ' Panel2
         ' 
         Panel2.BackColor = Color.White
-        Panel2.Controls.Add(Button4)
+        Panel2.Controls.Add(Button1)
+        Panel2.Controls.Add(RichTextBox2)
+        Panel2.Controls.Add(RichTextBox1)
         Panel2.Controls.Add(TextBox4)
         Panel2.Controls.Add(TextBox3)
         Panel2.Controls.Add(TextBox2)
@@ -317,12 +328,56 @@ Partial Class Ratings
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.ForeColor = Color.CornflowerBlue
+        Label1.ForeColor = Color.MidnightBlue
         Label1.Location = New Point(65, 11)
         Label1.Name = "Label1"
-        Label1.Size = New Size(170, 25)
+        Label1.Size = New Size(162, 25)
         Label1.TabIndex = 1
-        Label1.Text = "Edit Information"
+        Label1.Text = "Comment Wall"
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label5.Location = New Point(101, 283)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(90, 16)
+        Label5.TabIndex = 50
+        Label5.Text = """star ratings"""
+        Label5.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' RichTextBox1
+        ' 
+        RichTextBox1.BorderStyle = BorderStyle.None
+        RichTextBox1.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        RichTextBox1.Location = New Point(14, 58)
+        RichTextBox1.Name = "RichTextBox1"
+        RichTextBox1.ReadOnly = True
+        RichTextBox1.Size = New Size(260, 224)
+        RichTextBox1.TabIndex = 44
+        RichTextBox1.Text = resources.GetString("RichTextBox1.Text")
+        ' 
+        ' RichTextBox2
+        ' 
+        RichTextBox2.BorderStyle = BorderStyle.FixedSingle
+        RichTextBox2.Location = New Point(14, 310)
+        RichTextBox2.Name = "RichTextBox2"
+        RichTextBox2.Size = New Size(204, 41)
+        RichTextBox2.TabIndex = 45
+        RichTextBox2.Text = ""
+        ' 
+        ' Button1
+        ' 
+        Button1.BackColor = Color.CornflowerBlue
+        Button1.FlatStyle = FlatStyle.Flat
+        Button1.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button1.ForeColor = Color.White
+        Button1.Location = New Point(224, 310)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(50, 41)
+        Button1.TabIndex = 54
+        Button1.Text = "SEND"
+        Button1.UseVisualStyleBackColor = False
         ' 
         ' Ratings
         ' 
@@ -374,4 +429,8 @@ Partial Class Ratings
     Friend WithEvents Button4 As Button
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label1 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents Button1 As Button
+    Friend WithEvents RichTextBox2 As RichTextBox
 End Class

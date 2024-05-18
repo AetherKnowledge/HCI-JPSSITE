@@ -219,7 +219,7 @@ Partial Class Ratings1
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label2.ForeColor = Color.RoyalBlue
+        Label2.ForeColor = Color.MidnightBlue
         Label2.Location = New Point(180, 25)
         Label2.Name = "Label2"
         Label2.Size = New Size(100, 25)
@@ -230,7 +230,7 @@ Partial Class Ratings1
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label3.ForeColor = Color.RoyalBlue
+        Label3.ForeColor = Color.MidnightBlue
         Label3.Location = New Point(582, 25)
         Label3.Name = "Label3"
         Label3.Size = New Size(143, 25)
@@ -241,7 +241,7 @@ Partial Class Ratings1
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.ForeColor = Color.CornflowerBlue
+        Label1.ForeColor = Color.MidnightBlue
         Label1.Location = New Point(23, 20)
         Label1.Name = "Label1"
         Label1.Size = New Size(179, 25)
@@ -288,7 +288,7 @@ Partial Class Ratings1
         ComboBox8.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         ComboBox8.FormattingEnabled = True
         ComboBox8.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
-        ComboBox8.Location = New Point(335, 277)
+        ComboBox8.Location = New Point(323, 284)
         ComboBox8.Name = "ComboBox8"
         ComboBox8.Size = New Size(142, 25)
         ComboBox8.TabIndex = 50
@@ -297,18 +297,18 @@ Partial Class Ratings1
         ' 
         Label16.AutoSize = True
         Label16.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label16.Location = New Point(315, 257)
+        Label16.Location = New Point(303, 264)
         Label16.Name = "Label16"
-        Label16.Size = New Size(228, 17)
+        Label16.Size = New Size(238, 17)
         Label16.TabIndex = 49
-        Label16.Text = "3. Effectivity of imparting knowledge."
+        Label16.Text = "8. The segments are logically arranged."
         ' 
         ' ComboBox7
         ' 
         ComboBox7.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         ComboBox7.FormattingEnabled = True
         ComboBox7.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
-        ComboBox7.Location = New Point(43, 284)
+        ComboBox7.Location = New Point(28, 284)
         ComboBox7.Name = "ComboBox7"
         ComboBox7.Size = New Size(142, 25)
         ComboBox7.TabIndex = 48
@@ -317,18 +317,18 @@ Partial Class Ratings1
         ' 
         Label15.AutoSize = True
         Label15.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label15.Location = New Point(23, 264)
+        Label15.Location = New Point(8, 264)
         Label15.Name = "Label15"
-        Label15.Size = New Size(228, 17)
+        Label15.Size = New Size(245, 17)
         Label15.TabIndex = 47
-        Label15.Text = "3. Effectivity of imparting knowledge."
+        Label15.Text = "4. The activities were well disseminated."
         ' 
         ' ComboBox6
         ' 
         ComboBox6.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         ComboBox6.FormattingEnabled = True
         ComboBox6.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
-        ComboBox6.Location = New Point(338, 220)
+        ComboBox6.Location = New Point(323, 223)
         ComboBox6.Name = "ComboBox6"
         ComboBox6.Size = New Size(142, 25)
         ComboBox6.TabIndex = 46
@@ -337,18 +337,18 @@ Partial Class Ratings1
         ' 
         Label14.AutoSize = True
         Label14.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label14.Location = New Point(318, 204)
+        Label14.Location = New Point(303, 207)
         Label14.Name = "Label14"
-        Label14.Size = New Size(180, 17)
+        Label14.Size = New Size(272, 17)
         Label14.TabIndex = 45
-        Label14.Text = "6. Ability to handle questions."
+        Label14.Text = "7. The length of the activities were sufficient."
         ' 
         ' ComboBox4
         ' 
         ComboBox4.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         ComboBox4.FormattingEnabled = True
         ComboBox4.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
-        ComboBox4.Location = New Point(338, 164)
+        ComboBox4.Location = New Point(323, 164)
         ComboBox4.Name = "ComboBox4"
         ComboBox4.Size = New Size(142, 25)
         ComboBox4.TabIndex = 44
@@ -357,18 +357,18 @@ Partial Class Ratings1
         ' 
         Label12.AutoSize = True
         Label12.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label12.Location = New Point(318, 147)
+        Label12.Location = New Point(303, 147)
         Label12.Name = "Label12"
-        Label12.Size = New Size(180, 17)
+        Label12.Size = New Size(283, 17)
         Label12.TabIndex = 43
-        Label12.Text = "5. Ability to maintain interest."
+        Label12.Text = "6. The activities met the needs of the students."
         ' 
         ' ComboBox5
         ' 
         ComboBox5.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         ComboBox5.FormattingEnabled = True
         ComboBox5.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
-        ComboBox5.Location = New Point(338, 107)
+        ComboBox5.Location = New Point(323, 107)
         ComboBox5.Name = "ComboBox5"
         ComboBox5.Size = New Size(142, 25)
         ComboBox5.TabIndex = 42
@@ -377,18 +377,18 @@ Partial Class Ratings1
         ' 
         Label13.AutoSize = True
         Label13.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label13.Location = New Point(318, 90)
+        Label13.Location = New Point(303, 90)
         Label13.Name = "Label13"
-        Label13.Size = New Size(174, 17)
+        Label13.Size = New Size(242, 17)
         Label13.TabIndex = 41
-        Label13.Text = "4. Used interesting methods."
+        Label13.Text = "5. The activities were well participated."
         ' 
         ' ComboBox3
         ' 
         ComboBox3.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         ComboBox3.FormattingEnabled = True
         ComboBox3.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
-        ComboBox3.Location = New Point(43, 224)
+        ComboBox3.Location = New Point(28, 224)
         ComboBox3.Name = "ComboBox3"
         ComboBox3.Size = New Size(142, 25)
         ComboBox3.TabIndex = 40
@@ -398,7 +398,7 @@ Partial Class Ratings1
         ComboBox2.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         ComboBox2.FormattingEnabled = True
         ComboBox2.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
-        ComboBox2.Location = New Point(43, 166)
+        ComboBox2.Location = New Point(28, 166)
         ComboBox2.Name = "ComboBox2"
         ComboBox2.Size = New Size(142, 25)
         ComboBox2.TabIndex = 39
@@ -408,7 +408,7 @@ Partial Class Ratings1
         ComboBox1.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         ComboBox1.FormattingEnabled = True
         ComboBox1.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
-        ComboBox1.Location = New Point(43, 112)
+        ComboBox1.Location = New Point(28, 112)
         ComboBox1.Name = "ComboBox1"
         ComboBox1.Size = New Size(142, 25)
         ComboBox1.TabIndex = 38
@@ -417,31 +417,31 @@ Partial Class Ratings1
         ' 
         Label11.AutoSize = True
         Label11.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label11.Location = New Point(23, 204)
+        Label11.Location = New Point(8, 204)
         Label11.Name = "Label11"
-        Label11.Size = New Size(228, 17)
+        Label11.Size = New Size(246, 17)
         Label11.TabIndex = 37
-        Label11.Text = "3. Effectivity of imparting knowledge."
+        Label11.Text = "3. The activities were properly designed."
         ' 
         ' Label10
         ' 
         Label10.AutoSize = True
         Label10.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label10.Location = New Point(23, 147)
+        Label10.Location = New Point(8, 147)
         Label10.Name = "Label10"
-        Label10.Size = New Size(179, 17)
+        Label10.Size = New Size(195, 17)
         Label10.TabIndex = 36
-        Label10.Text = "2. Clarity of the presentation."
+        Label10.Text = "2. The program started  on time."
         ' 
         ' Label9
         ' 
         Label9.AutoSize = True
         Label9.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label9.Location = New Point(23, 90)
+        Label9.Location = New Point(8, 90)
         Label9.Name = "Label9"
-        Label9.Size = New Size(162, 17)
+        Label9.Size = New Size(287, 17)
         Label9.TabIndex = 35
-        Label9.Text = "1. Knowledge in the topic."
+        Label9.Text = "1. The schedule of activities were well planned."
         ' 
         ' Label8
         ' 
@@ -503,7 +503,7 @@ Partial Class Ratings1
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label5.ForeColor = Color.CornflowerBlue
+        Label5.ForeColor = Color.MidnightBlue
         Label5.Location = New Point(208, 20)
         Label5.Name = "Label5"
         Label5.Size = New Size(18, 25)
