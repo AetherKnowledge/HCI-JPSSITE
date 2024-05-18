@@ -129,7 +129,7 @@ Partial Class Ratings
         ' logoutBtn
         ' 
         logoutBtn.BackColor = Color.CornflowerBlue
-        logoutBtn.FlatStyle = FlatStyle.Flat
+        logoutBtn.FlatStyle = FlatStyle.Popup
         logoutBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         logoutBtn.ForeColor = Color.White
         logoutBtn.Location = New Point(12, 329)
@@ -164,7 +164,7 @@ Partial Class Ratings
         ' officersBtn
         ' 
         officersBtn.BackColor = Color.CornflowerBlue
-        officersBtn.FlatStyle = FlatStyle.Flat
+        officersBtn.FlatStyle = FlatStyle.Popup
         officersBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         officersBtn.ForeColor = Color.White
         officersBtn.Location = New Point(12, 286)
@@ -178,7 +178,7 @@ Partial Class Ratings
         ' ratingsBtn
         ' 
         ratingsBtn.BackColor = Color.RoyalBlue
-        ratingsBtn.FlatStyle = FlatStyle.Flat
+        ratingsBtn.FlatStyle = FlatStyle.Popup
         ratingsBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         ratingsBtn.ForeColor = Color.White
         ratingsBtn.Location = New Point(12, 243)
@@ -192,7 +192,7 @@ Partial Class Ratings
         ' profileBtn
         ' 
         profileBtn.BackColor = Color.CornflowerBlue
-        profileBtn.FlatStyle = FlatStyle.Flat
+        profileBtn.FlatStyle = FlatStyle.Popup
         profileBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         profileBtn.ForeColor = Color.White
         profileBtn.Location = New Point(12, 200)
@@ -206,7 +206,7 @@ Partial Class Ratings
         ' eventsBtn
         ' 
         eventsBtn.BackColor = Color.CornflowerBlue
-        eventsBtn.FlatStyle = FlatStyle.Flat
+        eventsBtn.FlatStyle = FlatStyle.Popup
         eventsBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         eventsBtn.ForeColor = Color.White
         eventsBtn.Location = New Point(12, 157)
@@ -236,7 +236,7 @@ Partial Class Ratings
         ' dashboardBtn
         ' 
         dashboardBtn.BackColor = Color.CornflowerBlue
-        dashboardBtn.FlatStyle = FlatStyle.Flat
+        dashboardBtn.FlatStyle = FlatStyle.Popup
         dashboardBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         dashboardBtn.ForeColor = Color.White
         dashboardBtn.Location = New Point(12, 114)
