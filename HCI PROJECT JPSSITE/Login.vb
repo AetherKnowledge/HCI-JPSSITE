@@ -26,7 +26,7 @@ Public Class Login
         End If
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles signupBtn.Click
         userNameTextField.Text = ""
         passwordTextField.Text = ""
 
@@ -34,7 +34,7 @@ Public Class Login
         Hide()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles loginBtn.Click
         Dim username As String = userNameTextField.Text
         Dim password As String = passwordTextField.Text
         If UserHandler.isLoginSuccessful(username, password) Then

@@ -36,11 +36,11 @@ Partial Class Events
         Panel1 = New Panel()
         Panel2 = New Panel()
         Label1 = New Label()
-        ListBox1 = New ListBox()
+        event2LBox = New ListBox()
         Panel3 = New Panel()
-        MonthCalendar1 = New MonthCalendar()
+        eventCal = New MonthCalendar()
         Panel4 = New Panel()
-        ListBox2 = New ListBox()
+        eventLBox = New ListBox()
         Label4 = New Label()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -207,7 +207,7 @@ Partial Class Events
         ' 
         Panel2.BackColor = Color.White
         Panel2.Controls.Add(Label1)
-        Panel2.Controls.Add(ListBox1)
+        Panel2.Controls.Add(event2LBox)
         Panel2.Location = New Point(490, 68)
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(288, 370)
@@ -224,50 +224,50 @@ Partial Class Events
         Label1.TabIndex = 1
         Label1.Text = "Past Events"
         ' 
-        ' ListBox1
+        ' event2LBox
         ' 
-        ListBox1.BorderStyle = BorderStyle.None
-        ListBox1.FormattingEnabled = True
-        ListBox1.ItemHeight = 15
-        ListBox1.Location = New Point(24, 63)
-        ListBox1.Name = "ListBox1"
-        ListBox1.Size = New Size(242, 285)
-        ListBox1.TabIndex = 0
+        event2LBox.BorderStyle = BorderStyle.None
+        event2LBox.FormattingEnabled = True
+        event2LBox.ItemHeight = 15
+        event2LBox.Location = New Point(24, 63)
+        event2LBox.Name = "event2LBox"
+        event2LBox.Size = New Size(242, 285)
+        event2LBox.TabIndex = 0
         ' 
         ' Panel3
         ' 
         Panel3.BackColor = Color.White
-        Panel3.Controls.Add(MonthCalendar1)
+        Panel3.Controls.Add(eventCal)
         Panel3.Location = New Point(180, 255)
         Panel3.Name = "Panel3"
         Panel3.Size = New Size(292, 183)
         Panel3.TabIndex = 16
         ' 
-        ' MonthCalendar1
+        ' eventCal
         ' 
-        MonthCalendar1.Location = New Point(28, 12)
-        MonthCalendar1.Name = "MonthCalendar1"
-        MonthCalendar1.TabIndex = 0
+        eventCal.Location = New Point(28, 12)
+        eventCal.Name = "eventCal"
+        eventCal.TabIndex = 0
         ' 
         ' Panel4
         ' 
         Panel4.BackColor = Color.White
-        Panel4.Controls.Add(ListBox2)
+        Panel4.Controls.Add(eventLBox)
         Panel4.Controls.Add(Label4)
         Panel4.Location = New Point(180, 68)
         Panel4.Name = "Panel4"
         Panel4.Size = New Size(292, 168)
         Panel4.TabIndex = 17
         ' 
-        ' ListBox2
+        ' eventLBox
         ' 
-        ListBox2.BorderStyle = BorderStyle.None
-        ListBox2.FormattingEnabled = True
-        ListBox2.ItemHeight = 15
-        ListBox2.Location = New Point(25, 45)
-        ListBox2.Name = "ListBox2"
-        ListBox2.Size = New Size(242, 105)
-        ListBox2.TabIndex = 3
+        eventLBox.BorderStyle = BorderStyle.None
+        eventLBox.FormattingEnabled = True
+        eventLBox.ItemHeight = 15
+        eventLBox.Location = New Point(25, 45)
+        eventLBox.Name = "eventLBox"
+        eventLBox.Size = New Size(242, 105)
+        eventLBox.TabIndex = 3
         ' 
         ' Label4
         ' 
@@ -322,10 +322,10 @@ Partial Class Events
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label1 As Label
-    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents event2LBox As ListBox
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents MonthCalendar1 As MonthCalendar
+    Friend WithEvents eventCal As MonthCalendar
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Label4 As Label
-    Friend WithEvents ListBox2 As ListBox
+    Friend WithEvents eventLBox As ListBox
 End Class

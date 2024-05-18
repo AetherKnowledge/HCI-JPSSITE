@@ -34,33 +34,33 @@ Partial Class Dashboard
         Label2 = New Label()
         Label3 = New Label()
         PictureBox2 = New PictureBox()
-        PictureBox3 = New PictureBox()
+        eventbannerPBox = New PictureBox()
         RadioButton1 = New RadioButton()
         RadioButton2 = New RadioButton()
         RadioButton3 = New RadioButton()
         Panel2 = New Panel()
         Panel3 = New Panel()
-        PictureBox6 = New PictureBox()
+        myprofPBox = New PictureBox()
         Label5 = New Label()
         Panel4 = New Panel()
-        PictureBox5 = New PictureBox()
+        myratePBox = New PictureBox()
         Label7 = New Label()
         Panel5 = New Panel()
-        PictureBox4 = New PictureBox()
+        myoffPBox = New PictureBox()
         Label6 = New Label()
         Label1 = New Label()
         Label4 = New Label()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
+        CType(eventbannerPBox, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
         Panel3.SuspendLayout()
-        CType(PictureBox6, ComponentModel.ISupportInitialize).BeginInit()
+        CType(myprofPBox, ComponentModel.ISupportInitialize).BeginInit()
         Panel4.SuspendLayout()
-        CType(PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
+        CType(myratePBox, ComponentModel.ISupportInitialize).BeginInit()
         Panel5.SuspendLayout()
-        CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
+        CType(myoffPBox, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel1
@@ -216,15 +216,15 @@ Partial Class Dashboard
         PictureBox2.TabIndex = 3
         PictureBox2.TabStop = False
         ' 
-        ' PictureBox3
+        ' eventbannerPBox
         ' 
-        PictureBox3.Image = My.Resources.Resources.Event_banner
-        PictureBox3.Location = New Point(0, -1)
-        PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(593, 146)
-        PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox3.TabIndex = 4
-        PictureBox3.TabStop = False
+        eventbannerPBox.Image = My.Resources.Resources.Event_banner
+        eventbannerPBox.Location = New Point(0, -1)
+        eventbannerPBox.Name = "eventbannerPBox"
+        eventbannerPBox.Size = New Size(593, 146)
+        eventbannerPBox.SizeMode = PictureBoxSizeMode.StretchImage
+        eventbannerPBox.TabIndex = 4
+        eventbannerPBox.TabStop = False
         ' 
         ' RadioButton1
         ' 
@@ -261,7 +261,7 @@ Partial Class Dashboard
         ' 
         ' Panel2
         ' 
-        Panel2.Controls.Add(PictureBox3)
+        Panel2.Controls.Add(eventbannerPBox)
         Panel2.Location = New Point(182, 60)
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(593, 145)
@@ -270,22 +270,22 @@ Partial Class Dashboard
         ' Panel3
         ' 
         Panel3.BackColor = Color.White
-        Panel3.Controls.Add(PictureBox6)
+        Panel3.Controls.Add(myprofPBox)
         Panel3.Controls.Add(Label5)
         Panel3.Location = New Point(182, 241)
         Panel3.Name = "Panel3"
         Panel3.Size = New Size(184, 197)
         Panel3.TabIndex = 9
         ' 
-        ' PictureBox6
+        ' myprofPBox
         ' 
-        PictureBox6.Image = My.Resources.Resources.profile_graphics
-        PictureBox6.Location = New Point(3, 28)
-        PictureBox6.Name = "PictureBox6"
-        PictureBox6.Size = New Size(178, 169)
-        PictureBox6.SizeMode = PictureBoxSizeMode.Zoom
-        PictureBox6.TabIndex = 3
-        PictureBox6.TabStop = False
+        myprofPBox.Image = My.Resources.Resources.profile_graphics
+        myprofPBox.Location = New Point(3, 28)
+        myprofPBox.Name = "myprofPBox"
+        myprofPBox.Size = New Size(178, 169)
+        myprofPBox.SizeMode = PictureBoxSizeMode.Zoom
+        myprofPBox.TabIndex = 3
+        myprofPBox.TabStop = False
         ' 
         ' Label5
         ' 
@@ -302,22 +302,22 @@ Partial Class Dashboard
         ' Panel4
         ' 
         Panel4.BackColor = Color.White
-        Panel4.Controls.Add(PictureBox5)
+        Panel4.Controls.Add(myratePBox)
         Panel4.Controls.Add(Label7)
         Panel4.Location = New Point(591, 241)
         Panel4.Name = "Panel4"
         Panel4.Size = New Size(184, 197)
         Panel4.TabIndex = 10
         ' 
-        ' PictureBox5
+        ' myratePBox
         ' 
-        PictureBox5.Image = My.Resources.Resources.ratings_graphics
-        PictureBox5.Location = New Point(3, 28)
-        PictureBox5.Name = "PictureBox5"
-        PictureBox5.Size = New Size(178, 169)
-        PictureBox5.SizeMode = PictureBoxSizeMode.Zoom
-        PictureBox5.TabIndex = 3
-        PictureBox5.TabStop = False
+        myratePBox.Image = My.Resources.Resources.ratings_graphics
+        myratePBox.Location = New Point(3, 28)
+        myratePBox.Name = "myratePBox"
+        myratePBox.Size = New Size(178, 169)
+        myratePBox.SizeMode = PictureBoxSizeMode.Zoom
+        myratePBox.TabIndex = 3
+        myratePBox.TabStop = False
         ' 
         ' Label7
         ' 
@@ -334,22 +334,22 @@ Partial Class Dashboard
         ' Panel5
         ' 
         Panel5.BackColor = Color.White
-        Panel5.Controls.Add(PictureBox4)
+        Panel5.Controls.Add(myoffPBox)
         Panel5.Controls.Add(Label6)
         Panel5.Location = New Point(388, 241)
         Panel5.Name = "Panel5"
         Panel5.Size = New Size(184, 197)
         Panel5.TabIndex = 10
         ' 
-        ' PictureBox4
+        ' myoffPBox
         ' 
-        PictureBox4.Image = My.Resources.Resources.meeting
-        PictureBox4.Location = New Point(3, 28)
-        PictureBox4.Name = "PictureBox4"
-        PictureBox4.Size = New Size(178, 169)
-        PictureBox4.SizeMode = PictureBoxSizeMode.Zoom
-        PictureBox4.TabIndex = 2
-        PictureBox4.TabStop = False
+        myoffPBox.Image = My.Resources.Resources.meeting
+        myoffPBox.Location = New Point(3, 28)
+        myoffPBox.Name = "myoffPBox"
+        myoffPBox.Size = New Size(178, 169)
+        myoffPBox.SizeMode = PictureBoxSizeMode.Zoom
+        myoffPBox.TabIndex = 2
+        myoffPBox.TabStop = False
         ' 
         ' Label6
         ' 
@@ -412,17 +412,17 @@ Partial Class Dashboard
         Panel1.ResumeLayout(False)
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
+        CType(eventbannerPBox, ComponentModel.ISupportInitialize).EndInit()
         Panel2.ResumeLayout(False)
         Panel3.ResumeLayout(False)
         Panel3.PerformLayout()
-        CType(PictureBox6, ComponentModel.ISupportInitialize).EndInit()
+        CType(myprofPBox, ComponentModel.ISupportInitialize).EndInit()
         Panel4.ResumeLayout(False)
         Panel4.PerformLayout()
-        CType(PictureBox5, ComponentModel.ISupportInitialize).EndInit()
+        CType(myratePBox, ComponentModel.ISupportInitialize).EndInit()
         Panel5.ResumeLayout(False)
         Panel5.PerformLayout()
-        CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
+        CType(myoffPBox, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -439,7 +439,7 @@ Partial Class Dashboard
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents eventbannerPBox As PictureBox
     Friend WithEvents RadioButton1 As RadioButton
     Friend WithEvents RadioButton2 As RadioButton
     Friend WithEvents RadioButton3 As RadioButton
@@ -450,9 +450,9 @@ Partial Class Dashboard
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents PictureBox4 As PictureBox
-    Friend WithEvents PictureBox5 As PictureBox
+    Friend WithEvents myoffPBox As PictureBox
+    Friend WithEvents myratePBox As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents PictureBox6 As PictureBox
+    Friend WithEvents myprofPBox As PictureBox
 End Class

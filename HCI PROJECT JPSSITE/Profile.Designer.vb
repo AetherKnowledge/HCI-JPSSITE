@@ -38,14 +38,14 @@ Partial Class Profile
         Label7 = New Label()
         Label6 = New Label()
         fullnameLabel = New Label()
-        PictureBox3 = New PictureBox()
+        profilepicPBox = New PictureBox()
         Label4 = New Label()
         logoutBtn = New Button()
         usernameLabel = New Label()
         PictureBox1 = New PictureBox()
         officersBtn = New Button()
         ratingsBtn = New Button()
-        Button3 = New Button()
+        profileBtn = New Button()
         eventsBtn = New Button()
         Panel1 = New Panel()
         dashboardBtn = New Button()
@@ -53,7 +53,7 @@ Partial Class Profile
         Label3 = New Label()
         Label2 = New Label()
         Panel2 = New Panel()
-        Button4 = New Button()
+        saveBtn = New Button()
         Label23 = New Label()
         Label22 = New Label()
         Label19 = New Label()
@@ -75,20 +75,20 @@ Partial Class Profile
         Label24 = New Label()
         Label25 = New Label()
         Label1 = New Label()
-        Label8 = New Label()
+        sexLabel = New Label()
         Label9 = New Label()
-        Label12 = New Label()
+        ageLabel = New Label()
         Label13 = New Label()
         Label14 = New Label()
         Panel3 = New Panel()
         Label15 = New Label()
-        RadioButton1 = New RadioButton()
-        RadioButton2 = New RadioButton()
+        maleRbtn = New RadioButton()
+        femaleRbtn = New RadioButton()
         Label26 = New Label()
         Label27 = New Label()
         Label28 = New Label()
         Panel4.SuspendLayout()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
+        CType(profilepicPBox, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
@@ -101,9 +101,9 @@ Partial Class Profile
         Panel4.Controls.Add(Label28)
         Panel4.Controls.Add(Label27)
         Panel4.Controls.Add(Label26)
-        Panel4.Controls.Add(Label12)
+        Panel4.Controls.Add(ageLabel)
         Panel4.Controls.Add(Label13)
-        Panel4.Controls.Add(Label8)
+        Panel4.Controls.Add(sexLabel)
         Panel4.Controls.Add(Label9)
         Panel4.Controls.Add(userIDLabel)
         Panel4.Controls.Add(Label5)
@@ -116,7 +116,7 @@ Partial Class Profile
         Panel4.Controls.Add(Label7)
         Panel4.Controls.Add(Label6)
         Panel4.Controls.Add(fullnameLabel)
-        Panel4.Controls.Add(PictureBox3)
+        Panel4.Controls.Add(profilepicPBox)
         Panel4.Controls.Add(Label4)
         Panel4.Location = New Point(180, 68)
         Panel4.Name = "Panel4"
@@ -236,15 +236,15 @@ Partial Class Profile
         fullnameLabel.TabIndex = 8
         fullnameLabel.Text = "User's Fullname"
         ' 
-        ' PictureBox3
+        ' profilepicPBox
         ' 
-        PictureBox3.Image = My.Resources.Resources.circle_user__1_
-        PictureBox3.Location = New Point(71, 58)
-        PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(137, 123)
-        PictureBox3.SizeMode = PictureBoxSizeMode.Zoom
-        PictureBox3.TabIndex = 7
-        PictureBox3.TabStop = False
+        profilepicPBox.Image = My.Resources.Resources.circle_user__1_
+        profilepicPBox.Location = New Point(71, 58)
+        profilepicPBox.Name = "profilepicPBox"
+        profilepicPBox.Size = New Size(137, 123)
+        profilepicPBox.SizeMode = PictureBoxSizeMode.Zoom
+        profilepicPBox.TabIndex = 7
+        profilepicPBox.TabStop = False
         ' 
         ' Label4
         ' 
@@ -320,19 +320,19 @@ Partial Class Profile
         ratingsBtn.TextAlign = ContentAlignment.MiddleLeft
         ratingsBtn.UseVisualStyleBackColor = False
         ' 
-        ' Button3
+        ' profileBtn
         ' 
-        Button3.BackColor = Color.RoyalBlue
-        Button3.FlatStyle = FlatStyle.Flat
-        Button3.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button3.ForeColor = Color.White
-        Button3.Location = New Point(12, 200)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(128, 37)
-        Button3.TabIndex = 3
-        Button3.Text = "My Profile"
-        Button3.TextAlign = ContentAlignment.MiddleLeft
-        Button3.UseVisualStyleBackColor = False
+        profileBtn.BackColor = Color.RoyalBlue
+        profileBtn.FlatStyle = FlatStyle.Flat
+        profileBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        profileBtn.ForeColor = Color.White
+        profileBtn.Location = New Point(12, 200)
+        profileBtn.Name = "profileBtn"
+        profileBtn.Size = New Size(128, 37)
+        profileBtn.TabIndex = 3
+        profileBtn.Text = "My Profile"
+        profileBtn.TextAlign = ContentAlignment.MiddleLeft
+        profileBtn.UseVisualStyleBackColor = False
         ' 
         ' eventsBtn
         ' 
@@ -356,7 +356,7 @@ Partial Class Profile
         Panel1.Controls.Add(PictureBox1)
         Panel1.Controls.Add(officersBtn)
         Panel1.Controls.Add(ratingsBtn)
-        Panel1.Controls.Add(Button3)
+        Panel1.Controls.Add(profileBtn)
         Panel1.Controls.Add(eventsBtn)
         Panel1.Controls.Add(dashboardBtn)
         Panel1.Location = New Point(12, 12)
@@ -413,10 +413,10 @@ Partial Class Profile
         ' Panel2
         ' 
         Panel2.BackColor = Color.White
-        Panel2.Controls.Add(RadioButton2)
-        Panel2.Controls.Add(RadioButton1)
+        Panel2.Controls.Add(femaleRbtn)
+        Panel2.Controls.Add(maleRbtn)
         Panel2.Controls.Add(Label14)
-        Panel2.Controls.Add(Button4)
+        Panel2.Controls.Add(saveBtn)
         Panel2.Controls.Add(Panel3)
         Panel2.Controls.Add(Label15)
         Panel2.Controls.Add(Label23)
@@ -445,18 +445,18 @@ Partial Class Profile
         Panel2.Size = New Size(288, 370)
         Panel2.TabIndex = 30
         ' 
-        ' Button4
+        ' saveBtn
         ' 
-        Button4.BackColor = Color.CornflowerBlue
-        Button4.FlatStyle = FlatStyle.Flat
-        Button4.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button4.ForeColor = Color.White
-        Button4.Location = New Point(110, 326)
-        Button4.Name = "Button4"
-        Button4.Size = New Size(75, 32)
-        Button4.TabIndex = 49
-        Button4.Text = "SAVE"
-        Button4.UseVisualStyleBackColor = False
+        saveBtn.BackColor = Color.CornflowerBlue
+        saveBtn.FlatStyle = FlatStyle.Flat
+        saveBtn.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        saveBtn.ForeColor = Color.White
+        saveBtn.Location = New Point(110, 326)
+        saveBtn.Name = "saveBtn"
+        saveBtn.Size = New Size(75, 32)
+        saveBtn.TabIndex = 49
+        saveBtn.Text = "SAVE"
+        saveBtn.UseVisualStyleBackColor = False
         ' 
         ' Label23
         ' 
@@ -671,15 +671,15 @@ Partial Class Profile
         Label1.TabIndex = 1
         Label1.Text = "Edit Information"
         ' 
-        ' Label8
+        ' sexLabel
         ' 
-        Label8.AutoSize = True
-        Label8.Font = New Font("Century Gothic", 9F)
-        Label8.Location = New Point(60, 250)
-        Label8.Name = "Label8"
-        Label8.Size = New Size(28, 17)
-        Label8.TabIndex = 20
-        Label8.Text = "m/f"
+        sexLabel.AutoSize = True
+        sexLabel.Font = New Font("Century Gothic", 9F)
+        sexLabel.Location = New Point(60, 250)
+        sexLabel.Name = "sexLabel"
+        sexLabel.Size = New Size(28, 17)
+        sexLabel.TabIndex = 20
+        sexLabel.Text = "m/f"
         ' 
         ' Label9
         ' 
@@ -691,15 +691,15 @@ Partial Class Profile
         Label9.TabIndex = 19
         Label9.Text = "SEX:"
         ' 
-        ' Label12
+        ' ageLabel
         ' 
-        Label12.AutoSize = True
-        Label12.Font = New Font("Century Gothic", 9F)
-        Label12.Location = New Point(213, 250)
-        Label12.Name = "Label12"
-        Label12.Size = New Size(22, 17)
-        Label12.TabIndex = 22
-        Label12.Text = "20"
+        ageLabel.AutoSize = True
+        ageLabel.Font = New Font("Century Gothic", 9F)
+        ageLabel.Location = New Point(213, 250)
+        ageLabel.Name = "ageLabel"
+        ageLabel.Size = New Size(22, 17)
+        ageLabel.TabIndex = 22
+        ageLabel.Text = "20"
         ' 
         ' Label13
         ' 
@@ -741,29 +741,29 @@ Partial Class Profile
         Label15.Text = "Sex"
         Label15.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' RadioButton1
+        ' maleRbtn
         ' 
-        RadioButton1.AutoSize = True
-        RadioButton1.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        RadioButton1.Location = New Point(149, 273)
-        RadioButton1.Name = "RadioButton1"
-        RadioButton1.Size = New Size(37, 21)
-        RadioButton1.TabIndex = 53
-        RadioButton1.TabStop = True
-        RadioButton1.Text = "M"
-        RadioButton1.UseVisualStyleBackColor = True
+        maleRbtn.AutoSize = True
+        maleRbtn.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        maleRbtn.Location = New Point(149, 273)
+        maleRbtn.Name = "maleRbtn"
+        maleRbtn.Size = New Size(37, 21)
+        maleRbtn.TabIndex = 53
+        maleRbtn.TabStop = True
+        maleRbtn.Text = "M"
+        maleRbtn.UseVisualStyleBackColor = True
         ' 
-        ' RadioButton2
+        ' femaleRbtn
         ' 
-        RadioButton2.AutoSize = True
-        RadioButton2.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        RadioButton2.Location = New Point(217, 272)
-        RadioButton2.Name = "RadioButton2"
-        RadioButton2.Size = New Size(32, 21)
-        RadioButton2.TabIndex = 54
-        RadioButton2.TabStop = True
-        RadioButton2.Text = "F"
-        RadioButton2.UseVisualStyleBackColor = True
+        femaleRbtn.AutoSize = True
+        femaleRbtn.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        femaleRbtn.Location = New Point(217, 272)
+        femaleRbtn.Name = "femaleRbtn"
+        femaleRbtn.Size = New Size(32, 21)
+        femaleRbtn.TabIndex = 54
+        femaleRbtn.TabStop = True
+        femaleRbtn.Text = "F"
+        femaleRbtn.UseVisualStyleBackColor = True
         ' 
         ' Label26
         ' 
@@ -813,7 +813,7 @@ Partial Class Profile
         Text = "Profile"
         Panel4.ResumeLayout(False)
         Panel4.PerformLayout()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
+        CType(profilepicPBox, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         Panel1.ResumeLayout(False)
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
@@ -829,7 +829,7 @@ Partial Class Profile
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents officersBtn As Button
     Friend WithEvents ratingsBtn As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents profileBtn As Button
     Friend WithEvents eventsBtn As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents dashboardBtn As Button
@@ -837,7 +837,7 @@ Partial Class Profile
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents fullnameLabel As Label
-    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents profilepicPBox As PictureBox
     Friend WithEvents Label6 As Label
     Friend WithEvents passLabel As Label
     Friend WithEvents usrnameLabel As Label
@@ -847,7 +847,7 @@ Partial Class Profile
     Friend WithEvents courselabel As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Button4 As Button
+    Friend WithEvents saveBtn As Button
     Friend WithEvents Label23 As Label
     Friend WithEvents Label22 As Label
     Friend WithEvents Label19 As Label
@@ -871,9 +871,9 @@ Partial Class Profile
     Friend WithEvents Label1 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents userIDLabel As Label
-    Friend WithEvents Label12 As Label
+    Friend WithEvents ageLabel As Label
     Friend WithEvents Label13 As Label
-    Friend WithEvents Label8 As Label
+    Friend WithEvents sexLabel As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents Panel3 As Panel
@@ -881,6 +881,6 @@ Partial Class Profile
     Friend WithEvents Label28 As Label
     Friend WithEvents Label27 As Label
     Friend WithEvents Label26 As Label
-    Friend WithEvents RadioButton2 As RadioButton
-    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents femaleRbtn As RadioButton
+    Friend WithEvents maleRbtn As RadioButton
 End Class
