@@ -30,14 +30,14 @@
     Shadows Sub show()
         MyBase.Show()
         usernameLabel.Text = UserHandler.getCurrentuser.username
-        loadDates()
+        loadEvents()
     End Sub
 
     Private Sub eventCal_DateChanged(sender As Object, e As DateRangeEventArgs) Handles eventCal.DateChanged
-        loadDates()
+        loadEvents()
     End Sub
 
-    Private Sub loadDates()
+    Private Sub loadEvents()
         eventLBox.Items.Clear()
         event2LBox.Items.Clear()
 

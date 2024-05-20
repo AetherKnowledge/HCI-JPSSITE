@@ -12,15 +12,13 @@ Public Class EventHandler
     Public Shared Sub addEvent(newEvent As EventObj)
         ConnectionHandler.connection.open()
         Try
-            Dim query As String = "INSERT into events(eventName, eventImg, eventRating, dateOfEvent) VALUES (?, ?, ?)"
+            Dim query As String = "INSERT into events(eventName, eventImg, eventRating, dateOfEvent) VALUES (?, ?, ?, ?)"
             Dim command As New MySqlCommand(query, ConnectionHandler.connection)
-
-            Dim formattedDateTime As String = newEvent.ToString("yyyy-MM-dd")
 
             command.Parameters.AddWithValue(1, newEvent.eventName)
             command.Parameters.AddWithValue(2, newEvent.eventImg)
             command.Parameters.AddWithValue(3, newEvent.eventRating)
-            command.Parameters.AddWithValue(4, formattedDateTime)
+            command.Parameters.AddWithValue(4, newEvent.dateOfEvent.ToString("yyyy-MM-dd HH:mm:ss"))
 
             command.ExecuteNonQuery()
             eventList.Add(newEvent)
@@ -43,7 +41,7 @@ Public Class EventHandler
             command.Parameters.AddWithValue(1, newEvent.eventName)
             command.Parameters.AddWithValue(2, newEvent.eventImg)
             command.Parameters.AddWithValue(3, newEvent.eventRating)
-            command.Parameters.AddWithValue(4, formattedDateTime)
+            command.Parameters.AddWithValue(4, newEvent.dateOfEvent.ToString("yyyy-MM-dd HH:mm:ss"))
             command.Parameters.AddWithValue(5, oldEventName)
 
             command.ExecuteNonQuery()

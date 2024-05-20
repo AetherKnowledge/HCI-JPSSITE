@@ -4,6 +4,7 @@
     Public ReadOnly eventImg As Image
     Public ReadOnly eventRating As Integer
     Public ReadOnly dateOfEvent As Date
+    Public ReadOnly details As String
 
     Public Sub New(eventName As String, eventImg As Image, eventRating As Integer, dateOfEvent As Date)
         Me.eventName = eventName
