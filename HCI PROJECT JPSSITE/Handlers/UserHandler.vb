@@ -12,7 +12,7 @@ Public Class UserHandler
     Public Shared Sub addUser(newUser As User)
         ConnectionHandler.connection.open()
         Try
-            Dim query As String = "INSERT into users(username, password, firstname, surname, userID, birthDate, courseProgram, yearLevel) VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
+            Dim query As String = "INSERT into users(username, password, firstname, surname, userID, birthDate, courseProgram, yearLevel, sex) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)"
             Dim command As New MySqlCommand(query, ConnectionHandler.connection)
 
             command.Parameters.AddWithValue(1, newUser.username)
@@ -23,6 +23,7 @@ Public Class UserHandler
             command.Parameters.AddWithValue(6, newUser.birthDate.ToString("yyyy-MM-dd HH:mm:ss"))
             command.Parameters.AddWithValue(7, newUser.courseProgram)
             command.Parameters.AddWithValue(8, newUser.yearLevel)
+            command.Parameters.AddWithValue(9, newUser.sex)
 
             command.ExecuteNonQuery()
             usersList.Add(newUser)
@@ -38,7 +39,7 @@ Public Class UserHandler
     Public Shared Sub updateUser(newUser As User, oldUsername As String)
         ConnectionHandler.connection.open()
         Try
-            Dim query As String = "UPDATE users SET username = ?, password = ?, firstname = ?, surname = ?, userID = ?, birthDate = ?, courseProgram = ?, yearLevel = ? WHERE username = ?"
+            Dim query As String = "UPDATE users SET username = ?, password = ?, firstname = ?, surname = ?, userID = ?, birthDate = ?, courseProgram = ?, yearLevel = ?, sex = ? WHERE username = ?"
             Dim command As New MySqlCommand(query, ConnectionHandler.connection)
 
             command.Parameters.AddWithValue(1, newUser.username)
@@ -49,7 +50,8 @@ Public Class UserHandler
             command.Parameters.AddWithValue(6, newUser.birthDate.ToString("yyyy-MM-dd HH:mm:ss"))
             command.Parameters.AddWithValue(7, newUser.courseProgram)
             command.Parameters.AddWithValue(8, newUser.yearLevel)
-            command.Parameters.AddWithValue(9, oldUsername)
+            command.Parameters.AddWithValue(9, newUser.sex)
+            command.Parameters.AddWithValue(10, oldUsername)
 
             command.ExecuteNonQuery()
             For Each user As User In usersList
@@ -69,6 +71,7 @@ Public Class UserHandler
     End Sub
 
     Public Shared Sub getUsersFromDB()
+        usersList.Clear()
         ConnectionHandler.connection.open()
         Dim query As String = "SELECT * FROM users"
         Dim command As New MySqlCommand(query, ConnectionHandler.connection)
@@ -83,8 +86,9 @@ Public Class UserHandler
             Dim birthDate As Date = reader.GetDateTime("birthDate")
             Dim courseProgram As String = reader.GetString("courseProgram")
             Dim yearLevel As Integer = reader.GetInt32("yearLevel")
+            Dim sex As String = reader.GetString("sex")
 
-            Dim newUser As User = New User(username, password, firstName, surName, userID, birthDate, courseProgram, yearLevel)
+            Dim newUser As User = New User(username, password, firstName, surName, userID, birthDate, courseProgram, yearLevel, sex)
             usersList.Add(newUser)
         End While
 

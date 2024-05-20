@@ -10,8 +10,9 @@ Public Class User
     Public birthDate As Date
     Public courseProgram As String
     Public yearLevel As Integer
+    Public sex As String
 
-    Public Sub New(username As String, password As String, firstName As String, surName As String, userID As String, birthDate As Date, courseProgram As String, yearLevel As Integer)
+    Public Sub New(username As String, password As String, firstName As String, surName As String, userID As String, birthDate As Date, courseProgram As String, yearLevel As Integer, sex As String)
         Me.username = username
         Me.password = password
         Me.firstName = firstName
@@ -20,5 +21,6 @@ Public Class User
         Me.birthDate = birthDate
         Me.courseProgram = courseProgram
         Me.yearLevel = yearLevel
+        Me.sex = sex
     End Sub
 End Class

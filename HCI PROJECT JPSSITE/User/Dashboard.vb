@@ -2,9 +2,7 @@
 
     Dim user As User
     Shadows Sub show()
-        If user Is Nothing Then
-            user = UserHandler.getCurrentuser
-        End If
+        user = UserHandler.getCurrentuser
         usernameLabel.Text = user.username
         MyBase.Show()
     End Sub
