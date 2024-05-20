@@ -54,7 +54,7 @@ Partial Class AdminEvents
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label4.ForeColor = Color.MidnightBlue
+        Label4.ForeColor = SystemColors.ActiveCaptionText
         Label4.Location = New Point(15, 11)
         Label4.Name = "Label4"
         Label4.Size = New Size(246, 25)
@@ -89,7 +89,7 @@ Partial Class AdminEvents
         ' 
         ' logoutBtn
         ' 
-        logoutBtn.BackColor = Color.CornflowerBlue
+        logoutBtn.BackColor = SystemColors.ControlDarkDark
         logoutBtn.FlatStyle = FlatStyle.Popup
         logoutBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         logoutBtn.ForeColor = Color.White
@@ -109,7 +109,7 @@ Partial Class AdminEvents
         usernameLabel.Name = "usernameLabel"
         usernameLabel.Size = New Size(70, 16)
         usernameLabel.TabIndex = 1
-        usernameLabel.Text = "User"
+        usernameLabel.Text = "Admin"
         usernameLabel.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' PictureBox1
@@ -124,7 +124,7 @@ Partial Class AdminEvents
         ' 
         ' officersBtn
         ' 
-        officersBtn.BackColor = Color.CornflowerBlue
+        officersBtn.BackColor = SystemColors.ControlDarkDark
         officersBtn.FlatStyle = FlatStyle.Popup
         officersBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         officersBtn.ForeColor = Color.White
@@ -138,7 +138,7 @@ Partial Class AdminEvents
         ' 
         ' ratingsBtn
         ' 
-        ratingsBtn.BackColor = Color.CornflowerBlue
+        ratingsBtn.BackColor = SystemColors.ControlDarkDark
         ratingsBtn.FlatStyle = FlatStyle.Popup
         ratingsBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         ratingsBtn.ForeColor = Color.White
@@ -152,7 +152,7 @@ Partial Class AdminEvents
         ' 
         ' profileBtn
         ' 
-        profileBtn.BackColor = Color.CornflowerBlue
+        profileBtn.BackColor = SystemColors.ControlDarkDark
         profileBtn.FlatStyle = FlatStyle.Popup
         profileBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         profileBtn.ForeColor = Color.White
@@ -177,7 +177,7 @@ Partial Class AdminEvents
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.ForeColor = Color.MidnightBlue
+        Label1.ForeColor = SystemColors.ActiveCaptionText
         Label1.Location = New Point(24, 11)
         Label1.Name = "Label1"
         Label1.Size = New Size(123, 25)
@@ -196,7 +196,7 @@ Partial Class AdminEvents
         ' 
         ' eventsBtn
         ' 
-        eventsBtn.BackColor = Color.RoyalBlue
+        eventsBtn.BackColor = SystemColors.ControlDark
         eventsBtn.FlatStyle = FlatStyle.Popup
         eventsBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         eventsBtn.ForeColor = Color.White
@@ -210,7 +210,7 @@ Partial Class AdminEvents
         ' 
         ' Panel1
         ' 
-        Panel1.BackColor = Color.CornflowerBlue
+        Panel1.BackColor = SystemColors.ControlDarkDark
         Panel1.Controls.Add(logoutBtn)
         Panel1.Controls.Add(usernameLabel)
         Panel1.Controls.Add(PictureBox1)
@@ -226,7 +226,7 @@ Partial Class AdminEvents
         ' 
         ' dashboardBtn
         ' 
-        dashboardBtn.BackColor = Color.CornflowerBlue
+        dashboardBtn.BackColor = SystemColors.ControlDarkDark
         dashboardBtn.FlatStyle = FlatStyle.Popup
         dashboardBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         dashboardBtn.ForeColor = Color.White
@@ -262,7 +262,7 @@ Partial Class AdminEvents
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label3.ForeColor = Color.MidnightBlue
+        Label3.ForeColor = SystemColors.ActiveCaptionText
         Label3.Location = New Point(587, 25)
         Label3.Name = "Label3"
         Label3.Size = New Size(143, 25)
@@ -273,7 +273,7 @@ Partial Class AdminEvents
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label2.ForeColor = Color.MidnightBlue
+        Label2.ForeColor = SystemColors.ActiveCaptionText
         Label2.Location = New Point(185, 25)
         Label2.Name = "Label2"
         Label2.Size = New Size(85, 25)
