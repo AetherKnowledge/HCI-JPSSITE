@@ -74,7 +74,7 @@ Partial Class Dashboard
         Panel1.Controls.Add(profileBtn)
         Panel1.Controls.Add(eventsBtn)
         Panel1.Controls.Add(Button1)
-        Panel1.Location = New Point(9, 11)
+        Panel1.Location = New Point(12, 11)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(153, 427)
         Panel1.TabIndex = 0
