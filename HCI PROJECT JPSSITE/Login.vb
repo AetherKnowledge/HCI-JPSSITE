@@ -1,7 +1,6 @@
 ﻿Imports System.ComponentModel
 
 Public Class Login
-
     Private Sub userNameTextField_GotFocus(sender As Object, e As EventArgs) Handles userNameTextField.GotFocus
         If userNameTextField.Text = "Username" Then
             userNameTextField.Text = ""
@@ -38,19 +37,27 @@ Public Class Login
         Dim username As String = userNameTextField.Text
         Dim password As String = passwordTextField.Text
         If UserHandler.isLoginSuccessful(username, password) Then
-            Hide()
-            Dashboard.show()
+            If username = "admin" Then
+                Hide()
+                AdminDashboard.show()
+            Else
+                Hide()
+                Dashboard.show()
+            End If
 
-            userNameTextField.Text = ""
-            passwordTextField.Text = ""
-
+            userNameTextField.Text = "Username"
+            passwordTextField.Text = "Password"
         Else
             MessageBox.Show("Invalid Credentials")
         End If
     End Sub
 
-    Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Shadows Sub show()
+        MyBase.Show()
         UserHandler.getUsersFromDB()
     End Sub
 
+    Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        UserHandler.getUsersFromDB()
+    End Sub
 End Class

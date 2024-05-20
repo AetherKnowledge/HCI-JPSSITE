@@ -69,6 +69,7 @@ Public Class UserHandler
     End Sub
 
     Public Shared Sub getUsersFromDB()
+        usersList.Clear()
         ConnectionHandler.connection.open()
         Dim query As String = "SELECT * FROM users"
         Dim command As New MySqlCommand(query, ConnectionHandler.connection)
