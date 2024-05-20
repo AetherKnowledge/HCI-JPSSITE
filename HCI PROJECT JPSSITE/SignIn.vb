@@ -44,9 +44,19 @@
         ElseIf userID = "" Then
             MessageBox.Show("Invalid User ID, cannot be empty")
             Return
+        ElseIf Not maleRBtn.Checked And Not femaleRBtn.Checked Then
+            MessageBox.Show("Please Pick your Sex")
+            Return
         End If
 
-        Dim newUser As User = New User(username, password, firstName, surName, userID, birthDate, courseProgram, yearLevel)
+        Dim sex As String
+        If maleRBtn.Checked Then
+            sex = "M"
+        Else
+            sex = "F"
+        End If
+
+        Dim newUser As User = New User(username, password, firstName, surName, userID, birthDate, courseProgram, yearLevel, sex)
         If Not UserHandler.containsUserDuplicate(newUser) Then
             UserHandler.addUser(newUser)
             UserHandler.isLoginSuccessful(username, password)
@@ -73,5 +83,14 @@
     Private Sub SignIn_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         yearLevelComboBox.SelectedIndex = 0
         courseprogramComboBox.SelectedIndex = 0
+    End Sub
+    Private Sub maleRbtn_CheckedChanged(sender As Object, e As EventArgs) Handles maleRBtn.MouseClick
+        maleRBtn.Checked = True
+        femaleRBtn.Checked = False
+    End Sub
+
+    Private Sub femaleRbtn_CheckedChanged(sender As Object, e As EventArgs) Handles femaleRBtn.MouseClick
+        maleRBtn.Checked = False
+        femaleRBtn.Checked = True
     End Sub
 End Class

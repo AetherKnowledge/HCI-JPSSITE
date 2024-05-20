@@ -8,12 +8,19 @@
         courselabel.Text = UserHandler.getCurrentuser.courseProgram
         yearLabel.Text = UserHandler.getCurrentuser.yearLevel
         passLabel.Text = "*******"
+        sexLabel.Text = UserHandler.getCurrentuser.sex
 
         firstnameField.Text = UserHandler.getCurrentuser.firstName
         surnameField.Text = UserHandler.getCurrentuser.firstName
         usernameField.Text = UserHandler.getCurrentuser.username
         birthDateField.Value = UserHandler.getCurrentuser.birthDate
-        passwordField.Text = "Password"
+        If UserHandler.getCurrentuser.sex = "M" Then
+            maleRbtn.Checked = True
+        Else
+            femaleRbtn.Checked = True
+        End If
+
+        passwordField.Text = "*******"
     End Sub
 
     Private Sub dashboardBtn_Click(sender As Object, e As EventArgs) Handles dashboardBtn.Click
@@ -49,13 +56,13 @@
         If username.Length < 4 Then
             MessageBox.Show("Invalid username, length must be greater than 3")
             Return
-        ElseIf password.Length < 8 Then
+        ElseIf password <> "*******" And password.Length < 8 Then
             MessageBox.Show("Invalid password, length must be greater or equal to 8")
             Return
-        ElseIf Not Utilities.containsUppercase(password) Then
+        ElseIf password <> "*******" And Not Utilities.containsUppercase(password) Then
             MessageBox.Show("Invalid password, must contain uppercase")
             Return
-        ElseIf Not Utilities.containsSpecial(password) Then
+        ElseIf password <> "*******" And Not Utilities.containsSpecial(password) Then
             MessageBox.Show("Invalid password, must contain special character")
             Return
         ElseIf firstName = "" Then
@@ -64,20 +71,65 @@
         ElseIf surName = "" Then
             MessageBox.Show("Invalid Surname, cannot be empty")
             Return
+        ElseIf Not maleRBtn.Checked And Not femaleRBtn.Checked Then
+            MessageBox.Show("Please Pick your Sex")
+            Return
         End If
-        Dim newUser As User = New User(username, password, firstName, surName, userID, birthDate, courseProgram, yearLevel)
+
+        Dim sex As String
+        If maleRbtn.Checked Then
+            sex = "M"
+        Else
+            sex = "F"
+        End If
+
+        If password = "*******" Then
+            password = UserHandler.getCurrentuser.password
+        End If
+
+        Dim newUser As User = New User(username, password, firstName, surName, userID, birthDate, courseProgram, yearLevel, sex)
         UserHandler.updateUser(newUser, UserHandler.getCurrentuser.username)
 
-        fullnameLabel.Text = firstName + " " + surName
-        firstnameField.Text = firstName
-        surnameField.Text = surName
-        usernameField.Text = username
-        usrnameLabel.Text = username
-        birthDateField.Value = birthDate
-        passwordField.Text = "Password"
+        fullnameLabel.Text = UserHandler.getCurrentuser.firstName + " " + UserHandler.getCurrentuser.surName
+        usernameLabel.Text = UserHandler.getCurrentuser.username
+        userIDLabel.Text = UserHandler.getCurrentuser.userID
+        usrnameLabel.Text = UserHandler.getCurrentuser.username
+        courselabel.Text = UserHandler.getCurrentuser.courseProgram
+        yearLabel.Text = UserHandler.getCurrentuser.yearLevel
+        passLabel.Text = "*******"
+        sexLabel.Text = UserHandler.getCurrentuser.sex
+
+        firstnameField.Text = UserHandler.getCurrentuser.firstName
+        surnameField.Text = UserHandler.getCurrentuser.firstName
+        usernameField.Text = UserHandler.getCurrentuser.username
+        birthDateField.Value = UserHandler.getCurrentuser.birthDate
+        If UserHandler.getCurrentuser.sex = "M" Then
+            maleRbtn.Checked = True
+        Else
+            femaleRbtn.Checked = True
+        End If
+
+        passwordField.Text = "*******"
+
+        MessageBox.Show("Account Updated")
     End Sub
 
     Private Sub Me_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         Login.Close()
+    End Sub
+
+    Private Sub maleRbtn_CheckedChanged(sender As Object, e As EventArgs)
+        maleRbtn.Checked = True
+        femaleRbtn.Checked = False
+    End Sub
+
+    Private Sub femaleRbtn_CheckedChanged(sender As Object, e As EventArgs)
+        maleRbtn.Checked = False
+        femaleRbtn.Checked = True
+    End Sub
+
+    Private Sub logoutBtn_Click(sender As Object, e As EventArgs) Handles logoutBtn.Click
+        Me.Hide()
+        Login.show()
     End Sub
 End Class

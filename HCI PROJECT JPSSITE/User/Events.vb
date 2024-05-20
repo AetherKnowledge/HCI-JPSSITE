@@ -30,5 +30,26 @@
     Shadows Sub show()
         MyBase.Show()
         usernameLabel.Text = UserHandler.getCurrentuser.username
+        loadDates()
+    End Sub
+
+    Private Sub eventCal_DateChanged(sender As Object, e As DateRangeEventArgs) Handles eventCal.DateChanged
+        loadDates()
+    End Sub
+
+    Private Sub loadDates()
+        eventLBox.Items.Clear()
+        event2LBox.Items.Clear()
+
+        Dim dateOfEvent As Date = eventCal.SelectionRange.Start
+        Dim events As ArrayList = EventHandler.getEvents()
+        For Each eventObj As EventObj In events
+            If eventObj.dateOfEvent >= dateOfEvent Then
+                eventLBox.Items.Add(eventObj.eventName)
+            Else
+                event2LBox.Items.Add(eventObj.eventName)
+            End If
+        Next
+
     End Sub
 End Class
