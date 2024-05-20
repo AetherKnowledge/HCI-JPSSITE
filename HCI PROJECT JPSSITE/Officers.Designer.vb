@@ -23,8 +23,23 @@ Partial Class Officers
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Panel4 = New Panel()
+        Label14 = New Label()
+        Label13 = New Label()
+        Label12 = New Label()
+        sexLabel = New Label()
+        ageLabel = New Label()
+        sectionLabel = New Label()
+        Label8 = New Label()
+        Label7 = New Label()
+        Label6 = New Label()
+        nameLabel = New Label()
+        officerPBox = New PictureBox()
+        officerPositionCBox = New ComboBox()
         Label4 = New Label()
         Panel2 = New Panel()
+        motoRTBox = New RichTextBox()
+        Label15 = New Label()
+        achieveLBox = New ListBox()
         Label1 = New Label()
         PictureBox2 = New PictureBox()
         Label3 = New Label()
@@ -39,27 +54,12 @@ Partial Class Officers
         eventsBtn = New Button()
         dashboardBtn = New Button()
         MySqlCommand1 = New MySqlConnector.MySqlCommand()
-        officerPositionCBox = New ComboBox()
-        officerPBox = New PictureBox()
-        nameLabel = New Label()
-        Label6 = New Label()
-        Label7 = New Label()
-        Label8 = New Label()
-        sectionLabel = New Label()
-        ageLabel = New Label()
-        sexLabel = New Label()
-        Label12 = New Label()
-        Label13 = New Label()
-        Label14 = New Label()
-        achieveLBox = New ListBox()
-        Label15 = New Label()
-        motoRTBox = New RichTextBox()
         Panel4.SuspendLayout()
+        CType(officerPBox, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
-        CType(officerPBox, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel4
@@ -83,6 +83,134 @@ Partial Class Officers
         Panel4.Size = New Size(292, 370)
         Panel4.TabIndex = 24
         ' 
+        ' Label14
+        ' 
+        Label14.AutoSize = True
+        Label14.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label14.Location = New Point(132, 325)
+        Label14.Name = "Label14"
+        Label14.Size = New Size(11, 16)
+        Label14.TabIndex = 14
+        Label14.Text = ":"
+        Label14.TextAlign = ContentAlignment.MiddleRight
+        ' 
+        ' Label13
+        ' 
+        Label13.AutoSize = True
+        Label13.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label13.Location = New Point(132, 294)
+        Label13.Name = "Label13"
+        Label13.Size = New Size(11, 16)
+        Label13.TabIndex = 13
+        Label13.Text = ":"
+        Label13.TextAlign = ContentAlignment.MiddleRight
+        ' 
+        ' Label12
+        ' 
+        Label12.AutoSize = True
+        Label12.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label12.Location = New Point(132, 264)
+        Label12.Name = "Label12"
+        Label12.Size = New Size(11, 16)
+        Label12.TabIndex = 12
+        Label12.Text = ":"
+        Label12.TextAlign = ContentAlignment.MiddleRight
+        ' 
+        ' sexLabel
+        ' 
+        sexLabel.AutoSize = True
+        sexLabel.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        sexLabel.Location = New Point(181, 325)
+        sexLabel.Name = "sexLabel"
+        sexLabel.Size = New Size(31, 16)
+        sexLabel.TabIndex = 11
+        sexLabel.Text = "M/F"
+        sexLabel.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' ageLabel
+        ' 
+        ageLabel.AutoSize = True
+        ageLabel.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        ageLabel.Location = New Point(181, 294)
+        ageLabel.Name = "ageLabel"
+        ageLabel.Size = New Size(21, 16)
+        ageLabel.TabIndex = 10
+        ageLabel.Text = "20"
+        ageLabel.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' sectionLabel
+        ' 
+        sectionLabel.AutoSize = True
+        sectionLabel.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        sectionLabel.Location = New Point(181, 264)
+        sectionLabel.Name = "sectionLabel"
+        sectionLabel.Size = New Size(53, 16)
+        sectionLabel.TabIndex = 9
+        sectionLabel.Text = "BSIT 2A"
+        sectionLabel.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label8.Location = New Point(64, 325)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(29, 16)
+        Label8.TabIndex = 8
+        Label8.Text = "Sex"
+        Label8.TextAlign = ContentAlignment.MiddleRight
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label7.Location = New Point(59, 294)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(34, 16)
+        Label7.TabIndex = 7
+        Label7.Text = "Age"
+        Label7.TextAlign = ContentAlignment.MiddleRight
+        ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label6.Location = New Point(39, 264)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(54, 16)
+        Label6.TabIndex = 6
+        Label6.Text = "Section"
+        Label6.TextAlign = ContentAlignment.MiddleRight
+        ' 
+        ' nameLabel
+        ' 
+        nameLabel.AutoSize = True
+        nameLabel.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        nameLabel.Location = New Point(116, 230)
+        nameLabel.Name = "nameLabel"
+        nameLabel.Size = New Size(46, 16)
+        nameLabel.TabIndex = 5
+        nameLabel.Text = "Name"
+        nameLabel.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' officerPBox
+        ' 
+        officerPBox.Location = New Point(74, 88)
+        officerPBox.Name = "officerPBox"
+        officerPBox.Size = New Size(135, 130)
+        officerPBox.TabIndex = 4
+        officerPBox.TabStop = False
+        ' 
+        ' officerPositionCBox
+        ' 
+        officerPositionCBox.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        officerPositionCBox.FormattingEnabled = True
+        officerPositionCBox.Items.AddRange(New Object() {"President", "Vice President", "Secretary", "Assitance Secretary", "VP Finance", "VP Auditor", "VP Marketing", "VP Event Management", "Internal Guest Relation", "External Guest Relation"})
+        officerPositionCBox.Location = New Point(33, 48)
+        officerPositionCBox.Name = "officerPositionCBox"
+        officerPositionCBox.Size = New Size(220, 24)
+        officerPositionCBox.TabIndex = 3
+        ' 
         ' Label4
         ' 
         Label4.AutoSize = True
@@ -105,6 +233,38 @@ Partial Class Officers
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(288, 370)
         Panel2.TabIndex = 22
+        ' 
+        ' motoRTBox
+        ' 
+        motoRTBox.BorderStyle = BorderStyle.None
+        motoRTBox.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        motoRTBox.Location = New Point(17, 230)
+        motoRTBox.Name = "motoRTBox"
+        motoRTBox.Size = New Size(256, 127)
+        motoRTBox.TabIndex = 4
+        motoRTBox.Text = ""
+        ' 
+        ' Label15
+        ' 
+        Label15.AutoSize = True
+        Label15.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label15.ForeColor = Color.MidnightBlue
+        Label15.Location = New Point(105, 199)
+        Label15.Name = "Label15"
+        Label15.Size = New Size(76, 25)
+        Label15.TabIndex = 3
+        Label15.Text = "MOTO"
+        ' 
+        ' achieveLBox
+        ' 
+        achieveLBox.BorderStyle = BorderStyle.None
+        achieveLBox.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        achieveLBox.FormattingEnabled = True
+        achieveLBox.ItemHeight = 17
+        achieveLBox.Location = New Point(17, 48)
+        achieveLBox.Name = "achieveLBox"
+        achieveLBox.Size = New Size(256, 119)
+        achieveLBox.TabIndex = 2
         ' 
         ' Label1
         ' 
@@ -277,166 +437,6 @@ Partial Class Officers
         MySqlCommand1.Transaction = Nothing
         MySqlCommand1.UpdatedRowSource = UpdateRowSource.None
         ' 
-        ' officerPositionCBox
-        ' 
-        officerPositionCBox.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        officerPositionCBox.FormattingEnabled = True
-        officerPositionCBox.Items.AddRange(New Object() {"President", "Vice President", "Secretary", "Assitance Secretary", "VP Finance", "VP Auditor", "VP Marketing", "VP Event Management", "Internal Guest Relation", "External Guest Relation"})
-        officerPositionCBox.Location = New Point(33, 48)
-        officerPositionCBox.Name = "officerPositionCBox"
-        officerPositionCBox.Size = New Size(220, 24)
-        officerPositionCBox.TabIndex = 3
-        ' 
-        ' officerPBox
-        ' 
-        officerPBox.Location = New Point(74, 88)
-        officerPBox.Name = "officerPBox"
-        officerPBox.Size = New Size(135, 130)
-        officerPBox.TabIndex = 4
-        officerPBox.TabStop = False
-        ' 
-        ' nameLabel
-        ' 
-        nameLabel.AutoSize = True
-        nameLabel.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        nameLabel.Location = New Point(116, 230)
-        nameLabel.Name = "nameLabel"
-        nameLabel.Size = New Size(46, 16)
-        nameLabel.TabIndex = 5
-        nameLabel.Text = "Name"
-        nameLabel.TextAlign = ContentAlignment.MiddleCenter
-        ' 
-        ' Label6
-        ' 
-        Label6.AutoSize = True
-        Label6.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label6.Location = New Point(39, 264)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(54, 16)
-        Label6.TabIndex = 6
-        Label6.Text = "Section"
-        Label6.TextAlign = ContentAlignment.MiddleRight
-        ' 
-        ' Label7
-        ' 
-        Label7.AutoSize = True
-        Label7.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label7.Location = New Point(59, 294)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(34, 16)
-        Label7.TabIndex = 7
-        Label7.Text = "Age"
-        Label7.TextAlign = ContentAlignment.MiddleRight
-        ' 
-        ' Label8
-        ' 
-        Label8.AutoSize = True
-        Label8.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label8.Location = New Point(64, 325)
-        Label8.Name = "Label8"
-        Label8.Size = New Size(29, 16)
-        Label8.TabIndex = 8
-        Label8.Text = "Sex"
-        Label8.TextAlign = ContentAlignment.MiddleRight
-        ' 
-        ' sectionLabel
-        ' 
-        sectionLabel.AutoSize = True
-        sectionLabel.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        sectionLabel.Location = New Point(181, 264)
-        sectionLabel.Name = "sectionLabel"
-        sectionLabel.Size = New Size(53, 16)
-        sectionLabel.TabIndex = 9
-        sectionLabel.Text = "BSIT 2A"
-        sectionLabel.TextAlign = ContentAlignment.MiddleCenter
-        ' 
-        ' ageLabel
-        ' 
-        ageLabel.AutoSize = True
-        ageLabel.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        ageLabel.Location = New Point(181, 294)
-        ageLabel.Name = "ageLabel"
-        ageLabel.Size = New Size(21, 16)
-        ageLabel.TabIndex = 10
-        ageLabel.Text = "20"
-        ageLabel.TextAlign = ContentAlignment.MiddleCenter
-        ' 
-        ' sexLabel
-        ' 
-        sexLabel.AutoSize = True
-        sexLabel.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        sexLabel.Location = New Point(181, 325)
-        sexLabel.Name = "sexLabel"
-        sexLabel.Size = New Size(31, 16)
-        sexLabel.TabIndex = 11
-        sexLabel.Text = "M/F"
-        sexLabel.TextAlign = ContentAlignment.MiddleCenter
-        ' 
-        ' Label12
-        ' 
-        Label12.AutoSize = True
-        Label12.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label12.Location = New Point(132, 264)
-        Label12.Name = "Label12"
-        Label12.Size = New Size(11, 16)
-        Label12.TabIndex = 12
-        Label12.Text = ":"
-        Label12.TextAlign = ContentAlignment.MiddleRight
-        ' 
-        ' Label13
-        ' 
-        Label13.AutoSize = True
-        Label13.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label13.Location = New Point(132, 294)
-        Label13.Name = "Label13"
-        Label13.Size = New Size(11, 16)
-        Label13.TabIndex = 13
-        Label13.Text = ":"
-        Label13.TextAlign = ContentAlignment.MiddleRight
-        ' 
-        ' Label14
-        ' 
-        Label14.AutoSize = True
-        Label14.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label14.Location = New Point(132, 325)
-        Label14.Name = "Label14"
-        Label14.Size = New Size(11, 16)
-        Label14.TabIndex = 14
-        Label14.Text = ":"
-        Label14.TextAlign = ContentAlignment.MiddleRight
-        ' 
-        ' achieveLBox
-        ' 
-        achieveLBox.BorderStyle = BorderStyle.None
-        achieveLBox.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        achieveLBox.FormattingEnabled = True
-        achieveLBox.ItemHeight = 17
-        achieveLBox.Location = New Point(17, 48)
-        achieveLBox.Name = "achieveLBox"
-        achieveLBox.Size = New Size(256, 119)
-        achieveLBox.TabIndex = 2
-        ' 
-        ' Label15
-        ' 
-        Label15.AutoSize = True
-        Label15.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label15.ForeColor = Color.MidnightBlue
-        Label15.Location = New Point(105, 199)
-        Label15.Name = "Label15"
-        Label15.Size = New Size(76, 25)
-        Label15.TabIndex = 3
-        Label15.Text = "MOTO"
-        ' 
-        ' motoRTBox
-        ' 
-        motoRTBox.BorderStyle = BorderStyle.None
-        motoRTBox.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        motoRTBox.Location = New Point(17, 230)
-        motoRTBox.Name = "motoRTBox"
-        motoRTBox.Size = New Size(256, 127)
-        motoRTBox.TabIndex = 4
-        motoRTBox.Text = ""
-        ' 
         ' Officers
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -452,12 +452,12 @@ Partial Class Officers
         Text = "Officers"
         Panel4.ResumeLayout(False)
         Panel4.PerformLayout()
+        CType(officerPBox, ComponentModel.ISupportInitialize).EndInit()
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         Panel1.ResumeLayout(False)
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
-        CType(officerPBox, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
