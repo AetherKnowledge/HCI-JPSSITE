@@ -35,12 +35,14 @@ Public Class Ratings
     Shadows Sub show()
         MyBase.Show()
         usernameLabel.Text = UserHandler.getCurrentuser.username
+        eventpicPBox.Image = My.Resources.upload
         loadEvents()
         loadComments()
     End Sub
 
     Private Sub loadEvents()
         eventselectCBox.Items.Clear()
+        eventpicPBox.Image = My.Resources.upload
         Dim eventList As ArrayList = EventHandler.getEvents()
         For Each ev As EventObj In eventList
             eventselectCBox.Items.Add(ev.ToString)
@@ -60,6 +62,11 @@ Public Class Ratings
             selectedEvent = eventselectCBox.SelectedItem
             loadComments()
             starRating.Rating = EventEvaluationHandler.getTotalRating(selectedEvent)
+            If EventHandler.getEvent(selectedEvent) IsNot Nothing And EventHandler.getEvent(selectedEvent).eventImg IsNot Nothing Then
+                eventpicPBox.Image = EventHandler.getEvent(selectedEvent).eventImg
+            Else
+                eventpicPBox.Image = My.Resources.upload
+            End If
         End If
     End Sub
 

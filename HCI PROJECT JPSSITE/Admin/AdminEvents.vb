@@ -1,6 +1,9 @@
-﻿Public Class AdminEvents
+﻿Imports System.IO
+
+Public Class AdminEvents
 
     Private selectedImg As Image = Nothing
+    Public Shared imageBytes As Byte()
     Private Sub logoutBtn_Click(sender As Object, e As EventArgs) Handles logoutBtn.Click
         Hide()
         Login.show()
@@ -66,6 +69,7 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        imageBytes = Nothing
         Dim openFileDialog As New OpenFileDialog()
         openFileDialog.Filter = "Image Files (*.jpg;*.jpeg;*.png;*.bmp;*.gif)|*.jpg;*.jpeg;*.png;*.bmp;*.gif"
         openFileDialog.Multiselect = False ' Allow only one file selection
@@ -74,6 +78,7 @@
             ' Display selected image in PictureBox
             selectedImg = Image.FromFile(selectedImagePath)
             PictureBox3.Image = Image.FromFile(selectedImagePath)
+            imageBytes = File.ReadAllBytes(selectedImagePath)
         End If
     End Sub
 End Class

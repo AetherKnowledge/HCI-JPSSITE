@@ -16,7 +16,7 @@ Public Class EventHandler
             Dim command As New MySqlCommand(query, ConnectionHandler.connection)
 
             command.Parameters.AddWithValue(1, newEvent.eventName)
-            command.Parameters.AddWithValue(2, newEvent.eventImg)
+            command.Parameters.AddWithValue(2, AdminEvents.imageBytes)
             command.Parameters.AddWithValue(3, newEvent.eventRating)
             command.Parameters.AddWithValue(4, newEvent.dateOfEvent.ToString("yyyy-MM-dd HH:mm:ss"))
 
@@ -62,11 +62,20 @@ Public Class EventHandler
         Dim reader As MySqlDataReader = command.ExecuteReader()
 
         While reader.Read
+
             Dim eventName As String = reader.GetString("eventName")
-            Dim eventImg As Image = Nothing
             Dim eventRating As Integer = reader.GetInt32("eventRating")
             Dim dateString As String = reader("dateOfEvent").ToString()
             Dim dateOfEvent As Date = Date.Parse(dateString)
+
+            Dim imageData As Byte() = DirectCast(command.ExecuteScalar(), Byte())
+            Dim eventImg As Image = Nothing
+            If imageData IsNot Nothing Then
+                ' Convert byte array back to image
+                Using memoryStream As New MemoryStream(imageData)
+                    eventImg = Image.FromStream(memoryStream)
+                End Using
+            End If
 
             Dim newEvent As EventObj = New EventObj(eventName, eventImg, eventRating, dateOfEvent)
             eventList.Add(newEvent)
@@ -89,6 +98,15 @@ Public Class EventHandler
             End If
         Next
         Return events
+    End Function
+
+    Public Shared Function getEvent(eventName As String) As EventObj
+        For Each eventObj As EventObj In eventList
+            If eventObj.eventName = eventName Then
+                Return eventObj
+            End If
+        Next
+        Return Nothing
     End Function
 
 End Class
