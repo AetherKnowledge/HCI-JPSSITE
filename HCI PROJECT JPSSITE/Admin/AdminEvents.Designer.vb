@@ -24,15 +24,12 @@ Partial Class AdminEvents
     Private Sub InitializeComponent()
         Label4 = New Label()
         Panel4 = New Panel()
-        eventLBox = New ListBox()
-        eventCal = New MonthCalendar()
         logoutBtn = New Button()
         usernameLabel = New Label()
         PictureBox1 = New PictureBox()
         officersBtn = New Button()
         ratingsBtn = New Button()
         profileBtn = New Button()
-        Panel3 = New Panel()
         Label1 = New Label()
         event2LBox = New ListBox()
         eventsBtn = New Button()
@@ -42,12 +39,21 @@ Partial Class AdminEvents
         PictureBox2 = New PictureBox()
         Label3 = New Label()
         Label2 = New Label()
+        Label5 = New Label()
+        eventTitleTBox = New TextBox()
+        Label6 = New Label()
+        DateTimePicker1 = New DateTimePicker()
+        PictureBox3 = New PictureBox()
+        Button1 = New Button()
+        Label7 = New Label()
+        RichTextBox1 = New RichTextBox()
+        Button2 = New Button()
         Panel4.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
-        Panel3.SuspendLayout()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Label4
@@ -57,35 +63,27 @@ Partial Class AdminEvents
         Label4.ForeColor = SystemColors.ActiveCaptionText
         Label4.Location = New Point(15, 11)
         Label4.Name = "Label4"
-        Label4.Size = New Size(246, 25)
+        Label4.Size = New Size(117, 25)
         Label4.TabIndex = 2
-        Label4.Text = "Current and Upcoming"
+        Label4.Text = "Add Event"
         ' 
         ' Panel4
         ' 
         Panel4.BackColor = Color.White
-        Panel4.Controls.Add(eventLBox)
+        Panel4.Controls.Add(Button2)
+        Panel4.Controls.Add(RichTextBox1)
+        Panel4.Controls.Add(Label7)
+        Panel4.Controls.Add(Button1)
+        Panel4.Controls.Add(PictureBox3)
+        Panel4.Controls.Add(DateTimePicker1)
+        Panel4.Controls.Add(Label6)
+        Panel4.Controls.Add(eventTitleTBox)
+        Panel4.Controls.Add(Label5)
         Panel4.Controls.Add(Label4)
         Panel4.Location = New Point(185, 68)
         Panel4.Name = "Panel4"
-        Panel4.Size = New Size(292, 168)
+        Panel4.Size = New Size(292, 370)
         Panel4.TabIndex = 24
-        ' 
-        ' eventLBox
-        ' 
-        eventLBox.BorderStyle = BorderStyle.None
-        eventLBox.FormattingEnabled = True
-        eventLBox.ItemHeight = 15
-        eventLBox.Location = New Point(25, 45)
-        eventLBox.Name = "eventLBox"
-        eventLBox.Size = New Size(242, 105)
-        eventLBox.TabIndex = 3
-        ' 
-        ' eventCal
-        ' 
-        eventCal.Location = New Point(28, 12)
-        eventCal.Name = "eventCal"
-        eventCal.TabIndex = 0
         ' 
         ' logoutBtn
         ' 
@@ -164,15 +162,6 @@ Partial Class AdminEvents
         profileBtn.TextAlign = ContentAlignment.MiddleLeft
         profileBtn.UseVisualStyleBackColor = False
         ' 
-        ' Panel3
-        ' 
-        Panel3.BackColor = Color.White
-        Panel3.Controls.Add(eventCal)
-        Panel3.Location = New Point(185, 255)
-        Panel3.Name = "Panel3"
-        Panel3.Size = New Size(292, 183)
-        Panel3.TabIndex = 23
-        ' 
         ' Label1
         ' 
         Label1.AutoSize = True
@@ -180,9 +169,9 @@ Partial Class AdminEvents
         Label1.ForeColor = SystemColors.ActiveCaptionText
         Label1.Location = New Point(24, 11)
         Label1.Name = "Label1"
-        Label1.Size = New Size(123, 25)
+        Label1.Size = New Size(102, 25)
         Label1.TabIndex = 1
-        Label1.Text = "Past Events"
+        Label1.Text = "Event List"
         ' 
         ' event2LBox
         ' 
@@ -280,13 +269,102 @@ Partial Class AdminEvents
         Label2.TabIndex = 19
         Label2.Text = "EVENTS"
         ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label5.Location = New Point(38, 73)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(35, 17)
+        Label5.TabIndex = 3
+        Label5.Text = "Title:"
+        ' 
+        ' eventTitleTBox
+        ' 
+        eventTitleTBox.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        eventTitleTBox.Location = New Point(79, 68)
+        eventTitleTBox.Name = "eventTitleTBox"
+        eventTitleTBox.Size = New Size(161, 22)
+        eventTitleTBox.TabIndex = 4
+        ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label6.Location = New Point(38, 106)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(41, 17)
+        Label6.TabIndex = 5
+        Label6.Text = "Date:"
+        ' 
+        ' DateTimePicker1
+        ' 
+        DateTimePicker1.CalendarFont = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DateTimePicker1.Location = New Point(79, 101)
+        DateTimePicker1.Name = "DateTimePicker1"
+        DateTimePicker1.Size = New Size(161, 23)
+        DateTimePicker1.TabIndex = 6
+        ' 
+        ' PictureBox3
+        ' 
+        PictureBox3.Image = My.Resources.Resources.upload
+        PictureBox3.Location = New Point(18, 170)
+        PictureBox3.Name = "PictureBox3"
+        PictureBox3.Size = New Size(126, 123)
+        PictureBox3.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox3.TabIndex = 7
+        PictureBox3.TabStop = False
+        ' 
+        ' Button1
+        ' 
+        Button1.FlatStyle = FlatStyle.Popup
+        Button1.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button1.Location = New Point(48, 141)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(61, 23)
+        Button1.TabIndex = 8
+        Button1.Text = "Upload"
+        Button1.UseVisualStyleBackColor = True
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label7.Location = New Point(188, 147)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(52, 17)
+        Label7.TabIndex = 9
+        Label7.Text = "Details:"
+        ' 
+        ' RichTextBox1
+        ' 
+        RichTextBox1.BorderStyle = BorderStyle.FixedSingle
+        RichTextBox1.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        RichTextBox1.Location = New Point(150, 170)
+        RichTextBox1.Name = "RichTextBox1"
+        RichTextBox1.Size = New Size(126, 123)
+        RichTextBox1.TabIndex = 10
+        RichTextBox1.Text = ""
+        ' 
+        ' Button2
+        ' 
+        Button2.BackColor = SystemColors.ControlDarkDark
+        Button2.FlatStyle = FlatStyle.Popup
+        Button2.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button2.ForeColor = Color.White
+        Button2.Location = New Point(96, 312)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(98, 32)
+        Button2.TabIndex = 11
+        Button2.Text = "Save Event"
+        Button2.UseVisualStyleBackColor = False
+        ' 
         ' AdminEvents
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
         Controls.Add(Panel4)
-        Controls.Add(Panel3)
         Controls.Add(Panel1)
         Controls.Add(Panel2)
         Controls.Add(PictureBox2)
@@ -297,26 +375,23 @@ Partial Class AdminEvents
         Panel4.ResumeLayout(False)
         Panel4.PerformLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
-        Panel3.ResumeLayout(False)
         Panel1.ResumeLayout(False)
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
 
     Friend WithEvents Label4 As Label
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents eventLBox As ListBox
-    Friend WithEvents eventCal As MonthCalendar
     Friend WithEvents logoutBtn As Button
     Friend WithEvents usernameLabel As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents officersBtn As Button
     Friend WithEvents ratingsBtn As Button
     Friend WithEvents profileBtn As Button
-    Friend WithEvents Panel3 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents event2LBox As ListBox
     Friend WithEvents eventsBtn As Button
@@ -326,4 +401,13 @@ Partial Class AdminEvents
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents eventTitleTBox As TextBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents Label6 As Label
+    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Button2 As Button
 End Class
