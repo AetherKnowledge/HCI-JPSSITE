@@ -106,6 +106,18 @@ Public Class EventEvaluationHandler
         Return evaluations
     End Function
 
+    Public Shared Function getTotalRating(eventName As String) As Integer
+        Dim total As Integer = 0
+        Dim evalCount As Integer = 0
+        For Each evaluation As EventEvaluation In evaluationList
+            If evaluation.eventName = eventName Then
+                total += evaluation.getTotalMean()
+                evalCount += 1
+            End If
+        Next
+        Return total / evalCount
+    End Function
+
     Public Shared Function getEvaluations() As ArrayList
         getEvaluationsFromDB()
         Return evaluationList

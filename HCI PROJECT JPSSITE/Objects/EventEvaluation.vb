@@ -60,4 +60,9 @@
         Return overallTotal / 3
     End Function
 
+    Public Function getTotalMean() As Integer
+        Dim total As String = getActivitiesMean() + getSpeakersMean() + getOverallMean()
+        Return total / 3
+    End Function
+
 End Class
