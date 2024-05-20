@@ -1,7 +1,6 @@
 ﻿Public Class Dashboard
 
     Dim user As User
-
     Shadows Sub show()
         If user Is Nothing Then
             user = UserHandler.getCurrentuser

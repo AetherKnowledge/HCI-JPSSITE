@@ -33,7 +33,7 @@
 
     Private Sub officersBtn_Click(sender As Object, e As EventArgs) Handles officersBtn.Click
         Me.Hide()
-        Dashboard.show()
+        Officers.show()
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles saveBtn.Click
