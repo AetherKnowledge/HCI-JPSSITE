@@ -55,7 +55,6 @@ Public Class EventEvaluationHandler
         While reader.Read
             Dim username As String = reader.GetString("username")
             Dim eventName As String = reader.GetString("eventName")
-            Dim comment As String = reader.GetString("comment")
 
             Dim activitiesQ1 As Integer = reader.GetInt32("activitiesQ1")
             Dim activitiesQ2 As Integer = reader.GetInt32("activitiesQ2")
@@ -107,6 +106,7 @@ Public Class EventEvaluationHandler
     End Function
 
     Public Shared Function getTotalRating(eventName As String) As Integer
+        getEvaluationsFromDB()
         Dim total As Integer = 0
         Dim evalCount As Integer = 0
         For Each evaluation As EventEvaluation In evaluationList
@@ -115,6 +115,11 @@ Public Class EventEvaluationHandler
                 evalCount += 1
             End If
         Next
+
+        If evalCount = 0 Then
+            Return 0
+        End If
+
         Return total / evalCount
     End Function
 

@@ -24,7 +24,6 @@ Partial Class Ratings
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Ratings))
         Panel4 = New Panel()
-        ratingsLabel = New Label()
         rateBtn = New Button()
         eventpicPBox = New PictureBox()
         eventselectCBox = New ComboBox()
@@ -61,7 +60,6 @@ Partial Class Ratings
         ' Panel4
         ' 
         Panel4.BackColor = Color.White
-        Panel4.Controls.Add(ratingsLabel)
         Panel4.Controls.Add(rateBtn)
         Panel4.Controls.Add(eventpicPBox)
         Panel4.Controls.Add(eventselectCBox)
@@ -70,17 +68,6 @@ Partial Class Ratings
         Panel4.Name = "Panel4"
         Panel4.Size = New Size(292, 370)
         Panel4.TabIndex = 30
-        ' 
-        ' ratingsLabel
-        ' 
-        ratingsLabel.AutoSize = True
-        ratingsLabel.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        ratingsLabel.Location = New Point(101, 283)
-        ratingsLabel.Name = "ratingsLabel"
-        ratingsLabel.Size = New Size(90, 16)
-        ratingsLabel.TabIndex = 50
-        ratingsLabel.Text = """star ratings"""
-        ratingsLabel.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' rateBtn
         ' 
@@ -107,7 +94,7 @@ Partial Class Ratings
         ' 
         ' eventselectCBox
         ' 
-        eventselectCBox.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        eventselectCBox.Font = New Font("Century Gothic", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         eventselectCBox.FormattingEnabled = True
         eventselectCBox.Items.AddRange(New Object() {"Event 1", "Event 2", "Event 3"})
         eventselectCBox.Location = New Point(36, 58)
@@ -130,7 +117,7 @@ Partial Class Ratings
         ' 
         logoutBtn.BackColor = Color.CornflowerBlue
         logoutBtn.FlatStyle = FlatStyle.Popup
-        logoutBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        logoutBtn.Font = New Font("Century Gothic", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         logoutBtn.ForeColor = Color.White
         logoutBtn.Location = New Point(12, 329)
         logoutBtn.Name = "logoutBtn"
@@ -142,7 +129,7 @@ Partial Class Ratings
         ' 
         ' usernameLabel
         ' 
-        usernameLabel.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        usernameLabel.Font = New Font("Century Gothic", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         usernameLabel.ForeColor = Color.White
         usernameLabel.Location = New Point(38, 85)
         usernameLabel.Name = "usernameLabel"
@@ -165,7 +152,7 @@ Partial Class Ratings
         ' 
         officersBtn.BackColor = Color.CornflowerBlue
         officersBtn.FlatStyle = FlatStyle.Popup
-        officersBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        officersBtn.Font = New Font("Century Gothic", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         officersBtn.ForeColor = Color.White
         officersBtn.Location = New Point(12, 286)
         officersBtn.Name = "officersBtn"
@@ -179,7 +166,7 @@ Partial Class Ratings
         ' 
         ratingsBtn.BackColor = Color.RoyalBlue
         ratingsBtn.FlatStyle = FlatStyle.Popup
-        ratingsBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        ratingsBtn.Font = New Font("Century Gothic", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         ratingsBtn.ForeColor = Color.White
         ratingsBtn.Location = New Point(12, 243)
         ratingsBtn.Name = "ratingsBtn"
@@ -193,7 +180,7 @@ Partial Class Ratings
         ' 
         profileBtn.BackColor = Color.CornflowerBlue
         profileBtn.FlatStyle = FlatStyle.Popup
-        profileBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        profileBtn.Font = New Font("Century Gothic", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         profileBtn.ForeColor = Color.White
         profileBtn.Location = New Point(12, 200)
         profileBtn.Name = "profileBtn"
@@ -207,7 +194,7 @@ Partial Class Ratings
         ' 
         eventsBtn.BackColor = Color.CornflowerBlue
         eventsBtn.FlatStyle = FlatStyle.Popup
-        eventsBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        eventsBtn.Font = New Font("Century Gothic", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         eventsBtn.ForeColor = Color.White
         eventsBtn.Location = New Point(12, 157)
         eventsBtn.Name = "eventsBtn"
@@ -237,7 +224,7 @@ Partial Class Ratings
         ' 
         dashboardBtn.BackColor = Color.CornflowerBlue
         dashboardBtn.FlatStyle = FlatStyle.Popup
-        dashboardBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        dashboardBtn.Font = New Font("Century Gothic", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         dashboardBtn.ForeColor = Color.White
         dashboardBtn.Location = New Point(12, 114)
         dashboardBtn.Name = "dashboardBtn"
@@ -382,7 +369,7 @@ Partial Class Ratings
         ' 
         ' Ratings
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         ClientSize = New Size(800, 450)
@@ -430,7 +417,6 @@ Partial Class Ratings
     Friend WithEvents rateBtn As Button
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label1 As Label
-    Friend WithEvents ratingsLabel As Label
     Friend WithEvents allcommentRTBox As RichTextBox
     Friend WithEvents sendBtn As Button
     Friend WithEvents yourcommentRTBox As RichTextBox

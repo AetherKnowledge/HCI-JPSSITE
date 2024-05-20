@@ -59,6 +59,7 @@ Public Class Ratings
         If eventselectCBox.SelectedIndex <> -1 Then
             selectedEvent = eventselectCBox.SelectedItem
             loadComments()
+            starRating.Rating = EventEvaluationHandler.getTotalRating(selectedEvent)
         End If
     End Sub
 
@@ -79,4 +80,14 @@ Public Class Ratings
         CommentHandler.addComment(New Comment(UserHandler.getCurrentuser.username, selectedEvent, yourcommentRTBox.Text))
         loadComments()
     End Sub
+
+    Private Sub Ratings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        starRating = New StarRating()
+        starRating.NumberOfStars = 5
+        starRating.Location = New Point(75, 273)
+        Panel4.Controls.Add(starRating)
+    End Sub
+
+    Private starRating As StarRating
+
 End Class
