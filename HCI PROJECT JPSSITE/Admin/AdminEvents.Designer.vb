@@ -1,0 +1,413 @@
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class AdminEvents
+    Inherits System.Windows.Forms.Form
+
+    'Form overrides dispose to clean up the component list.
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        Try
+            If disposing AndAlso components IsNot Nothing Then
+                components.Dispose()
+            End If
+        Finally
+            MyBase.Dispose(disposing)
+        End Try
+    End Sub
+
+    'Required by the Windows Form Designer
+    Private components As System.ComponentModel.IContainer
+
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
+    <System.Diagnostics.DebuggerStepThrough()> _
+    Private Sub InitializeComponent()
+        Label4 = New Label()
+        Panel4 = New Panel()
+        logoutBtn = New Button()
+        usernameLabel = New Label()
+        PictureBox1 = New PictureBox()
+        officersBtn = New Button()
+        ratingsBtn = New Button()
+        profileBtn = New Button()
+        Label1 = New Label()
+        event2LBox = New ListBox()
+        eventsBtn = New Button()
+        Panel1 = New Panel()
+        dashboardBtn = New Button()
+        Panel2 = New Panel()
+        PictureBox2 = New PictureBox()
+        Label3 = New Label()
+        Label2 = New Label()
+        Label5 = New Label()
+        eventTitleTBox = New TextBox()
+        Label6 = New Label()
+        DateTimePicker1 = New DateTimePicker()
+        PictureBox3 = New PictureBox()
+        Button1 = New Button()
+        Label7 = New Label()
+        RichTextBox1 = New RichTextBox()
+        Button2 = New Button()
+        Panel4.SuspendLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        Panel1.SuspendLayout()
+        Panel2.SuspendLayout()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
+        SuspendLayout()
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label4.ForeColor = SystemColors.ActiveCaptionText
+        Label4.Location = New Point(15, 11)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(117, 25)
+        Label4.TabIndex = 2
+        Label4.Text = "Add Event"
+        ' 
+        ' Panel4
+        ' 
+        Panel4.BackColor = Color.White
+        Panel4.Controls.Add(Button2)
+        Panel4.Controls.Add(RichTextBox1)
+        Panel4.Controls.Add(Label7)
+        Panel4.Controls.Add(Button1)
+        Panel4.Controls.Add(PictureBox3)
+        Panel4.Controls.Add(DateTimePicker1)
+        Panel4.Controls.Add(Label6)
+        Panel4.Controls.Add(eventTitleTBox)
+        Panel4.Controls.Add(Label5)
+        Panel4.Controls.Add(Label4)
+        Panel4.Location = New Point(185, 68)
+        Panel4.Name = "Panel4"
+        Panel4.Size = New Size(292, 370)
+        Panel4.TabIndex = 24
+        ' 
+        ' logoutBtn
+        ' 
+        logoutBtn.BackColor = SystemColors.ControlDarkDark
+        logoutBtn.FlatStyle = FlatStyle.Popup
+        logoutBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        logoutBtn.ForeColor = Color.White
+        logoutBtn.Location = New Point(12, 329)
+        logoutBtn.Name = "logoutBtn"
+        logoutBtn.Size = New Size(128, 37)
+        logoutBtn.TabIndex = 6
+        logoutBtn.Text = "Log Out"
+        logoutBtn.TextAlign = ContentAlignment.MiddleLeft
+        logoutBtn.UseVisualStyleBackColor = False
+        ' 
+        ' usernameLabel
+        ' 
+        usernameLabel.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        usernameLabel.ForeColor = Color.White
+        usernameLabel.Location = New Point(38, 85)
+        usernameLabel.Name = "usernameLabel"
+        usernameLabel.Size = New Size(70, 16)
+        usernameLabel.TabIndex = 1
+        usernameLabel.Text = "Admin"
+        usernameLabel.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Image = My.Resources.Resources.circle_user
+        PictureBox1.Location = New Point(38, 13)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(70, 69)
+        PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox1.TabIndex = 0
+        PictureBox1.TabStop = False
+        ' 
+        ' officersBtn
+        ' 
+        officersBtn.BackColor = SystemColors.ControlDarkDark
+        officersBtn.FlatStyle = FlatStyle.Popup
+        officersBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        officersBtn.ForeColor = Color.White
+        officersBtn.Location = New Point(12, 286)
+        officersBtn.Name = "officersBtn"
+        officersBtn.Size = New Size(128, 37)
+        officersBtn.TabIndex = 5
+        officersBtn.Text = "My Officers"
+        officersBtn.TextAlign = ContentAlignment.MiddleLeft
+        officersBtn.UseVisualStyleBackColor = False
+        ' 
+        ' ratingsBtn
+        ' 
+        ratingsBtn.BackColor = SystemColors.ControlDarkDark
+        ratingsBtn.FlatStyle = FlatStyle.Popup
+        ratingsBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        ratingsBtn.ForeColor = Color.White
+        ratingsBtn.Location = New Point(12, 243)
+        ratingsBtn.Name = "ratingsBtn"
+        ratingsBtn.Size = New Size(128, 37)
+        ratingsBtn.TabIndex = 4
+        ratingsBtn.Text = "My Ratings"
+        ratingsBtn.TextAlign = ContentAlignment.MiddleLeft
+        ratingsBtn.UseVisualStyleBackColor = False
+        ' 
+        ' profileBtn
+        ' 
+        profileBtn.BackColor = SystemColors.ControlDarkDark
+        profileBtn.FlatStyle = FlatStyle.Popup
+        profileBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        profileBtn.ForeColor = Color.White
+        profileBtn.Location = New Point(12, 200)
+        profileBtn.Name = "profileBtn"
+        profileBtn.Size = New Size(128, 37)
+        profileBtn.TabIndex = 3
+        profileBtn.Text = "My Profile"
+        profileBtn.TextAlign = ContentAlignment.MiddleLeft
+        profileBtn.UseVisualStyleBackColor = False
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.ForeColor = SystemColors.ActiveCaptionText
+        Label1.Location = New Point(24, 11)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(102, 25)
+        Label1.TabIndex = 1
+        Label1.Text = "Event List"
+        ' 
+        ' event2LBox
+        ' 
+        event2LBox.BorderStyle = BorderStyle.None
+        event2LBox.FormattingEnabled = True
+        event2LBox.ItemHeight = 15
+        event2LBox.Location = New Point(24, 63)
+        event2LBox.Name = "event2LBox"
+        event2LBox.Size = New Size(242, 285)
+        event2LBox.TabIndex = 0
+        ' 
+        ' eventsBtn
+        ' 
+        eventsBtn.BackColor = SystemColors.ControlDark
+        eventsBtn.FlatStyle = FlatStyle.Popup
+        eventsBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        eventsBtn.ForeColor = Color.White
+        eventsBtn.Location = New Point(12, 157)
+        eventsBtn.Name = "eventsBtn"
+        eventsBtn.Size = New Size(128, 37)
+        eventsBtn.TabIndex = 3
+        eventsBtn.Text = "My Events"
+        eventsBtn.TextAlign = ContentAlignment.MiddleLeft
+        eventsBtn.UseVisualStyleBackColor = False
+        ' 
+        ' Panel1
+        ' 
+        Panel1.BackColor = SystemColors.ControlDarkDark
+        Panel1.Controls.Add(logoutBtn)
+        Panel1.Controls.Add(usernameLabel)
+        Panel1.Controls.Add(PictureBox1)
+        Panel1.Controls.Add(officersBtn)
+        Panel1.Controls.Add(ratingsBtn)
+        Panel1.Controls.Add(profileBtn)
+        Panel1.Controls.Add(eventsBtn)
+        Panel1.Controls.Add(dashboardBtn)
+        Panel1.Location = New Point(17, 12)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(153, 427)
+        Panel1.TabIndex = 18
+        ' 
+        ' dashboardBtn
+        ' 
+        dashboardBtn.BackColor = SystemColors.ControlDarkDark
+        dashboardBtn.FlatStyle = FlatStyle.Popup
+        dashboardBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        dashboardBtn.ForeColor = Color.White
+        dashboardBtn.Location = New Point(12, 114)
+        dashboardBtn.Name = "dashboardBtn"
+        dashboardBtn.Size = New Size(128, 37)
+        dashboardBtn.TabIndex = 2
+        dashboardBtn.Text = "My Dashboard"
+        dashboardBtn.TextAlign = ContentAlignment.MiddleLeft
+        dashboardBtn.UseVisualStyleBackColor = False
+        ' 
+        ' Panel2
+        ' 
+        Panel2.BackColor = Color.White
+        Panel2.Controls.Add(Label1)
+        Panel2.Controls.Add(event2LBox)
+        Panel2.Location = New Point(495, 68)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(288, 370)
+        Panel2.TabIndex = 22
+        ' 
+        ' PictureBox2
+        ' 
+        PictureBox2.Image = My.Resources.Resources._2
+        PictureBox2.Location = New Point(736, 12)
+        PictureBox2.Name = "PictureBox2"
+        PictureBox2.Size = New Size(47, 45)
+        PictureBox2.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox2.TabIndex = 21
+        PictureBox2.TabStop = False
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label3.ForeColor = SystemColors.ActiveCaptionText
+        Label3.Location = New Point(587, 25)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(143, 25)
+        Label3.TabIndex = 20
+        Label3.Text = "JPPSITE ORG."
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Font = New Font("Century Gothic", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.ForeColor = SystemColors.ActiveCaptionText
+        Label2.Location = New Point(185, 25)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(85, 25)
+        Label2.TabIndex = 19
+        Label2.Text = "EVENTS"
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label5.Location = New Point(38, 73)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(35, 17)
+        Label5.TabIndex = 3
+        Label5.Text = "Title:"
+        ' 
+        ' eventTitleTBox
+        ' 
+        eventTitleTBox.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        eventTitleTBox.Location = New Point(79, 68)
+        eventTitleTBox.Name = "eventTitleTBox"
+        eventTitleTBox.Size = New Size(161, 22)
+        eventTitleTBox.TabIndex = 4
+        ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label6.Location = New Point(38, 106)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(41, 17)
+        Label6.TabIndex = 5
+        Label6.Text = "Date:"
+        ' 
+        ' DateTimePicker1
+        ' 
+        DateTimePicker1.CalendarFont = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DateTimePicker1.Location = New Point(79, 101)
+        DateTimePicker1.Name = "DateTimePicker1"
+        DateTimePicker1.Size = New Size(161, 23)
+        DateTimePicker1.TabIndex = 6
+        ' 
+        ' PictureBox3
+        ' 
+        PictureBox3.Image = My.Resources.Resources.upload
+        PictureBox3.Location = New Point(18, 170)
+        PictureBox3.Name = "PictureBox3"
+        PictureBox3.Size = New Size(126, 123)
+        PictureBox3.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox3.TabIndex = 7
+        PictureBox3.TabStop = False
+        ' 
+        ' Button1
+        ' 
+        Button1.FlatStyle = FlatStyle.Popup
+        Button1.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button1.Location = New Point(48, 141)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(61, 23)
+        Button1.TabIndex = 8
+        Button1.Text = "Upload"
+        Button1.UseVisualStyleBackColor = True
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label7.Location = New Point(188, 147)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(52, 17)
+        Label7.TabIndex = 9
+        Label7.Text = "Details:"
+        ' 
+        ' RichTextBox1
+        ' 
+        RichTextBox1.BorderStyle = BorderStyle.FixedSingle
+        RichTextBox1.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        RichTextBox1.Location = New Point(150, 170)
+        RichTextBox1.Name = "RichTextBox1"
+        RichTextBox1.Size = New Size(126, 123)
+        RichTextBox1.TabIndex = 10
+        RichTextBox1.Text = ""
+        ' 
+        ' Button2
+        ' 
+        Button2.BackColor = SystemColors.ControlDarkDark
+        Button2.FlatStyle = FlatStyle.Popup
+        Button2.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button2.ForeColor = Color.White
+        Button2.Location = New Point(96, 312)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(98, 32)
+        Button2.TabIndex = 11
+        Button2.Text = "Save Event"
+        Button2.UseVisualStyleBackColor = False
+        ' 
+        ' AdminEvents
+        ' 
+        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Size(800, 450)
+        Controls.Add(Panel4)
+        Controls.Add(Panel1)
+        Controls.Add(Panel2)
+        Controls.Add(PictureBox2)
+        Controls.Add(Label3)
+        Controls.Add(Label2)
+        Name = "AdminEvents"
+        Text = "AdminEvents"
+        Panel4.ResumeLayout(False)
+        Panel4.PerformLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        Panel1.ResumeLayout(False)
+        Panel2.ResumeLayout(False)
+        Panel2.PerformLayout()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
+        ResumeLayout(False)
+        PerformLayout()
+    End Sub
+
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents logoutBtn As Button
+    Friend WithEvents usernameLabel As Label
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents officersBtn As Button
+    Friend WithEvents ratingsBtn As Button
+    Friend WithEvents profileBtn As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents event2LBox As ListBox
+    Friend WithEvents eventsBtn As Button
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents dashboardBtn As Button
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents eventTitleTBox As TextBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents Label6 As Label
+    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Button2 As Button
+End Class

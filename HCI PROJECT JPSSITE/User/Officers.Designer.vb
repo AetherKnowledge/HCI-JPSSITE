@@ -449,6 +449,7 @@ Partial Class Officers
         Controls.Add(Label2)
         Controls.Add(Panel1)
         Name = "Officers"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Officers"
         Panel4.ResumeLayout(False)
         Panel4.PerformLayout()
