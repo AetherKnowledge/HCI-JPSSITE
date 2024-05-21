@@ -1,7 +1,11 @@
 ﻿Public Class AdminRatings
+
+    Private starRating As StarRating
+    Public Shared selectedEvent As String = ""
+
     Private Sub logoutBtn_Click(sender As Object, e As EventArgs) Handles logoutBtn.Click
         Hide()
-        Login.Show()
+        Login.show()
     End Sub
     Private Sub dashboardBtn_Click(sender As Object, e As EventArgs) Handles dashboardBtn.Click
         Me.Hide()
@@ -30,5 +34,49 @@
     Shadows Sub show()
         MyBase.Show()
         usernameLabel.Text = UserHandler.getCurrentuser.username
+        loadEvents()
+        loadComments()
     End Sub
+
+    Private Sub loadEvents()
+        eventselectCBox.Items.Clear()
+        Dim eventList As ArrayList = EventHandler.getEvents()
+        For Each ev As EventObj In eventList
+            eventselectCBox.Items.Add(ev.ToString)
+        Next
+    End Sub
+
+    Private Sub loadComments()
+        allcommentRTBox.Clear()
+        Dim comments As ArrayList = CommentHandler.getCommentsFromEvent(selectedEvent)
+        For Each comment As Comment In comments
+            allcommentRTBox.AppendText(comment.userName + " : " + comment.comment + vbCrLf)
+        Next
+    End Sub
+
+    Private Sub eventselectCBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles eventselectCBox.SelectedIndexChanged
+        If eventselectCBox.SelectedIndex <> -1 Then
+            selectedEvent = eventselectCBox.SelectedItem
+            loadComments()
+            StarRating.Rating = EventEvaluationHandler.getTotalRating(selectedEvent)
+        End If
+    End Sub
+
+    Private Sub sendBtn_Click(sender As Object, e As EventArgs) Handles sendBtn.Click
+        If selectedEvent = "" Then
+            MessageBox.Show("Select Event to Comment on")
+            Return
+        End If
+        CommentHandler.addComment(New Comment(UserHandler.getCurrentuser.username, selectedEvent, yourcommentRTBox.Text))
+        loadComments()
+    End Sub
+
+    Private Sub Ratings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        StarRating = New StarRating()
+        StarRating.NumberOfStars = 5
+        StarRating.Location = New Point(75, 273)
+        Panel4.Controls.Add(StarRating)
+    End Sub
+
+
 End Class

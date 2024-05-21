@@ -24,6 +24,12 @@ Partial Class AdminEvents
     Private Sub InitializeComponent()
         Label4 = New Label()
         Panel4 = New Panel()
+        Button2 = New Button()
+        RichTextBox1 = New RichTextBox()
+        Label7 = New Label()
+        Button1 = New Button()
+        PictureBox3 = New PictureBox()
+        DateTimePicker1 = New DateTimePicker()
         saveEventBtn = New Button()
         uploadBtn = New Button()
         eventPBox = New PictureBox()
@@ -47,6 +53,7 @@ Partial Class AdminEvents
         Label3 = New Label()
         Label2 = New Label()
         Panel4.SuspendLayout()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         CType(eventPBox, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
@@ -81,6 +88,69 @@ Partial Class AdminEvents
         Panel4.Size = New Size(292, 370)
         Panel4.TabIndex = 24
         ' 
+
+        ' Button2
+        ' 
+        Button2.BackColor = SystemColors.ControlDarkDark
+        Button2.FlatStyle = FlatStyle.Popup
+        Button2.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button2.ForeColor = Color.White
+        Button2.Location = New Point(96, 312)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(98, 32)
+        Button2.TabIndex = 11
+        Button2.Text = "Save Event"
+        Button2.UseVisualStyleBackColor = False
+        ' 
+        ' RichTextBox1
+        ' 
+        RichTextBox1.BorderStyle = BorderStyle.FixedSingle
+        RichTextBox1.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        RichTextBox1.Location = New Point(150, 170)
+        RichTextBox1.Name = "RichTextBox1"
+        RichTextBox1.Size = New Size(126, 123)
+        RichTextBox1.TabIndex = 10
+        RichTextBox1.Text = ""
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label7.Location = New Point(188, 147)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(52, 17)
+        Label7.TabIndex = 9
+        Label7.Text = "Details:"
+        ' 
+        ' Button1
+        ' 
+        Button1.FlatStyle = FlatStyle.Popup
+        Button1.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button1.Location = New Point(48, 141)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(61, 23)
+        Button1.TabIndex = 8
+        Button1.Text = "Upload"
+        Button1.UseVisualStyleBackColor = True
+        ' 
+        ' PictureBox3
+        ' 
+        PictureBox3.Image = My.Resources.Resources.upload
+        PictureBox3.Location = New Point(18, 170)
+        PictureBox3.Name = "PictureBox3"
+        PictureBox3.Size = New Size(126, 123)
+        PictureBox3.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox3.TabIndex = 7
+        PictureBox3.TabStop = False
+        ' 
+        ' DateTimePicker1
+        ' 
+        DateTimePicker1.CalendarFont = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        DateTimePicker1.Location = New Point(79, 101)
+        DateTimePicker1.Name = "DateTimePicker1"
+        DateTimePicker1.Size = New Size(161, 23)
+        DateTimePicker1.TabIndex = 6
+
         ' saveEventBtn
         ' 
         saveEventBtn.BackColor = SystemColors.ControlDarkDark
@@ -122,10 +192,15 @@ Partial Class AdminEvents
         schedPicker.Name = "schedPicker"
         schedPicker.Size = New Size(161, 23)
         schedPicker.TabIndex = 6
+
         ' 
         ' Label6
         ' 
         Label6.AutoSize = True
+        Label6.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label6.Location = New Point(38, 106)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(41, 17)
         Label6.Font = New Font("Century Gothic", 9F, FontStyle.Bold)
         Label6.Location = New Point(38, 96)
         Label6.Name = "Label6"
@@ -136,6 +211,7 @@ Partial Class AdminEvents
         ' eventTitleTBox
         ' 
         eventTitleTBox.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        eventTitleTBox.Location = New Point(79, 68)
         eventTitleTBox.Location = New Point(79, 58)
         eventTitleTBox.Name = "eventTitleTBox"
         eventTitleTBox.Size = New Size(161, 22)
@@ -144,6 +220,10 @@ Partial Class AdminEvents
         ' Label5
         ' 
         Label5.AutoSize = True
+        Label5.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label5.Location = New Point(38, 73)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(35, 17)
         Label5.Font = New Font("Century Gothic", 9F, FontStyle.Bold)
         Label5.Location = New Point(38, 63)
         Label5.Name = "Label5"
@@ -351,6 +431,7 @@ Partial Class AdminEvents
         Text = "AdminEvents"
         Panel4.ResumeLayout(False)
         Panel4.PerformLayout()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
         CType(eventPBox, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         Panel1.ResumeLayout(False)

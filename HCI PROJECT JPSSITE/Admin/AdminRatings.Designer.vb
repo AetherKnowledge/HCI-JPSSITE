@@ -224,6 +224,7 @@ Partial Class AdminRatings
         showrateBtn.Text = "SHOW RATINGS"
         showrateBtn.UseVisualStyleBackColor = False
         ' 
+
         ' eventpicPBox
         ' 
         eventpicPBox.Image = My.Resources.Resources.EVENT_2
