@@ -48,13 +48,9 @@ Public Class AdminEvents
         Next
     End Sub
 
-    Private Sub RichTextBox1_TextChanged(sender As Object, e As EventArgs) Handles RichTextBox1.TextChanged
-
-    End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles saveEventBtn.Click
         Dim eventName As String = eventTitleTBox.Text
-        Dim dateOfEvent As Date = DateTimePicker1.Value
+        Dim dateOfEvent As Date = schedPicker.Value
 
         If eventName = "" Then
             MessageBox.Show("Please add title to Event")
@@ -64,11 +60,10 @@ Public Class AdminEvents
         EventHandler.addEvent(New EventObj(eventName, selectedImg, 0, dateOfEvent))
         selectedImg = Nothing
         eventTitleTBox.Text = ""
-        DateTimePicker1.Value = Date.Now
-        RichTextBox1.Text = ""
+        schedPicker.Value = Date.Now
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles uploadBtn.Click
         imageBytes = Nothing
         Dim openFileDialog As New OpenFileDialog()
         openFileDialog.Filter = "Image Files (*.jpg;*.jpeg;*.png;*.bmp;*.gif)|*.jpg;*.jpeg;*.png;*.bmp;*.gif"
@@ -77,7 +72,7 @@ Public Class AdminEvents
             Dim selectedImagePath As String = openFileDialog.FileName
             ' Display selected image in PictureBox
             selectedImg = Image.FromFile(selectedImagePath)
-            PictureBox3.Image = Image.FromFile(selectedImagePath)
+            eventPBox.Image = Image.FromFile(selectedImagePath)
             imageBytes = File.ReadAllBytes(selectedImagePath)
         End If
     End Sub

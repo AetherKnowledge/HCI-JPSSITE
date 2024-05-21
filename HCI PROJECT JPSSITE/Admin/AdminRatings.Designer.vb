@@ -35,7 +35,6 @@ Partial Class AdminRatings
         dashboardBtn = New Button()
         eventsBtn = New Button()
         Panel4 = New Panel()
-        ratingsLabel = New Label()
         showrateBtn = New Button()
         eventpicPBox = New PictureBox()
         eventselectCBox = New ComboBox()
@@ -190,7 +189,6 @@ Partial Class AdminRatings
         ' Panel4
         ' 
         Panel4.BackColor = Color.White
-        Panel4.Controls.Add(ratingsLabel)
         Panel4.Controls.Add(showrateBtn)
         Panel4.Controls.Add(eventpicPBox)
         Panel4.Controls.Add(eventselectCBox)
@@ -199,17 +197,6 @@ Partial Class AdminRatings
         Panel4.Name = "Panel4"
         Panel4.Size = New Size(292, 370)
         Panel4.TabIndex = 36
-        ' 
-        ' ratingsLabel
-        ' 
-        ratingsLabel.AutoSize = True
-        ratingsLabel.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        ratingsLabel.Location = New Point(101, 283)
-        ratingsLabel.Name = "ratingsLabel"
-        ratingsLabel.Size = New Size(90, 16)
-        ratingsLabel.TabIndex = 50
-        ratingsLabel.Text = """star ratings"""
-        ratingsLabel.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' showrateBtn
         ' 
@@ -224,7 +211,6 @@ Partial Class AdminRatings
         showrateBtn.Text = "SHOW RATINGS"
         showrateBtn.UseVisualStyleBackColor = False
         ' 
-
         ' eventpicPBox
         ' 
         eventpicPBox.Image = My.Resources.Resources.EVENT_2
@@ -419,7 +405,6 @@ Partial Class AdminRatings
     Friend WithEvents dashboardBtn As Button
     Friend WithEvents eventsBtn As Button
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents ratingsLabel As Label
     Friend WithEvents showrateBtn As Button
     Friend WithEvents eventpicPBox As PictureBox
     Friend WithEvents eventselectCBox As ComboBox

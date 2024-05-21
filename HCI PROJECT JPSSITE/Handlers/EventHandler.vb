@@ -68,13 +68,14 @@ Public Class EventHandler
             Dim dateString As String = reader("dateOfEvent").ToString()
             Dim dateOfEvent As Date = Date.Parse(dateString)
 
-            Dim imageData As Byte() = DirectCast(command.ExecuteScalar(), Byte())
-            Dim eventImg As Image = Nothing
-            If imageData IsNot Nothing Then
-                ' Convert byte array back to image
-                Using memoryStream As New MemoryStream(imageData)
-                    eventImg = Image.FromStream(memoryStream)
-                End Using
+            Dim eventImg As Image
+
+            If Not reader.IsDBNull(reader.GetOrdinal("eventImg")) Then
+                Dim byteArray As Byte() = DirectCast(reader("eventImg"), Byte())
+                Dim imageStream As New System.IO.MemoryStream(byteArray)
+                eventImg = Image.FromStream(imageStream)
+            Else
+                eventImg = My.Resources.upload
             End If
 
             Dim newEvent As EventObj = New EventObj(eventName, eventImg, eventRating, dateOfEvent)
