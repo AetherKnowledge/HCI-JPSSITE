@@ -1,6 +1,7 @@
 ﻿Imports System.Runtime.Serialization
 
 Public Class User
+    Implements IComparable(Of User)
 
     Public username As String
     Public password As String
@@ -23,4 +24,16 @@ Public Class User
         Me.yearLevel = yearLevel
         Me.sex = sex
     End Sub
+
+    Public Overrides Function ToString() As String
+        Return courseProgram + "-" + yearLevel.ToString + " - " + firstName + " " + surName
+    End Function
+
+    Public Function CompareTo(other As User) As Integer Implements IComparable(Of User).CompareTo
+        If other Is Nothing Then
+            Return 1
+        End If
+
+        Return String.Compare(Me.ToString, other.ToString)
+    End Function
 End Class

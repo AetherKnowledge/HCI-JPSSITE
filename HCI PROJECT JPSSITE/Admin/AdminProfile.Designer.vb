@@ -24,8 +24,13 @@ Partial Class AdminProfile
     Private Sub InitializeComponent()
         dashboardBtn = New Button()
         Panel2 = New Panel()
+        nameSearch = New TextBox()
+        studLBox = New ListBox()
+        descRBtn = New RadioButton()
+        ascRBtn = New RadioButton()
         Label1 = New Label()
         Panel4 = New Panel()
+        deleteBtn = New Button()
         Label28 = New Label()
         Label27 = New Label()
         Label26 = New Label()
@@ -57,12 +62,6 @@ Partial Class AdminProfile
         eventsBtn = New Button()
         Label3 = New Label()
         Label2 = New Label()
-        sectionCmBox = New ComboBox()
-        ascRBtn = New RadioButton()
-        descRBtn = New RadioButton()
-        sortBtn = New Button()
-        studLBox = New ListBox()
-        deleteBtn = New Button()
         Panel2.SuspendLayout()
         Panel4.SuspendLayout()
         CType(profilepicPBox, ComponentModel.ISupportInitialize).BeginInit()
@@ -88,16 +87,58 @@ Partial Class AdminProfile
         ' Panel2
         ' 
         Panel2.BackColor = Color.White
+        Panel2.Controls.Add(nameSearch)
         Panel2.Controls.Add(studLBox)
-        Panel2.Controls.Add(sortBtn)
         Panel2.Controls.Add(descRBtn)
         Panel2.Controls.Add(ascRBtn)
-        Panel2.Controls.Add(sectionCmBox)
         Panel2.Controls.Add(Label1)
         Panel2.Location = New Point(495, 68)
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(288, 370)
         Panel2.TabIndex = 36
+        ' 
+        ' nameSearch
+        ' 
+        nameSearch.Location = New Point(23, 50)
+        nameSearch.Name = "nameSearch"
+        nameSearch.Size = New Size(158, 23)
+        nameSearch.TabIndex = 8
+        ' 
+        ' studLBox
+        ' 
+        studLBox.BorderStyle = BorderStyle.FixedSingle
+        studLBox.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        studLBox.FormattingEnabled = True
+        studLBox.ItemHeight = 17
+        studLBox.Location = New Point(23, 90)
+        studLBox.Name = "studLBox"
+        studLBox.Size = New Size(236, 257)
+        studLBox.TabIndex = 7
+        ' 
+        ' descRBtn
+        ' 
+        descRBtn.AutoSize = True
+        descRBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        descRBtn.Location = New Point(226, 50)
+        descRBtn.Name = "descRBtn"
+        descRBtn.Size = New Size(33, 20)
+        descRBtn.TabIndex = 4
+        descRBtn.TabStop = True
+        descRBtn.Text = "⬆"
+        descRBtn.UseVisualStyleBackColor = True
+        ' 
+        ' ascRBtn
+        ' 
+        ascRBtn.AutoSize = True
+        ascRBtn.Checked = True
+        ascRBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        ascRBtn.Location = New Point(187, 50)
+        ascRBtn.Name = "ascRBtn"
+        ascRBtn.Size = New Size(33, 20)
+        ascRBtn.TabIndex = 3
+        ascRBtn.TabStop = True
+        ascRBtn.Text = "⬇"
+        ascRBtn.UseVisualStyleBackColor = True
         ' 
         ' Label1
         ' 
@@ -138,6 +179,19 @@ Partial Class AdminProfile
         Panel4.Name = "Panel4"
         Panel4.Size = New Size(292, 370)
         Panel4.TabIndex = 35
+        ' 
+        ' deleteBtn
+        ' 
+        deleteBtn.BackColor = SystemColors.ControlDarkDark
+        deleteBtn.FlatStyle = FlatStyle.Popup
+        deleteBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        deleteBtn.ForeColor = Color.White
+        deleteBtn.Location = New Point(108, 332)
+        deleteBtn.Name = "deleteBtn"
+        deleteBtn.Size = New Size(67, 24)
+        deleteBtn.TabIndex = 26
+        deleteBtn.Text = "DELETE"
+        deleteBtn.UseVisualStyleBackColor = False
         ' 
         ' Label28
         ' 
@@ -485,77 +539,6 @@ Partial Class AdminProfile
         Label2.TabIndex = 32
         Label2.Text = "PROFILE"
         ' 
-        ' sectionCmBox
-        ' 
-        sectionCmBox.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        sectionCmBox.FormattingEnabled = True
-        sectionCmBox.Items.AddRange(New Object() {"BSIT - 1A", "BSIT - 1B", "BSIT - 2A", "BSIT - 2B", "BSIT - 3", "BSIT - 4"})
-        sectionCmBox.Location = New Point(23, 49)
-        sectionCmBox.Name = "sectionCmBox"
-        sectionCmBox.Size = New Size(85, 24)
-        sectionCmBox.TabIndex = 2
-        ' 
-        ' ascRBtn
-        ' 
-        ascRBtn.AutoSize = True
-        ascRBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        ascRBtn.Location = New Point(114, 53)
-        ascRBtn.Name = "ascRBtn"
-        ascRBtn.Size = New Size(33, 20)
-        ascRBtn.TabIndex = 3
-        ascRBtn.TabStop = True
-        ascRBtn.Text = "⬇"
-        ascRBtn.UseVisualStyleBackColor = True
-        ' 
-        ' descRBtn
-        ' 
-        descRBtn.AutoSize = True
-        descRBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        descRBtn.Location = New Point(153, 53)
-        descRBtn.Name = "descRBtn"
-        descRBtn.Size = New Size(33, 20)
-        descRBtn.TabIndex = 4
-        descRBtn.TabStop = True
-        descRBtn.Text = "⬆"
-        descRBtn.UseVisualStyleBackColor = True
-        ' 
-        ' sortBtn
-        ' 
-        sortBtn.BackColor = SystemColors.ControlDarkDark
-        sortBtn.FlatStyle = FlatStyle.Popup
-        sortBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        sortBtn.ForeColor = Color.White
-        sortBtn.Location = New Point(192, 49)
-        sortBtn.Name = "sortBtn"
-        sortBtn.Size = New Size(67, 24)
-        sortBtn.TabIndex = 6
-        sortBtn.Text = "SORT"
-        sortBtn.UseVisualStyleBackColor = False
-        ' 
-        ' studLBox
-        ' 
-        studLBox.BorderStyle = BorderStyle.FixedSingle
-        studLBox.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        studLBox.FormattingEnabled = True
-        studLBox.ItemHeight = 17
-        studLBox.Location = New Point(23, 90)
-        studLBox.Name = "studLBox"
-        studLBox.Size = New Size(236, 257)
-        studLBox.TabIndex = 7
-        ' 
-        ' deleteBtn
-        ' 
-        deleteBtn.BackColor = SystemColors.ControlDarkDark
-        deleteBtn.FlatStyle = FlatStyle.Popup
-        deleteBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        deleteBtn.ForeColor = Color.White
-        deleteBtn.Location = New Point(108, 332)
-        deleteBtn.Name = "deleteBtn"
-        deleteBtn.Size = New Size(67, 24)
-        deleteBtn.TabIndex = 26
-        deleteBtn.Text = "DELETE"
-        deleteBtn.UseVisualStyleBackColor = False
-        ' 
         ' AdminProfile
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -618,9 +601,8 @@ Partial Class AdminProfile
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents ascRBtn As RadioButton
-    Friend WithEvents sectionCmBox As ComboBox
     Friend WithEvents descRBtn As RadioButton
-    Friend WithEvents sortBtn As Button
     Friend WithEvents studLBox As ListBox
     Friend WithEvents deleteBtn As Button
+    Friend WithEvents nameSearch As TextBox
 End Class

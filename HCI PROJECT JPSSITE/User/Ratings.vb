@@ -38,6 +38,9 @@ Public Class Ratings
         eventpicPBox.Image = My.Resources.upload
         loadEvents()
         loadComments()
+        If eventselectCBox.Items.Count > 0 Then
+            eventselectCBox.SelectedIndex = 0
+        End If
     End Sub
 
     Private Sub loadEvents()
