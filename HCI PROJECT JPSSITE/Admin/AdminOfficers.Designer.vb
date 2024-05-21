@@ -44,16 +44,17 @@ Partial Class AdminOfficers
         Label14 = New Label()
         Label13 = New Label()
         Label12 = New Label()
-        sexLabel = New Label()
-        ageLabel = New Label()
-        sectionLabel = New Label()
         Label8 = New Label()
         Label7 = New Label()
         Label6 = New Label()
-        nameLabel = New Label()
         officerPBox = New PictureBox()
         officerPositionCBox = New ComboBox()
         Label4 = New Label()
+        sectionCmBox = New ComboBox()
+        ageCmBox = New ComboBox()
+        sexCmBox = New ComboBox()
+        officerNameTBox = New TextBox()
+        saveBtn = New Button()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
@@ -114,7 +115,7 @@ Partial Class AdminOfficers
         officersBtn.Name = "officersBtn"
         officersBtn.Size = New Size(128, 37)
         officersBtn.TabIndex = 5
-        officersBtn.Text = "My Officers"
+        officersBtn.Text = "Officers"
         officersBtn.TextAlign = ContentAlignment.MiddleLeft
         officersBtn.UseVisualStyleBackColor = False
         ' 
@@ -128,7 +129,7 @@ Partial Class AdminOfficers
         ratingsBtn.Name = "ratingsBtn"
         ratingsBtn.Size = New Size(128, 37)
         ratingsBtn.TabIndex = 4
-        ratingsBtn.Text = "My Ratings"
+        ratingsBtn.Text = "Ratings"
         ratingsBtn.TextAlign = ContentAlignment.MiddleLeft
         ratingsBtn.UseVisualStyleBackColor = False
         ' 
@@ -142,7 +143,7 @@ Partial Class AdminOfficers
         profileBtn.Name = "profileBtn"
         profileBtn.Size = New Size(128, 37)
         profileBtn.TabIndex = 3
-        profileBtn.Text = "My Profile"
+        profileBtn.Text = "Profile"
         profileBtn.TextAlign = ContentAlignment.MiddleLeft
         profileBtn.UseVisualStyleBackColor = False
         ' 
@@ -156,7 +157,7 @@ Partial Class AdminOfficers
         eventsBtn.Name = "eventsBtn"
         eventsBtn.Size = New Size(128, 37)
         eventsBtn.TabIndex = 3
-        eventsBtn.Text = "My Events"
+        eventsBtn.Text = "Events"
         eventsBtn.TextAlign = ContentAlignment.MiddleLeft
         eventsBtn.UseVisualStyleBackColor = False
         ' 
@@ -218,13 +219,14 @@ Partial Class AdminOfficers
         dashboardBtn.Name = "dashboardBtn"
         dashboardBtn.Size = New Size(128, 37)
         dashboardBtn.TabIndex = 2
-        dashboardBtn.Text = "My Dashboard"
+        dashboardBtn.Text = "Dashboard"
         dashboardBtn.TextAlign = ContentAlignment.MiddleLeft
         dashboardBtn.UseVisualStyleBackColor = False
         ' 
         ' Panel2
         ' 
         Panel2.BackColor = Color.White
+        Panel2.Controls.Add(saveBtn)
         Panel2.Controls.Add(motoRTBox)
         Panel2.Controls.Add(Label15)
         Panel2.Controls.Add(achieveLBox)
@@ -240,9 +242,9 @@ Partial Class AdminOfficers
         motoRTBox.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         motoRTBox.Location = New Point(17, 230)
         motoRTBox.Name = "motoRTBox"
-        motoRTBox.Size = New Size(256, 127)
+        motoRTBox.Size = New Size(256, 80)
         motoRTBox.TabIndex = 4
-        motoRTBox.Text = ""
+        motoRTBox.Text = "hehehehe"
         ' 
         ' Label15
         ' 
@@ -280,16 +282,16 @@ Partial Class AdminOfficers
         ' Panel4
         ' 
         Panel4.BackColor = Color.White
+        Panel4.Controls.Add(officerNameTBox)
+        Panel4.Controls.Add(sexCmBox)
+        Panel4.Controls.Add(ageCmBox)
+        Panel4.Controls.Add(sectionCmBox)
         Panel4.Controls.Add(Label14)
         Panel4.Controls.Add(Label13)
         Panel4.Controls.Add(Label12)
-        Panel4.Controls.Add(sexLabel)
-        Panel4.Controls.Add(ageLabel)
-        Panel4.Controls.Add(sectionLabel)
         Panel4.Controls.Add(Label8)
         Panel4.Controls.Add(Label7)
         Panel4.Controls.Add(Label6)
-        Panel4.Controls.Add(nameLabel)
         Panel4.Controls.Add(officerPBox)
         Panel4.Controls.Add(officerPositionCBox)
         Panel4.Controls.Add(Label4)
@@ -331,39 +333,6 @@ Partial Class AdminOfficers
         Label12.Text = ":"
         Label12.TextAlign = ContentAlignment.MiddleRight
         ' 
-        ' sexLabel
-        ' 
-        sexLabel.AutoSize = True
-        sexLabel.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        sexLabel.Location = New Point(181, 325)
-        sexLabel.Name = "sexLabel"
-        sexLabel.Size = New Size(31, 16)
-        sexLabel.TabIndex = 11
-        sexLabel.Text = "M/F"
-        sexLabel.TextAlign = ContentAlignment.MiddleCenter
-        ' 
-        ' ageLabel
-        ' 
-        ageLabel.AutoSize = True
-        ageLabel.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        ageLabel.Location = New Point(181, 294)
-        ageLabel.Name = "ageLabel"
-        ageLabel.Size = New Size(21, 16)
-        ageLabel.TabIndex = 10
-        ageLabel.Text = "20"
-        ageLabel.TextAlign = ContentAlignment.MiddleCenter
-        ' 
-        ' sectionLabel
-        ' 
-        sectionLabel.AutoSize = True
-        sectionLabel.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        sectionLabel.Location = New Point(181, 264)
-        sectionLabel.Name = "sectionLabel"
-        sectionLabel.Size = New Size(53, 16)
-        sectionLabel.TabIndex = 9
-        sectionLabel.Text = "BSIT 2A"
-        sectionLabel.TextAlign = ContentAlignment.MiddleCenter
-        ' 
         ' Label8
         ' 
         Label8.AutoSize = True
@@ -397,22 +366,13 @@ Partial Class AdminOfficers
         Label6.Text = "Section"
         Label6.TextAlign = ContentAlignment.MiddleRight
         ' 
-        ' nameLabel
-        ' 
-        nameLabel.AutoSize = True
-        nameLabel.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        nameLabel.Location = New Point(116, 230)
-        nameLabel.Name = "nameLabel"
-        nameLabel.Size = New Size(46, 16)
-        nameLabel.TabIndex = 5
-        nameLabel.Text = "Name"
-        nameLabel.TextAlign = ContentAlignment.MiddleCenter
-        ' 
         ' officerPBox
         ' 
+        officerPBox.Image = My.Resources.Resources.Pres_Darren
         officerPBox.Location = New Point(74, 88)
         officerPBox.Name = "officerPBox"
         officerPBox.Size = New Size(135, 130)
+        officerPBox.SizeMode = PictureBoxSizeMode.Zoom
         officerPBox.TabIndex = 4
         officerPBox.TabStop = False
         ' 
@@ -437,6 +397,63 @@ Partial Class AdminOfficers
         Label4.TabIndex = 2
         Label4.Text = "Personal Information"
         ' 
+        ' sectionCmBox
+        ' 
+        sectionCmBox.FlatStyle = FlatStyle.Flat
+        sectionCmBox.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        sectionCmBox.FormattingEnabled = True
+        sectionCmBox.Items.AddRange(New Object() {"BSIT - 1A", "BSIT - 1B", "BSIT - 2A", "BSIT - 2B", "BSIT - 3", "BSIT - 4"})
+        sectionCmBox.Location = New Point(164, 262)
+        sectionCmBox.Name = "sectionCmBox"
+        sectionCmBox.Size = New Size(89, 24)
+        sectionCmBox.TabIndex = 15
+        ' 
+        ' ageCmBox
+        ' 
+        ageCmBox.FlatStyle = FlatStyle.Flat
+        ageCmBox.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        ageCmBox.FormattingEnabled = True
+        ageCmBox.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40"})
+        ageCmBox.Location = New Point(164, 291)
+        ageCmBox.Name = "ageCmBox"
+        ageCmBox.Size = New Size(89, 24)
+        ageCmBox.TabIndex = 16
+        ' 
+        ' sexCmBox
+        ' 
+        sexCmBox.FlatStyle = FlatStyle.Flat
+        sexCmBox.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        sexCmBox.FormattingEnabled = True
+        sexCmBox.Items.AddRange(New Object() {"Male", "Female"})
+        sexCmBox.Location = New Point(164, 321)
+        sexCmBox.Name = "sexCmBox"
+        sexCmBox.Size = New Size(89, 24)
+        sexCmBox.TabIndex = 17
+        ' 
+        ' officerNameTBox
+        ' 
+        officerNameTBox.BorderStyle = BorderStyle.None
+        officerNameTBox.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        officerNameTBox.Location = New Point(33, 230)
+        officerNameTBox.Name = "officerNameTBox"
+        officerNameTBox.Size = New Size(220, 15)
+        officerNameTBox.TabIndex = 18
+        officerNameTBox.Text = "Name"
+        officerNameTBox.TextAlign = HorizontalAlignment.Center
+        ' 
+        ' saveBtn
+        ' 
+        saveBtn.BackColor = SystemColors.ControlDarkDark
+        saveBtn.FlatStyle = FlatStyle.Popup
+        saveBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        saveBtn.ForeColor = Color.White
+        saveBtn.Location = New Point(106, 325)
+        saveBtn.Name = "saveBtn"
+        saveBtn.Size = New Size(75, 23)
+        saveBtn.TabIndex = 5
+        saveBtn.Text = "SAVE"
+        saveBtn.UseVisualStyleBackColor = False
+        ' 
         ' AdminOfficers
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -449,6 +466,7 @@ Partial Class AdminOfficers
         Controls.Add(Panel2)
         Controls.Add(Panel4)
         Name = "AdminOfficers"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "AdminOfficers"
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
@@ -484,14 +502,15 @@ Partial Class AdminOfficers
     Friend WithEvents Label14 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Label12 As Label
-    Friend WithEvents sexLabel As Label
-    Friend WithEvents ageLabel As Label
-    Friend WithEvents sectionLabel As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents nameLabel As Label
     Friend WithEvents officerPBox As PictureBox
     Friend WithEvents officerPositionCBox As ComboBox
     Friend WithEvents Label4 As Label
+    Friend WithEvents sexCmBox As ComboBox
+    Friend WithEvents ageCmBox As ComboBox
+    Friend WithEvents sectionCmBox As ComboBox
+    Friend WithEvents saveBtn As Button
+    Friend WithEvents officerNameTBox As TextBox
 End Class

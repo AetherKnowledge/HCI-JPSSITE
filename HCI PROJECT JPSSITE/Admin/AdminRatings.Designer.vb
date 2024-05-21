@@ -36,7 +36,7 @@ Partial Class AdminRatings
         eventsBtn = New Button()
         Panel4 = New Panel()
         ratingsLabel = New Label()
-        rateBtn = New Button()
+        showrateBtn = New Button()
         eventpicPBox = New PictureBox()
         eventselectCBox = New ComboBox()
         Label4 = New Label()
@@ -169,7 +169,7 @@ Partial Class AdminRatings
         dashboardBtn.Name = "dashboardBtn"
         dashboardBtn.Size = New Size(128, 37)
         dashboardBtn.TabIndex = 2
-        dashboardBtn.Text = "My Dashboard"
+        dashboardBtn.Text = "Dashboard"
         dashboardBtn.TextAlign = ContentAlignment.MiddleLeft
         dashboardBtn.UseVisualStyleBackColor = False
         ' 
@@ -183,7 +183,7 @@ Partial Class AdminRatings
         eventsBtn.Name = "eventsBtn"
         eventsBtn.Size = New Size(128, 37)
         eventsBtn.TabIndex = 3
-        eventsBtn.Text = "My Events"
+        eventsBtn.Text = "Events"
         eventsBtn.TextAlign = ContentAlignment.MiddleLeft
         eventsBtn.UseVisualStyleBackColor = False
         ' 
@@ -191,7 +191,7 @@ Partial Class AdminRatings
         ' 
         Panel4.BackColor = Color.White
         Panel4.Controls.Add(ratingsLabel)
-        Panel4.Controls.Add(rateBtn)
+        Panel4.Controls.Add(showrateBtn)
         Panel4.Controls.Add(eventpicPBox)
         Panel4.Controls.Add(eventselectCBox)
         Panel4.Controls.Add(Label4)
@@ -211,18 +211,18 @@ Partial Class AdminRatings
         ratingsLabel.Text = """star ratings"""
         ratingsLabel.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' rateBtn
+        ' showrateBtn
         ' 
-        rateBtn.BackColor = SystemColors.ControlDarkDark
-        rateBtn.FlatStyle = FlatStyle.Flat
-        rateBtn.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        rateBtn.ForeColor = Color.White
-        rateBtn.Location = New Point(101, 320)
-        rateBtn.Name = "rateBtn"
-        rateBtn.Size = New Size(90, 31)
-        rateBtn.TabIndex = 49
-        rateBtn.Text = "RATE"
-        rateBtn.UseVisualStyleBackColor = False
+        showrateBtn.BackColor = SystemColors.ControlDarkDark
+        showrateBtn.FlatStyle = FlatStyle.Flat
+        showrateBtn.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        showrateBtn.ForeColor = Color.White
+        showrateBtn.Location = New Point(81, 320)
+        showrateBtn.Name = "showrateBtn"
+        showrateBtn.Size = New Size(126, 31)
+        showrateBtn.TabIndex = 49
+        showrateBtn.Text = "SHOW RATINGS"
+        showrateBtn.UseVisualStyleBackColor = False
         ' 
         ' eventpicPBox
         ' 
@@ -275,7 +275,7 @@ Partial Class AdminRatings
         officersBtn.Name = "officersBtn"
         officersBtn.Size = New Size(128, 37)
         officersBtn.TabIndex = 5
-        officersBtn.Text = "My Officers"
+        officersBtn.Text = "Officers"
         officersBtn.TextAlign = ContentAlignment.MiddleLeft
         officersBtn.UseVisualStyleBackColor = False
         ' 
@@ -289,7 +289,7 @@ Partial Class AdminRatings
         ratingsBtn.Name = "ratingsBtn"
         ratingsBtn.Size = New Size(128, 37)
         ratingsBtn.TabIndex = 4
-        ratingsBtn.Text = "My Ratings"
+        ratingsBtn.Text = "Ratings"
         ratingsBtn.TextAlign = ContentAlignment.MiddleLeft
         ratingsBtn.UseVisualStyleBackColor = False
         ' 
@@ -360,7 +360,7 @@ Partial Class AdminRatings
         profileBtn.Name = "profileBtn"
         profileBtn.Size = New Size(128, 37)
         profileBtn.TabIndex = 3
-        profileBtn.Text = "My Profile"
+        profileBtn.Text = "Profile"
         profileBtn.TextAlign = ContentAlignment.MiddleLeft
         profileBtn.UseVisualStyleBackColor = False
         ' 
@@ -392,6 +392,7 @@ Partial Class AdminRatings
         Controls.Add(Label3)
         Controls.Add(Panel1)
         Name = "AdminRatings"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "AdminRatings"
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
@@ -418,7 +419,7 @@ Partial Class AdminRatings
     Friend WithEvents eventsBtn As Button
     Friend WithEvents Panel4 As Panel
     Friend WithEvents ratingsLabel As Label
-    Friend WithEvents rateBtn As Button
+    Friend WithEvents showrateBtn As Button
     Friend WithEvents eventpicPBox As PictureBox
     Friend WithEvents eventselectCBox As ComboBox
     Friend WithEvents Label4 As Label
