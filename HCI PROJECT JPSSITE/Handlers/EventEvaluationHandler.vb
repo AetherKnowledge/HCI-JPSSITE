@@ -8,7 +8,7 @@ Public Class EventEvaluationHandler
     Public Shared Sub addEvaluations(newEvaluation As EventEvaluation)
         ConnectionHandler.connection.open()
         Try
-            Dim query As String = "INSERT into eventevaluations(username, eventName, activitiesQ1, activitiesQ2, activitiesQ3, activitiesQ4, activitiesQ5, activitiesQ6, activitiesQ7, activitiesQ8, speakersQ1, speakersQ2, speakersQ3, speakersQ4, speakersQ5, speakersQ6, overallQ1_1, overallQ1_2, overallQ2) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+            Dim query As String = "INSERT into eventevaluations(username, eventName, activitiesQ1, activitiesQ2, activitiesQ3, activitiesQ4, activitiesQ5, activitiesQ6, activitiesQ7, activitiesQ8, speakersQ1, speakersQ2, speakersQ3, speakersQ4, speakersQ5, speakersQ6, overallQ1_1, overallQ1_2, overallQ2, dateSubmitted) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
             Dim command As New MySqlCommand(query, ConnectionHandler.connection)
 
             command.Parameters.AddWithValue(1, newEvaluation.userName)
@@ -32,6 +32,7 @@ Public Class EventEvaluationHandler
             command.Parameters.AddWithValue(17, newEvaluation.overallQ1_1)
             command.Parameters.AddWithValue(18, newEvaluation.overallQ1_2)
             command.Parameters.AddWithValue(19, newEvaluation.overallQ2)
+            command.Parameters.AddWithValue(20, newEvaluation.dateSubmitted)
 
             command.ExecuteNonQuery()
             evaluationList.Add(newEvaluation)
@@ -75,8 +76,9 @@ Public Class EventEvaluationHandler
             Dim overallQ1_1 As Integer = reader.GetInt32("overallQ1_1")
             Dim overallQ1_2 As Integer = reader.GetInt32("overallQ1_2")
             Dim overallQ2 As Integer = reader.GetInt32("overallQ2")
+            Dim dateSubmitted As Date = reader.GetDateTime("dateSubmitted")
 
-            Dim newEvent As EventEvaluation = New EventEvaluation(eventName, username, activitiesQ1, activitiesQ2, activitiesQ3, activitiesQ4, activitiesQ5, activitiesQ6, activitiesQ7, activitiesQ8, speakersQ1, speakersQ2, speakersQ3, speakersQ4, speakersQ5, speakersQ6, overallQ1_1, overallQ1_2, overallQ2)
+            Dim newEvent As EventEvaluation = New EventEvaluation(eventName, username, activitiesQ1, activitiesQ2, activitiesQ3, activitiesQ4, activitiesQ5, activitiesQ6, activitiesQ7, activitiesQ8, speakersQ1, speakersQ2, speakersQ3, speakersQ4, speakersQ5, speakersQ6, overallQ1_1, overallQ1_2, overallQ2, dateSubmitted)
             evaluationList.Add(newEvent)
         End While
 

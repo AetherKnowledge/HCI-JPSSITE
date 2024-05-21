@@ -23,7 +23,9 @@
     Public ReadOnly overallQ1_2 As Integer
     Public ReadOnly overallQ2 As Integer
 
-    Public Sub New(eventName As String, userName As String, activitiesQ1 As Integer, activitiesQ2 As Integer, activitiesQ3 As Integer, activitiesQ4 As Integer, activitiesQ5 As Integer, activitiesQ6 As Integer, activitiesQ7 As Integer, activitiesQ8 As Integer, speakersQ1 As Integer, speakersQ2 As Integer, speakersQ3 As Integer, speakersQ4 As Integer, speakersQ5 As Integer, speakersQ6 As Integer, overallQ1_1 As Integer, overallQ1_2 As Integer, overallQ2 As Integer)
+    Public ReadOnly dateSubmitted As Date
+
+    Public Sub New(eventName As String, userName As String, activitiesQ1 As Integer, activitiesQ2 As Integer, activitiesQ3 As Integer, activitiesQ4 As Integer, activitiesQ5 As Integer, activitiesQ6 As Integer, activitiesQ7 As Integer, activitiesQ8 As Integer, speakersQ1 As Integer, speakersQ2 As Integer, speakersQ3 As Integer, speakersQ4 As Integer, speakersQ5 As Integer, speakersQ6 As Integer, overallQ1_1 As Integer, overallQ1_2 As Integer, overallQ2 As Integer, dateSubmitted As Date)
         Me.eventName = eventName
         Me.userName = userName
         Me.activitiesQ1 = activitiesQ1
@@ -43,6 +45,7 @@
         Me.overallQ1_1 = overallQ1_1
         Me.overallQ1_2 = overallQ1_2
         Me.overallQ2 = overallQ2
+        Me.dateSubmitted = dateSubmitted
     End Sub
 
     Public Function getActivitiesMean() As Integer

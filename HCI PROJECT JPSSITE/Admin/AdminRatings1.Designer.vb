@@ -1525,7 +1525,7 @@ Partial Class AdminRatings1
         ' 
         ' AdminRatings1
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
         Controls.Add(Panel4)
@@ -1647,4 +1647,5 @@ Partial Class AdminRatings1
     Friend WithEvents Q1_Eval As Label
     Friend WithEvents Q8Label As Label
     Friend WithEvents DateTimePicker1 As DateTimePicker
+
 End Class
