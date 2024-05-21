@@ -37,8 +37,16 @@ Partial Class AdminRatings1
         Label4 = New Label()
         eventselectCBox = New ComboBox()
         Panel4 = New Panel()
+        DateTimePicker1 = New DateTimePicker()
         TableLayoutPanel1 = New TableLayoutPanel()
-        Q1_5 = New Label()
+        Q8_Total = New Label()
+        Q8_3 = New Label()
+        Q8_2 = New Label()
+        Q8_5 = New Label()
+        Q8_4 = New Label()
+        Q8_Mean = New Label()
+        Q8_Eval = New Label()
+        Q8_1 = New Label()
         Label1 = New Label()
         Label5 = New Label()
         Label6 = New Label()
@@ -57,29 +65,26 @@ Partial Class AdminRatings1
         Label19 = New Label()
         Q1_4 = New Label()
         Q1_3 = New Label()
-        Button1 = New Button()
-        backBtn = New Button()
-        MySqlCommand1 = New MySqlConnector.MySqlCommand()
+        Q1_5 = New Label()
         Q1_2 = New Label()
         Q1_1 = New Label()
         Q2_5 = New Label()
-        Q3_4 = New Label()
-        Q3_1 = New Label()
         Q2_4 = New Label()
         Q2_2 = New Label()
         Q2_3 = New Label()
         Q3_5 = New Label()
+        Q3_4 = New Label()
         Q3_3 = New Label()
-        Label32 = New Label()
         Q3_2 = New Label()
         Q2_1 = New Label()
-        Q4_4 = New Label()
+        Q3_1 = New Label()
         Q4_5 = New Label()
+        Q4_4 = New Label()
         Q4_3 = New Label()
-        Q4_1 = New Label()
         Q4_2 = New Label()
-        Q5_4 = New Label()
+        Q4_1 = New Label()
         Q5_5 = New Label()
+        Q5_4 = New Label()
         Q5_3 = New Label()
         Q5_2 = New Label()
         Q5_1 = New Label()
@@ -108,20 +113,16 @@ Partial Class AdminRatings1
         Q7_Total = New Label()
         Q7_Mean = New Label()
         Q2_Eval = New Label()
-        Q4_Eval = New Label()
         Q3_Eval = New Label()
+        Q4_Eval = New Label()
         Q5_Eval = New Label()
         Q6_Eval = New Label()
         Q7_Eval = New Label()
-        Q8_1 = New Label()
-        Q8_Eval = New Label()
-        Q8_Mean = New Label()
-        Q8_4 = New Label()
-        Q8_5 = New Label()
-        Q8_2 = New Label()
         Q1_Eval = New Label()
-        Q8_3 = New Label()
-        Q8_Total = New Label()
+        Label32 = New Label()
+        Button1 = New Button()
+        backBtn = New Button()
+        MySqlCommand1 = New MySqlConnector.MySqlCommand()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
@@ -181,7 +182,7 @@ Partial Class AdminRatings1
         ' 
         logoutBtn.BackColor = SystemColors.ControlDarkDark
         logoutBtn.FlatStyle = FlatStyle.Popup
-        logoutBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        logoutBtn.Font = New Font("Century Gothic", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         logoutBtn.ForeColor = Color.White
         logoutBtn.Location = New Point(12, 329)
         logoutBtn.Name = "logoutBtn"
@@ -193,7 +194,7 @@ Partial Class AdminRatings1
         ' 
         ' usernameLabel
         ' 
-        usernameLabel.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        usernameLabel.Font = New Font("Century Gothic", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         usernameLabel.ForeColor = Color.White
         usernameLabel.Location = New Point(38, 85)
         usernameLabel.Name = "usernameLabel"
@@ -216,7 +217,7 @@ Partial Class AdminRatings1
         ' 
         officersBtn.BackColor = SystemColors.ControlDarkDark
         officersBtn.FlatStyle = FlatStyle.Popup
-        officersBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        officersBtn.Font = New Font("Century Gothic", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         officersBtn.ForeColor = Color.White
         officersBtn.Location = New Point(12, 286)
         officersBtn.Name = "officersBtn"
@@ -230,7 +231,7 @@ Partial Class AdminRatings1
         ' 
         ratingsBtn.BackColor = SystemColors.ControlDark
         ratingsBtn.FlatStyle = FlatStyle.Popup
-        ratingsBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        ratingsBtn.Font = New Font("Century Gothic", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         ratingsBtn.ForeColor = Color.White
         ratingsBtn.Location = New Point(12, 243)
         ratingsBtn.Name = "ratingsBtn"
@@ -244,7 +245,7 @@ Partial Class AdminRatings1
         ' 
         profileBtn.BackColor = SystemColors.ControlDarkDark
         profileBtn.FlatStyle = FlatStyle.Popup
-        profileBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        profileBtn.Font = New Font("Century Gothic", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         profileBtn.ForeColor = Color.White
         profileBtn.Location = New Point(12, 200)
         profileBtn.Name = "profileBtn"
@@ -258,7 +259,7 @@ Partial Class AdminRatings1
         ' 
         eventsBtn.BackColor = SystemColors.ControlDarkDark
         eventsBtn.FlatStyle = FlatStyle.Popup
-        eventsBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        eventsBtn.Font = New Font("Century Gothic", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         eventsBtn.ForeColor = Color.White
         eventsBtn.Location = New Point(12, 157)
         eventsBtn.Name = "eventsBtn"
@@ -272,7 +273,7 @@ Partial Class AdminRatings1
         ' 
         dashboardBtn.BackColor = SystemColors.ControlDarkDark
         dashboardBtn.FlatStyle = FlatStyle.Popup
-        dashboardBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        dashboardBtn.Font = New Font("Century Gothic", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         dashboardBtn.ForeColor = Color.White
         dashboardBtn.Location = New Point(12, 114)
         dashboardBtn.Name = "dashboardBtn"
@@ -295,10 +296,10 @@ Partial Class AdminRatings1
         ' 
         ' eventselectCBox
         ' 
-        eventselectCBox.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        eventselectCBox.Font = New Font("Century Gothic", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         eventselectCBox.FormattingEnabled = True
         eventselectCBox.Items.AddRange(New Object() {"Event 1", "Event 2", "Event 3"})
-        eventselectCBox.Location = New Point(354, 11)
+        eventselectCBox.Location = New Point(266, 13)
         eventselectCBox.Name = "eventselectCBox"
         eventselectCBox.Size = New Size(217, 25)
         eventselectCBox.TabIndex = 3
@@ -306,6 +307,7 @@ Partial Class AdminRatings1
         ' Panel4
         ' 
         Panel4.BackColor = Color.White
+        Panel4.Controls.Add(DateTimePicker1)
         Panel4.Controls.Add(TableLayoutPanel1)
         Panel4.Controls.Add(Button1)
         Panel4.Controls.Add(backBtn)
@@ -316,15 +318,24 @@ Partial Class AdminRatings1
         Panel4.Size = New Size(598, 370)
         Panel4.TabIndex = 42
         ' 
+        ' DateTimePicker1
+        ' 
+        DateTimePicker1.CustomFormat = "MM/yyyy"
+        DateTimePicker1.Format = DateTimePickerFormat.Custom
+        DateTimePicker1.Location = New Point(489, 15)
+        DateTimePicker1.Name = "DateTimePicker1"
+        DateTimePicker1.Size = New Size(82, 23)
+        DateTimePicker1.TabIndex = 53
+        ' 
         ' TableLayoutPanel1
         ' 
         TableLayoutPanel1.ColumnCount = 9
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 63.02161F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 25F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 25F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 25F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 25F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 25F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 25.0F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 25.0F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 25.0F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 25.0F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 25.0F))
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 9.682552F))
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 9.682552F))
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 17.61328F))
@@ -412,7 +423,7 @@ Partial Class AdminRatings1
         TableLayoutPanel1.Location = New Point(18, 48)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
         TableLayoutPanel1.RowCount = 9
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 20.0F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 12.5F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 12.5F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 12.5F))
@@ -421,22 +432,113 @@ Partial Class AdminRatings1
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 12.5F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 12.5F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 12.5F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 20.0F))
         TableLayoutPanel1.Size = New Size(553, 268)
         TableLayoutPanel1.TabIndex = 52
         ' 
-        ' Q1_5
+        ' Q8_Total
         ' 
-        Q1_5.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Q1_5.AutoSize = True
-        Q1_5.BorderStyle = BorderStyle.FixedSingle
-        Q1_5.Location = New Point(269, 20)
-        Q1_5.Margin = New Padding(0)
-        Q1_5.Name = "Q1_5"
-        Q1_5.Size = New Size(25, 31)
-        Q1_5.TabIndex = 19
-        Q1_5.Text = "5"
-        Q1_5.TextAlign = ContentAlignment.MiddleCenter
+        Q8_Total.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        Q8_Total.AutoSize = True
+        Q8_Total.BorderStyle = BorderStyle.FixedSingle
+        Q8_Total.Location = New Point(394, 237)
+        Q8_Total.Margin = New Padding(0)
+        Q8_Total.Name = "Q8_Total"
+        Q8_Total.Size = New Size(41, 31)
+        Q8_Total.TabIndex = 82
+        Q8_Total.Text = "5"
+        Q8_Total.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' Q8_3
+        ' 
+        Q8_3.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        Q8_3.AutoSize = True
+        Q8_3.BorderStyle = BorderStyle.FixedSingle
+        Q8_3.Location = New Point(319, 237)
+        Q8_3.Margin = New Padding(0)
+        Q8_3.Name = "Q8_3"
+        Q8_3.Size = New Size(25, 31)
+        Q8_3.TabIndex = 81
+        Q8_3.Text = "5"
+        Q8_3.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' Q8_2
+        ' 
+        Q8_2.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        Q8_2.AutoSize = True
+        Q8_2.BorderStyle = BorderStyle.FixedSingle
+        Q8_2.Location = New Point(344, 237)
+        Q8_2.Margin = New Padding(0)
+        Q8_2.Name = "Q8_2"
+        Q8_2.Size = New Size(25, 31)
+        Q8_2.TabIndex = 79
+        Q8_2.Text = "5"
+        Q8_2.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' Q8_5
+        ' 
+        Q8_5.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        Q8_5.AutoSize = True
+        Q8_5.BorderStyle = BorderStyle.FixedSingle
+        Q8_5.Location = New Point(269, 237)
+        Q8_5.Margin = New Padding(0)
+        Q8_5.Name = "Q8_5"
+        Q8_5.Size = New Size(25, 31)
+        Q8_5.TabIndex = 78
+        Q8_5.Text = "5"
+        Q8_5.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' Q8_4
+        ' 
+        Q8_4.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        Q8_4.AutoSize = True
+        Q8_4.BorderStyle = BorderStyle.FixedSingle
+        Q8_4.Location = New Point(294, 237)
+        Q8_4.Margin = New Padding(0)
+        Q8_4.Name = "Q8_4"
+        Q8_4.Size = New Size(25, 31)
+        Q8_4.TabIndex = 77
+        Q8_4.Text = "5"
+        Q8_4.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' Q8_Mean
+        ' 
+        Q8_Mean.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        Q8_Mean.AutoSize = True
+        Q8_Mean.BorderStyle = BorderStyle.FixedSingle
+        Q8_Mean.Location = New Point(435, 237)
+        Q8_Mean.Margin = New Padding(0)
+        Q8_Mean.Name = "Q8_Mean"
+        Q8_Mean.Size = New Size(41, 31)
+        Q8_Mean.TabIndex = 76
+        Q8_Mean.Text = "5"
+        Q8_Mean.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' Q8_Eval
+        ' 
+        Q8_Eval.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        Q8_Eval.AutoSize = True
+        Q8_Eval.BorderStyle = BorderStyle.FixedSingle
+        Q8_Eval.Location = New Point(476, 237)
+        Q8_Eval.Margin = New Padding(0)
+        Q8_Eval.Name = "Q8_Eval"
+        Q8_Eval.Size = New Size(77, 31)
+        Q8_Eval.TabIndex = 75
+        Q8_Eval.Text = "5"
+        Q8_Eval.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' Q8_1
+        ' 
+        Q8_1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        Q8_1.AutoSize = True
+        Q8_1.BorderStyle = BorderStyle.FixedSingle
+        Q8_1.Location = New Point(369, 237)
+        Q8_1.Margin = New Padding(0)
+        Q8_1.Name = "Q8_1"
+        Q8_1.Size = New Size(25, 31)
+        Q8_1.TabIndex = 74
+        Q8_1.Text = "5"
+        Q8_1.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' Label1
         ' 
@@ -672,38 +774,18 @@ Partial Class AdminRatings1
         Q1_3.Text = "5"
         Q1_3.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' Button1
+        ' Q1_5
         ' 
-        Button1.BackColor = Color.White
-        Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button1.ForeColor = SystemColors.ActiveCaptionText
-        Button1.Location = New Point(489, 322)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(82, 31)
-        Button1.TabIndex = 51
-        Button1.Text = "NEXT"
-        Button1.UseVisualStyleBackColor = False
-        ' 
-        ' backBtn
-        ' 
-        backBtn.BackColor = Color.White
-        backBtn.FlatStyle = FlatStyle.Flat
-        backBtn.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        backBtn.ForeColor = SystemColors.ActiveCaptionText
-        backBtn.Location = New Point(18, 322)
-        backBtn.Name = "backBtn"
-        backBtn.Size = New Size(82, 31)
-        backBtn.TabIndex = 50
-        backBtn.Text = "BACK"
-        backBtn.UseVisualStyleBackColor = False
-        ' 
-        ' MySqlCommand1
-        ' 
-        MySqlCommand1.CommandTimeout = 0
-        MySqlCommand1.Connection = Nothing
-        MySqlCommand1.Transaction = Nothing
-        MySqlCommand1.UpdatedRowSource = UpdateRowSource.None
+        Q1_5.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        Q1_5.AutoSize = True
+        Q1_5.BorderStyle = BorderStyle.FixedSingle
+        Q1_5.Location = New Point(269, 20)
+        Q1_5.Margin = New Padding(0)
+        Q1_5.Name = "Q1_5"
+        Q1_5.Size = New Size(25, 31)
+        Q1_5.TabIndex = 19
+        Q1_5.Text = "5"
+        Q1_5.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' Q1_2
         ' 
@@ -743,32 +825,6 @@ Partial Class AdminRatings1
         Q2_5.TabIndex = 22
         Q2_5.Text = "5"
         Q2_5.TextAlign = ContentAlignment.MiddleCenter
-        ' 
-        ' Q3_4
-        ' 
-        Q3_4.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Q3_4.AutoSize = True
-        Q3_4.BorderStyle = BorderStyle.FixedSingle
-        Q3_4.Location = New Point(294, 82)
-        Q3_4.Margin = New Padding(0)
-        Q3_4.Name = "Q3_4"
-        Q3_4.Size = New Size(25, 31)
-        Q3_4.TabIndex = 23
-        Q3_4.Text = "5"
-        Q3_4.TextAlign = ContentAlignment.MiddleCenter
-        ' 
-        ' Q3_1
-        ' 
-        Q3_1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Q3_1.AutoSize = True
-        Q3_1.BorderStyle = BorderStyle.FixedSingle
-        Q3_1.Location = New Point(369, 82)
-        Q3_1.Margin = New Padding(0)
-        Q3_1.Name = "Q3_1"
-        Q3_1.Size = New Size(25, 31)
-        Q3_1.TabIndex = 24
-        Q3_1.Text = "5"
-        Q3_1.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' Q2_4
         ' 
@@ -822,6 +878,19 @@ Partial Class AdminRatings1
         Q3_5.Text = "5"
         Q3_5.TextAlign = ContentAlignment.MiddleCenter
         ' 
+        ' Q3_4
+        ' 
+        Q3_4.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        Q3_4.AutoSize = True
+        Q3_4.BorderStyle = BorderStyle.FixedSingle
+        Q3_4.Location = New Point(294, 82)
+        Q3_4.Margin = New Padding(0)
+        Q3_4.Name = "Q3_4"
+        Q3_4.Size = New Size(25, 31)
+        Q3_4.TabIndex = 23
+        Q3_4.Text = "5"
+        Q3_4.TextAlign = ContentAlignment.MiddleCenter
+        ' 
         ' Q3_3
         ' 
         Q3_3.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
@@ -834,20 +903,6 @@ Partial Class AdminRatings1
         Q3_3.TabIndex = 31
         Q3_3.Text = "5"
         Q3_3.TextAlign = ContentAlignment.MiddleCenter
-        ' 
-        ' Label32
-        ' 
-        Label32.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Label32.AutoSize = True
-        Label32.BorderStyle = BorderStyle.FixedSingle
-        Label32.ImageAlign = ContentAlignment.MiddleLeft
-        Label32.Location = New Point(0, 237)
-        Label32.Margin = New Padding(0)
-        Label32.Name = "Label32"
-        Label32.Size = New Size(269, 31)
-        Label32.TabIndex = 29
-        Label32.Text = "8. The segments are logically arranged."
-        Label32.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Q3_2
         ' 
@@ -875,18 +930,18 @@ Partial Class AdminRatings1
         Q2_1.Text = "5"
         Q2_1.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' Q4_4
+        ' Q3_1
         ' 
-        Q4_4.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Q4_4.AutoSize = True
-        Q4_4.BorderStyle = BorderStyle.FixedSingle
-        Q4_4.Location = New Point(294, 113)
-        Q4_4.Margin = New Padding(0)
-        Q4_4.Name = "Q4_4"
-        Q4_4.Size = New Size(25, 31)
-        Q4_4.TabIndex = 34
-        Q4_4.Text = "5"
-        Q4_4.TextAlign = ContentAlignment.MiddleCenter
+        Q3_1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        Q3_1.AutoSize = True
+        Q3_1.BorderStyle = BorderStyle.FixedSingle
+        Q3_1.Location = New Point(369, 82)
+        Q3_1.Margin = New Padding(0)
+        Q3_1.Name = "Q3_1"
+        Q3_1.Size = New Size(25, 31)
+        Q3_1.TabIndex = 24
+        Q3_1.Text = "5"
+        Q3_1.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' Q4_5
         ' 
@@ -901,6 +956,19 @@ Partial Class AdminRatings1
         Q4_5.Text = "5"
         Q4_5.TextAlign = ContentAlignment.MiddleCenter
         ' 
+        ' Q4_4
+        ' 
+        Q4_4.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        Q4_4.AutoSize = True
+        Q4_4.BorderStyle = BorderStyle.FixedSingle
+        Q4_4.Location = New Point(294, 113)
+        Q4_4.Margin = New Padding(0)
+        Q4_4.Name = "Q4_4"
+        Q4_4.Size = New Size(25, 31)
+        Q4_4.TabIndex = 34
+        Q4_4.Text = "5"
+        Q4_4.TextAlign = ContentAlignment.MiddleCenter
+        ' 
         ' Q4_3
         ' 
         Q4_3.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
@@ -913,19 +981,6 @@ Partial Class AdminRatings1
         Q4_3.TabIndex = 36
         Q4_3.Text = "5"
         Q4_3.TextAlign = ContentAlignment.MiddleCenter
-        ' 
-        ' Q4_1
-        ' 
-        Q4_1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Q4_1.AutoSize = True
-        Q4_1.BorderStyle = BorderStyle.FixedSingle
-        Q4_1.Location = New Point(369, 113)
-        Q4_1.Margin = New Padding(0)
-        Q4_1.Name = "Q4_1"
-        Q4_1.Size = New Size(25, 31)
-        Q4_1.TabIndex = 37
-        Q4_1.Text = "5"
-        Q4_1.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' Q4_2
         ' 
@@ -940,18 +995,18 @@ Partial Class AdminRatings1
         Q4_2.Text = "5"
         Q4_2.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' Q5_4
+        ' Q4_1
         ' 
-        Q5_4.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Q5_4.AutoSize = True
-        Q5_4.BorderStyle = BorderStyle.FixedSingle
-        Q5_4.Location = New Point(294, 144)
-        Q5_4.Margin = New Padding(0)
-        Q5_4.Name = "Q5_4"
-        Q5_4.Size = New Size(25, 31)
-        Q5_4.TabIndex = 39
-        Q5_4.Text = "5"
-        Q5_4.TextAlign = ContentAlignment.MiddleCenter
+        Q4_1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        Q4_1.AutoSize = True
+        Q4_1.BorderStyle = BorderStyle.FixedSingle
+        Q4_1.Location = New Point(369, 113)
+        Q4_1.Margin = New Padding(0)
+        Q4_1.Name = "Q4_1"
+        Q4_1.Size = New Size(25, 31)
+        Q4_1.TabIndex = 37
+        Q4_1.Text = "5"
+        Q4_1.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' Q5_5
         ' 
@@ -965,6 +1020,19 @@ Partial Class AdminRatings1
         Q5_5.TabIndex = 40
         Q5_5.Text = "5"
         Q5_5.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' Q5_4
+        ' 
+        Q5_4.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        Q5_4.AutoSize = True
+        Q5_4.BorderStyle = BorderStyle.FixedSingle
+        Q5_4.Location = New Point(294, 144)
+        Q5_4.Margin = New Padding(0)
+        Q5_4.Name = "Q5_4"
+        Q5_4.Size = New Size(25, 31)
+        Q5_4.TabIndex = 39
+        Q5_4.Text = "5"
+        Q5_4.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' Q5_3
         ' 
@@ -1330,19 +1398,6 @@ Partial Class AdminRatings1
         Q2_Eval.Text = "5"
         Q2_Eval.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' Q4_Eval
-        ' 
-        Q4_Eval.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Q4_Eval.AutoSize = True
-        Q4_Eval.BorderStyle = BorderStyle.FixedSingle
-        Q4_Eval.Location = New Point(476, 113)
-        Q4_Eval.Margin = New Padding(0)
-        Q4_Eval.Name = "Q4_Eval"
-        Q4_Eval.Size = New Size(77, 31)
-        Q4_Eval.TabIndex = 69
-        Q4_Eval.Text = "5"
-        Q4_Eval.TextAlign = ContentAlignment.MiddleCenter
-        ' 
         ' Q3_Eval
         ' 
         Q3_Eval.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
@@ -1355,6 +1410,19 @@ Partial Class AdminRatings1
         Q3_Eval.TabIndex = 70
         Q3_Eval.Text = "5"
         Q3_Eval.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' Q4_Eval
+        ' 
+        Q4_Eval.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        Q4_Eval.AutoSize = True
+        Q4_Eval.BorderStyle = BorderStyle.FixedSingle
+        Q4_Eval.Location = New Point(476, 113)
+        Q4_Eval.Margin = New Padding(0)
+        Q4_Eval.Name = "Q4_Eval"
+        Q4_Eval.Size = New Size(77, 31)
+        Q4_Eval.TabIndex = 69
+        Q4_Eval.Text = "5"
+        Q4_Eval.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' Q5_Eval
         ' 
@@ -1395,84 +1463,6 @@ Partial Class AdminRatings1
         Q7_Eval.Text = "5"
         Q7_Eval.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' Q8_1
-        ' 
-        Q8_1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Q8_1.AutoSize = True
-        Q8_1.BorderStyle = BorderStyle.FixedSingle
-        Q8_1.Location = New Point(369, 237)
-        Q8_1.Margin = New Padding(0)
-        Q8_1.Name = "Q8_1"
-        Q8_1.Size = New Size(25, 31)
-        Q8_1.TabIndex = 74
-        Q8_1.Text = "5"
-        Q8_1.TextAlign = ContentAlignment.MiddleCenter
-        ' 
-        ' Q8_Eval
-        ' 
-        Q8_Eval.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Q8_Eval.AutoSize = True
-        Q8_Eval.BorderStyle = BorderStyle.FixedSingle
-        Q8_Eval.Location = New Point(476, 237)
-        Q8_Eval.Margin = New Padding(0)
-        Q8_Eval.Name = "Q8_Eval"
-        Q8_Eval.Size = New Size(77, 31)
-        Q8_Eval.TabIndex = 75
-        Q8_Eval.Text = "5"
-        Q8_Eval.TextAlign = ContentAlignment.MiddleCenter
-        ' 
-        ' Q8_Mean
-        ' 
-        Q8_Mean.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Q8_Mean.AutoSize = True
-        Q8_Mean.BorderStyle = BorderStyle.FixedSingle
-        Q8_Mean.Location = New Point(435, 237)
-        Q8_Mean.Margin = New Padding(0)
-        Q8_Mean.Name = "Q8_Mean"
-        Q8_Mean.Size = New Size(41, 31)
-        Q8_Mean.TabIndex = 76
-        Q8_Mean.Text = "5"
-        Q8_Mean.TextAlign = ContentAlignment.MiddleCenter
-        ' 
-        ' Q8_4
-        ' 
-        Q8_4.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Q8_4.AutoSize = True
-        Q8_4.BorderStyle = BorderStyle.FixedSingle
-        Q8_4.Location = New Point(294, 237)
-        Q8_4.Margin = New Padding(0)
-        Q8_4.Name = "Q8_4"
-        Q8_4.Size = New Size(25, 31)
-        Q8_4.TabIndex = 77
-        Q8_4.Text = "5"
-        Q8_4.TextAlign = ContentAlignment.MiddleCenter
-        ' 
-        ' Q8_5
-        ' 
-        Q8_5.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Q8_5.AutoSize = True
-        Q8_5.BorderStyle = BorderStyle.FixedSingle
-        Q8_5.Location = New Point(269, 237)
-        Q8_5.Margin = New Padding(0)
-        Q8_5.Name = "Q8_5"
-        Q8_5.Size = New Size(25, 31)
-        Q8_5.TabIndex = 78
-        Q8_5.Text = "5"
-        Q8_5.TextAlign = ContentAlignment.MiddleCenter
-        ' 
-        ' Q8_2
-        ' 
-        Q8_2.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Q8_2.AutoSize = True
-        Q8_2.BorderStyle = BorderStyle.FixedSingle
-        Q8_2.Location = New Point(344, 237)
-        Q8_2.Margin = New Padding(0)
-        Q8_2.Name = "Q8_2"
-        Q8_2.Size = New Size(25, 31)
-        Q8_2.TabIndex = 79
-        Q8_2.Text = "5"
-        Q8_2.TextAlign = ContentAlignment.MiddleCenter
-        ' 
         ' Q1_Eval
         ' 
         Q1_Eval.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
@@ -1486,31 +1476,52 @@ Partial Class AdminRatings1
         Q1_Eval.Text = "5"
         Q1_Eval.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' Q8_3
+        ' Label32
         ' 
-        Q8_3.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Q8_3.AutoSize = True
-        Q8_3.BorderStyle = BorderStyle.FixedSingle
-        Q8_3.Location = New Point(319, 237)
-        Q8_3.Margin = New Padding(0)
-        Q8_3.Name = "Q8_3"
-        Q8_3.Size = New Size(25, 31)
-        Q8_3.TabIndex = 81
-        Q8_3.Text = "5"
-        Q8_3.TextAlign = ContentAlignment.MiddleCenter
+        Label32.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        Label32.AutoSize = True
+        Label32.BorderStyle = BorderStyle.FixedSingle
+        Label32.ImageAlign = ContentAlignment.MiddleLeft
+        Label32.Location = New Point(0, 237)
+        Label32.Margin = New Padding(0)
+        Label32.Name = "Label32"
+        Label32.Size = New Size(269, 31)
+        Label32.TabIndex = 29
+        Label32.Text = "8. The segments are logically arranged."
+        Label32.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' Q8_Total
+        ' Button1
         ' 
-        Q8_Total.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Q8_Total.AutoSize = True
-        Q8_Total.BorderStyle = BorderStyle.FixedSingle
-        Q8_Total.Location = New Point(394, 237)
-        Q8_Total.Margin = New Padding(0)
-        Q8_Total.Name = "Q8_Total"
-        Q8_Total.Size = New Size(41, 31)
-        Q8_Total.TabIndex = 82
-        Q8_Total.Text = "5"
-        Q8_Total.TextAlign = ContentAlignment.MiddleCenter
+        Button1.BackColor = Color.White
+        Button1.FlatStyle = FlatStyle.Flat
+        Button1.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button1.ForeColor = SystemColors.ActiveCaptionText
+        Button1.Location = New Point(489, 322)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(82, 31)
+        Button1.TabIndex = 51
+        Button1.Text = "NEXT"
+        Button1.UseVisualStyleBackColor = False
+        ' 
+        ' backBtn
+        ' 
+        backBtn.BackColor = Color.White
+        backBtn.FlatStyle = FlatStyle.Flat
+        backBtn.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        backBtn.ForeColor = SystemColors.ActiveCaptionText
+        backBtn.Location = New Point(18, 322)
+        backBtn.Name = "backBtn"
+        backBtn.Size = New Size(82, 31)
+        backBtn.TabIndex = 50
+        backBtn.Text = "BACK"
+        backBtn.UseVisualStyleBackColor = False
+        ' 
+        ' MySqlCommand1
+        ' 
+        MySqlCommand1.CommandTimeout = 0
+        MySqlCommand1.Connection = Nothing
+        MySqlCommand1.Transaction = Nothing
+        MySqlCommand1.UpdatedRowSource = UpdateRowSource.None
         ' 
         ' AdminRatings1
         ' 
@@ -1634,4 +1645,5 @@ Partial Class AdminRatings1
     Friend WithEvents Q7_Eval As Label
     Friend WithEvents Q1_Eval As Label
     Friend WithEvents Label32 As Label
+    Friend WithEvents DateTimePicker1 As DateTimePicker
 End Class

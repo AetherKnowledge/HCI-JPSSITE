@@ -8,9 +8,8 @@
     Shadows Sub show(selectedEvent As String)
         MyBase.Show()
         Me.eval = EventEvaluationHandler.getEvaluationsFromEvent(selectedEvent)
-    End Sub
 
-    Private Sub AdminRatings1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
 
     End Sub
 

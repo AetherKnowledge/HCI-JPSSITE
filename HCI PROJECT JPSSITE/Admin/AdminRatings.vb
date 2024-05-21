@@ -63,7 +63,7 @@
         If eventselectCBox.SelectedIndex <> -1 Then
             selectedEvent = eventselectCBox.SelectedItem
             loadComments()
-            StarRating.Rating = EventEvaluationHandler.getTotalRating(selectedEvent)
+            starRating.Rating = EventEvaluationHandler.getTotalRating(selectedEvent)
         End If
     End Sub
 
@@ -77,10 +77,10 @@
     End Sub
 
     Private Sub Ratings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        StarRating = New StarRating()
-        StarRating.NumberOfStars = 5
-        StarRating.Location = New Point(75, 273)
-        Panel4.Controls.Add(StarRating)
+        starRating = New StarRating()
+        starRating.NumberOfStars = 5
+        starRating.Location = New Point(75, 273)
+        Panel4.Controls.Add(starRating)
     End Sub
 
     Private Sub showrateBtn_Click(sender As Object, e As EventArgs) Handles showrateBtn.Click
