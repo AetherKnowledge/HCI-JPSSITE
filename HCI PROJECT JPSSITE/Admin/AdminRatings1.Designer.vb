@@ -56,13 +56,13 @@ Partial Class AdminRatings1
         Label10 = New Label()
         Label11 = New Label()
         Label12 = New Label()
-        Label13 = New Label()
-        Label14 = New Label()
-        Label15 = New Label()
-        Label16 = New Label()
-        Label17 = New Label()
-        Label18 = New Label()
-        Label19 = New Label()
+        Q1Label = New Label()
+        Q2Label = New Label()
+        Q3Label = New Label()
+        Q4Label = New Label()
+        Q5Label = New Label()
+        Q6Label = New Label()
+        Q7Label = New Label()
         Q1_4 = New Label()
         Q1_3 = New Label()
         Q1_5 = New Label()
@@ -119,7 +119,7 @@ Partial Class AdminRatings1
         Q6_Eval = New Label()
         Q7_Eval = New Label()
         Q1_Eval = New Label()
-        Label32 = New Label()
+        Q8Label = New Label()
         Button1 = New Button()
         backBtn = New Button()
         MySqlCommand1 = New MySqlConnector.MySqlCommand()
@@ -182,7 +182,7 @@ Partial Class AdminRatings1
         ' 
         logoutBtn.BackColor = SystemColors.ControlDarkDark
         logoutBtn.FlatStyle = FlatStyle.Popup
-        logoutBtn.Font = New Font("Century Gothic", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        logoutBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         logoutBtn.ForeColor = Color.White
         logoutBtn.Location = New Point(12, 329)
         logoutBtn.Name = "logoutBtn"
@@ -194,7 +194,7 @@ Partial Class AdminRatings1
         ' 
         ' usernameLabel
         ' 
-        usernameLabel.Font = New Font("Century Gothic", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        usernameLabel.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         usernameLabel.ForeColor = Color.White
         usernameLabel.Location = New Point(38, 85)
         usernameLabel.Name = "usernameLabel"
@@ -217,7 +217,7 @@ Partial Class AdminRatings1
         ' 
         officersBtn.BackColor = SystemColors.ControlDarkDark
         officersBtn.FlatStyle = FlatStyle.Popup
-        officersBtn.Font = New Font("Century Gothic", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        officersBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         officersBtn.ForeColor = Color.White
         officersBtn.Location = New Point(12, 286)
         officersBtn.Name = "officersBtn"
@@ -231,7 +231,7 @@ Partial Class AdminRatings1
         ' 
         ratingsBtn.BackColor = SystemColors.ControlDark
         ratingsBtn.FlatStyle = FlatStyle.Popup
-        ratingsBtn.Font = New Font("Century Gothic", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        ratingsBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         ratingsBtn.ForeColor = Color.White
         ratingsBtn.Location = New Point(12, 243)
         ratingsBtn.Name = "ratingsBtn"
@@ -245,7 +245,7 @@ Partial Class AdminRatings1
         ' 
         profileBtn.BackColor = SystemColors.ControlDarkDark
         profileBtn.FlatStyle = FlatStyle.Popup
-        profileBtn.Font = New Font("Century Gothic", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        profileBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         profileBtn.ForeColor = Color.White
         profileBtn.Location = New Point(12, 200)
         profileBtn.Name = "profileBtn"
@@ -259,7 +259,7 @@ Partial Class AdminRatings1
         ' 
         eventsBtn.BackColor = SystemColors.ControlDarkDark
         eventsBtn.FlatStyle = FlatStyle.Popup
-        eventsBtn.Font = New Font("Century Gothic", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        eventsBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         eventsBtn.ForeColor = Color.White
         eventsBtn.Location = New Point(12, 157)
         eventsBtn.Name = "eventsBtn"
@@ -273,7 +273,7 @@ Partial Class AdminRatings1
         ' 
         dashboardBtn.BackColor = SystemColors.ControlDarkDark
         dashboardBtn.FlatStyle = FlatStyle.Popup
-        dashboardBtn.Font = New Font("Century Gothic", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        dashboardBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         dashboardBtn.ForeColor = Color.White
         dashboardBtn.Location = New Point(12, 114)
         dashboardBtn.Name = "dashboardBtn"
@@ -296,7 +296,7 @@ Partial Class AdminRatings1
         ' 
         ' eventselectCBox
         ' 
-        eventselectCBox.Font = New Font("Century Gothic", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        eventselectCBox.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         eventselectCBox.FormattingEnabled = True
         eventselectCBox.Items.AddRange(New Object() {"Event 1", "Event 2", "Event 3"})
         eventselectCBox.Location = New Point(266, 13)
@@ -331,11 +331,11 @@ Partial Class AdminRatings1
         ' 
         TableLayoutPanel1.ColumnCount = 9
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 63.02161F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 25.0F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 25.0F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 25.0F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 25.0F))
-        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 25.0F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 25F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 25F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 25F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 25F))
+        TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 25F))
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 9.682552F))
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 9.682552F))
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 17.61328F))
@@ -356,13 +356,13 @@ Partial Class AdminRatings1
         TableLayoutPanel1.Controls.Add(Label10, 6, 0)
         TableLayoutPanel1.Controls.Add(Label11, 7, 0)
         TableLayoutPanel1.Controls.Add(Label12, 8, 0)
-        TableLayoutPanel1.Controls.Add(Label13, 0, 1)
-        TableLayoutPanel1.Controls.Add(Label14, 0, 2)
-        TableLayoutPanel1.Controls.Add(Label15, 0, 3)
-        TableLayoutPanel1.Controls.Add(Label16, 0, 4)
-        TableLayoutPanel1.Controls.Add(Label17, 0, 5)
-        TableLayoutPanel1.Controls.Add(Label18, 0, 6)
-        TableLayoutPanel1.Controls.Add(Label19, 0, 7)
+        TableLayoutPanel1.Controls.Add(Q1Label, 0, 1)
+        TableLayoutPanel1.Controls.Add(Q2Label, 0, 2)
+        TableLayoutPanel1.Controls.Add(Q3Label, 0, 3)
+        TableLayoutPanel1.Controls.Add(Q4Label, 0, 4)
+        TableLayoutPanel1.Controls.Add(Q5Label, 0, 5)
+        TableLayoutPanel1.Controls.Add(Q6Label, 0, 6)
+        TableLayoutPanel1.Controls.Add(Q7Label, 0, 7)
         TableLayoutPanel1.Controls.Add(Q1_4, 2, 1)
         TableLayoutPanel1.Controls.Add(Q1_3, 3, 1)
         TableLayoutPanel1.Controls.Add(Q1_5, 1, 1)
@@ -419,11 +419,11 @@ Partial Class AdminRatings1
         TableLayoutPanel1.Controls.Add(Q6_Eval, 8, 6)
         TableLayoutPanel1.Controls.Add(Q7_Eval, 8, 7)
         TableLayoutPanel1.Controls.Add(Q1_Eval, 8, 1)
-        TableLayoutPanel1.Controls.Add(Label32, 0, 8)
+        TableLayoutPanel1.Controls.Add(Q8Label, 0, 8)
         TableLayoutPanel1.Location = New Point(18, 48)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
         TableLayoutPanel1.RowCount = 9
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 20.0F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 12.5F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 12.5F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 12.5F))
@@ -432,7 +432,7 @@ Partial Class AdminRatings1
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 12.5F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 12.5F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 12.5F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 20.0F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
         TableLayoutPanel1.Size = New Size(553, 268)
         TableLayoutPanel1.TabIndex = 52
         ' 
@@ -657,96 +657,96 @@ Partial Class AdminRatings1
         Label12.Text = "Evaluation"
         Label12.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' Label13
+        ' Q1Label
         ' 
-        Label13.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Label13.AutoSize = True
-        Label13.BorderStyle = BorderStyle.FixedSingle
-        Label13.Location = New Point(0, 20)
-        Label13.Margin = New Padding(0)
-        Label13.Name = "Label13"
-        Label13.Size = New Size(269, 31)
-        Label13.TabIndex = 9
-        Label13.Text = "1. The schedule of activities were all well planned."
-        Label13.TextAlign = ContentAlignment.MiddleLeft
+        Q1Label.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        Q1Label.AutoSize = True
+        Q1Label.BorderStyle = BorderStyle.FixedSingle
+        Q1Label.Location = New Point(0, 20)
+        Q1Label.Margin = New Padding(0)
+        Q1Label.Name = "Q1Label"
+        Q1Label.Size = New Size(269, 31)
+        Q1Label.TabIndex = 9
+        Q1Label.Text = "1. The schedule of activities were all well planned."
+        Q1Label.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' Label14
+        ' Q2Label
         ' 
-        Label14.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Label14.AutoSize = True
-        Label14.BorderStyle = BorderStyle.FixedSingle
-        Label14.Location = New Point(0, 51)
-        Label14.Margin = New Padding(0)
-        Label14.Name = "Label14"
-        Label14.Size = New Size(269, 31)
-        Label14.TabIndex = 10
-        Label14.Text = "2. The program started on time."
-        Label14.TextAlign = ContentAlignment.MiddleLeft
+        Q2Label.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        Q2Label.AutoSize = True
+        Q2Label.BorderStyle = BorderStyle.FixedSingle
+        Q2Label.Location = New Point(0, 51)
+        Q2Label.Margin = New Padding(0)
+        Q2Label.Name = "Q2Label"
+        Q2Label.Size = New Size(269, 31)
+        Q2Label.TabIndex = 10
+        Q2Label.Text = "2. The program started on time."
+        Q2Label.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' Label15
+        ' Q3Label
         ' 
-        Label15.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Label15.AutoSize = True
-        Label15.BorderStyle = BorderStyle.FixedSingle
-        Label15.Location = New Point(0, 82)
-        Label15.Margin = New Padding(0)
-        Label15.Name = "Label15"
-        Label15.Size = New Size(269, 31)
-        Label15.TabIndex = 11
-        Label15.Text = "3. The activities were properly designed."
-        Label15.TextAlign = ContentAlignment.MiddleLeft
+        Q3Label.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        Q3Label.AutoSize = True
+        Q3Label.BorderStyle = BorderStyle.FixedSingle
+        Q3Label.Location = New Point(0, 82)
+        Q3Label.Margin = New Padding(0)
+        Q3Label.Name = "Q3Label"
+        Q3Label.Size = New Size(269, 31)
+        Q3Label.TabIndex = 11
+        Q3Label.Text = "3. The activities were properly designed."
+        Q3Label.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' Label16
+        ' Q4Label
         ' 
-        Label16.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Label16.AutoSize = True
-        Label16.BorderStyle = BorderStyle.FixedSingle
-        Label16.Location = New Point(0, 113)
-        Label16.Margin = New Padding(0)
-        Label16.Name = "Label16"
-        Label16.Size = New Size(269, 31)
-        Label16.TabIndex = 12
-        Label16.Text = "4. The activities were all well disseminated."
-        Label16.TextAlign = ContentAlignment.MiddleLeft
+        Q4Label.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        Q4Label.AutoSize = True
+        Q4Label.BorderStyle = BorderStyle.FixedSingle
+        Q4Label.Location = New Point(0, 113)
+        Q4Label.Margin = New Padding(0)
+        Q4Label.Name = "Q4Label"
+        Q4Label.Size = New Size(269, 31)
+        Q4Label.TabIndex = 12
+        Q4Label.Text = "4. The activities were all well disseminated."
+        Q4Label.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' Label17
+        ' Q5Label
         ' 
-        Label17.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Label17.AutoSize = True
-        Label17.BorderStyle = BorderStyle.FixedSingle
-        Label17.Location = New Point(0, 144)
-        Label17.Margin = New Padding(0)
-        Label17.Name = "Label17"
-        Label17.Size = New Size(269, 31)
-        Label17.TabIndex = 13
-        Label17.Text = "5. The activities were all well participated."
-        Label17.TextAlign = ContentAlignment.MiddleLeft
+        Q5Label.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        Q5Label.AutoSize = True
+        Q5Label.BorderStyle = BorderStyle.FixedSingle
+        Q5Label.Location = New Point(0, 144)
+        Q5Label.Margin = New Padding(0)
+        Q5Label.Name = "Q5Label"
+        Q5Label.Size = New Size(269, 31)
+        Q5Label.TabIndex = 13
+        Q5Label.Text = "5. The activities were all well participated."
+        Q5Label.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' Label18
+        ' Q6Label
         ' 
-        Label18.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Label18.AutoSize = True
-        Label18.BorderStyle = BorderStyle.FixedSingle
-        Label18.Location = New Point(0, 175)
-        Label18.Margin = New Padding(0)
-        Label18.Name = "Label18"
-        Label18.Size = New Size(269, 31)
-        Label18.TabIndex = 14
-        Label18.Text = "6. The activities met the needs of the students"
-        Label18.TextAlign = ContentAlignment.MiddleLeft
+        Q6Label.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        Q6Label.AutoSize = True
+        Q6Label.BorderStyle = BorderStyle.FixedSingle
+        Q6Label.Location = New Point(0, 175)
+        Q6Label.Margin = New Padding(0)
+        Q6Label.Name = "Q6Label"
+        Q6Label.Size = New Size(269, 31)
+        Q6Label.TabIndex = 14
+        Q6Label.Text = "6. The activities met the needs of the students"
+        Q6Label.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' Label19
+        ' Q7Label
         ' 
-        Label19.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Label19.AutoSize = True
-        Label19.BorderStyle = BorderStyle.FixedSingle
-        Label19.Location = New Point(0, 206)
-        Label19.Margin = New Padding(0)
-        Label19.Name = "Label19"
-        Label19.Size = New Size(269, 31)
-        Label19.TabIndex = 15
-        Label19.Text = "7. The length of the activities were suffictient"
-        Label19.TextAlign = ContentAlignment.MiddleLeft
+        Q7Label.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        Q7Label.AutoSize = True
+        Q7Label.BorderStyle = BorderStyle.FixedSingle
+        Q7Label.Location = New Point(0, 206)
+        Q7Label.Margin = New Padding(0)
+        Q7Label.Name = "Q7Label"
+        Q7Label.Size = New Size(269, 31)
+        Q7Label.TabIndex = 15
+        Q7Label.Text = "7. The length of the activities were suffictient"
+        Q7Label.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Q1_4
         ' 
@@ -1476,19 +1476,19 @@ Partial Class AdminRatings1
         Q1_Eval.Text = "5"
         Q1_Eval.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' Label32
+        ' Q8Label
         ' 
-        Label32.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        Label32.AutoSize = True
-        Label32.BorderStyle = BorderStyle.FixedSingle
-        Label32.ImageAlign = ContentAlignment.MiddleLeft
-        Label32.Location = New Point(0, 237)
-        Label32.Margin = New Padding(0)
-        Label32.Name = "Label32"
-        Label32.Size = New Size(269, 31)
-        Label32.TabIndex = 29
-        Label32.Text = "8. The segments are logically arranged."
-        Label32.TextAlign = ContentAlignment.MiddleLeft
+        Q8Label.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        Q8Label.AutoSize = True
+        Q8Label.BorderStyle = BorderStyle.FixedSingle
+        Q8Label.ImageAlign = ContentAlignment.MiddleLeft
+        Q8Label.Location = New Point(0, 237)
+        Q8Label.Margin = New Padding(0)
+        Q8Label.Name = "Q8Label"
+        Q8Label.Size = New Size(269, 31)
+        Q8Label.TabIndex = 29
+        Q8Label.Text = "8. The segments are logically arranged."
+        Q8Label.TextAlign = ContentAlignment.MiddleLeft
         ' 
         ' Button1
         ' 
@@ -1573,13 +1573,13 @@ Partial Class AdminRatings1
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
-    Friend WithEvents Label13 As Label
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Label15 As Label
-    Friend WithEvents Label16 As Label
-    Friend WithEvents Label17 As Label
-    Friend WithEvents Label18 As Label
-    Friend WithEvents Label19 As Label
+    Friend WithEvents Q1Label As Label
+    Friend WithEvents Q2Label As Label
+    Friend WithEvents Q3Label As Label
+    Friend WithEvents Q4Label As Label
+    Friend WithEvents Q5Label As Label
+    Friend WithEvents Q6Label As Label
+    Friend WithEvents Q7Label As Label
     Friend WithEvents Q1_5 As Label
     Friend WithEvents Q1_4 As Label
     Friend WithEvents Q1_3 As Label
@@ -1644,6 +1644,6 @@ Partial Class AdminRatings1
     Friend WithEvents Q6_Eval As Label
     Friend WithEvents Q7_Eval As Label
     Friend WithEvents Q1_Eval As Label
-    Friend WithEvents Label32 As Label
+    Friend WithEvents Q8Label As Label
     Friend WithEvents DateTimePicker1 As DateTimePicker
 End Class
