@@ -49,7 +49,6 @@ Partial Class AdminRatings
         usernameLabel = New Label()
         profileBtn = New Button()
         Panel1 = New Panel()
-        showratingsLabel = New Label()
         Panel2.SuspendLayout()
         Panel4.SuspendLayout()
         CType(eventpicPBox, ComponentModel.ISupportInitialize).BeginInit()
@@ -190,7 +189,6 @@ Partial Class AdminRatings
         ' Panel4
         ' 
         Panel4.BackColor = Color.White
-        Panel4.Controls.Add(showratingsLabel)
         Panel4.Controls.Add(showrateBtn)
         Panel4.Controls.Add(eventpicPBox)
         Panel4.Controls.Add(eventselectCBox)
@@ -369,17 +367,6 @@ Partial Class AdminRatings
         Panel1.Size = New Size(153, 427)
         Panel1.TabIndex = 31
         ' 
-        ' showratingsLabel
-        ' 
-        showratingsLabel.AutoSize = True
-        showratingsLabel.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        showratingsLabel.Location = New Point(101, 283)
-        showratingsLabel.Name = "showratingsLabel"
-        showratingsLabel.Size = New Size(92, 16)
-        showratingsLabel.TabIndex = 50
-        showratingsLabel.Text = "show ratings "
-        showratingsLabel.TextAlign = ContentAlignment.MiddleCenter
-        ' 
         ' AdminRatings
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -432,5 +419,4 @@ Partial Class AdminRatings
     Friend WithEvents usernameLabel As Label
     Friend WithEvents profileBtn As Button
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents showratingsLabel As Label
 End Class
