@@ -2,7 +2,7 @@
 
 Public Class EventEvaluationHandler
     Private Shared loadedEvaluations As Boolean = False
-    Private Shared evaluationList As New ArrayList()
+    Private Shared evaluationList As New List(Of EventEvaluation)
     Private Shared ReadOnly EVALUATION_PATH As String = "evaluation.sav"
 
     Public Shared Sub addEvaluations(newEvaluation As EventEvaluation)
@@ -83,9 +83,9 @@ Public Class EventEvaluationHandler
         ConnectionHandler.connection.close()
     End Sub
 
-    Public Shared Function getEvaluationsFromEvent(eventName As String) As ArrayList
+    Public Shared Function getEvaluationsFromEvent(eventName As String) As List(Of EventEvaluation)
         getEvaluationsFromDB()
-        Dim evaluations As ArrayList = New ArrayList
+        Dim evaluations As List(Of EventEvaluation) = New List(Of EventEvaluation)
         For Each evaluation As EventEvaluation In evaluationList
             If evaluation.eventName = eventName Then
                 evaluations.Add(evaluation)
@@ -123,7 +123,7 @@ Public Class EventEvaluationHandler
         Return total / evalCount
     End Function
 
-    Public Shared Function getEvaluations() As ArrayList
+    Public Shared Function getEvaluations() As List(Of EventEvaluation)
         getEvaluationsFromDB()
         Return evaluationList
     End Function

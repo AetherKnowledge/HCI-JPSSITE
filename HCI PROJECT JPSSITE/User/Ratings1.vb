@@ -81,4 +81,5 @@
         Me.Hide()
         Ratings2.show()
     End Sub
+
 End Class

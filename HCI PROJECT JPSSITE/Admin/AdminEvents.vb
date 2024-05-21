@@ -61,6 +61,7 @@ Public Class AdminEvents
         selectedImg = Nothing
         eventTitleTBox.Text = ""
         schedPicker.Value = Date.Now
+        eventPBox.Image = My.Resources.upload
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles uploadBtn.Click

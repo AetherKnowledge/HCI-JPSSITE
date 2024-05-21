@@ -34,12 +34,17 @@
     Shadows Sub show()
         MyBase.Show()
         usernameLabel.Text = UserHandler.getCurrentuser.username
+        eventpicPBox.Image = My.Resources.upload
         loadEvents()
         loadComments()
+        If eventselectCBox.Items.Count > 0 Then
+            eventselectCBox.SelectedIndex = 0
+        End If
     End Sub
 
     Private Sub loadEvents()
         eventselectCBox.Items.Clear()
+        eventpicPBox.Image = My.Resources.upload
         Dim eventList As ArrayList = EventHandler.getEvents()
         For Each ev As EventObj In eventList
             eventselectCBox.Items.Add(ev.ToString)
@@ -78,5 +83,12 @@
         Panel4.Controls.Add(StarRating)
     End Sub
 
-
+    Private Sub showrateBtn_Click(sender As Object, e As EventArgs) Handles showrateBtn.Click
+        If selectedEvent = "" Then
+            MessageBox.Show("Select Event to Rate")
+        Else
+            Me.Hide()
+            AdminRatings1.show(selectedEvent)
+        End If
+    End Sub
 End Class

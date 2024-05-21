@@ -5,7 +5,7 @@ Imports MySqlConnector
 Public Class UserHandler
 
     Private Shared loadedUsers As Boolean = False
-    Private Shared usersList As New ArrayList()
+    Private Shared usersList As New List(Of User)
     Private Shared currentUser As User
     Private Shared ReadOnly USERS_PATH As String = "users.sav"
 
@@ -115,7 +115,7 @@ Public Class UserHandler
         Return False
     End Function
 
-    Public Shared Function getUsers() As ArrayList
+    Public Shared Function getUsers() As List(Of User)
         Return usersList
     End Function
 
