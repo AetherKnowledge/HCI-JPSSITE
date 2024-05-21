@@ -30,6 +30,10 @@ Partial Class AdminEvents
         Button1 = New Button()
         PictureBox3 = New PictureBox()
         DateTimePicker1 = New DateTimePicker()
+        saveEventBtn = New Button()
+        uploadBtn = New Button()
+        eventPBox = New PictureBox()
+        schedPicker = New DateTimePicker()
         Label6 = New Label()
         eventTitleTBox = New TextBox()
         Label5 = New Label()
@@ -50,6 +54,7 @@ Partial Class AdminEvents
         Label2 = New Label()
         Panel4.SuspendLayout()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
+        CType(eventPBox, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
@@ -70,12 +75,10 @@ Partial Class AdminEvents
         ' Panel4
         ' 
         Panel4.BackColor = Color.White
-        Panel4.Controls.Add(Button2)
-        Panel4.Controls.Add(RichTextBox1)
-        Panel4.Controls.Add(Label7)
-        Panel4.Controls.Add(Button1)
-        Panel4.Controls.Add(PictureBox3)
-        Panel4.Controls.Add(DateTimePicker1)
+        Panel4.Controls.Add(saveEventBtn)
+        Panel4.Controls.Add(uploadBtn)
+        Panel4.Controls.Add(eventPBox)
+        Panel4.Controls.Add(schedPicker)
         Panel4.Controls.Add(Label6)
         Panel4.Controls.Add(eventTitleTBox)
         Panel4.Controls.Add(Label5)
@@ -85,6 +88,7 @@ Partial Class AdminEvents
         Panel4.Size = New Size(292, 370)
         Panel4.TabIndex = 24
         ' 
+
         ' Button2
         ' 
         Button2.BackColor = SystemColors.ControlDarkDark
@@ -146,6 +150,49 @@ Partial Class AdminEvents
         DateTimePicker1.Name = "DateTimePicker1"
         DateTimePicker1.Size = New Size(161, 23)
         DateTimePicker1.TabIndex = 6
+
+        ' saveEventBtn
+        ' 
+        saveEventBtn.BackColor = SystemColors.ControlDarkDark
+        saveEventBtn.FlatStyle = FlatStyle.Popup
+        saveEventBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        saveEventBtn.ForeColor = Color.White
+        saveEventBtn.Location = New Point(142, 314)
+        saveEventBtn.Name = "saveEventBtn"
+        saveEventBtn.Size = New Size(98, 34)
+        saveEventBtn.TabIndex = 11
+        saveEventBtn.Text = "Save Event"
+        saveEventBtn.UseVisualStyleBackColor = False
+        ' 
+        ' uploadBtn
+        ' 
+        uploadBtn.FlatStyle = FlatStyle.Popup
+        uploadBtn.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        uploadBtn.Location = New Point(38, 314)
+        uploadBtn.Name = "uploadBtn"
+        uploadBtn.Size = New Size(94, 34)
+        uploadBtn.TabIndex = 8
+        uploadBtn.Text = "Upload"
+        uploadBtn.UseVisualStyleBackColor = True
+        ' 
+        ' eventPBox
+        ' 
+        eventPBox.Image = My.Resources.Resources.upload
+        eventPBox.Location = New Point(38, 130)
+        eventPBox.Name = "eventPBox"
+        eventPBox.Size = New Size(202, 169)
+        eventPBox.SizeMode = PictureBoxSizeMode.Zoom
+        eventPBox.TabIndex = 7
+        eventPBox.TabStop = False
+        ' 
+        ' schedPicker
+        ' 
+        schedPicker.CalendarFont = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        schedPicker.Location = New Point(79, 91)
+        schedPicker.Name = "schedPicker"
+        schedPicker.Size = New Size(161, 23)
+        schedPicker.TabIndex = 6
+
         ' 
         ' Label6
         ' 
@@ -154,6 +201,10 @@ Partial Class AdminEvents
         Label6.Location = New Point(38, 106)
         Label6.Name = "Label6"
         Label6.Size = New Size(41, 17)
+        Label6.Font = New Font("Century Gothic", 9F, FontStyle.Bold)
+        Label6.Location = New Point(38, 96)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(37, 16)
         Label6.TabIndex = 5
         Label6.Text = "Date:"
         ' 
@@ -161,6 +212,7 @@ Partial Class AdminEvents
         ' 
         eventTitleTBox.Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         eventTitleTBox.Location = New Point(79, 68)
+        eventTitleTBox.Location = New Point(79, 58)
         eventTitleTBox.Name = "eventTitleTBox"
         eventTitleTBox.Size = New Size(161, 22)
         eventTitleTBox.TabIndex = 4
@@ -172,6 +224,10 @@ Partial Class AdminEvents
         Label5.Location = New Point(38, 73)
         Label5.Name = "Label5"
         Label5.Size = New Size(35, 17)
+        Label5.Font = New Font("Century Gothic", 9F, FontStyle.Bold)
+        Label5.Location = New Point(38, 63)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(33, 16)
         Label5.TabIndex = 3
         Label5.Text = "Title:"
         ' 
@@ -220,7 +276,7 @@ Partial Class AdminEvents
         officersBtn.Name = "officersBtn"
         officersBtn.Size = New Size(128, 37)
         officersBtn.TabIndex = 5
-        officersBtn.Text = "My Officers"
+        officersBtn.Text = "Officers"
         officersBtn.TextAlign = ContentAlignment.MiddleLeft
         officersBtn.UseVisualStyleBackColor = False
         ' 
@@ -234,7 +290,7 @@ Partial Class AdminEvents
         ratingsBtn.Name = "ratingsBtn"
         ratingsBtn.Size = New Size(128, 37)
         ratingsBtn.TabIndex = 4
-        ratingsBtn.Text = "My Ratings"
+        ratingsBtn.Text = "Ratings"
         ratingsBtn.TextAlign = ContentAlignment.MiddleLeft
         ratingsBtn.UseVisualStyleBackColor = False
         ' 
@@ -248,7 +304,7 @@ Partial Class AdminEvents
         profileBtn.Name = "profileBtn"
         profileBtn.Size = New Size(128, 37)
         profileBtn.TabIndex = 3
-        profileBtn.Text = "My Profile"
+        profileBtn.Text = "Profile"
         profileBtn.TextAlign = ContentAlignment.MiddleLeft
         profileBtn.UseVisualStyleBackColor = False
         ' 
@@ -283,7 +339,7 @@ Partial Class AdminEvents
         eventsBtn.Name = "eventsBtn"
         eventsBtn.Size = New Size(128, 37)
         eventsBtn.TabIndex = 3
-        eventsBtn.Text = "My Events"
+        eventsBtn.Text = "Events"
         eventsBtn.TextAlign = ContentAlignment.MiddleLeft
         eventsBtn.UseVisualStyleBackColor = False
         ' 
@@ -313,7 +369,7 @@ Partial Class AdminEvents
         dashboardBtn.Name = "dashboardBtn"
         dashboardBtn.Size = New Size(128, 37)
         dashboardBtn.TabIndex = 2
-        dashboardBtn.Text = "My Dashboard"
+        dashboardBtn.Text = "Dashboard"
         dashboardBtn.TextAlign = ContentAlignment.MiddleLeft
         dashboardBtn.UseVisualStyleBackColor = False
         ' 
@@ -371,10 +427,12 @@ Partial Class AdminEvents
         Controls.Add(Label3)
         Controls.Add(Label2)
         Name = "AdminEvents"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "AdminEvents"
         Panel4.ResumeLayout(False)
         Panel4.PerformLayout()
         CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
+        CType(eventPBox, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         Panel1.ResumeLayout(False)
         Panel2.ResumeLayout(False)
@@ -403,11 +461,9 @@ Partial Class AdminEvents
     Friend WithEvents Label2 As Label
     Friend WithEvents eventTitleTBox As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents uploadBtn As Button
+    Friend WithEvents eventPBox As PictureBox
+    Friend WithEvents schedPicker As DateTimePicker
     Friend WithEvents Label6 As Label
-    Friend WithEvents RichTextBox1 As RichTextBox
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Button2 As Button
+    Friend WithEvents saveEventBtn As Button
 End Class

@@ -237,7 +237,7 @@ Partial Class AdminDashboard
         Button1.Name = "Button1"
         Button1.Size = New Size(128, 37)
         Button1.TabIndex = 2
-        Button1.Text = "My Dashboard"
+        Button1.Text = "Dashboard"
         Button1.TextAlign = ContentAlignment.MiddleLeft
         Button1.UseVisualStyleBackColor = False
         ' 
@@ -269,7 +269,7 @@ Partial Class AdminDashboard
         profileBtn.Name = "profileBtn"
         profileBtn.Size = New Size(128, 37)
         profileBtn.TabIndex = 3
-        profileBtn.Text = "My Profile"
+        profileBtn.Text = "Profile"
         profileBtn.TextAlign = ContentAlignment.MiddleLeft
         profileBtn.UseVisualStyleBackColor = False
         ' 
@@ -283,7 +283,7 @@ Partial Class AdminDashboard
         eventsBtn.Name = "eventsBtn"
         eventsBtn.Size = New Size(128, 37)
         eventsBtn.TabIndex = 3
-        eventsBtn.Text = "My Events"
+        eventsBtn.Text = "Events"
         eventsBtn.TextAlign = ContentAlignment.MiddleLeft
         eventsBtn.UseVisualStyleBackColor = False
         ' 
@@ -342,7 +342,7 @@ Partial Class AdminDashboard
         officersBtn.Name = "officersBtn"
         officersBtn.Size = New Size(128, 37)
         officersBtn.TabIndex = 5
-        officersBtn.Text = "My Officers"
+        officersBtn.Text = "Officers"
         officersBtn.TextAlign = ContentAlignment.MiddleLeft
         officersBtn.UseVisualStyleBackColor = False
         ' 
@@ -356,7 +356,7 @@ Partial Class AdminDashboard
         ratingsBtn.Name = "ratingsBtn"
         ratingsBtn.Size = New Size(128, 37)
         ratingsBtn.TabIndex = 4
-        ratingsBtn.Text = "My Ratings"
+        ratingsBtn.Text = "Ratings"
         ratingsBtn.TextAlign = ContentAlignment.MiddleLeft
         ratingsBtn.UseVisualStyleBackColor = False
         ' 
@@ -405,6 +405,7 @@ Partial Class AdminDashboard
         Controls.Add(PictureBox2)
         Controls.Add(Panel1)
         Name = "AdminDashboard"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "AdminDashboard"
         CType(myoffPBox, ComponentModel.ISupportInitialize).EndInit()
         Panel5.ResumeLayout(False)

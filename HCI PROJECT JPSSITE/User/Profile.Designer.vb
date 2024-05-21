@@ -302,10 +302,10 @@ Partial Class Profile
         ' fullnameLabel
         ' 
         fullnameLabel.AutoSize = True
-        fullnameLabel.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        fullnameLabel.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         fullnameLabel.Location = New Point(89, 197)
         fullnameLabel.Name = "fullnameLabel"
-        fullnameLabel.Size = New Size(103, 17)
+        fullnameLabel.Size = New Size(106, 16)
         fullnameLabel.TabIndex = 8
         fullnameLabel.Text = "User's Fullname"
         ' 
