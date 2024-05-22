@@ -58,7 +58,7 @@ Public Class OfficerHandler
         Dim command As New MySqlCommand(query, ConnectionHandler.connection)
 
         command.Parameters.AddWithValue(1, newOfficer.name)
-        command.Parameters.AddWithValue(2, newOfficer.img)
+        command.Parameters.AddWithValue(2, AdminOfficers.imageBytes)
         command.Parameters.AddWithValue(3, newOfficer.section)
         command.Parameters.AddWithValue(4, newOfficer.age)
         command.Parameters.AddWithValue(5, newOfficer.sex)
