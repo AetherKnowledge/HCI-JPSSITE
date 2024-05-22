@@ -72,6 +72,11 @@
             selectedEvent = eventselectCBox.SelectedItem
             loadComments()
             starRating.Rating = EventEvaluationHandler.getTotalRating(selectedEvent)
+            If EventHandler.getEvent(selectedEvent) IsNot Nothing And EventHandler.getEvent(selectedEvent).eventImg IsNot Nothing Then
+                eventpicPBox.Image = EventHandler.getEvent(selectedEvent).eventImg
+            Else
+                eventpicPBox.Image = My.Resources.upload
+            End If
         End If
     End Sub
 
