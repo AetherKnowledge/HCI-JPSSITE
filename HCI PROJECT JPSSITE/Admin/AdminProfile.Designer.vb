@@ -26,8 +26,6 @@ Partial Class AdminProfile
         Panel2 = New Panel()
         nameSearch = New TextBox()
         studLBox = New ListBox()
-        descRBtn = New RadioButton()
-        ascRBtn = New RadioButton()
         Label1 = New Label()
         Panel4 = New Panel()
         deleteBtn = New Button()
@@ -89,8 +87,6 @@ Partial Class AdminProfile
         Panel2.BackColor = Color.White
         Panel2.Controls.Add(nameSearch)
         Panel2.Controls.Add(studLBox)
-        Panel2.Controls.Add(descRBtn)
-        Panel2.Controls.Add(ascRBtn)
         Panel2.Controls.Add(Label1)
         Panel2.Location = New Point(495, 68)
         Panel2.Name = "Panel2"
@@ -101,7 +97,7 @@ Partial Class AdminProfile
         ' 
         nameSearch.Location = New Point(23, 50)
         nameSearch.Name = "nameSearch"
-        nameSearch.Size = New Size(158, 23)
+        nameSearch.Size = New Size(236, 23)
         nameSearch.TabIndex = 8
         ' 
         ' studLBox
@@ -114,31 +110,6 @@ Partial Class AdminProfile
         studLBox.Name = "studLBox"
         studLBox.Size = New Size(236, 257)
         studLBox.TabIndex = 7
-        ' 
-        ' descRBtn
-        ' 
-        descRBtn.AutoSize = True
-        descRBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        descRBtn.Location = New Point(226, 50)
-        descRBtn.Name = "descRBtn"
-        descRBtn.Size = New Size(33, 20)
-        descRBtn.TabIndex = 4
-        descRBtn.TabStop = True
-        descRBtn.Text = "⬆"
-        descRBtn.UseVisualStyleBackColor = True
-        ' 
-        ' ascRBtn
-        ' 
-        ascRBtn.AutoSize = True
-        ascRBtn.Checked = True
-        ascRBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        ascRBtn.Location = New Point(187, 50)
-        ascRBtn.Name = "ascRBtn"
-        ascRBtn.Size = New Size(33, 20)
-        ascRBtn.TabIndex = 3
-        ascRBtn.TabStop = True
-        ascRBtn.Text = "⬇"
-        ascRBtn.UseVisualStyleBackColor = True
         ' 
         ' Label1
         ' 
@@ -600,8 +571,6 @@ Partial Class AdminProfile
     Friend WithEvents eventsBtn As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents ascRBtn As RadioButton
-    Friend WithEvents descRBtn As RadioButton
     Friend WithEvents studLBox As ListBox
     Friend WithEvents deleteBtn As Button
     Friend WithEvents nameSearch As TextBox

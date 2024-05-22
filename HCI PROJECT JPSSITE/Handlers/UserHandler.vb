@@ -142,10 +142,12 @@ Public Class UserHandler
     End Function
 
     Public Shared Function getUsers() As List(Of User)
+        getUsersFromDB()
         Return usersList
     End Function
 
     Public Shared Function getCurrentuser() As User
+        getUsersFromDB()
         Return currentUser
     End Function
 
