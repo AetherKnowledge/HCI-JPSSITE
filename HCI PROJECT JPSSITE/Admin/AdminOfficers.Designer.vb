@@ -432,7 +432,7 @@ Partial Class AdminOfficers
         ' 
         officerPositionCBox.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         officerPositionCBox.FormattingEnabled = True
-        officerPositionCBox.Items.AddRange(New Object() {"President", "Vice President", "Secretary", "Assitance Secretary", "VP Finance", "VP Auditor", "VP Marketing", "VP Event Management", "Internal Guest Relation", "External Guest Relation"})
+        officerPositionCBox.Items.AddRange(New Object() {"President", "Vice President", "Secretary", "Assitance Secretary", "VP Finance", "VP Auditor", "VP Marketing", "VP Event Management", "Internal Guest Relation", "External Guest Relation", "Creative Manager"})
         officerPositionCBox.Location = New Point(33, 48)
         officerPositionCBox.Name = "officerPositionCBox"
         officerPositionCBox.Size = New Size(220, 24)

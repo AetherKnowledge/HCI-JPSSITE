@@ -188,7 +188,7 @@ Partial Class Officers
         ' 
         nameLabel.AutoSize = True
         nameLabel.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        nameLabel.Location = New Point(116, 230)
+        nameLabel.Location = New Point(74, 230)
         nameLabel.Name = "nameLabel"
         nameLabel.Size = New Size(46, 16)
         nameLabel.TabIndex = 5
