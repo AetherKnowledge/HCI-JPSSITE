@@ -74,4 +74,10 @@ Public Class AdminProfile
         loadUsers()
     End Sub
 
+    Private Sub deleteBtn_Click(sender As Object, e As EventArgs) Handles deleteBtn.Click
+        If studLBox.SelectedIndex <> -1 Then
+            UserHandler.removeUser(studLBox.SelectedItem)
+        End If
+
+    End Sub
 End Class

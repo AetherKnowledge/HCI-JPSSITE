@@ -36,6 +36,20 @@ Public Class UserHandler
         ConnectionHandler.connection.close()
     End Sub
 
+    Public Shared Sub removeUser(user As User)
+        ConnectionHandler.connection.open()
+        Try
+            Dim query As String = "DELETE FROM users WHERE username = '" + user.username + "'"
+            Dim command As New MySqlCommand(query, ConnectionHandler.connection)
+            command.ExecuteNonQuery()
+
+        Catch ex As Exception
+            MessageBox.Show("Error : " & ex.Message)
+        End Try
+
+        ConnectionHandler.connection.close()
+    End Sub
+
     Public Shared Sub updateUser(newUser As User, oldUsername As String)
         ConnectionHandler.connection.open()
         Try
