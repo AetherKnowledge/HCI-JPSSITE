@@ -82,4 +82,9 @@
         Ratings2.show()
     End Sub
 
+    Private Sub cancelBtn_Click(sender As Object, e As EventArgs) Handles cancelBtn.Click
+        Me.Hide()
+        Ratings.show()
+
+    End Sub
 End Class
