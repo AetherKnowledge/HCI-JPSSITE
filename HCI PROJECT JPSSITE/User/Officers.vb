@@ -29,9 +29,41 @@
     Shadows Sub show()
         MyBase.Show()
         usernameLabel.Text = UserHandler.getCurrentuser.username
+        officerPositionCBox.SelectedIndex = 0
     End Sub
 
-    Private Sub loadOfficers()
+    Private Sub officerPositionCBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles officerPositionCBox.SelectedIndexChanged
+        If officerPositionCBox.SelectedIndex <> -1 Then
+            Dim officer As Officer = OfficerHandler.getOfficer(officerPositionCBox.SelectedItem)
+            If officer Is Nothing Then
+                nameLabel.Text = "N/A"
+                sectionLabel.Text = "N/A"
+                ageLabel.Text = "N/A"
+                sexLabel.Text = "N/A"
+                officerPBox.Image = My.Resources.upload
+                achievementRTBox.Text = "N/A"
+                motoRTBox.Text = "N/A"
+            Else
+                nameLabel.Text = officer.name
+                officerPositionCBox.SelectedItem = officer.position
+                ageLabel.Text = officer.age.ToString
+                sectionLabel.Text = officer.section
 
+                If officer.sex = "Male" Then
+                    sexLabel.Text = "Male"
+                Else
+                    sexLabel.Text = "Female"
+                End If
+
+                officerPBox.Image = officer.img
+                If officer.img Is Nothing Then
+                    officerPBox.Image = My.Resources.upload
+                End If
+
+                achievementRTBox.Text = officer.achievements
+                motoRTBox.Text = officer.motto
+            End If
+
+        End If
     End Sub
 End Class

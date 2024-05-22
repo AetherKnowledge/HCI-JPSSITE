@@ -220,6 +220,7 @@ Partial Class SignIn
         ' 
         ' yearLevelComboBox
         ' 
+        yearLevelComboBox.DropDownStyle = ComboBoxStyle.DropDownList
         yearLevelComboBox.FormattingEnabled = True
         yearLevelComboBox.Items.AddRange(New Object() {"1", "2", "3", "4"})
         yearLevelComboBox.Location = New Point(176, 257)
@@ -229,6 +230,7 @@ Partial Class SignIn
         ' 
         ' courseprogramComboBox
         ' 
+        courseprogramComboBox.DropDownStyle = ComboBoxStyle.DropDownList
         courseprogramComboBox.FormattingEnabled = True
         courseprogramComboBox.Items.AddRange(New Object() {"BSIT", "BSCPE", "BSIE"})
         courseprogramComboBox.Location = New Point(22, 257)

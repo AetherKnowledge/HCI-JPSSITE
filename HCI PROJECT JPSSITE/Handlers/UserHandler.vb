@@ -1,5 +1,6 @@
 ﻿Imports System.IO
 Imports System.Text.Json
+Imports Microsoft.Extensions.Logging
 Imports MySqlConnector
 
 Public Class UserHandler
@@ -12,7 +13,7 @@ Public Class UserHandler
     Public Shared Sub addUser(newUser As User)
         ConnectionHandler.connection.open()
         Try
-            Dim query As String = "INSERT into users(username, password, firstname, surname, userID, birthDate, courseProgram, yearLevel, sex) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)"
+            Dim query As String = "INSERT into users(username, password, firstname, surname, userID, birthDate, courseProgram, yearLevel, sex, img) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
             Dim command As New MySqlCommand(query, ConnectionHandler.connection)
 
             command.Parameters.AddWithValue(1, newUser.username)
@@ -24,6 +25,7 @@ Public Class UserHandler
             command.Parameters.AddWithValue(7, newUser.courseProgram)
             command.Parameters.AddWithValue(8, newUser.yearLevel)
             command.Parameters.AddWithValue(9, newUser.sex)
+            command.Parameters.AddWithValue(10, newUser.img)
 
             command.ExecuteNonQuery()
             usersList.Add(newUser)
@@ -39,7 +41,7 @@ Public Class UserHandler
     Public Shared Sub updateUser(newUser As User, oldUsername As String)
         ConnectionHandler.connection.open()
         Try
-            Dim query As String = "UPDATE users SET username = ?, password = ?, firstname = ?, surname = ?, userID = ?, birthDate = ?, courseProgram = ?, yearLevel = ?, sex = ? WHERE username = ?"
+            Dim query As String = "UPDATE users SET username = ?, password = ?, firstname = ?, surname = ?, userID = ?, birthDate = ?, courseProgram = ?, yearLevel = ?, sex = ?, img = ? WHERE username = ?"
             Dim command As New MySqlCommand(query, ConnectionHandler.connection)
 
             command.Parameters.AddWithValue(1, newUser.username)
@@ -51,7 +53,8 @@ Public Class UserHandler
             command.Parameters.AddWithValue(7, newUser.courseProgram)
             command.Parameters.AddWithValue(8, newUser.yearLevel)
             command.Parameters.AddWithValue(9, newUser.sex)
-            command.Parameters.AddWithValue(10, oldUsername)
+            command.Parameters.AddWithValue(10, newUser.img)
+            command.Parameters.AddWithValue(11, oldUsername)
 
             command.ExecuteNonQuery()
             For Each user As User In usersList
@@ -88,7 +91,16 @@ Public Class UserHandler
             Dim yearLevel As Integer = reader.GetInt32("yearLevel")
             Dim sex As String = reader.GetString("sex")
 
-            Dim newUser As User = New User(username, password, firstName, surName, userID, birthDate, courseProgram, yearLevel, sex)
+            Dim img As Image
+            If Not reader.IsDBNull(reader.GetOrdinal("img")) Then
+                Dim byteArray As Byte() = DirectCast(reader("img"), Byte())
+                Dim imageStream As New System.IO.MemoryStream(byteArray)
+                img = Image.FromStream(imageStream)
+            Else
+                img = My.Resources.circle_user1
+            End If
+
+            Dim newUser As User = New User(username, password, firstName, surName, userID, birthDate, courseProgram, yearLevel, sex, img)
             usersList.Add(newUser)
         End While
 

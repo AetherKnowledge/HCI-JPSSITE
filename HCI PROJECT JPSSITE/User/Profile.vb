@@ -1,4 +1,6 @@
-﻿Public Class Profile
+﻿Imports System.IO
+
+Public Class Profile
     Shadows Sub show()
         MyBase.Show()
         fullnameLabel.Text = UserHandler.getCurrentuser.firstName + " " + UserHandler.getCurrentuser.surName
@@ -30,12 +32,12 @@
 
     Private Sub eventsBtn_Click(sender As Object, e As EventArgs) Handles eventsBtn.Click
         Me.Hide()
-        HCI_PROJECT_JPSSITE.Events.Show()
+        HCI_PROJECT_JPSSITE.Events.show()
     End Sub
 
     Private Sub ratingsBtn_Click(sender As Object, e As EventArgs) Handles ratingsBtn.Click
         Me.Hide()
-        Ratings.Show()
+        Ratings.show()
     End Sub
 
     Private Sub officersBtn_Click(sender As Object, e As EventArgs) Handles officersBtn.Click
@@ -71,7 +73,7 @@
         ElseIf surName = "" Then
             MessageBox.Show("Invalid Surname, cannot be empty")
             Return
-        ElseIf Not maleRBtn.Checked And Not femaleRBtn.Checked Then
+        ElseIf Not maleRbtn.Checked And Not femaleRbtn.Checked Then
             MessageBox.Show("Please Pick your Sex")
             Return
         End If
@@ -87,7 +89,7 @@
             password = UserHandler.getCurrentuser.password
         End If
 
-        Dim newUser As User = New User(username, password, firstName, surName, userID, birthDate, courseProgram, yearLevel, sex)
+        Dim newUser As User = New User(username, password, firstName, surName, userID, birthDate, courseProgram, yearLevel, sex, Nothing)
         UserHandler.updateUser(newUser, UserHandler.getCurrentuser.username)
 
         fullnameLabel.Text = UserHandler.getCurrentuser.firstName + " " + UserHandler.getCurrentuser.surName
@@ -110,7 +112,6 @@
         End If
 
         passwordField.Text = "*******"
-
         MessageBox.Show("Account Updated")
     End Sub
 

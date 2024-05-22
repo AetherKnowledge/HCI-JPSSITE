@@ -40,6 +40,12 @@
         If eventselectCBox.Items.Count > 0 Then
             eventselectCBox.SelectedIndex = 0
         End If
+        Timer1.Enabled = True
+    End Sub
+
+    Shadows Sub hide()
+        MyBase.Hide()
+        Timer1.Enabled = False
     End Sub
 
     Private Sub loadEvents()
@@ -52,11 +58,13 @@
     End Sub
 
     Private Sub loadComments()
-        allcommentRTBox.Clear()
-        Dim comments As ArrayList = CommentHandler.getCommentsFromEvent(selectedEvent)
-        For Each comment As Comment In comments
-            allcommentRTBox.AppendText(comment.userName + " : " + comment.comment + vbCrLf)
-        Next
+        If selectedEvent <> "" Then
+            Dim comments As ArrayList = CommentHandler.getCommentsFromEvent(selectedEvent)
+            allcommentRTBox.Clear()
+            For Each comment As Comment In comments
+                allcommentRTBox.AppendText(comment.userName + " : " + comment.comment + vbCrLf)
+            Next
+        End If
     End Sub
 
     Private Sub eventselectCBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles eventselectCBox.SelectedIndexChanged
@@ -64,6 +72,11 @@
             selectedEvent = eventselectCBox.SelectedItem
             loadComments()
             starRating.Rating = EventEvaluationHandler.getTotalRating(selectedEvent)
+            If EventHandler.getEvent(selectedEvent) IsNot Nothing And EventHandler.getEvent(selectedEvent).eventImg IsNot Nothing Then
+                eventpicPBox.Image = EventHandler.getEvent(selectedEvent).eventImg
+            Else
+                eventpicPBox.Image = My.Resources.upload
+            End If
         End If
     End Sub
 
@@ -81,6 +94,13 @@
         starRating.NumberOfStars = 5
         starRating.Location = New Point(75, 273)
         Panel4.Controls.Add(starRating)
+
+        Timer1.Interval = 1000
+        Timer1.Enabled = True
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        loadComments()
     End Sub
 
     Private Sub showrateBtn_Click(sender As Object, e As EventArgs) Handles showrateBtn.Click

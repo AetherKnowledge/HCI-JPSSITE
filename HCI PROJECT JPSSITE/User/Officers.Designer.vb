@@ -22,6 +22,7 @@ Partial Class Officers
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         Panel4 = New Panel()
         Label14 = New Label()
         Label13 = New Label()
@@ -37,9 +38,9 @@ Partial Class Officers
         officerPositionCBox = New ComboBox()
         Label4 = New Label()
         Panel2 = New Panel()
+        achievementRTBox = New RichTextBox()
         motoRTBox = New RichTextBox()
         Label15 = New Label()
-        achieveLBox = New ListBox()
         Label1 = New Label()
         PictureBox2 = New PictureBox()
         Label3 = New Label()
@@ -54,6 +55,7 @@ Partial Class Officers
         eventsBtn = New Button()
         dashboardBtn = New Button()
         MySqlCommand1 = New MySqlConnector.MySqlCommand()
+        Timer1 = New Timer(components)
         Panel4.SuspendLayout()
         CType(officerPBox, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
@@ -186,7 +188,7 @@ Partial Class Officers
         ' 
         nameLabel.AutoSize = True
         nameLabel.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        nameLabel.Location = New Point(116, 230)
+        nameLabel.Location = New Point(74, 230)
         nameLabel.Name = "nameLabel"
         nameLabel.Size = New Size(46, 16)
         nameLabel.TabIndex = 5
@@ -195,9 +197,11 @@ Partial Class Officers
         ' 
         ' officerPBox
         ' 
+        officerPBox.BackgroundImageLayout = ImageLayout.Stretch
         officerPBox.Location = New Point(74, 88)
         officerPBox.Name = "officerPBox"
         officerPBox.Size = New Size(135, 130)
+        officerPBox.SizeMode = PictureBoxSizeMode.StretchImage
         officerPBox.TabIndex = 4
         officerPBox.TabStop = False
         ' 
@@ -225,14 +229,24 @@ Partial Class Officers
         ' Panel2
         ' 
         Panel2.BackColor = Color.White
+        Panel2.Controls.Add(achievementRTBox)
         Panel2.Controls.Add(motoRTBox)
         Panel2.Controls.Add(Label15)
-        Panel2.Controls.Add(achieveLBox)
         Panel2.Controls.Add(Label1)
         Panel2.Location = New Point(490, 68)
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(288, 370)
         Panel2.TabIndex = 22
+        ' 
+        ' achievementRTBox
+        ' 
+        achievementRTBox.BorderStyle = BorderStyle.None
+        achievementRTBox.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        achievementRTBox.Location = New Point(17, 39)
+        achievementRTBox.Name = "achievementRTBox"
+        achievementRTBox.Size = New Size(256, 157)
+        achievementRTBox.TabIndex = 5
+        achievementRTBox.Text = ""
         ' 
         ' motoRTBox
         ' 
@@ -254,17 +268,6 @@ Partial Class Officers
         Label15.Size = New Size(76, 25)
         Label15.TabIndex = 3
         Label15.Text = "MOTO"
-        ' 
-        ' achieveLBox
-        ' 
-        achieveLBox.BorderStyle = BorderStyle.None
-        achieveLBox.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        achieveLBox.FormattingEnabled = True
-        achieveLBox.ItemHeight = 17
-        achieveLBox.Location = New Point(17, 48)
-        achieveLBox.Name = "achieveLBox"
-        achieveLBox.Size = New Size(256, 119)
-        achieveLBox.TabIndex = 2
         ' 
         ' Label1
         ' 
@@ -494,5 +497,6 @@ Partial Class Officers
     Friend WithEvents Label14 As Label
     Friend WithEvents motoRTBox As RichTextBox
     Friend WithEvents Label15 As Label
-    Friend WithEvents achieveLBox As ListBox
+    Friend WithEvents achievementRTBox As RichTextBox
+    Friend WithEvents Timer1 As Timer
 End Class
