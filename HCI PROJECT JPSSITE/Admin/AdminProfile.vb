@@ -1,4 +1,5 @@
-﻿Imports Microsoft.VisualBasic.ApplicationServices
+﻿Imports System.Configuration
+Imports Microsoft.VisualBasic.ApplicationServices
 
 Public Class AdminProfile
     Private Sub Me_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
@@ -33,6 +34,14 @@ Public Class AdminProfile
 
     Private Sub loadUsers()
         Dim users As List(Of User) = UserHandler.getUsers
+        Dim indexOfAdmin As Integer
+        For Each user As User In users
+            If user.username = "admin" Then
+                indexOfAdmin = users.IndexOf(user)
+            End If
+        Next
+        users.RemoveAt(indexOfAdmin)
+
         users.Sort()
 
         If descRBtn.Checked Then

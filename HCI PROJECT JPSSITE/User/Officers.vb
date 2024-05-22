@@ -49,7 +49,7 @@
                 ageLabel.Text = officer.age.ToString
                 sectionLabel.Text = officer.section
 
-                If officer.sex = "M" Then
+                If officer.sex = "Male" Then
                     sexLabel.Text = "Male"
                 Else
                     sexLabel.Text = "Female"
