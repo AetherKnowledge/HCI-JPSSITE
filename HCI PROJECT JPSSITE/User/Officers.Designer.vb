@@ -22,6 +22,7 @@ Partial Class Officers
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         Panel4 = New Panel()
         Label14 = New Label()
         Label13 = New Label()
@@ -54,6 +55,7 @@ Partial Class Officers
         eventsBtn = New Button()
         dashboardBtn = New Button()
         MySqlCommand1 = New MySqlConnector.MySqlCommand()
+        Timer1 = New Timer(components)
         Panel4.SuspendLayout()
         CType(officerPBox, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
@@ -496,4 +498,5 @@ Partial Class Officers
     Friend WithEvents motoRTBox As RichTextBox
     Friend WithEvents Label15 As Label
     Friend WithEvents achievementRTBox As RichTextBox
+    Friend WithEvents Timer1 As Timer
 End Class

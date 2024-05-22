@@ -34,7 +34,7 @@ Public Class AdminOfficers
     Shadows Sub show()
         MyBase.Show()
         usernameLabel.Text = UserHandler.getCurrentuser.username
-
+        officerPositionCBox.SelectedIndex = 0
     End Sub
 
     Private Sub officerPBox_Click(sender As Object, e As EventArgs) Handles officerPBox.Click
@@ -74,6 +74,11 @@ Public Class AdminOfficers
                 End If
                 nameTextBox.Text = officer.name
                 officerPBox.Image = officer.img
+
+                If officer.img Is Nothing Then
+                    officerPBox.Image = My.Resources.upload
+                End If
+
                 achivementsRTBox.Text = officer.achievements
                 motoRTBox.Text = officer.motto
             End If
