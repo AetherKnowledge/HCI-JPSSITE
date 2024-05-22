@@ -52,7 +52,7 @@ Public Class OfficerHandler
             ConnectionHandler.connection.close()
             Return
         End If
-
+        ConnectionHandler.connection.close()
         ConnectionHandler.connection.open()
         Dim query As String = "UPDATE officers SET name = ?, img = ?, section = ?, age = ?, sex = ?, achievements = ?, motto = ? WHERE position = ?"
         Dim command As New MySqlCommand(query, ConnectionHandler.connection)
