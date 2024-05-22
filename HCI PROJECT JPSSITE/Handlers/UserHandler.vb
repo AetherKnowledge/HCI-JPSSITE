@@ -25,7 +25,7 @@ Public Class UserHandler
             command.Parameters.AddWithValue(7, newUser.courseProgram)
             command.Parameters.AddWithValue(8, newUser.yearLevel)
             command.Parameters.AddWithValue(9, newUser.sex)
-            command.Parameters.AddWithValue(10, newUser.img)
+            command.Parameters.AddWithValue(10, Nothing)
 
             command.ExecuteNonQuery()
             usersList.Add(newUser)
@@ -53,7 +53,7 @@ Public Class UserHandler
             command.Parameters.AddWithValue(7, newUser.courseProgram)
             command.Parameters.AddWithValue(8, newUser.yearLevel)
             command.Parameters.AddWithValue(9, newUser.sex)
-            command.Parameters.AddWithValue(10, newUser.img)
+            command.Parameters.AddWithValue(10, Nothing)
             command.Parameters.AddWithValue(11, oldUsername)
 
             command.ExecuteNonQuery()
