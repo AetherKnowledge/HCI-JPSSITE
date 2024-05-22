@@ -87,13 +87,21 @@ Public Class OfficerHandler
 
         While reader.Read
             Dim name As String = reader.GetString("name")
-            Dim img As Image = Nothing
             Dim section As String = reader.GetString("section")
             Dim age As String = reader.GetInt32("age")
             Dim sex As String = reader.GetString("sex")
             Dim achievements As String = reader.GetString("achievements")
             Dim motto As String = reader.GetString("motto")
             Dim position As String = reader.GetString("position")
+
+            Dim img As Image
+            If Not reader.IsDBNull(reader.GetOrdinal("img")) Then
+                Dim byteArray As Byte() = DirectCast(reader("img"), Byte())
+                Dim imageStream As New System.IO.MemoryStream(byteArray)
+                img = Image.FromStream(imageStream)
+            Else
+                img = My.Resources.upload
+            End If
 
             Dim newEvent As Officer = New Officer(name, img, section, age, sex, achievements, motto, position)
             officerList.Add(newEvent)

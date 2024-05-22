@@ -311,11 +311,12 @@ Partial Class Profile
         ' 
         ' profilepicPBox
         ' 
+        profilepicPBox.BackgroundImageLayout = ImageLayout.Stretch
         profilepicPBox.Image = My.Resources.Resources.circle_user__1_
         profilepicPBox.Location = New Point(71, 58)
         profilepicPBox.Name = "profilepicPBox"
         profilepicPBox.Size = New Size(137, 123)
-        profilepicPBox.SizeMode = PictureBoxSizeMode.Zoom
+        profilepicPBox.SizeMode = PictureBoxSizeMode.StretchImage
         profilepicPBox.TabIndex = 7
         profilepicPBox.TabStop = False
         ' 
