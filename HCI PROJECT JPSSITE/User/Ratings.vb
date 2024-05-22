@@ -41,6 +41,12 @@ Public Class Ratings
         If eventselectCBox.Items.Count > 0 Then
             eventselectCBox.SelectedIndex = 0
         End If
+        Timer1.Enabled = True
+    End Sub
+
+    Shadows Sub hide()
+        MyBase.Hide()
+        Timer1.Enabled = False
     End Sub
 
     Private Sub loadEvents()
@@ -53,11 +59,13 @@ Public Class Ratings
     End Sub
 
     Private Sub loadComments()
-        allcommentRTBox.Clear()
-        Dim comments As ArrayList = CommentHandler.getCommentsFromEvent(selectedEvent)
-        For Each comment As Comment In comments
-            allcommentRTBox.AppendText(comment.userName + " : " + comment.comment + vbCrLf)
-        Next
+        If selectedEvent <> "" Then
+            Dim comments As ArrayList = CommentHandler.getCommentsFromEvent(selectedEvent)
+            allcommentRTBox.Clear()
+            For Each comment As Comment In comments
+                allcommentRTBox.AppendText(comment.userName + " : " + comment.comment + vbCrLf)
+            Next
+        End If
     End Sub
 
     Private Sub eventselectCBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles eventselectCBox.SelectedIndexChanged
@@ -96,6 +104,13 @@ Public Class Ratings
         starRating.NumberOfStars = 5
         starRating.Location = New Point(75, 273)
         Panel4.Controls.Add(starRating)
+
+        Timer1.Interval = 1000
+        Timer1.Enabled = True
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        loadComments()
     End Sub
 
     Private starRating As StarRating

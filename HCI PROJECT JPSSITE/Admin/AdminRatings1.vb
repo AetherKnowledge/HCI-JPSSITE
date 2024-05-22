@@ -254,6 +254,11 @@
 
     Private Sub backBtn_Click(sender As Object, e As EventArgs) Handles backBtn.Click
         Me.Hide()
-        Ratings.show()
+        AdminRatings.show()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Hide()
+        AdminRatings2.show(eventselectCBox.SelectedItem)
     End Sub
 End Class

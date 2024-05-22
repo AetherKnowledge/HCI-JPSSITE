@@ -56,7 +56,7 @@
             sex = "F"
         End If
 
-        Dim newUser As User = New User(username, password, firstName, surName, userID, birthDate, courseProgram, yearLevel, sex)
+        Dim newUser As User = New User(username, password, firstName, surName, userID, birthDate, courseProgram, yearLevel, sex, Nothing)
         If Not UserHandler.containsUserDuplicate(newUser) Then
             UserHandler.addUser(newUser)
             UserHandler.isLoginSuccessful(username, password)
@@ -84,12 +84,12 @@
         yearLevelComboBox.SelectedIndex = 0
         courseprogramComboBox.SelectedIndex = 0
     End Sub
-    Private Sub maleRbtn_CheckedChanged(sender As Object, e As EventArgs) Handles maleRBtn.MouseClick
+    Private Sub maleRbtn_CheckedChanged(sender As Object, e As EventArgs)
         maleRBtn.Checked = True
         femaleRBtn.Checked = False
     End Sub
 
-    Private Sub femaleRbtn_CheckedChanged(sender As Object, e As EventArgs) Handles femaleRBtn.MouseClick
+    Private Sub femaleRbtn_CheckedChanged(sender As Object, e As EventArgs)
         maleRBtn.Checked = False
         femaleRBtn.Checked = True
     End Sub

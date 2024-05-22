@@ -36,11 +36,16 @@ Partial Class AdminOfficers
         Panel1 = New Panel()
         dashboardBtn = New Button()
         Panel2 = New Panel()
+        achivementsRTBox = New RichTextBox()
+        saveBtn = New Button()
         motoRTBox = New RichTextBox()
         Label15 = New Label()
-        achieveLBox = New ListBox()
         Label1 = New Label()
         Panel4 = New Panel()
+        nameTextBox = New TextBox()
+        sexCmBox = New ComboBox()
+        ageCmBox = New ComboBox()
+        sectionCmBox = New ComboBox()
         Label14 = New Label()
         Label13 = New Label()
         Label12 = New Label()
@@ -50,11 +55,6 @@ Partial Class AdminOfficers
         officerPBox = New PictureBox()
         officerPositionCBox = New ComboBox()
         Label4 = New Label()
-        sectionCmBox = New ComboBox()
-        ageCmBox = New ComboBox()
-        sexCmBox = New ComboBox()
-        officerNameTBox = New TextBox()
-        saveBtn = New Button()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
@@ -226,15 +226,38 @@ Partial Class AdminOfficers
         ' Panel2
         ' 
         Panel2.BackColor = Color.White
+        Panel2.Controls.Add(achivementsRTBox)
         Panel2.Controls.Add(saveBtn)
         Panel2.Controls.Add(motoRTBox)
         Panel2.Controls.Add(Label15)
-        Panel2.Controls.Add(achieveLBox)
         Panel2.Controls.Add(Label1)
         Panel2.Location = New Point(495, 68)
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(288, 370)
         Panel2.TabIndex = 29
+        ' 
+        ' achivementsRTBox
+        ' 
+        achivementsRTBox.BorderStyle = BorderStyle.None
+        achivementsRTBox.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        achivementsRTBox.Location = New Point(17, 39)
+        achivementsRTBox.Name = "achivementsRTBox"
+        achivementsRTBox.Size = New Size(256, 157)
+        achivementsRTBox.TabIndex = 6
+        achivementsRTBox.Text = "hehehehe"
+        ' 
+        ' saveBtn
+        ' 
+        saveBtn.BackColor = SystemColors.ControlDarkDark
+        saveBtn.FlatStyle = FlatStyle.Popup
+        saveBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        saveBtn.ForeColor = Color.White
+        saveBtn.Location = New Point(106, 325)
+        saveBtn.Name = "saveBtn"
+        saveBtn.Size = New Size(75, 23)
+        saveBtn.TabIndex = 5
+        saveBtn.Text = "SAVE"
+        saveBtn.UseVisualStyleBackColor = False
         ' 
         ' motoRTBox
         ' 
@@ -257,17 +280,6 @@ Partial Class AdminOfficers
         Label15.TabIndex = 3
         Label15.Text = "MOTO"
         ' 
-        ' achieveLBox
-        ' 
-        achieveLBox.BorderStyle = BorderStyle.None
-        achieveLBox.Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        achieveLBox.FormattingEnabled = True
-        achieveLBox.ItemHeight = 17
-        achieveLBox.Location = New Point(17, 48)
-        achieveLBox.Name = "achieveLBox"
-        achieveLBox.Size = New Size(256, 119)
-        achieveLBox.TabIndex = 2
-        ' 
         ' Label1
         ' 
         Label1.AutoSize = True
@@ -282,7 +294,7 @@ Partial Class AdminOfficers
         ' Panel4
         ' 
         Panel4.BackColor = Color.White
-        Panel4.Controls.Add(officerNameTBox)
+        Panel4.Controls.Add(nameTextBox)
         Panel4.Controls.Add(sexCmBox)
         Panel4.Controls.Add(ageCmBox)
         Panel4.Controls.Add(sectionCmBox)
@@ -299,6 +311,46 @@ Partial Class AdminOfficers
         Panel4.Name = "Panel4"
         Panel4.Size = New Size(292, 370)
         Panel4.TabIndex = 30
+        ' 
+        ' nameTextBox
+        ' 
+        nameTextBox.Location = New Point(39, 224)
+        nameTextBox.Name = "nameTextBox"
+        nameTextBox.Size = New Size(214, 23)
+        nameTextBox.TabIndex = 18
+        ' 
+        ' sexCmBox
+        ' 
+        sexCmBox.FlatStyle = FlatStyle.Flat
+        sexCmBox.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        sexCmBox.FormattingEnabled = True
+        sexCmBox.Items.AddRange(New Object() {"Male", "Female"})
+        sexCmBox.Location = New Point(164, 321)
+        sexCmBox.Name = "sexCmBox"
+        sexCmBox.Size = New Size(89, 24)
+        sexCmBox.TabIndex = 17
+        ' 
+        ' ageCmBox
+        ' 
+        ageCmBox.FlatStyle = FlatStyle.Flat
+        ageCmBox.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        ageCmBox.FormattingEnabled = True
+        ageCmBox.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40"})
+        ageCmBox.Location = New Point(164, 291)
+        ageCmBox.Name = "ageCmBox"
+        ageCmBox.Size = New Size(89, 24)
+        ageCmBox.TabIndex = 16
+        ' 
+        ' sectionCmBox
+        ' 
+        sectionCmBox.FlatStyle = FlatStyle.Flat
+        sectionCmBox.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        sectionCmBox.FormattingEnabled = True
+        sectionCmBox.Items.AddRange(New Object() {"BSIT - 1A", "BSIT - 1B", "BSIT - 2A", "BSIT - 2B", "BSIT - 3", "BSIT - 4"})
+        sectionCmBox.Location = New Point(164, 262)
+        sectionCmBox.Name = "sectionCmBox"
+        sectionCmBox.Size = New Size(89, 24)
+        sectionCmBox.TabIndex = 15
         ' 
         ' Label14
         ' 
@@ -380,7 +432,7 @@ Partial Class AdminOfficers
         ' 
         officerPositionCBox.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         officerPositionCBox.FormattingEnabled = True
-        officerPositionCBox.Items.AddRange(New Object() {"President", "Vice President", "Secretary", "Assitance Secretary", "VP Finance", "VP Auditor", "VP Marketing", "VP Event Management", "Internal Guest Relation", "External Guest Relation"})
+        officerPositionCBox.Items.AddRange(New Object() {"President", "Vice President", "Secretary", "Assitance Secretary", "VP Finance", "VP Auditor", "VP Marketing", "VP Event Management", "Internal Guest Relation", "External Guest Relation", "Creative Manager"})
         officerPositionCBox.Location = New Point(33, 48)
         officerPositionCBox.Name = "officerPositionCBox"
         officerPositionCBox.Size = New Size(220, 24)
@@ -396,63 +448,6 @@ Partial Class AdminOfficers
         Label4.Size = New Size(220, 25)
         Label4.TabIndex = 2
         Label4.Text = "Personal Information"
-        ' 
-        ' sectionCmBox
-        ' 
-        sectionCmBox.FlatStyle = FlatStyle.Flat
-        sectionCmBox.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        sectionCmBox.FormattingEnabled = True
-        sectionCmBox.Items.AddRange(New Object() {"BSIT - 1A", "BSIT - 1B", "BSIT - 2A", "BSIT - 2B", "BSIT - 3", "BSIT - 4"})
-        sectionCmBox.Location = New Point(164, 262)
-        sectionCmBox.Name = "sectionCmBox"
-        sectionCmBox.Size = New Size(89, 24)
-        sectionCmBox.TabIndex = 15
-        ' 
-        ' ageCmBox
-        ' 
-        ageCmBox.FlatStyle = FlatStyle.Flat
-        ageCmBox.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        ageCmBox.FormattingEnabled = True
-        ageCmBox.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40"})
-        ageCmBox.Location = New Point(164, 291)
-        ageCmBox.Name = "ageCmBox"
-        ageCmBox.Size = New Size(89, 24)
-        ageCmBox.TabIndex = 16
-        ' 
-        ' sexCmBox
-        ' 
-        sexCmBox.FlatStyle = FlatStyle.Flat
-        sexCmBox.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        sexCmBox.FormattingEnabled = True
-        sexCmBox.Items.AddRange(New Object() {"Male", "Female"})
-        sexCmBox.Location = New Point(164, 321)
-        sexCmBox.Name = "sexCmBox"
-        sexCmBox.Size = New Size(89, 24)
-        sexCmBox.TabIndex = 17
-        ' 
-        ' officerNameTBox
-        ' 
-        officerNameTBox.BorderStyle = BorderStyle.None
-        officerNameTBox.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        officerNameTBox.Location = New Point(33, 230)
-        officerNameTBox.Name = "officerNameTBox"
-        officerNameTBox.Size = New Size(220, 15)
-        officerNameTBox.TabIndex = 18
-        officerNameTBox.Text = "Name"
-        officerNameTBox.TextAlign = HorizontalAlignment.Center
-        ' 
-        ' saveBtn
-        ' 
-        saveBtn.BackColor = SystemColors.ControlDarkDark
-        saveBtn.FlatStyle = FlatStyle.Popup
-        saveBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        saveBtn.ForeColor = Color.White
-        saveBtn.Location = New Point(106, 325)
-        saveBtn.Name = "saveBtn"
-        saveBtn.Size = New Size(75, 23)
-        saveBtn.TabIndex = 5
-        saveBtn.Text = "SAVE"
-        saveBtn.UseVisualStyleBackColor = False
         ' 
         ' AdminOfficers
         ' 
@@ -496,7 +491,6 @@ Partial Class AdminOfficers
     Friend WithEvents Panel2 As Panel
     Friend WithEvents motoRTBox As RichTextBox
     Friend WithEvents Label15 As Label
-    Friend WithEvents achieveLBox As ListBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Label14 As Label
@@ -512,5 +506,6 @@ Partial Class AdminOfficers
     Friend WithEvents ageCmBox As ComboBox
     Friend WithEvents sectionCmBox As ComboBox
     Friend WithEvents saveBtn As Button
-    Friend WithEvents officerNameTBox As TextBox
+    Friend WithEvents achivementsRTBox As RichTextBox
+    Friend WithEvents nameTextBox As TextBox
 End Class

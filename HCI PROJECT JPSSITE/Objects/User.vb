@@ -12,8 +12,9 @@ Public Class User
     Public courseProgram As String
     Public yearLevel As Integer
     Public sex As String
+    Public img As Image
 
-    Public Sub New(username As String, password As String, firstName As String, surName As String, userID As String, birthDate As Date, courseProgram As String, yearLevel As Integer, sex As String)
+    Public Sub New(username As String, password As String, firstName As String, surName As String, userID As String, birthDate As Date, courseProgram As String, yearLevel As Integer, sex As String, img As Image)
         Me.username = username
         Me.password = password
         Me.firstName = firstName
@@ -23,6 +24,7 @@ Public Class User
         Me.courseProgram = courseProgram
         Me.yearLevel = yearLevel
         Me.sex = sex
+        Me.img = img
     End Sub
 
     Public Overrides Function ToString() As String

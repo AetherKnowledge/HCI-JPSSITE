@@ -157,16 +157,15 @@ Partial Class AdminRatings3
         TableLayoutPanel1.Controls.Add(Q1_Eval, 8, 1)
         TableLayoutPanel1.Location = New Point(18, 48)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
-        TableLayoutPanel1.RowCount = 9
+        TableLayoutPanel1.RowCount = 4
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 12.5F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 12.5F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 12.5F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 12.5F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 12.5F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 12.5F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 12.5F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 12.5F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 33.3333321F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 33.3333321F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 33.3333321F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
         TableLayoutPanel1.Size = New Size(553, 268)
         TableLayoutPanel1.TabIndex = 52
@@ -296,7 +295,7 @@ Partial Class AdminRatings3
         Q1Label.Location = New Point(0, 20)
         Q1Label.Margin = New Padding(0)
         Q1Label.Name = "Q1Label"
-        Q1Label.Size = New Size(269, 31)
+        Q1Label.Size = New Size(269, 82)
         Q1Label.TabIndex = 9
         Q1Label.Text = "1. Personal growth obtained."
         Q1Label.TextAlign = ContentAlignment.MiddleLeft
@@ -306,10 +305,10 @@ Partial Class AdminRatings3
         Q2Label.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Q2Label.AutoSize = True
         Q2Label.BorderStyle = BorderStyle.FixedSingle
-        Q2Label.Location = New Point(0, 51)
+        Q2Label.Location = New Point(0, 102)
         Q2Label.Margin = New Padding(0)
         Q2Label.Name = "Q2Label"
-        Q2Label.Size = New Size(269, 31)
+        Q2Label.Size = New Size(269, 82)
         Q2Label.TabIndex = 10
         Q2Label.Text = "2. Social Development."
         Q2Label.TextAlign = ContentAlignment.MiddleLeft
@@ -319,10 +318,10 @@ Partial Class AdminRatings3
         Q3Label.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Q3Label.AutoSize = True
         Q3Label.BorderStyle = BorderStyle.FixedSingle
-        Q3Label.Location = New Point(0, 82)
+        Q3Label.Location = New Point(0, 184)
         Q3Label.Margin = New Padding(0)
         Q3Label.Name = "Q3Label"
-        Q3Label.Size = New Size(269, 31)
+        Q3Label.Size = New Size(269, 84)
         Q3Label.TabIndex = 11
         Q3Label.Text = "3. How well are your expectations met?"
         Q3Label.TextAlign = ContentAlignment.MiddleLeft
@@ -335,7 +334,7 @@ Partial Class AdminRatings3
         Q1_4.Location = New Point(294, 20)
         Q1_4.Margin = New Padding(0)
         Q1_4.Name = "Q1_4"
-        Q1_4.Size = New Size(25, 31)
+        Q1_4.Size = New Size(25, 82)
         Q1_4.TabIndex = 17
         Q1_4.Text = "5"
         Q1_4.TextAlign = ContentAlignment.MiddleCenter
@@ -348,7 +347,7 @@ Partial Class AdminRatings3
         Q1_3.Location = New Point(319, 20)
         Q1_3.Margin = New Padding(0)
         Q1_3.Name = "Q1_3"
-        Q1_3.Size = New Size(25, 31)
+        Q1_3.Size = New Size(25, 82)
         Q1_3.TabIndex = 18
         Q1_3.Text = "5"
         Q1_3.TextAlign = ContentAlignment.MiddleCenter
@@ -361,7 +360,7 @@ Partial Class AdminRatings3
         Q1_5.Location = New Point(269, 20)
         Q1_5.Margin = New Padding(0)
         Q1_5.Name = "Q1_5"
-        Q1_5.Size = New Size(25, 31)
+        Q1_5.Size = New Size(25, 82)
         Q1_5.TabIndex = 19
         Q1_5.Text = "5"
         Q1_5.TextAlign = ContentAlignment.MiddleCenter
@@ -374,7 +373,7 @@ Partial Class AdminRatings3
         Q1_2.Location = New Point(344, 20)
         Q1_2.Margin = New Padding(0)
         Q1_2.Name = "Q1_2"
-        Q1_2.Size = New Size(25, 31)
+        Q1_2.Size = New Size(25, 82)
         Q1_2.TabIndex = 20
         Q1_2.Text = "5"
         Q1_2.TextAlign = ContentAlignment.MiddleCenter
@@ -387,7 +386,7 @@ Partial Class AdminRatings3
         Q1_1.Location = New Point(369, 20)
         Q1_1.Margin = New Padding(0)
         Q1_1.Name = "Q1_1"
-        Q1_1.Size = New Size(25, 31)
+        Q1_1.Size = New Size(25, 82)
         Q1_1.TabIndex = 21
         Q1_1.Text = "5"
         Q1_1.TextAlign = ContentAlignment.MiddleCenter
@@ -397,10 +396,10 @@ Partial Class AdminRatings3
         Q2_5.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Q2_5.AutoSize = True
         Q2_5.BorderStyle = BorderStyle.FixedSingle
-        Q2_5.Location = New Point(269, 51)
+        Q2_5.Location = New Point(269, 102)
         Q2_5.Margin = New Padding(0)
         Q2_5.Name = "Q2_5"
-        Q2_5.Size = New Size(25, 31)
+        Q2_5.Size = New Size(25, 82)
         Q2_5.TabIndex = 22
         Q2_5.Text = "5"
         Q2_5.TextAlign = ContentAlignment.MiddleCenter
@@ -410,10 +409,10 @@ Partial Class AdminRatings3
         Q2_4.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Q2_4.AutoSize = True
         Q2_4.BorderStyle = BorderStyle.FixedSingle
-        Q2_4.Location = New Point(294, 51)
+        Q2_4.Location = New Point(294, 102)
         Q2_4.Margin = New Padding(0)
         Q2_4.Name = "Q2_4"
-        Q2_4.Size = New Size(25, 31)
+        Q2_4.Size = New Size(25, 82)
         Q2_4.TabIndex = 25
         Q2_4.Text = "5"
         Q2_4.TextAlign = ContentAlignment.MiddleCenter
@@ -423,10 +422,10 @@ Partial Class AdminRatings3
         Q2_2.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Q2_2.AutoSize = True
         Q2_2.BorderStyle = BorderStyle.FixedSingle
-        Q2_2.Location = New Point(344, 51)
+        Q2_2.Location = New Point(344, 102)
         Q2_2.Margin = New Padding(0)
         Q2_2.Name = "Q2_2"
-        Q2_2.Size = New Size(25, 31)
+        Q2_2.Size = New Size(25, 82)
         Q2_2.TabIndex = 27
         Q2_2.Text = "5"
         Q2_2.TextAlign = ContentAlignment.MiddleCenter
@@ -436,10 +435,10 @@ Partial Class AdminRatings3
         Q2_3.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Q2_3.AutoSize = True
         Q2_3.BorderStyle = BorderStyle.FixedSingle
-        Q2_3.Location = New Point(319, 51)
+        Q2_3.Location = New Point(319, 102)
         Q2_3.Margin = New Padding(0)
         Q2_3.Name = "Q2_3"
-        Q2_3.Size = New Size(25, 31)
+        Q2_3.Size = New Size(25, 82)
         Q2_3.TabIndex = 28
         Q2_3.Text = "5"
         Q2_3.TextAlign = ContentAlignment.MiddleCenter
@@ -449,10 +448,10 @@ Partial Class AdminRatings3
         Q3_5.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Q3_5.AutoSize = True
         Q3_5.BorderStyle = BorderStyle.FixedSingle
-        Q3_5.Location = New Point(269, 82)
+        Q3_5.Location = New Point(269, 184)
         Q3_5.Margin = New Padding(0)
         Q3_5.Name = "Q3_5"
-        Q3_5.Size = New Size(25, 31)
+        Q3_5.Size = New Size(25, 84)
         Q3_5.TabIndex = 30
         Q3_5.Text = "5"
         Q3_5.TextAlign = ContentAlignment.MiddleCenter
@@ -462,10 +461,10 @@ Partial Class AdminRatings3
         Q3_4.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Q3_4.AutoSize = True
         Q3_4.BorderStyle = BorderStyle.FixedSingle
-        Q3_4.Location = New Point(294, 82)
+        Q3_4.Location = New Point(294, 184)
         Q3_4.Margin = New Padding(0)
         Q3_4.Name = "Q3_4"
-        Q3_4.Size = New Size(25, 31)
+        Q3_4.Size = New Size(25, 84)
         Q3_4.TabIndex = 23
         Q3_4.Text = "5"
         Q3_4.TextAlign = ContentAlignment.MiddleCenter
@@ -475,10 +474,10 @@ Partial Class AdminRatings3
         Q3_3.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Q3_3.AutoSize = True
         Q3_3.BorderStyle = BorderStyle.FixedSingle
-        Q3_3.Location = New Point(319, 82)
+        Q3_3.Location = New Point(319, 184)
         Q3_3.Margin = New Padding(0)
         Q3_3.Name = "Q3_3"
-        Q3_3.Size = New Size(25, 31)
+        Q3_3.Size = New Size(25, 84)
         Q3_3.TabIndex = 31
         Q3_3.Text = "5"
         Q3_3.TextAlign = ContentAlignment.MiddleCenter
@@ -488,10 +487,10 @@ Partial Class AdminRatings3
         Q3_2.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Q3_2.AutoSize = True
         Q3_2.BorderStyle = BorderStyle.FixedSingle
-        Q3_2.Location = New Point(344, 82)
+        Q3_2.Location = New Point(344, 184)
         Q3_2.Margin = New Padding(0)
         Q3_2.Name = "Q3_2"
-        Q3_2.Size = New Size(25, 31)
+        Q3_2.Size = New Size(25, 84)
         Q3_2.TabIndex = 32
         Q3_2.Text = "5"
         Q3_2.TextAlign = ContentAlignment.MiddleCenter
@@ -501,10 +500,10 @@ Partial Class AdminRatings3
         Q2_1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Q2_1.AutoSize = True
         Q2_1.BorderStyle = BorderStyle.FixedSingle
-        Q2_1.Location = New Point(369, 51)
+        Q2_1.Location = New Point(369, 102)
         Q2_1.Margin = New Padding(0)
         Q2_1.Name = "Q2_1"
-        Q2_1.Size = New Size(25, 31)
+        Q2_1.Size = New Size(25, 82)
         Q2_1.TabIndex = 33
         Q2_1.Text = "5"
         Q2_1.TextAlign = ContentAlignment.MiddleCenter
@@ -514,10 +513,10 @@ Partial Class AdminRatings3
         Q3_1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Q3_1.AutoSize = True
         Q3_1.BorderStyle = BorderStyle.FixedSingle
-        Q3_1.Location = New Point(369, 82)
+        Q3_1.Location = New Point(369, 184)
         Q3_1.Margin = New Padding(0)
         Q3_1.Name = "Q3_1"
-        Q3_1.Size = New Size(25, 31)
+        Q3_1.Size = New Size(25, 84)
         Q3_1.TabIndex = 24
         Q3_1.Text = "5"
         Q3_1.TextAlign = ContentAlignment.MiddleCenter
@@ -530,7 +529,7 @@ Partial Class AdminRatings3
         Q1_Mean.Location = New Point(435, 20)
         Q1_Mean.Margin = New Padding(0)
         Q1_Mean.Name = "Q1_Mean"
-        Q1_Mean.Size = New Size(41, 31)
+        Q1_Mean.Size = New Size(41, 82)
         Q1_Mean.TabIndex = 54
         Q1_Mean.Text = "5"
         Q1_Mean.TextAlign = ContentAlignment.MiddleCenter
@@ -543,7 +542,7 @@ Partial Class AdminRatings3
         Q1_Total.Location = New Point(394, 20)
         Q1_Total.Margin = New Padding(0)
         Q1_Total.Name = "Q1_Total"
-        Q1_Total.Size = New Size(41, 31)
+        Q1_Total.Size = New Size(41, 82)
         Q1_Total.TabIndex = 55
         Q1_Total.Text = "5"
         Q1_Total.TextAlign = ContentAlignment.MiddleCenter
@@ -553,10 +552,10 @@ Partial Class AdminRatings3
         Q2_Total.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Q2_Total.AutoSize = True
         Q2_Total.BorderStyle = BorderStyle.FixedSingle
-        Q2_Total.Location = New Point(394, 51)
+        Q2_Total.Location = New Point(394, 102)
         Q2_Total.Margin = New Padding(0)
         Q2_Total.Name = "Q2_Total"
-        Q2_Total.Size = New Size(41, 31)
+        Q2_Total.Size = New Size(41, 82)
         Q2_Total.TabIndex = 56
         Q2_Total.Text = "5"
         Q2_Total.TextAlign = ContentAlignment.MiddleCenter
@@ -566,10 +565,10 @@ Partial Class AdminRatings3
         Q2_Mean.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Q2_Mean.AutoSize = True
         Q2_Mean.BorderStyle = BorderStyle.FixedSingle
-        Q2_Mean.Location = New Point(435, 51)
+        Q2_Mean.Location = New Point(435, 102)
         Q2_Mean.Margin = New Padding(0)
         Q2_Mean.Name = "Q2_Mean"
-        Q2_Mean.Size = New Size(41, 31)
+        Q2_Mean.Size = New Size(41, 82)
         Q2_Mean.TabIndex = 57
         Q2_Mean.Text = "5"
         Q2_Mean.TextAlign = ContentAlignment.MiddleCenter
@@ -579,10 +578,10 @@ Partial Class AdminRatings3
         Q3_Total.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Q3_Total.AutoSize = True
         Q3_Total.BorderStyle = BorderStyle.FixedSingle
-        Q3_Total.Location = New Point(394, 82)
+        Q3_Total.Location = New Point(394, 184)
         Q3_Total.Margin = New Padding(0)
         Q3_Total.Name = "Q3_Total"
-        Q3_Total.Size = New Size(41, 31)
+        Q3_Total.Size = New Size(41, 84)
         Q3_Total.TabIndex = 58
         Q3_Total.Text = "5"
         Q3_Total.TextAlign = ContentAlignment.MiddleCenter
@@ -592,10 +591,10 @@ Partial Class AdminRatings3
         Q3_Mean.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Q3_Mean.AutoSize = True
         Q3_Mean.BorderStyle = BorderStyle.FixedSingle
-        Q3_Mean.Location = New Point(435, 82)
+        Q3_Mean.Location = New Point(435, 184)
         Q3_Mean.Margin = New Padding(0)
         Q3_Mean.Name = "Q3_Mean"
-        Q3_Mean.Size = New Size(41, 31)
+        Q3_Mean.Size = New Size(41, 84)
         Q3_Mean.TabIndex = 59
         Q3_Mean.Text = "5"
         Q3_Mean.TextAlign = ContentAlignment.MiddleCenter
@@ -605,10 +604,10 @@ Partial Class AdminRatings3
         Q2_Eval.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Q2_Eval.AutoSize = True
         Q2_Eval.BorderStyle = BorderStyle.FixedSingle
-        Q2_Eval.Location = New Point(476, 51)
+        Q2_Eval.Location = New Point(476, 102)
         Q2_Eval.Margin = New Padding(0)
         Q2_Eval.Name = "Q2_Eval"
-        Q2_Eval.Size = New Size(77, 31)
+        Q2_Eval.Size = New Size(77, 82)
         Q2_Eval.TabIndex = 68
         Q2_Eval.Text = "5"
         Q2_Eval.TextAlign = ContentAlignment.MiddleCenter
@@ -618,10 +617,10 @@ Partial Class AdminRatings3
         Q3_Eval.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         Q3_Eval.AutoSize = True
         Q3_Eval.BorderStyle = BorderStyle.FixedSingle
-        Q3_Eval.Location = New Point(476, 82)
+        Q3_Eval.Location = New Point(476, 184)
         Q3_Eval.Margin = New Padding(0)
         Q3_Eval.Name = "Q3_Eval"
-        Q3_Eval.Size = New Size(77, 31)
+        Q3_Eval.Size = New Size(77, 84)
         Q3_Eval.TabIndex = 70
         Q3_Eval.Text = "5"
         Q3_Eval.TextAlign = ContentAlignment.MiddleCenter
@@ -634,7 +633,7 @@ Partial Class AdminRatings3
         Q1_Eval.Location = New Point(476, 20)
         Q1_Eval.Margin = New Padding(0)
         Q1_Eval.Name = "Q1_Eval"
-        Q1_Eval.Size = New Size(77, 31)
+        Q1_Eval.Size = New Size(77, 82)
         Q1_Eval.TabIndex = 80
         Q1_Eval.Text = "5"
         Q1_Eval.TextAlign = ContentAlignment.MiddleCenter
