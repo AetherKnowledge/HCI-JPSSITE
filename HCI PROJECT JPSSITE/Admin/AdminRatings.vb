@@ -58,11 +58,13 @@
     End Sub
 
     Private Sub loadComments()
-        allcommentRTBox.Clear()
-        Dim comments As ArrayList = CommentHandler.getCommentsFromEvent(selectedEvent)
-        For Each comment As Comment In comments
-            allcommentRTBox.AppendText(comment.userName + " : " + comment.comment + vbCrLf)
-        Next
+        If selectedEvent <> "" Then
+            Dim comments As ArrayList = CommentHandler.getCommentsFromEvent(selectedEvent)
+            allcommentRTBox.Clear()
+            For Each comment As Comment In comments
+                allcommentRTBox.AppendText(comment.userName + " : " + comment.comment + vbCrLf)
+            Next
+        End If
     End Sub
 
     Private Sub eventselectCBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles eventselectCBox.SelectedIndexChanged

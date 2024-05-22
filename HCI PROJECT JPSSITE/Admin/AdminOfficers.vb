@@ -119,4 +119,8 @@ Public Class AdminOfficers
 
         OfficerHandler.updateOfficer(New Officer(name, img, section, age, sex, achievements, motto, position))
     End Sub
+
+    Private Sub officersBtn_Click(sender As Object, e As EventArgs) Handles officersBtn.Click
+
+    End Sub
 End Class
