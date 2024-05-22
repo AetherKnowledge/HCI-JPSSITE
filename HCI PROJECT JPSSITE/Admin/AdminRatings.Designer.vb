@@ -22,6 +22,7 @@ Partial Class AdminRatings
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AdminRatings))
         sendBtn = New Button()
         yourcommentRTBox = New RichTextBox()
@@ -49,6 +50,7 @@ Partial Class AdminRatings
         usernameLabel = New Label()
         profileBtn = New Button()
         Panel1 = New Panel()
+        Timer1 = New Timer(components)
         Panel2.SuspendLayout()
         Panel4.SuspendLayout()
         CType(eventpicPBox, ComponentModel.ISupportInitialize).BeginInit()
@@ -419,4 +421,5 @@ Partial Class AdminRatings
     Friend WithEvents usernameLabel As Label
     Friend WithEvents profileBtn As Button
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents Timer1 As Timer
 End Class

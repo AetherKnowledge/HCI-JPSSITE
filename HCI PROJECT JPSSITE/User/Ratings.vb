@@ -59,9 +59,9 @@ Public Class Ratings
     End Sub
 
     Private Sub loadComments()
-        allcommentRTBox.Clear()
         If selectedEvent <> "" Then
             Dim comments As ArrayList = CommentHandler.getCommentsFromEvent(selectedEvent)
+            allcommentRTBox.Clear()
             For Each comment As Comment In comments
                 allcommentRTBox.AppendText(comment.userName + " : " + comment.comment + vbCrLf)
             Next
@@ -105,7 +105,7 @@ Public Class Ratings
         starRating.Location = New Point(75, 273)
         Panel4.Controls.Add(starRating)
 
-        Timer1.Interval = 200
+        Timer1.Interval = 1000
         Timer1.Enabled = True
     End Sub
 

@@ -40,6 +40,12 @@
         If eventselectCBox.Items.Count > 0 Then
             eventselectCBox.SelectedIndex = 0
         End If
+        Timer1.Enabled = True
+    End Sub
+
+    Shadows Sub hide()
+        MyBase.Hide()
+        Timer1.Enabled = False
     End Sub
 
     Private Sub loadEvents()
@@ -81,6 +87,13 @@
         starRating.NumberOfStars = 5
         starRating.Location = New Point(75, 273)
         Panel4.Controls.Add(starRating)
+
+        Timer1.Interval = 1000
+        Timer1.Enabled = True
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        loadComments()
     End Sub
 
     Private Sub showrateBtn_Click(sender As Object, e As EventArgs) Handles showrateBtn.Click
