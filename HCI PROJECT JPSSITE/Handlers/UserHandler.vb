@@ -25,7 +25,7 @@ Public Class UserHandler
             command.Parameters.AddWithValue(7, newUser.courseProgram)
             command.Parameters.AddWithValue(8, newUser.yearLevel)
             command.Parameters.AddWithValue(9, newUser.sex)
-            command.Parameters.AddWithValue(10, newUser.img)
+            command.Parameters.AddWithValue(10, Nothing)
 
             command.ExecuteNonQuery()
             usersList.Add(newUser)
@@ -67,7 +67,7 @@ Public Class UserHandler
             command.Parameters.AddWithValue(7, newUser.courseProgram)
             command.Parameters.AddWithValue(8, newUser.yearLevel)
             command.Parameters.AddWithValue(9, newUser.sex)
-            command.Parameters.AddWithValue(10, newUser.img)
+            command.Parameters.AddWithValue(10, Nothing)
             command.Parameters.AddWithValue(11, oldUsername)
 
             command.ExecuteNonQuery()
@@ -114,7 +114,7 @@ Public Class UserHandler
                 img = My.Resources.circle_user1
             End If
 
-            Dim newUser As User = New User(username, password, firstName, surName, userID, birthDate, courseProgram, yearLevel, sex, img)
+            Dim newUser As User = New User(username, password, firstName, surName, userID, birthDate, courseProgram, yearLevel, sex, Nothing)
             usersList.Add(newUser)
         End While
 
@@ -142,10 +142,12 @@ Public Class UserHandler
     End Function
 
     Public Shared Function getUsers() As List(Of User)
+        getUsersFromDB()
         Return usersList
     End Function
 
     Public Shared Function getCurrentuser() As User
+        getUsersFromDB()
         Return currentUser
     End Function
 

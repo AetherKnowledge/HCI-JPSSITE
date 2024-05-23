@@ -75,4 +75,10 @@
         Me.Hide()
         Ratings3.show()
     End Sub
+
+    Private Sub backBtn_Click(sender As Object, e As EventArgs) Handles backBtn.Click
+        Me.Hide()
+        Ratings1.show()
+
+    End Sub
 End Class
