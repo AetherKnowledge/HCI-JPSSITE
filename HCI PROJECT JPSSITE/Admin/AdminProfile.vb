@@ -34,19 +34,17 @@ Public Class AdminProfile
 
     Private Sub loadUsers()
         Dim users As List(Of User) = UserHandler.getUsers
-        Dim indexOfAdmin As Integer
+        Dim indexOfAdmin As Integer = -1
         For Each user As User In users
             If user.username = "admin" Then
                 indexOfAdmin = users.IndexOf(user)
             End If
         Next
-        users.RemoveAt(indexOfAdmin)
+        If indexOfAdmin <> -1 Then
+            users.RemoveAt(indexOfAdmin)
+        End If
 
         users.Sort()
-
-        If descRBtn.Checked Then
-            users.Reverse()
-        End If
 
         studLBox.Items.Clear()
         For Each user As User In users
@@ -56,6 +54,8 @@ Public Class AdminProfile
                 studLBox.Items.Add(user)
             End If
         Next
+
+
     End Sub
 
     Private Sub nameSearch_TextChanged(sender As Object, e As EventArgs) Handles nameSearch.TextChanged
@@ -63,7 +63,14 @@ Public Class AdminProfile
     End Sub
 
     Private Sub studLBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles studLBox.SelectedIndexChanged
+        If studLBox.SelectedIndex = -1 Then
+            Return
+        End If
+
         Dim user As User = studLBox.SelectedItem
+        If user Is Nothing Then
+            Return
+        End If
 
         fullnameLabel.Text = user.firstName + " " + user.surName
         userIDLabel.Text = user.userID
@@ -83,10 +90,4 @@ Public Class AdminProfile
         loadUsers()
     End Sub
 
-    Private Sub deleteBtn_Click(sender As Object, e As EventArgs) Handles deleteBtn.Click
-        If studLBox.SelectedIndex <> -1 Then
-            UserHandler.removeUser(studLBox.SelectedItem)
-        End If
-
-    End Sub
 End Class
