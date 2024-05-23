@@ -30,7 +30,6 @@ Partial Class AdminProfile
         ascRBtn = New RadioButton()
         Label1 = New Label()
         Panel4 = New Panel()
-        deleteBtn = New Button()
         Label28 = New Label()
         Label27 = New Label()
         Label26 = New Label()
@@ -154,7 +153,6 @@ Partial Class AdminProfile
         ' Panel4
         ' 
         Panel4.BackColor = Color.White
-        Panel4.Controls.Add(deleteBtn)
         Panel4.Controls.Add(Label28)
         Panel4.Controls.Add(Label27)
         Panel4.Controls.Add(Label26)
@@ -179,19 +177,6 @@ Partial Class AdminProfile
         Panel4.Name = "Panel4"
         Panel4.Size = New Size(292, 370)
         Panel4.TabIndex = 35
-        ' 
-        ' deleteBtn
-        ' 
-        deleteBtn.BackColor = SystemColors.ControlDarkDark
-        deleteBtn.FlatStyle = FlatStyle.Popup
-        deleteBtn.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        deleteBtn.ForeColor = Color.White
-        deleteBtn.Location = New Point(108, 332)
-        deleteBtn.Name = "deleteBtn"
-        deleteBtn.Size = New Size(67, 24)
-        deleteBtn.TabIndex = 26
-        deleteBtn.Text = "DELETE"
-        deleteBtn.UseVisualStyleBackColor = False
         ' 
         ' Label28
         ' 
@@ -603,6 +588,5 @@ Partial Class AdminProfile
     Friend WithEvents ascRBtn As RadioButton
     Friend WithEvents descRBtn As RadioButton
     Friend WithEvents studLBox As ListBox
-    Friend WithEvents deleteBtn As Button
     Friend WithEvents nameSearch As TextBox
 End Class
