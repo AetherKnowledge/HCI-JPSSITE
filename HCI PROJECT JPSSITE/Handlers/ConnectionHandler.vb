@@ -5,8 +5,7 @@ Public Class ConnectionHandler
     Public Shared ReadOnly connection = startConnection()
 
     Private Shared Function startConnection()
-        Dim conString As String = "server=librarysystem-librarysystem.e.aivencloud.com;Port=15306;user id=test;password=AVNS_4GVJCxH3fyoz2Y41vHL;database=jpssite"
-        ' Dim conString As String = "server=localhost;user id=root;password=;database=jpssite"
+        Dim conString As String = "server=localhost;user id=root;password=;database=jpssite"
         Dim con As New MySqlConnection(conString)
 
         Return con
