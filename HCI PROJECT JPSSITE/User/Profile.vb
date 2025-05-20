@@ -3,6 +3,10 @@
 Public Class Profile
     Shadows Sub show()
         MyBase.Show()
+        update_contents()
+    End Sub
+
+    Private Sub update_contents()
         fullnameLabel.Text = UserHandler.getCurrentuser.firstName + " " + UserHandler.getCurrentuser.surName
         usernameLabel.Text = UserHandler.getCurrentuser.username
         userIDLabel.Text = UserHandler.getCurrentuser.userID
@@ -16,6 +20,13 @@ Public Class Profile
         surnameField.Text = UserHandler.getCurrentuser.firstName
         usernameField.Text = UserHandler.getCurrentuser.username
         birthDateField.Value = UserHandler.getCurrentuser.birthDate
+
+        Dim today As Date = Date.Now
+        Dim birthDate As Date = UserHandler.getCurrentuser.birthDate
+        Dim age As Integer = today.Year - birthDate.Year
+        If (birthDate > today.AddYears(-age)) Then age -= 1
+        ageLabel.Text = age.ToString()
+
         If UserHandler.getCurrentuser.sex = "M" Then
             maleRbtn.Checked = True
         Else
@@ -46,14 +57,14 @@ Public Class Profile
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles saveBtn.Click
-        Dim username As String = usernameField.Text
-        Dim password As String = passwordField.Text
-        Dim firstName As String = firstnameField.Text
-        Dim surName As String = surnameField.Text
-        Dim userID As String = UserHandler.getCurrentuser.userID
-        Dim birthDate As Date = birthDateField.Value
-        Dim courseProgram As String = UserHandler.getCurrentuser.courseProgram
-        Dim yearLevel As Integer = UserHandler.getCurrentuser.yearLevel
+        Dim username = usernameField.Text
+        Dim password = passwordField.Text
+        Dim firstName = firstnameField.Text
+        Dim surName = surnameField.Text
+        Dim userID = UserHandler.getCurrentuser.userID
+        Dim birthDate = birthDateField.Value
+        Dim courseProgram = UserHandler.getCurrentuser.courseProgram
+        Dim yearLevel = UserHandler.getCurrentuser.yearLevel
 
         If username.Length < 4 Then
             MessageBox.Show("Invalid username, length must be greater than 3")
@@ -89,7 +100,7 @@ Public Class Profile
             password = UserHandler.getCurrentuser.password
         End If
 
-        Dim newUser As User = New User(username, password, firstName, surName, userID, birthDate, courseProgram, yearLevel, sex, Nothing)
+        Dim newUser = New User(username, password, firstName, surName, userID, birthDate, courseProgram, yearLevel, sex, Nothing)
         UserHandler.updateUser(newUser, UserHandler.getCurrentuser.username)
 
         fullnameLabel.Text = UserHandler.getCurrentuser.firstName + " " + UserHandler.getCurrentuser.surName
@@ -112,6 +123,7 @@ Public Class Profile
         End If
 
         passwordField.Text = "*******"
+        update_contents()
         MessageBox.Show("Account Updated")
     End Sub
 
@@ -131,6 +143,12 @@ Public Class Profile
 
     Private Sub logoutBtn_Click(sender As Object, e As EventArgs) Handles logoutBtn.Click
         Me.Hide()
+        Login.show()
+    End Sub
+
+    Private Sub delete_account_Click(sender As Object, e As EventArgs) Handles deleteBtn.Click
+        UserHandler.removeUser(UserHandler.getCurrentuser)
+        MessageBox.Show("Account Deleted")
         Login.show()
     End Sub
 End Class

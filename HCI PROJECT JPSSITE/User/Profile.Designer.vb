@@ -60,6 +60,7 @@ Partial Class Profile
         Label3 = New Label()
         Label2 = New Label()
         Panel2 = New Panel()
+        deleteBtn = New Button()
         femaleRbtn = New RadioButton()
         maleRbtn = New RadioButton()
         Label14 = New Label()
@@ -487,6 +488,7 @@ Partial Class Profile
         ' Panel2
         ' 
         Panel2.BackColor = Color.White
+        Panel2.Controls.Add(deleteBtn)
         Panel2.Controls.Add(femaleRbtn)
         Panel2.Controls.Add(maleRbtn)
         Panel2.Controls.Add(Label14)
@@ -518,6 +520,19 @@ Partial Class Profile
         Panel2.Name = "Panel2"
         Panel2.Size = New Size(288, 370)
         Panel2.TabIndex = 30
+        ' 
+        ' deleteBtn
+        ' 
+        deleteBtn.BackColor = Color.CornflowerBlue
+        deleteBtn.FlatStyle = FlatStyle.Flat
+        deleteBtn.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        deleteBtn.ForeColor = Color.White
+        deleteBtn.Location = New Point(174, 326)
+        deleteBtn.Name = "deleteBtn"
+        deleteBtn.Size = New Size(75, 32)
+        deleteBtn.TabIndex = 55
+        deleteBtn.Text = "DELETE"
+        deleteBtn.UseVisualStyleBackColor = False
         ' 
         ' femaleRbtn
         ' 
@@ -560,7 +575,7 @@ Partial Class Profile
         saveBtn.FlatStyle = FlatStyle.Flat
         saveBtn.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         saveBtn.ForeColor = Color.White
-        saveBtn.Location = New Point(110, 326)
+        saveBtn.Location = New Point(36, 326)
         saveBtn.Name = "saveBtn"
         saveBtn.Size = New Size(75, 32)
         saveBtn.TabIndex = 49
@@ -885,4 +900,5 @@ Partial Class Profile
     Friend WithEvents Label26 As Label
     Friend WithEvents femaleRbtn As RadioButton
     Friend WithEvents maleRbtn As RadioButton
+    Friend WithEvents deleteBtn As Button
 End Class

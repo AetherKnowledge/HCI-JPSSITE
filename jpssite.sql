@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 19, 2025 at 01:48 PM
+-- Generation Time: May 20, 2025 at 12:04 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `jpssite`
 --
+CREATE DATABASE IF NOT EXISTS `jpssite` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `jpssite`;
 
 -- --------------------------------------------------------
 
@@ -28,6 +30,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `comments` (
+  `id` int(11) NOT NULL,
   `username` varchar(256) NOT NULL,
   `eventName` varchar(256) NOT NULL,
   `comment` varchar(256) NOT NULL
@@ -37,14 +40,13 @@ CREATE TABLE `comments` (
 -- Dumping data for table `comments`
 --
 
-INSERT INTO `comments` (`username`, `eventName`, `comment`) VALUES
-('Gucci', 'JPSSITE COMMUNITY EXTENSION', 'One of the best events JPSSITE made! Truly phenomenal!'),
-('manaoghanz', 'JPSSITE COMMUNITY EXTENSION', 'Hello, good morning'),
-('JCRosuelo', 'JPSSITE COMMUNITY EXTENSION', 'Hi po mam'),
-('JCRosuelo', 'Pirate', 'Pirate'),
-('JCRosuelo', 'Pirate', 'test'),
-('JCRosuelo', 'Pirate', ''),
-('JCRosuelo', 'Pirate', '');
+INSERT INTO `comments` (`id`, `username`, `eventName`, `comment`) VALUES
+(1, 'user', 'wew', 'bruh'),
+(2, 'user', 'wew', 'bruh'),
+(3, 'user', 'wew', 'bruh'),
+(4, 'user', 'wew', 'bruh'),
+(5, 'user', 'wew', 'bruh'),
+(6, 'user', 'wew', 'lmaoo');
 
 -- --------------------------------------------------------
 
@@ -87,6 +89,13 @@ CREATE TABLE `events` (
   `eventRating` int(11) NOT NULL DEFAULT 0,
   `dateOfEvent` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `events`
+--
+
+INSERT INTO `events` (`eventName`, `eventImg`, `eventRating`, `dateOfEvent`) VALUES
+('wew', NULL, 0, '2025-05-20');
 
 -- --------------------------------------------------------
 
@@ -142,6 +151,13 @@ INSERT INTO `users` (`username`, `password`, `firstname`, `surname`, `userID`, `
 --
 
 --
+-- Indexes for table `comments`
+--
+ALTER TABLE `comments`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `username` (`username`);
+
+--
 -- Indexes for table `events`
 --
 ALTER TABLE `events`
@@ -159,6 +175,26 @@ ALTER TABLE `officers`
 ALTER TABLE `users`
   ADD PRIMARY KEY (`username`),
   ADD UNIQUE KEY `userID` (`userID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `comments`
+--
+ALTER TABLE `comments`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `comments`
+--
+ALTER TABLE `comments`
+  ADD CONSTRAINT `comments_ibfk_1` FOREIGN KEY (`username`) REFERENCES `users` (`username`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
