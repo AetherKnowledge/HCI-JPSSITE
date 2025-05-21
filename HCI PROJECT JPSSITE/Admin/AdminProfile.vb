@@ -72,6 +72,12 @@ Public Class AdminProfile
             Return
         End If
 
+        Dim today As Date = Date.Now
+        Dim birthDate As Date = user.birthDate
+        Dim age As Integer = today.Year - birthDate.Year
+        If (birthDate > today.AddYears(-age)) Then age -= 1
+        ageLabel.Text = age.ToString()
+
         fullnameLabel.Text = user.firstName + " " + user.surName
         userIDLabel.Text = user.userID
         usrnameLabel.Text = user.username
@@ -79,6 +85,7 @@ Public Class AdminProfile
         yearLabel.Text = user.yearLevel
         passLabel.Text = "*******"
         sexLabel.Text = user.sex
+
 
     End Sub
 
@@ -90,4 +97,7 @@ Public Class AdminProfile
         loadUsers()
     End Sub
 
+    Private Sub ageLabel_Click(sender As Object, e As EventArgs) Handles ageLabel.Click
+
+    End Sub
 End Class

@@ -17,12 +17,12 @@ Public Class Profile
         sexLabel.Text = UserHandler.getCurrentuser.sex
 
         firstnameField.Text = UserHandler.getCurrentuser.firstName
-        surnameField.Text = UserHandler.getCurrentuser.firstName
+        surnameField.Text = UserHandler.getCurrentuser.surName
         usernameField.Text = UserHandler.getCurrentuser.username
         birthDateField.Value = UserHandler.getCurrentuser.birthDate
 
         Dim today As Date = Date.Now
-        Dim birthDate As Date = UserHandler.getCurrentuser.birthDate
+        Dim birthDate As Date = birthDateField.Value
         Dim age As Integer = today.Year - birthDate.Year
         If (birthDate > today.AddYears(-age)) Then age -= 1
         ageLabel.Text = age.ToString()
@@ -150,5 +150,13 @@ Public Class Profile
         UserHandler.removeUser(UserHandler.getCurrentuser)
         MessageBox.Show("Account Deleted")
         Login.show()
+    End Sub
+
+    Private Sub ageLabel_Click(sender As Object, e As EventArgs) Handles ageLabel.Click
+
+    End Sub
+
+    Private Sub profilepicPBox_Click(sender As Object, e As EventArgs) Handles profilepicPBox.Click
+
     End Sub
 End Class
